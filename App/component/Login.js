@@ -15,7 +15,6 @@ import {
 } from 'react-native';
 
 import UserInput from './UserInput';
-import { loginUser } from '../actions';
 
 //import Spinner from './Spinner';
 
@@ -23,15 +22,11 @@ import backgroundImg from '../assets/background.png';
 import logoImg from '../assets/light.png';
 import carKey from '../assets/carKeyDev.png';
 import user from '../assets/userLogInDev.png';
-//import arrow from '../assets/arrow.png';
 
 
 
 
-import authReducer from '../reducer/authReducer';
-
-
-class Login extends Component {
+export  class Login extends Component {
 
   constructor() {
     super();
@@ -41,6 +36,13 @@ class Login extends Component {
       password: ''
     };
   }
+
+
+props: {
+  errorMessage: string,
+  loading: boolean,
+  tryLogin: (user: UserLoginModel) => void
+};
 
   static navigationOptions = {//header styling
     title: 'Welcome',
@@ -57,28 +59,6 @@ class Login extends Component {
     this.setState({ password: text })
   }
 
-  /*  componentWillReceiveProps(nextProps) {
-     if (nextProps.user) {
-       this.props.navigation.navigate('Home');
-     }
-   } */
-  /* _onLoginPressed() {
-
-    const { username, password } = this.state;
-
-    this.props.loginUser({ username, password });
-
-  }
- */
-
-  /* _renderButton() {
-    if (this.props.loading) {
-      return <Spinner />;
-    }
-    return (
-      <Button onPress={this._onLoginPressed.bind(this)}>Login</Button>
-    );
-  } */
 
   render() {
     const { navigate } = this.props.navigation;
@@ -124,7 +104,8 @@ class Login extends Component {
         {/*  button view */}
 
         <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
-          <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough1", {})} >
+          {/* <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough1", {})} > */}
+          <TouchableOpacity style={styles.button} onPress={() => this.props.tryLogin(this.state)} >
             <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
             <Text style={styles.ButtonText}>Login</Text>
           </TouchableOpacity>
@@ -328,4 +309,4 @@ const mapStateToProps = state => {
     user: state.auth.user
   }
 }
-export default connect(mapStateToProps, { loginUser })(Login);
+
