@@ -37,11 +37,12 @@ export async function tryLogin(user: UserLoginModel) {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_LOADING });
     let response = await authProxyService.login(user);
-    token = await response.json();
+    debugger;
+    // token = await response.json();
     if (response.status === 200) {
       debugger;
-      dispatch(success(token));
-      //dispatch({ type: UiTypes.UI_LOADING });
+      // dispatch(success(token));
+      dispatch({ type: UiTypes.UI_LOADING });
     } else {
       dispatch(fail());
       //dispatch({ type: UiTypes.UI_LOADING });

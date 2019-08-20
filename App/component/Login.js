@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import {
   StyleSheet,
@@ -11,61 +11,69 @@ import {
   KeyboardAvoidingView,
   Text,
   Button,
-  Linking,//for linking a button to a link
-} from 'react-native';
+  Linking //for linking a button to a link
+} from "react-native";
 
-import UserInput from './UserInput';
+import { Spinner } from "native-base";
+
+import UserInput from "./UserInput";
 
 //import Spinner from './Spinner';
 
-import backgroundImg from '../assets/background.png';
-import logoImg from '../assets/light.png';
-import carKey from '../assets/carKeyDev.png';
-import user from '../assets/userLogInDev.png';
+import backgroundImg from "../assets/background.png";
+import logoImg from "../assets/light.png";
+import carKey from "../assets/carKeyDev.png";
+import user from "../assets/userLogInDev.png";
 
-
-
-
-export  class Login extends Component {
-
+export class Login extends Component {
   constructor() {
     super();
     //  _onLoginPressed=this._onLoginPressed.bind(this);
     this.state = {
-      username: '',
-      password: ''
+      email: "",
+      password: ""
     };
   }
 
-
-props: {
-  errorMessage: string,
-  loading: boolean,
-  tryLogin: (user: UserLoginModel) => void
-};
-
-  static navigationOptions = {//header styling
-    title: 'Welcome',
-    fontWeight: 'bold'
+  props: {
+    errorMessage: string,
+    loading: boolean,
+    tryLogin: (user: UserLoginModel) => void
   };
 
+  static navigationOptions = {
+    //header styling
+    title: "Welcome",
+    fontWeight: "bold"
+  };
 
+  handleEmail = text => {
+    this.setState({ email: text });
+  };
 
-  handleEmail = (text) => {
-    this.setState({ username: text })
-  }
-
-  handlePassword = (text) => {
-    this.setState({ password: text })
-  }
-
+  handlePassword = text => {
+    this.setState({ password: text });
+  };
 
   render() {
     const { navigate } = this.props.navigation;
+    const loadingSpinner = this.props.loading ? (
+      <Spinner color="red" />
+    ) : (
+      <Text bold red margin20>
+        {" "}
+        {this.props.errorMessage}
+      </Text>
+    );
     return (
-      <ImageBackground source={backgroundImg} style={styles.wallpaper}>{/*background*/}
+      <ImageBackground source={backgroundImg} style={styles.wallpaper}>
+        {/*background*/}
 
-        <Image source={logoImg} style={{ position: 'absolute', top: 30, right: 50 }} />{/* top corner logo*/}
+        <Image
+          source={logoImg}
+          style={{ position: "absolute", top: 30, right: 50 }}
+        />
+        {/* top corner logo*/}
 
         {/*welcome To and Vodabuddy text view*/}
         <View style={styles.TextContainer}>
@@ -78,39 +86,52 @@ props: {
           </View>
         </View>
 
-
         {/*email user input view*/}
 
         <View style={styles.userNameTextInputView}>
           <Image source={user} style={styles.userNameIconStyle} />
-          <UserInput placeholder={'E-mail .....'} onChangeText={this.handleEmail} secureTextEntry={false} />
+          <UserInput
+            placeholder={"E-mail ....."}
+            onChangeText={this.handleEmail}
+            secureTextEntry={false}
+          />
         </View>
 
         <View style={styles.PasswordTextInputView}>
           <Image source={carKey} style={styles.PasswordIconStyle} />
-          <UserInput placeholder={'Password .....'} onChangeText={this.handlePassword} secureTextEntry={true} />
+          <UserInput
+            placeholder={"Password ....."}
+            onChangeText={this.handlePassword}
+            secureTextEntry={true}
+          />
         </View>
 
         {/*forget password view*/}
         <View style={styles.ForgetPasswordContainer}>
-          <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>{/*chane the linking url in order to change password*/}
-            <Text style={styles.ForgetPasswordStyle}>
-              Forgot Password ?
-                  </Text>
+          <TouchableOpacity
+            onPress={() => Linking.openURL("http://google.com")}
+          >
+            {/*chane the linking url in order to change password*/}
+            <Text style={styles.ForgetPasswordStyle}>Forgot Password ?</Text>
           </TouchableOpacity>
         </View>
 
-
         {/*  button view */}
+        {loadingSpinner}
 
         <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
           {/* <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough1", {})} > */}
-          <TouchableOpacity style={styles.button} onPress={() => this.props.tryLogin(this.state)} >
-            <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => this.props.tryLogin(this.state)}
+          >
+            <Image
+              source={require("../assets/arrow.png")}
+              style={styles.ButtonimageStyle}
+            />
             <Text style={styles.ButtonText}>Login</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>
-
 
         {/*signature bottom text view*/}
         <View style={styles.EndTextView}>
@@ -118,145 +139,150 @@ props: {
             © 2019 Vodafone Group. Vodafone Group Plc
           </Text>
         </View>
-
       </ImageBackground>
     );
   }
 }
 
-
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
+const DEVICE_WIDTH = Dimensions.get("window").width;
+const DEVICE_HEIGHT = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
-  wallpaper: { //background style
+  wallpaper: {
+    //background style
     flex: 1,
-    height: '100%',
-    width: '100%'
+    height: "100%",
+    width: "100%"
   },
 
   EndTextView: {
-    width: '100%',
+    width: "100%",
     // height: 0,
     //flex: 0.1,
     // backgroundColor: 'green',
-    alignItems: 'center',
-    justifyContent: 'center',// center of the flex view
+    alignItems: "center",
+    justifyContent: "center", // center of the flex view
     // marginTop: 5
-    position: 'absolute',
-    bottom: 0,
+    position: "absolute",
+    bottom: 0
   },
 
   VodafoneGroupText: {
-    color: 'white'
+    color: "white"
   },
 
-  WelcomeText: {//welcome to word style
-    alignItems: 'center',
-    color: 'red',
+  WelcomeText: {
+    //welcome to word style
+    alignItems: "center",
+    color: "red",
     fontSize: 16,
-    position: 'absolute',
+    position: "absolute",
     left: 40
   },
 
-  VodaText: {//login word text style
+  VodaText: {
+    //login word text style
     //textAlign: 'center',
-    color: 'red',
-    fontWeight: 'bold',
-    fontSize: 35,
+    color: "red",
+    fontWeight: "bold",
+    fontSize: 35
     /*    position: 'absolute',
        left: 40 */
   },
 
   buddyText: {
-    color: 'black',
-    fontWeight: 'bold',
+    color: "black",
+    fontWeight: "bold",
     fontSize: 35
   },
   welcomTextView: {
-    width: '100%',
-    alignItems: 'center',
+    width: "100%",
+    alignItems: "center"
     // backgroundColor:'green'
   },
 
-  TextContainer: {/* Welcome back and vodabuddy wrapper */
+  TextContainer: {
+    /* Welcome back and vodabuddy wrapper */
 
-    flexDirection: 'column',
+    flexDirection: "column",
     // flex: 0.35,
     // backgroundColor: 'green',
-    alignItems: 'center',
+    alignItems: "center",
     // justifyContent: 'center',
-    top: 200,
-
+    top: 200
   },
 
   VodaBuddyView: {
-    width: '100%',
-    flexDirection: 'row',
+    width: "100%",
+    flexDirection: "row",
     //  backgroundColor: 'yellow',
-    position: 'absolute',
+    position: "absolute",
     top: 18,
     left: 40
     // alignItems:'flex-start'
   },
 
-  ForgetPasswordContainer: { //forget password wrapper
+  ForgetPasswordContainer: {
+    //forget password wrapper
     // flex: 0.1,
-    justifyContent: 'center',// center of the flex view
-    position: 'absolute',
+    justifyContent: "center", // center of the flex view
+    position: "absolute",
     top: 400,
-    left: 40,
-
+    left: 40
   },
-  ForgetPasswordStyle: { //forget password style 
-    //textAlign: 'center', 
-    color: 'blue',
-    // fontWeight : 'bold', 
+  ForgetPasswordStyle: {
+    //forget password style
+    //textAlign: 'center',
+    color: "blue",
+    // fontWeight : 'bold',
     // justifyContent: 'center',
     //paddingBottom:'45%',
     fontSize: 14,
-    justifyContent: 'space-around',
-    textAlign: 'left',
+    justifyContent: "space-around",
+    textAlign: "left"
     // paddingRight: 30
   },
 
-  button: { // button design
+  button: {
+    // button design
     width: DEVICE_WIDTH - 250,
     height: 40,
-    justifyContent: 'center',
-    backgroundColor: '#B82202',
-    borderColor: 'black',
-    alignItems: 'center',
+    justifyContent: "center",
+    backgroundColor: "#B82202",
+    borderColor: "black",
+    alignItems: "center",
     borderRadius: 15,
     flexDirection: "row"
   },
-  ButtonimageStyle: {//button icon
+  ButtonimageStyle: {
+    //button icon
     margin: 5,
     marginLeft: 0,
     marginRight: 15,
     height: 16.5,
     width: 16.5,
-    resizeMode: 'stretch',
+    resizeMode: "stretch"
   },
-  buttonView: { //wrapper for button 
+  buttonView: {
+    //wrapper for button
     // flex: 0.15,
-    justifyContent: 'center',
-    flexDirection: 'row',
-    alignItems: 'center',
-    position: 'absolute',
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    position: "absolute",
     top: 450,
-    left: 40,
+    left: 40
     // marginTop: 50,
-
   },
-  ButtonText: { // text inside button
-    //textAlign: 'center', 
-    color: 'white',
+  ButtonText: {
+    // text inside button
+    //textAlign: 'center',
+    color: "white",
     //fontWeight: 'bold',
     // justifyContent: 'center',
     //paddingBottom:'45%',
     fontSize: 18,
-    justifyContent: 'space-around',
+    justifyContent: "space-around"
   },
 
   userNameIconStyle: {
@@ -265,48 +291,45 @@ const styles = StyleSheet.create({
     margin: 25,
     height: 12,
     width: 12,
-    resizeMode: 'stretch',
-    alignItems: 'center',
+    resizeMode: "stretch",
+    alignItems: "center"
     //justifyContent:'center'
   },
 
   userNameTextInputView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     height: 40,
-    position: 'absolute',
+    position: "absolute",
     //margin: 10
     top: 300
   },
   PasswordTextInputView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     height: 40,
-    position: 'absolute',
+    position: "absolute",
     //margin: 10
     top: 340
   },
   PasswordIconStyle: {
-    padding: 5,//icon size
+    padding: 5, //icon size
     // paddingLeft:10,
     margin: 25,
     height: 13,
     width: 14,
-    resizeMode: 'stretch',
-    alignItems: 'center',
+    resizeMode: "stretch",
+    alignItems: "center"
     //justifyContent:'center'
   }
-
 });
 
 const mapStateToProps = state => {
-
   return {
     error: state.auth.error,
     loading: state.auth.loading,
     user: state.auth.user
-  }
-}
-
+  };
+};

@@ -7,8 +7,9 @@ import {
 import { Application } from "../../application";
 export class AuthProxyService {
   async login(user: UserLoginModel) {
+    debugger;
     const data = {};
-    data["userName"] = user.userName;
+    data["email"] = user.email;
     data["password"] = user.password;
 
     return await fetch(`${BASE_URL}api/account/login`, {

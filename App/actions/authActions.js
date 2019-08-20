@@ -1,29 +1,26 @@
-import {
-    LOGIN_ATTEMPT,
-    LOGIN_SUCCESS,
-    LOGIN_FAILURE
-} from './constants'
+import { LOGIN_ATTEMPT, LOGIN_SUCCESS, LOGIN_FAILURE } from "./constants";
 
-import axios from 'axios';
+import axios from "axios";
 //import environment from '../environment';
 import { BASE_URL } from "../environment";
 
+import { UserLoginModel } from "../proxy/models";
+
 export class AuthProxyService {
-    async login(user: any) {
-        debugger;
-      const data = {};
-      data["userName"] = user.userName;
-      data["password"] = user.password;
-  
-      return await fetch(`${BASE_URL}api/account/login`, {
-        method: "post",
-        headers: { "content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-    }
+  async login(user: UserLoginModel) {
+    debugger;
+    const data = {};
+    data["userName"] = user.email;
+    data["password"] = user.password;
+
+    return await fetch(`${BASE_URL}api/account/login`, {
+      method: "post",
+      headers: { "content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+  }
 }
 const authProxyService = new AuthProxyService();
-
 
 // export const loginUser = ({ username, password }) => {
 
@@ -36,54 +33,49 @@ const authProxyService = new AuthProxyService();
 //         .then(resp=>{
 //             debugger;
 //             handleResponse(resp.data)
-//         })         
+//         })
 //         .catch(error => {
 //             debugger;
 //             console.log(error)
-//         }) 
+//         })
 //     };
 
 // debugger;
 // }
 
 export async function tryLogin(user: any) {
-    debugger;
-    let token = null;
-    return async dispatch => {
+  debugger;
+  let token = null;
+  return async dispatch => {
     //   dispatch(onLogin(user));
     //   dispatch({ type: UiTypes.UI_LOADING });
-      dispatch({ type: LOGIN_ATTEMPT })
-      let response = await authProxyService.login(user);
+    dispatch({ type: LOGIN_ATTEMPT });
+    let response = await authProxyService.login(user);
+    debugger;
+    // token = await response.json();
+    if (response.status === 200) {
       debugger;
-      // token = await response.json();
-      if (response.status === 200) {
-        debugger;
-        dispatch(success(token));
-        //dispatch({ type: UiTypes.UI_LOADING });
-      } else {
-        dispatch(fail());
-        //dispatch({ type: UiTypes.UI_LOADING });
-      }
-    };
-  }
-  
+      dispatch(success(token));
+      //dispatch({ type: UiTypes.UI_LOADING });
+    } else {
+      dispatch(fail());
+      //dispatch({ type: UiTypes.UI_LOADING });
+    }
+  };
+}
 
 const handleResponse = (dispatch, data) => {
-    debugger;
-    if (!data.success) {
-        onLoginFailure(dispatch, data.message);
-    }
-    else {
-
-        onLoginSuccess(dispatch, data.user, data.token);
-    }
+  debugger;
+  if (!data.success) {
+    onLoginFailure(dispatch, data.message);
+  } else {
+    onLoginSuccess(dispatch, data.user, data.token);
+  }
 };
 
 const onLoginSuccess = (dispatch, user, token) => {
-    dispatch({ type: LOGIN_SUCCESS, user });
-
+  dispatch({ type: LOGIN_SUCCESS, user });
 };
 const onLoginFailure = (dispatch, errorMessage) => {
-
-    dispatch({ type: LOGIN_FAILURE, error: errorMessage });
+  dispatch({ type: LOGIN_FAILURE, error: errorMessage });
 };

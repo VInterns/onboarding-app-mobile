@@ -29,7 +29,7 @@ class LoginContainer extends Component {
   componentWillReceiveProps(nextProps) {
     debugger;
     if (nextProps.isLoggedIn) {
-      nextProps.navigation.navigate("AccountSetup");
+      // nextProps.navigation.navigate("AccountSetup");
     }
   }
 
