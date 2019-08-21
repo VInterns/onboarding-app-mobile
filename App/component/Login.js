@@ -38,7 +38,8 @@ export class Login extends Component {
   props: {
     errorMessage: string,
     loading: boolean,
-    tryLogin: (user: UserLoginModel) => void
+    tryLogin: (user: UserLoginModel) => void,
+    isLoggedIn: boolean,
   };
 
   static navigationOptions = {
@@ -326,10 +327,4 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = state => {
-  return {
-    error: state.auth.error,
-    loading: state.auth.loading,
-    user: state.auth.user
-  };
-};
+

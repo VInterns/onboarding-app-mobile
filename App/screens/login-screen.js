@@ -29,7 +29,7 @@ class LoginContainer extends Component {
   componentWillReceiveProps(nextProps) {
     debugger;
     if (nextProps.isLoggedIn) {
-      // nextProps.navigation.navigate("AccountSetup");
+      nextProps.navigation.navigate("walkTrough");
     }
   }
 
@@ -40,6 +40,7 @@ class LoginContainer extends Component {
         errorMessage={this.props.errorMessage}
         tryLogin={this.props.tryLogin}
         navigation={this.props.navigation}
+        isLoggedIn={this.props.isLoggedIn}
       />
     );
   }

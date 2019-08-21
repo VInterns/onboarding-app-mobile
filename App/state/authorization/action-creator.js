@@ -41,7 +41,7 @@ export async function tryLogin(user: UserLoginModel) {
     // token = await response.json();
     if (response.status === 200) {
       debugger;
-      // dispatch(success(token));
+      dispatch(success());
       dispatch({ type: UiTypes.UI_LOADING });
     } else {
       dispatch(fail());
@@ -83,8 +83,8 @@ export function onLogin(user): ON_LOGIN_Action {
   return { type: types.ON_LOGIN, payload: user };
 }
 
-export function success(token): LOGIN_SUCCESS_Action {
-  return { type: types.LOGIN_SUCCESS, payload: token };
+export function success(): LOGIN_SUCCESS_Action {
+  return { type: types.LOGIN_SUCCESS };
 }
 
 export function fail(): LOGIN_FAIL_Action {
