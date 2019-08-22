@@ -15,12 +15,13 @@ import {
 
 import FadeInView from './FadeInView'
 import backgroundImg from '../assets/group.png';
-import mobile from '../assets/mobile.png'
-//import backgroundImg from '../assets/background.png';
-export default class walkTrough1 extends Component {
+import mobile from '../assets/group4.png'
+
+export default class walkTrough2 extends Component {
 
     static navigationOptions = {//header styling
-      header:null
+        title: 'walkTrough 2',
+        fontWeight: 'bold'
     };
 
 
@@ -28,87 +29,86 @@ export default class walkTrough1 extends Component {
         const { navigate } = this.props.navigation;
 
         return (
+            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <ImageBackground source={backgroundImg} style={styles.wallpaper}>{/*background*/}
+                </ImageBackground >
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+                <FadeInView>
+                    <Image source={mobile} style={{ marginLeft: 10 }} />{/* centered logo*/}
+                </FadeInView>
 
-                <ImageBackground source={backgroundImg} style={styles.wallpaper}>
-                    <Image source={mobile} style={{ marginTop: 38 }} />{/* centered mobile logo*/}
-                </ImageBackground>
-
-                {/*welcome  and on board text view*/}
-                <View style={styles.WelcomOnBoardTextContainer}>
-
-                    <View style={styles.welcomTextView}>
+                {/*header text view*/}
+                <View style={styles.TextContainer}>
+                    <View style={styles.redView}>
                         <FadeInView>
-                            <Text style={styles.WelcomeText}>Welcome </Text>
+                            <Text style={styles.RedText}>This app will guide you to </Text>
                         </FadeInView>
                     </View>
 
-                    <View style={styles.onBoardView}>
+                    <View style={styles.blackView}>
                         <FadeInView>
-                            <Text style={styles.onBoardText}>on board</Text>
+                            <Text style={styles.blackText}>know more about Vodafone</Text>
                         </FadeInView>
                     </View>
                 </View>
 
                 {/*  button view */}
                 <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough2", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough3", {})} >
                         <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
+            </View>
 
-            </View >
+
 
 
         );
     }
 }
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     wallpaper: { //background style
-        //flex: 1,
         resizeMode: 'cover',
         height: 340,
         width: 340,
         justifyContent: 'center',
         alignItems: 'center',
-
+        position: 'absolute',
+        right: 220
     },
-    WelcomeText: {//welcome to word style
+    RedText: {//welcome to word style
         // alignItems: 'center',
         color: 'red',
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: 'bold'
         //position: 'absolute',
         // left: 40,
         //  top: 50
     },
 
-    onBoardText: {//login word text style
+    blackText: {//login word text style
         //textAlign: 'center',
         color: 'black',
         // fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 25,
         /*    position: 'absolute',
            left: 40 */
     },
 
-    welcomTextView: {
+    redView: {
         alignItems: 'center',
         justifyContent: 'center'
     },
 
-    WelcomOnBoardTextContainer: {/* Welcome back and vodabuddy wrapper */
-        flexDirection: 'row',
+    TextContainer: {/* Welcome back and vodabuddy wrapper */
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
         top: 40
     },
 
-    onBoardView: {
+    blackView: {
         alignItems: 'center',
         justifyContent: 'center'
     },
