@@ -9,6 +9,7 @@ import { Navgation } from "./App/routing";
 import { Application } from "./App/application";
 import { Provider } from "react-redux";
 
+
 export default class App extends React.Component {
   constructor() {
     super();
@@ -38,10 +39,12 @@ export default class App extends React.Component {
       <Provider store={Application.current.store}>
         <Root>
           <View style={styles.container}>
+            
             <Navgation />
             <AppLoading />
           </View>
         </Root>
+
       </Provider>
     );
   }
