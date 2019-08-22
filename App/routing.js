@@ -77,9 +77,10 @@ const AppNavigator = createStackNavigator(
   },
 
   {
-    initialRouteName: "Login"
-  }, {
     transitionConfig: (nav) => handleCustomTransition(nav)
+  },
+  {
+    initialRouteName: "Login"
   });
 
 
