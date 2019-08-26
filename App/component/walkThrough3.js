@@ -43,9 +43,9 @@ export default class walkTrough3 extends Component {
 
     }
 
-    componentDidMount(){
+    componentDidMount() {
         debugger;
-        console.log("this state",this.state);
+        console.log("this state", this.state);
     }
 
     ShowHideComponent = () => {// responsible for showing and hiding component
@@ -114,6 +114,8 @@ export default class walkTrough3 extends Component {
         );
     }
 }
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     wallpaper: { //background style
         resizeMode: 'cover',
@@ -122,8 +124,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        left: 220
-    },
+        //left: 220
+        right: DEVICE_WIDTH - (DEVICE_WIDTH + (DEVICE_WIDTH / 2))
+},
     RedText: {//red text style
         // alignItems: 'center',
         color: 'red',

@@ -36,39 +36,17 @@ export default class History4 extends Component {
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
 
-                    <View style={styles.blackView}>
-                        <FadeInView>
-                            <Text style={styles.BoldblackText}>Vodafone started back in UK in 1985,</Text>
-                        </FadeInView>
+                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={styles.blackText}>
+                            <Text style={styles.BoldblackText}>Vodafone started back in UK in 1985, {'\n'}</Text>
+                            where after several acquisitions of other {'\n'}
+                            operators such as Omnitel, Airtel and {'\n'}
+                            Panafon which are now Vodafone Italy, {'\n'}
+                            Vodafone Spain & Vodafone Greece {'\n'}
+                            respectively.
+                        </Text>
                     </View>
-                    <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-
-                        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                            <Text style={styles.blackText}>
-                                where after several acquisitions of other
-                            </Text>
-                        </View>
-
-                        <View style={{ justifyContent: 'center', alignItems: 'center' }} >
-                            <Text style={styles.blackText}>
-                                operators such as Omnitel,Airtel and
-                            </Text>
-                        </View>
-                        {/* 
-                        <FadeInView>
-                            <Text style={styles.blackText}>
-                                Panafon which are now Vodafone Italy, Vodafone Spain & Vodafone Greece
-                            </Text>
-                        </FadeInView>
-
-                        <FadeInView>
-                            <Text style={styles.blackText}>
-                                respectively.
-                            </Text>
-                        </FadeInView> */}
-
-                    </View>
-
+                    
                 </View>
 
                 {/*  button view */}

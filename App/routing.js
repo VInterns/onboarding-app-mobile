@@ -16,6 +16,7 @@ import History2 from './component/History2';
 import History3 from './component/History3';
 import History4 from './component/History4';
 import History5 from './component/History5';
+import History6 from './component/History6';
 import ErrorAlert from './component/ErrorAlert';
 import GreatJob from './component/GreatJob';
 
@@ -74,6 +75,7 @@ const AppNavigator = createStackNavigator(
     GreatJob: { screen: GreatJob },
     History4: { screen: History4 },
     History5: { screen: History5 },
+    History6: { screen: History6 },
   },
 
   {
