@@ -17,9 +17,15 @@ import History3 from './component/History3';
 import History4 from './component/History4';
 import History5 from './component/History5';
 import History6 from './component/History6';
+import History7 from './component/History7';
+import History8 from './component/History8';
+import History9 from './component/History9';
 import ErrorAlert from './component/ErrorAlert';
+import ErrorAlert2 from './component/ErrorAlert2';
+import ErrorAlert3 from './component/ErrorAlert3';
+import ErrorAlert4 from './component/ErrorAlert4';
 import GreatJob from './component/GreatJob';
-
+import GreatJob2 from './component/GreatJob2';
 const handleCustomTransition = ({ scenes }) => { //handle transitions between screens
   const prevScene = scenes[scenes.length - 2];
   const nextScene = scenes[scenes.length - 1];
@@ -43,12 +49,17 @@ const handleCustomTransition = ({ scenes }) => { //handle transitions between sc
     return fromTop(600);
   } else if (prevScene
     && prevScene.route.routeName === 'History2'
-    && nextScene.route.routeName === 'ErrorAlert') {
+    && nextScene.route.routeName === 'ErrorAlert2') {
     return fromTop(600);
   }
   else if (prevScene
     && prevScene.route.routeName === 'History3'
-    && nextScene.route.routeName === 'ErrorAlert') {
+    && nextScene.route.routeName === 'ErrorAlert3') {
+    return fromTop(600);
+  }
+  else if (prevScene
+    && prevScene.route.routeName === 'History8'
+    && nextScene.route.routeName === 'ErrorAlert4') {
     return fromTop(600);
   }
 
@@ -62,7 +73,7 @@ const AppNavigator = createStackNavigator(
     Login: {
       screen: LoginScreen
     },
-    walkTrough: {
+    walkThrough: {
       screen: walkTrough1
     },
     walkThrough2: { screen: walkThrough2 },
@@ -76,6 +87,13 @@ const AppNavigator = createStackNavigator(
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },
+    History7: { screen: History7 },
+    History8: { screen: History8 },
+    History9: { screen: History9 },
+    GreatJob2: { screen: GreatJob2 },
+    ErrorAlert2: { screen: ErrorAlert2 },
+    ErrorAlert3: { screen: ErrorAlert3 },
+    ErrorAlert4: { screen: ErrorAlert4 },
   },
 
   {

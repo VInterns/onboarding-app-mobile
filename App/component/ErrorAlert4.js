@@ -18,11 +18,11 @@ import {
 
 import FadeInView from './FadeInView'
 
-import confused from '../assets/group2_1.png'
+import confused from '../assets/confused.png'
 
-class GreatJob extends Component {
+class ErrorAlert4 extends Component {
     static navigationOptions = {
-        title: 'great job',
+        title: 'ERROR',
     };
     render() {
         const { navigate } = this.props.navigation;
@@ -35,25 +35,21 @@ class GreatJob extends Component {
 
                 <View style={{ marginTop: 30 }}>
                     <Text style={{ color: 'red', fontSize: 26, fontWeight: 'bold' }}>
-                        Great Job !
+                        Oops !
                     </Text>
                 </View>
 
 
-                <View style={{ position: 'absolute', top: 350 ,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                <View style={{ position: 'absolute', top: 350 }}>
                     <Text style={{ color: 'black', fontSize: 21 }}>
-                        Vodafone stands for 
-                    </Text>
-
-                    <Text style={{ color: 'black', fontSize: 21 ,fontWeight:'bold'}}>
-                        Voice, Data and Phone
+                        you guessed wrong
                     </Text>
                 </View>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.ButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History4", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History8", {})} >
                         <Text style={styles.ButtonText}>
-                            Done
+                            Try again
                        </Text>
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
@@ -88,4 +84,4 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
 });
-export default GreatJob;
+export default ErrorAlert4;

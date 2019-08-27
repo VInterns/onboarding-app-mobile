@@ -19,10 +19,10 @@ import {
 import FadeInView from './FadeInView'
 
 import confused from '../assets/group2_1.png'
-
-class GreatJob extends Component {
+import styles from './styles/greatJob2.styles'
+export default class GreatJob2 extends Component {
     static navigationOptions = {
-        title: 'great job',
+        title: 'great job2',
     };
     render() {
         const { navigate } = this.props.navigation;
@@ -40,18 +40,18 @@ class GreatJob extends Component {
                 </View>
 
 
-                <View style={{ position: 'absolute', top: 350 ,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                <View style={{ position: 'absolute', top: 350, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ color: 'black', fontSize: 21 }}>
-                        Vodafone stands for 
+                         Vodafone India has
                     </Text>
 
-                    <Text style={{ color: 'black', fontSize: 21 ,fontWeight:'bold'}}>
-                        Voice, Data and Phone
+                    <Text style={{ color: 'black', fontSize: 21, fontWeight: 'bold' }}>
+                        the most subscribers
                     </Text>
                 </View>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.ButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History4", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History9", {})} >
                         <Text style={styles.ButtonText}>
                             Done
                        </Text>
@@ -63,29 +63,3 @@ class GreatJob extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-
-    button: { // button design
-        width: 128,
-        height: 38,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor:'red',
-        borderRadius :10
-    },
-
-    ButtonView: { //wrapper for button 
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        top: 462,
-      
-
-    },
-     ButtonText: { // text inside button
-        color: 'white',
-        fontSize: 20,
-    },
-});
-export default GreatJob;

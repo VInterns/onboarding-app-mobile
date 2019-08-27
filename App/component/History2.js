@@ -261,7 +261,7 @@ export default class History2 extends Component {
             this.setState({
                 showHideVoiceWord: false
             })
-            this.props.navigation.navigate("ErrorAlert", {});
+            this.props.navigation.navigate("ErrorAlert2", {});
         }
     }
 

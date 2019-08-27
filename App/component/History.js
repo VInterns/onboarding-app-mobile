@@ -68,7 +68,7 @@ export default class History extends Component {
                 </KeyboardAvoidingView>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough3", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                        </Text>

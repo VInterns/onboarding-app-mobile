@@ -381,7 +381,7 @@ export default class History1 extends Component {
                 </KeyboardAvoidingView>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough3", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                        </Text>
@@ -397,6 +397,7 @@ export default class History1 extends Component {
         );
     }
 }
+
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 

@@ -22,7 +22,7 @@ import readyButton from '../assets/group3.png'
 export default class walkTrough3 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'walkTrough 3',
+        title: 'walkThrough 3',
         fontWeight: 'bold'
     };
     constructor() {

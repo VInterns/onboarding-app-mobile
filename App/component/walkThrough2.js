@@ -20,7 +20,7 @@ import mobile from '../assets/group4.png'
 export default class walkTrough2 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'walkTrough 2',
+        title: 'walkThrough 2',
         fontWeight: 'bold'
     };
 
