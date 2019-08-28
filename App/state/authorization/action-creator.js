@@ -44,8 +44,8 @@ export async function tryLogin(user: UserLoginModel) {
       dispatch(success());
       dispatch({ type: UiTypes.UI_LOADING });
     } else {
+      dispatch({ type: UiTypes.UI_LOADING });
       dispatch(fail());
-      //dispatch({ type: UiTypes.UI_LOADING });
     }
   };
 }
