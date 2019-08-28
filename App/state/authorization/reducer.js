@@ -37,8 +37,7 @@ export function authorizationReducer(
       return {
         ...state,
         isLoggedIn: false,
-        errorMessage: action.payload,
-        loading: false
+        errorMessage: action.payload
       };
     }
 
