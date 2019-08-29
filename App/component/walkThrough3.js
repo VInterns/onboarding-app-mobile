@@ -91,7 +91,7 @@ export default class walkTrough3 extends Component {
                         this.ShowHideComponent(); //hide component except the rocket
                         this._moveRocket(); //then move rocket
                         setTimeout(function () {//finally navigate after certain delay
-                            navigate("History", {})
+                            navigate("Video1", {})
                         }, 3200)
                     }} >
                         <Image source={readyButton} style={styles.ButtonimageStyle} />

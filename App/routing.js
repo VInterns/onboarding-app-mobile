@@ -20,12 +20,14 @@ import History6 from './component/History6';
 import History7 from './component/History7';
 import History8 from './component/History8';
 import History9 from './component/History9';
+import Video1 from './component/Video1';
 import ErrorAlert from './component/ErrorAlert';
 import ErrorAlert2 from './component/ErrorAlert2';
 import ErrorAlert3 from './component/ErrorAlert3';
 import ErrorAlert4 from './component/ErrorAlert4';
 import GreatJob from './component/GreatJob';
 import GreatJob2 from './component/GreatJob2';
+
 const handleCustomTransition = ({ scenes }) => { //handle transitions between screens
   const prevScene = scenes[scenes.length - 2];
   const nextScene = scenes[scenes.length - 1];
@@ -41,8 +43,8 @@ const handleCustomTransition = ({ scenes }) => { //handle transitions between sc
     return flipY(800);
   } else if (prevScene
     && prevScene.route.routeName === 'walkThrough3'
-    && nextScene.route.routeName === 'History') {
-    return fromTop(600);
+    && nextScene.route.routeName === 'Video1') {
+    return zoomIn(600);
   } else if (prevScene
     && prevScene.route.routeName === 'History1'
     && nextScene.route.routeName === 'ErrorAlert') {
@@ -61,6 +63,10 @@ const handleCustomTransition = ({ scenes }) => { //handle transitions between sc
     && prevScene.route.routeName === 'History8'
     && nextScene.route.routeName === 'ErrorAlert4') {
     return fromTop(600);
+  } else if (prevScene
+    && prevScene.route.routeName === 'Video1'
+    && nextScene.route.routeName === 'History') {
+    return zoomIn(600);
   }
 
   return fromRight(500);
@@ -94,6 +100,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
+    Video1: { screen: Video1 },
   },
 
   {
