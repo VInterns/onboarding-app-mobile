@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import {
   StyleSheet,
   View,
@@ -8,15 +7,17 @@ import {
   TouchableOpacity,
   ImageBackground,
   Dimensions,
-  KeyboardAvoidingView,
   Text,
   Button,
+  KeyboardAvoidingView,
   Linking //for linking a button to a link
 } from "react-native";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { Spinner } from "native-base";
 
 import UserInput from "./UserInput";
+
 
 //import Spinner from './Spinner';
 
@@ -61,12 +62,17 @@ export class Login extends Component {
     const loadingSpinner = this.props.loading ? (
       <Spinner color="red" />
     ) : (
-      <Text bold red margin20>
-        {" "}
-        {this.props.errorMessage}
-      </Text>
-    );
+        <Text bold red margin20>
+          {" "}
+          {this.props.errorMessage}
+        </Text>
+      );
     return (
+<KeyboardAvoidingView
+  style={{flex:1}}
+  behavior="padding"
+  >
+<View style={{flex:1}}> 
       <ImageBackground source={backgroundImg} style={styles.wallpaper}>
         {/*background*/}
 
@@ -89,25 +95,29 @@ export class Login extends Component {
 
         {/*email user input view*/}
 
-        <View style={styles.userNameTextInputView}>
-          <Image source={user} style={styles.userNameIconStyle} />
-          <UserInput
-            placeholder={"E-mail ....."}
-            onChangeText={this.handleEmail}
-            secureTextEntry={false}
-          />
-        </View>
+    
 
-        <View style={styles.PasswordTextInputView}>
-          <Image source={carKey} style={styles.PasswordIconStyle} />
-          <UserInput
-            placeholder={"Password ....."}
-            onChangeText={this.handlePassword}
-            secureTextEntry={true}
-          />
-        </View>
+            <View style={styles.userNameTextInputView}>
+              <Image source={user} style={styles.userNameIconStyle} />
+
+              <UserInput
+                placeholder={"E-mail ....."}
+                onChangeText={this.handleEmail}
+                secureTextEntry={false}
+                />
+            </View>
+
+            <View style={styles.PasswordTextInputView}>
+              <Image source={carKey} style={styles.PasswordIconStyle} />
+              <UserInput
+                placeholder={"Password ....."}
+                onChangeText={this.handlePassword}
+                secureTextEntry={true}
+                />
+            </View>
 
         {/*forget password view*/}
+
         <View style={styles.ForgetPasswordContainer}>
           <TouchableOpacity
             onPress={() => Linking.openURL("http://google.com")}
@@ -117,22 +127,24 @@ export class Login extends Component {
           </TouchableOpacity>
         </View>
 
+
         {/*  button view */}
         {loadingSpinner}
 
-        <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
-          {/* <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough1", {})} > */}
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => this.props.tryLogin(this.state)}
-          >
-            <Image
-              source={require("../assets/arrow.png")}
-              style={styles.ButtonimageStyle}
-            />
-            <Text style={styles.ButtonText}>Login</Text>
-          </TouchableOpacity>
-        </KeyboardAvoidingView>
+        {/* <KeyboardAvoidingView behavior="padding" style={styles.buttonView}> */}
+        {/* <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough1", {})} > */}
+        <View style={styles.buttonView}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => this.props.tryLogin(this.state)}
+        >
+          <Image
+            source={require("../assets/arrow.png")}
+            style={styles.ButtonimageStyle}
+          />
+          <Text style={styles.ButtonText}>Login</Text>
+        </TouchableOpacity>
+        </View>
 
         {/*signature bottom text view*/}
         <View style={styles.EndTextView}>
@@ -141,6 +153,8 @@ export class Login extends Component {
           </Text>
         </View>
       </ImageBackground>
+      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -177,7 +191,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     color: "red",
     fontSize: 16,
-    position: "absolute",
+    // position: "absolute",
     left: 40
   },
 
