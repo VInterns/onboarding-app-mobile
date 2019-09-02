@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { Video } from 'expo-av';
-import video from '../assets/1_new.mp4';
+import video from '../assets/1-3.mp4';
 export default class Video1 extends React.Component {
     static navigationOptions = {//header styling
        header:null
     };
     _onPlaybackStatusUpdate = playbackStatus => {
-        if (playbackStatus.durationMillis + 1000 === playbackStatus.positionMillis + 1000)
+        if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500)
             // The player has just finished playing and will stop.
 
             this.props.navigation.navigate("History", {})

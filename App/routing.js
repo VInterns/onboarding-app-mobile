@@ -5,7 +5,7 @@ import {
 } from "react-navigation";
 import { LoginScreen } from "./screens/login-screen";
 
-import { fromRight, fromLeft, flipY, fadeIn, zoomIn, fromTop, flipX } from 'react-navigation-transitions'
+import { fromRight, fromLeft, flipY, fadeIn, zoomIn, fromTop, flipX, fadeOut } from 'react-navigation-transitions'
 
 import walkTrough1 from "./component/walkThrough1";
 import walkThrough2 from './component/walkThrough2';
@@ -77,13 +77,17 @@ const AppNavigator = createStackNavigator(
   {
 
     Login: {
-      screen: LoginScreen
+      screen: LoginScreen,
+       navigationOptions: {
+        header: null,
+      }, 
     },
     walkThrough: {
       screen: walkTrough1
     },
     walkThrough2: { screen: walkThrough2 },
     walkThrough3: { screen: walkThrough3 },
+    Video1: { screen: Video1 },
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },
@@ -100,7 +104,6 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
-    Video1: { screen: Video1 },
   },
 
   {

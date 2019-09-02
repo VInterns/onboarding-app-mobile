@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import {
   StyleSheet,
   View,
@@ -8,15 +7,17 @@ import {
   TouchableOpacity,
   ImageBackground,
   Dimensions,
-  KeyboardAvoidingView,
   Text,
   Button,
+  KeyboardAvoidingView,
   Linking //for linking a button to a link
 } from "react-native";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { Spinner } from "native-base";
 
 import UserInput from "./UserInput";
+
 
 //import Spinner from './Spinner';
 
@@ -44,8 +45,9 @@ export class Login extends Component {
 
   static navigationOptions = {
     //header styling
-    title: "Welcome",
-    fontWeight: "bold"
+    // title: "Welcome",
+    // fontWeight: "bold"
+    header: null
   };
 
   handleEmail = text => {
@@ -61,86 +63,98 @@ export class Login extends Component {
     const loadingSpinner = this.props.loading ? (
       <Spinner color="red" />
     ) : (
-      <Text bold red margin20>
-        {" "}
-        {this.props.errorMessage}
-      </Text>
-    );
+        <Text bold red margin20>
+          {" "}
+          {this.props.errorMessage}
+        </Text>
+      );
     return (
-      <ImageBackground source={backgroundImg} style={styles.wallpaper}>
-        {/*background*/}
 
-        <Image
-          source={logoImg}
-          style={{ position: "absolute", top: 30, right: 50 }}
-        />
-        {/* top corner logo*/}
+      <View style={{ flex: 1, backgroundColor: 'blue' }}>
+        <ImageBackground source={backgroundImg} style={styles.wallpaper}>
+          {/*background*/}
 
-        {/*welcome To and Vodabuddy text view*/}
-        <View style={styles.TextContainer}>
-          <View style={styles.welcomTextView}>
-            <Text style={styles.WelcomeText}>Welcome to</Text>
-          </View>
-          <View style={styles.VodaBuddyView}>
-            <Text style={styles.VodaText}>Voda</Text>
-            <Text style={styles.buddyText}>buddy</Text>
-          </View>
-        </View>
-
-        {/*email user input view*/}
-
-        <View style={styles.userNameTextInputView}>
-          <Image source={user} style={styles.userNameIconStyle} />
-          <UserInput
-            placeholder={"E-mail ....."}
-            onChangeText={this.handleEmail}
-            secureTextEntry={false}
+          <Image
+            source={logoImg}
+            style={styles.Logo}
           />
-        </View>
+          {/* top corner logo*/}
 
-        <View style={styles.PasswordTextInputView}>
-          <Image source={carKey} style={styles.PasswordIconStyle} />
-          <UserInput
-            placeholder={"Password ....."}
-            onChangeText={this.handlePassword}
-            secureTextEntry={true}
-          />
-        </View>
+          {/*welcome To and Vodabuddy text view*/}
+          < KeyboardAwareScrollView style={{flex:1 }} resetScrollToCoords={{ x: 0, y: 0 }} scrollEnabled={true} >
+            <View style={{ flex: 1 }}>
 
-        {/*forget password view*/}
-        <View style={styles.ForgetPasswordContainer}>
-          <TouchableOpacity
-            onPress={() => Linking.openURL("http://google.com")}
-          >
-            {/*chane the linking url in order to change password*/}
-            <Text style={styles.ForgetPasswordStyle}>Forgot Password ?</Text>
-          </TouchableOpacity>
-        </View>
+              <View style={styles.TextContainer}>
 
-        {/*  button view */}
-        {loadingSpinner}
+                <View style={styles.welcomTextView}>
+                  <Text style={styles.WelcomeText}>Welcome to</Text>
+                </View>
 
-        <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
-          {/* <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough1", {})} > */}
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => this.props.tryLogin(this.state)}
-          >
-            <Image
-              source={require("../assets/arrow.png")}
-              style={styles.ButtonimageStyle}
-            />
-            <Text style={styles.ButtonText}>Login</Text>
-          </TouchableOpacity>
-        </KeyboardAvoidingView>
+                <View style={styles.VodaBuddyView}>
+                  <Text style={styles.VodaText}>Voda</Text>
+                  <Text style={styles.buddyText}>buddy</Text>
+                </View>
 
-        {/*signature bottom text view*/}
-        <View style={styles.EndTextView}>
-          <Text style={styles.VodafoneGroupText}>
-            © 2019 Vodafone Group. Vodafone Group Plc
-          </Text>
-        </View>
-      </ImageBackground>
+              </View>
+
+              <View style={styles.userNameTextInputView}>
+                <Image source={user} style={styles.userNameIconStyle} />
+
+                <UserInput
+                  placeholder={"E-mail"}
+                  onChangeText={this.handleEmail}
+                />
+              </View>
+
+              <View style={styles.PasswordTextInputView}>
+                <Image source={carKey} style={styles.PasswordIconStyle} />
+                <UserInput
+                  placeholder={"Password"}
+                  onChangeText={this.handlePassword}
+                  secureTextEntry={true}
+                />
+              </View>
+
+              <View style={styles.ForgetPasswordContainer}>
+                <TouchableOpacity
+                // onPress={() => Linking.openURL("http://google.com")}
+                >
+                  {/*chane the linking url in order to change password*/}
+                  <Text style={styles.ForgetPasswordStyle}>Forgot Password ?</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/*  button view */}
+              {loadingSpinner}
+
+              <View>
+                <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => this.props.tryLogin(this.state)}
+                >
+                  <Text style={styles.ButtonText}>Login</Text>
+                  <Image
+                    source={require("../assets/arrow.png")}
+                    style={styles.ButtonimageStyle}
+                  />
+                </TouchableOpacity>
+              </View>
+
+            </View>
+          </KeyboardAwareScrollView >
+
+          {/*signature bottom text view*/}
+          <View style={styles.EndTextView}>
+            <Text style={styles.VodafoneGroupText}>
+              © 2019 Vodafone Group. Vodafone Group Plc
+            </Text>
+          </View>
+
+        </ImageBackground>
+      </View >
+
+
+
     );
   }
 }
@@ -151,46 +165,29 @@ const DEVICE_HEIGHT = Dimensions.get("window").height;
 const styles = StyleSheet.create({
   wallpaper: {
     //background style
-    flex: 1,
     height: "100%",
-    width: "100%"
-  },
-
-  EndTextView: {
     width: "100%",
-    // height: 0,
-    //flex: 0.1,
-    // backgroundColor: 'green',
-    alignItems: "center",
-    justifyContent: "center", // center of the flex view
-    // marginTop: 5
-    position: "absolute",
-    bottom: 0
-  },
 
+  },
+  Logo: {
+    position: "absolute",
+    marginLeft: DEVICE_WIDTH * 0.7,
+    marginTop: DEVICE_HEIGHT * 0.1
+  },
   VodafoneGroupText: {
     color: "white"
   },
 
   WelcomeText: {
-    //welcome to word style
-    alignItems: "center",
     color: "red",
     fontSize: 16,
-    position: "absolute",
-    left: 40
   },
 
   VodaText: {
-    //login word text style
-    //textAlign: 'center',
     color: "red",
     fontWeight: "bold",
     fontSize: 35
-    /*    position: 'absolute',
-       left: 40 */
   },
-
   buddyText: {
     color: "black",
     fontWeight: "bold",
@@ -198,133 +195,91 @@ const styles = StyleSheet.create({
   },
   welcomTextView: {
     width: "100%",
-    alignItems: "center"
-    // backgroundColor:'green'
   },
 
   TextContainer: {
-    /* Welcome back and vodabuddy wrapper */
-
+    marginLeft: DEVICE_WIDTH * 0.07,
     flexDirection: "column",
-    // flex: 0.35,
-    // backgroundColor: 'green',
-    alignItems: "center",
-    // justifyContent: 'center',
-    top: 200
+    marginTop: DEVICE_HEIGHT * 0.30,
+    width: DEVICE_WIDTH * 0.396
   },
-
   VodaBuddyView: {
     width: "100%",
     flexDirection: "row",
-    //  backgroundColor: 'yellow',
-    position: "absolute",
-    top: 18,
-    left: 40
-    // alignItems:'flex-start'
+  },
+  button: {
+    // button design
+    // width: DEVICE_WIDTH - 250, 
+    width: DEVICE_WIDTH * 0.35,
+    height: 40,
+    backgroundColor: "#E00000",
+    borderColor: "#E00000",
+    alignItems: "center",
+    borderRadius: 15,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    marginLeft: DEVICE_WIDTH * 0.07,
+    marginTop: DEVICE_HEIGHT * 0.02,
+    borderStyle: "solid",
+    borderWidth: 1
+  },
+  ButtonimageStyle: {
+    height: 16.5,
+    width: 16.5,
+    resizeMode: "stretch",
+    marginLeft: DEVICE_WIDTH * 0.03,
+    marginTop: DEVICE_HEIGHT * 0.004
+  },
+
+  ButtonText: {
+    color: "white",
+    fontSize: 18,
+    justifyContent: "center",
+    marginLeft: DEVICE_WIDTH * 0.07,
+  },
+  userNameIconStyle: {
+    marginLeft: DEVICE_WIDTH * 0.07,
+    marginTop: 2,
+    height: 14,
+    width: 12,
+    resizeMode: "stretch",
+  },
+  userNameTextInputView: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    height: 45,
+    marginTop: DEVICE_HEIGHT * 0.06
+  },
+  PasswordTextInputView: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    height: 45,
+    marginTop: DEVICE_HEIGHT * 0.01
+  },
+  PasswordIconStyle: {
+    marginLeft: DEVICE_WIDTH * 0.07,
+    height: 14,
+    width: 12,
+    resizeMode: "stretch",
   },
 
   ForgetPasswordContainer: {
     //forget password wrapper
-    // flex: 0.1,
-    justifyContent: "center", // center of the flex view
-    position: "absolute",
-    top: 400,
-    left: 40
+    justifyContent: "flex-start", // center of the flex view
+    marginLeft: DEVICE_WIDTH * 0.07,
   },
   ForgetPasswordStyle: {
-    //forget password style
-    //textAlign: 'center',
-    color: "blue",
-    // fontWeight : 'bold',
-    // justifyContent: 'center',
-    //paddingBottom:'45%',
-    fontSize: 14,
-    justifyContent: "space-around",
-    textAlign: "left"
-    // paddingRight: 30
+    height: 18,
+    // fontFamily: "VodafoneRg",
+    fontSize: 16,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    letterSpacing: 0,
+    color: "#4b464d"
   },
-
-  button: {
-    // button design
-    width: DEVICE_WIDTH - 250,
-    height: 40,
-    justifyContent: "center",
-    backgroundColor: "#B82202",
-    borderColor: "black",
+  EndTextView: {
     alignItems: "center",
-    borderRadius: 15,
-    flexDirection: "row"
-  },
-  ButtonimageStyle: {
-    //button icon
-    margin: 5,
-    marginLeft: 0,
-    marginRight: 15,
-    height: 16.5,
-    width: 16.5,
-    resizeMode: "stretch"
-  },
-  buttonView: {
-    //wrapper for button
-    // flex: 0.15,
     justifyContent: "center",
-    flexDirection: "row",
-    alignItems: "center",
-    position: "absolute",
-    top: 450,
-    left: 40
-    // marginTop: 50,
-  },
-  ButtonText: {
-    // text inside button
-    //textAlign: 'center',
-    color: "white",
-    //fontWeight: 'bold',
-    // justifyContent: 'center',
-    //paddingBottom:'45%',
-    fontSize: 18,
-    justifyContent: "space-around"
-  },
-
-  userNameIconStyle: {
-    //padding: 4,//icon size
-    // paddingLeft:10,
-    margin: 25,
-    height: 12,
-    width: 12,
-    resizeMode: "stretch",
-    alignItems: "center"
-    //justifyContent:'center'
-  },
-
-  userNameTextInputView: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    height: 40,
-    position: "absolute",
-    //margin: 10
-    top: 300
-  },
-  PasswordTextInputView: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    height: 40,
-    position: "absolute",
-    //margin: 10
-    top: 340
-  },
-  PasswordIconStyle: {
-    padding: 5, //icon size
-    // paddingLeft:10,
-    margin: 25,
-    height: 13,
-    width: 14,
-    resizeMode: "stretch",
-    alignItems: "center"
-    //justifyContent:'center'
+    height: DEVICE_HEIGHT * 0.05,
   }
 });
-
-

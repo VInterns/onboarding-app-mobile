@@ -92,7 +92,7 @@ export default class walkTrough3 extends Component {
                         this._moveRocket(); //then move rocket
                         setTimeout(function () {//finally navigate after certain delay
                             navigate("Video1", {})
-                        }, 3200)
+                        }, 3000)
                     }} >
                         <Image source={readyButton} style={styles.ButtonimageStyle} />
                     </TouchableOpacity>
