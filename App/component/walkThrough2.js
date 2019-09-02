@@ -20,7 +20,7 @@ import mobile from '../assets/group4.png'
 export default class walkTrough2 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'walkTrough 2',
+        title: 'walkThrough 2',
         fontWeight: 'bold'
     };
 
@@ -66,6 +66,8 @@ export default class walkTrough2 extends Component {
         );
     }
 }
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     wallpaper: { //background style
         resizeMode: 'cover',
@@ -74,7 +76,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        right: 220
+        //right: 220
+        left: DEVICE_WIDTH - (DEVICE_WIDTH + (DEVICE_WIDTH / 2))
     },
     RedText: {//welcome to word style
         // alignItems: 'center',
