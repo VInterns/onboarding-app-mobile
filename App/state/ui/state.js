@@ -1,7 +1,9 @@
 export interface UiState {
   loading: boolean;
+  currentSection:number;
 }
 
 export const UiInitialState: UiState = {
-  loading: false
+  loading: false,
+  currentSection:0
 };

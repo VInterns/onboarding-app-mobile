@@ -28,7 +28,8 @@ export function authorizationReducer(
       return {
         ...state,
         token: action.payload,
-        isLoggedIn: true
+        isLoggedIn: true,
+        loading:false
         // username: action.payload.username
       };
     }
@@ -64,6 +65,12 @@ export function authorizationReducer(
       };
     }
 
+    case types.LOGOUT:{
+      return {
+        ...state,
+        isLoggedIn:false,
+      }
+    }
     default:
       return state;
   }
