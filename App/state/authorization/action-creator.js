@@ -18,6 +18,7 @@ export type LOGIN_SUCCESS_Action = {
   payload: any
 };
 export type LOGIN_FAIL_Action = { type: string, payload: string };
+export type LOGOUT = { type: String, payload: string };
 
 /*************** */
 
@@ -31,8 +32,6 @@ export type REGISTER_FAIL_Action = { type: string, payload: string };
 /*************************** */
 
 export async function tryLogin(user: UserLoginModel) {
-  debugger;
-  let token = null;
   return async dispatch => {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_LOADING });
@@ -103,4 +102,10 @@ export function registerSuccess(): REGISTER_SUCCESS_Action {
 export function registerFail(): REGISTER_FAIL_Action {
   const errorMsg = "Invalid Credentials";
   return { type: types.REGISTER_FAIL, payload: errorMsg };
+}
+
+export function logout(){
+  return {
+    type:types.LOGOUT
+  }
 }
