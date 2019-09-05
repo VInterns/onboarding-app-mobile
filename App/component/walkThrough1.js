@@ -17,25 +17,22 @@ import FadeInView from './FadeInView'
 import backgroundImg from '../assets/group.png';
 import mobile from '../assets/mobile.png'
 //import backgroundImg from '../assets/background.png';
-export default class walkTrough1 extends Component {
+export default class walkThrough1 extends Component {
 
     static navigationOptions = {//header styling
-      header:null
+        header: null
     };
 
 
     render() {
         const { navigate } = this.props.navigation;
-
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-
-                <ImageBackground source={backgroundImg} style={styles.wallpaper}>
-                    <Image source={mobile} style={{ marginTop: 38 }} />{/* centered mobile logo*/}
-                </ImageBackground>
-
+            <View style={{ justifyContent: 'flex-start', alignItems: 'center', flex: 1, }}>
                 {/*welcome  and on board text view*/}
+
                 <View style={styles.WelcomOnBoardTextContainer}>
 
                     <View style={styles.welcomTextView}>
@@ -51,12 +48,16 @@ export default class walkTrough1 extends Component {
                     </View>
                 </View>
 
+                <ImageBackground source={backgroundImg} style={styles.wallpaper} >
+                    <Image source={mobile} style={{ justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.06 }} />
+                </ImageBackground>
+
                 {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
+                <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough2", {})} >
                         <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
                     </TouchableOpacity>
-                </KeyboardAvoidingView>
+                </View>
 
             </View >
 
@@ -68,31 +69,25 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     wallpaper: { //background style
-        //flex: 1,
-        resizeMode: 'cover',
-        height: 340,
-        width: 340,
+        // flex: 1,
+        resizeMode: 'center',
+        marginTop: DEVICE_WIDTH * 0.1,
+        height: DEVICE_WIDTH * 0.93,
+        width: DEVICE_WIDTH * 0.93,
         justifyContent: 'center',
         alignItems: 'center',
 
+        //  backgroundColor: 'blue'
     },
     WelcomeText: {//welcome to word style
-        // alignItems: 'center',
         color: 'red',
-        fontSize: 30,
+        fontSize: DEVICE_WIDTH * 0.085,
         fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
     },
 
     onBoardText: {//login word text style
-        //textAlign: 'center',
         color: 'black',
-        // fontWeight: 'bold',
-        fontSize: 30,
-        /*    position: 'absolute',
-           left: 40 */
+        fontSize: DEVICE_WIDTH * 0.085,
     },
 
     welcomTextView: {
@@ -103,9 +98,8 @@ const styles = StyleSheet.create({
     WelcomOnBoardTextContainer: {/* Welcome back and vodabuddy wrapper */
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: 40
+        justifyContent: 'flex-start',
+        marginTop: DEVICE_HEIGHT * 0.1,
     },
 
     onBoardView: {
@@ -134,12 +128,15 @@ const styles = StyleSheet.create({
         ],
     },
     buttonView: { //wrapper for button 
-
-        justifyContent: 'center',
+        flex: 1,
+        justifyContent: 'flex-end',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 30,
-        right: 30
+        /*         position: 'absolute',
+                bottom: 30,
+                right: 30 */
+        marginBottom: DEVICE_HEIGHT * 0.05,
+        marginLeft: DEVICE_WIDTH * 0.65,
+
 
     },
 });

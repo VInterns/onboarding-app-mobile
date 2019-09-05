@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { Video } from 'expo-av';
-import video from '../assets/1-3.mp4';
+import video from '../assets/01.mp4';
 export default class Video1 extends React.Component {
     static navigationOptions = {//header styling
        header:null

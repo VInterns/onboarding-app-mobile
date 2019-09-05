@@ -7,7 +7,7 @@ import { LoginScreen } from "./screens/login-screen";
 
 import { fromRight, fromLeft, flipY, fadeIn, zoomIn, fromTop, flipX, fadeOut } from 'react-navigation-transitions'
 
-import walkTrough1 from "./component/walkThrough1";
+import walkThrough1 from "./component/walkThrough1";
 import walkThrough2 from './component/walkThrough2';
 import walkThrough3 from './component/walkThrough3';
 import History from './component/History';
@@ -27,6 +27,7 @@ import ErrorAlert3 from './component/ErrorAlert3';
 import ErrorAlert4 from './component/ErrorAlert4';
 import GreatJob from './component/GreatJob';
 import GreatJob2 from './component/GreatJob2';
+//import AppIntroSlider from './component/AppIntroSlider';
 
 const handleCustomTransition = ({ scenes }) => { //handle transitions between screens
   const prevScene = scenes[scenes.length - 2];
@@ -78,12 +79,13 @@ const AppNavigator = createStackNavigator(
 
     Login: {
       screen: LoginScreen,
-       navigationOptions: {
+      navigationOptions: {
         header: null,
-      }, 
+      },
     },
+    //AppIntroSlider: { screen: AppIntroSlider },
     walkThrough: {
-      screen: walkTrough1
+      screen: walkThrough1
     },
     walkThrough2: { screen: walkThrough2 },
     walkThrough3: { screen: walkThrough3 },
@@ -104,6 +106,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
+
   },
 
   {

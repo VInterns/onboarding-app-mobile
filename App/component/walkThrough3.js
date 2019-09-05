@@ -19,7 +19,7 @@ import backgroundImg from '../assets/group.png';
 import rocket from '../assets/rocket.png'
 import readyButton from '../assets/group3.png'
 
-export default class walkTrough3 extends Component {
+export default class walkThrough3 extends Component {
 
     static navigationOptions = {//header styling
         title: 'walkThrough 3',
@@ -62,13 +62,7 @@ export default class walkTrough3 extends Component {
 
         const show =
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-                <ImageBackground source={backgroundImg} style={styles.wallpaper}>{/*background*/}
-                </ImageBackground >
-
-                <FadeInView>
-                    <Image source={rocket} style={{ marginLeft: 10 }} />{/* centered logo*/}
-                </FadeInView>
+            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
                 {/*header text view*/}
                 <View style={styles.TextContainer}>
@@ -85,8 +79,15 @@ export default class walkTrough3 extends Component {
                     </View>
                 </View>
 
-                {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
+
+                <ImageBackground source={backgroundImg} style={styles.wallpaper}>
+                    <FadeInView>
+                        <Image source={rocket} style={{ justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.04, marginRight: DEVICE_WIDTH, }} />
+                    </FadeInView>
+                </ImageBackground >
+
+
+                <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.button} onPress={() => {
                         this.ShowHideComponent(); //hide component except the rocket
                         this._moveRocket(); //then move rocket
@@ -96,13 +97,13 @@ export default class walkTrough3 extends Component {
                     }} >
                         <Image source={readyButton} style={styles.ButtonimageStyle} />
                     </TouchableOpacity>
-                </KeyboardAvoidingView>
+                </View>
 
             </View>
 
         const hide =
             <Animated.View style={this.moveAnimation.getLayout()}>
-                <Image source={rocket} style={{ marginLeft: 10 }} />{/* centered logo*/}
+                        <Image source={rocket} style={{ justifyContent: 'center', alignItems: 'center' }} />
             </Animated.View>
 
         return (
@@ -118,36 +119,28 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     wallpaper: { //background style
-        resizeMode: 'cover',
-        height: 340,
-        width: 340,
+        resizeMode: 'center',
+        marginTop: DEVICE_WIDTH * 0.03,
+        height: DEVICE_WIDTH * 0.93,
+        width: DEVICE_WIDTH * 0.93,
         justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        //left: 220
-        right: DEVICE_WIDTH - (DEVICE_WIDTH + (DEVICE_WIDTH / 2))
-},
+        marginLeft: DEVICE_WIDTH
+    },
     RedText: {//red text style
-        // alignItems: 'center',
         color: 'red',
-        fontSize: 35,
-        fontWeight: 'bold',
-        // position: 'absolute',
-        //  left: 40,
-        //  top: 50
+        fontSize: DEVICE_WIDTH * 0.08,
+
     },
 
     blackText: {//black text style
-        //textAlign: 'center',
         color: 'black',
-        // fontWeight: 'bold',
-        fontSize: 35,
-        //    position: 'absolute',
-        //  left: 40
+        fontSize: DEVICE_WIDTH * 0.08,
+        fontWeight: 'bold',
     },
 
     redView: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center'
     },
 
@@ -155,52 +148,30 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'center',
-        position: 'absolute',
-        top: 40,
-        left: 40
-
+        marginTop: DEVICE_HEIGHT * 0.05
     },
 
     blackView: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
-
     },
 
     button: { // button design
-        /*    width: 50,
-           height: 50,
-           backgroundColor: 'red',
-           borderColor: 'red',
-           transform: [     //to create rhombus shape by rotating the square shape
-               { rotate: '45deg' }
-           ],
-           borderRadius: 10, */
         width: 100,
         height: 100,
         borderRadius: 100 / 2,
         backgroundColor: 'red',
-        /*         transform: [     //to create rhombus shape by rotating the square shape
-                    { rotate: '45deg' }
-                ],
-         */
     },
     ButtonimageStyle: {//button icon
         //margin: 2,
         height: 100,
         width: 100,
         resizeMode: 'stretch',
-        /*        transform: [ //to adjust the image inside the button 
-                   { rotate: '315deg' }
-               ], */
     },
     buttonView: { //wrapper for button 
-
-        justifyContent: 'center',
+        flex: 1,
+        justifyContent: 'flex-end',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 40,
-        right: 150
-
+        marginBottom: DEVICE_HEIGHT * 0.05
     },
 });

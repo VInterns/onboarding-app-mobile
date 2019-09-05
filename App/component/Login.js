@@ -53,7 +53,7 @@ export class Login extends Component {
   handleEmail = text => {
     this.setState({ email: text });
   };
-
+s
   handlePassword = text => {
     this.setState({ password: text });
   };
@@ -61,7 +61,7 @@ export class Login extends Component {
   render() {
     const { navigate } = this.props.navigation;
     const loadingSpinner = this.props.loading ? (
-      <Spinner color="red" />
+      <Spinner color="red" style={{position:'absolute'}}/>
     ) : (
         <Text bold red margin20>
           {" "}
@@ -72,7 +72,7 @@ export class Login extends Component {
 
 
 
-      <View style={{ flex: 1, backgroundColor: 'blue' }}>
+      <View style={{ flex: 1,}}>
         <ImageBackground source={backgroundImg} style={styles.wallpaper}>
           {/*background*/}
 

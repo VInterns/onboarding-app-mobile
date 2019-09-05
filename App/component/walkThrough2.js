@@ -17,27 +17,22 @@ import FadeInView from './FadeInView'
 import backgroundImg from '../assets/group.png';
 import mobile from '../assets/group4.png'
 
-export default class walkTrough2 extends Component {
+export default class walkThrough2 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'walkThrough 2',
-        fontWeight: 'bold'
+        /* title: 'walkThrough 2',
+        fontWeight: 'bold' */
+        header: null
     };
 
 
     render() {
         const { navigate } = this.props.navigation;
-
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-                <ImageBackground source={backgroundImg} style={styles.wallpaper}>{/*background*/}
-                </ImageBackground >
+            <View style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', flex: 1 }}>
 
-                <FadeInView>
-                    <Image source={mobile} style={{ marginLeft: 10 }} />{/* centered logo*/}
-                </FadeInView>
-
-                {/*header text view*/}
                 <View style={styles.TextContainer}>
                     <View style={styles.redView}>
                         <FadeInView>
@@ -52,15 +47,20 @@ export default class walkTrough2 extends Component {
                     </View>
                 </View>
 
+                <ImageBackground source={backgroundImg} style={styles.wallpaper}>
+                    <FadeInView>
+                        <Image source={mobile} style={{ justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.045, marginLeft: DEVICE_WIDTH, }} />
+                    </FadeInView>
+                </ImageBackground >
+
                 {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
+                <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough3", {})} >
                         <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
                     </TouchableOpacity>
-                </KeyboardAvoidingView>
+                </View>
+
             </View>
-
-
 
 
         );
@@ -70,32 +70,24 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     wallpaper: { //background style
-        resizeMode: 'cover',
-        height: 340,
-        width: 340,
+        resizeMode: 'center',
+        marginTop: DEVICE_WIDTH * 0.05,
+        height: DEVICE_WIDTH * 0.93,
+        width: DEVICE_WIDTH * 0.93,
         justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        //right: 220
-        left: DEVICE_WIDTH - (DEVICE_WIDTH + (DEVICE_WIDTH / 2))
+        marginRight: DEVICE_WIDTH
     },
     RedText: {//welcome to word style
-        // alignItems: 'center',
         color: 'red',
-        fontSize: 25,
-        fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
+        fontSize: DEVICE_WIDTH * 0.065,
+
     },
 
     blackText: {//login word text style
-        //textAlign: 'center',
         color: 'black',
-        // fontWeight: 'bold',
-        fontSize: 25,
-        /*    position: 'absolute',
-           left: 40 */
+        fontSize: DEVICE_WIDTH * 0.065,
+        fontWeight: 'bold'
     },
 
     redView: {
@@ -105,10 +97,9 @@ const styles = StyleSheet.create({
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
-        position: 'absolute',
-        top: 40
+        marginTop: DEVICE_HEIGHT * 0.1
     },
 
     blackView: {
@@ -137,12 +128,10 @@ const styles = StyleSheet.create({
         ],
     },
     buttonView: { //wrapper for button 
-
-        justifyContent: 'center',
+        flex: 1,
+        justifyContent: 'flex-end',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 30,
-        right: 30
-
+        marginBottom: DEVICE_HEIGHT * 0.05,
+        marginLeft: DEVICE_WIDTH * 0.65,
     },
 });
