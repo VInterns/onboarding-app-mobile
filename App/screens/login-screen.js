@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { State, tryLogin ,logout} from "../state";
+import { State, tryLogin } from "../state";
 
 import { UserLoginModel } from "../proxy";
 import { Login } from "../component/Login";
 class LoginContainer extends Component {
-  constructor(){
-    super();
-    this.state = {};
-  }
   static mapStateToProps(state: State) {
     return {
       isLoggedIn: state.authorization.isLoggedIn,
@@ -20,27 +16,24 @@ class LoginContainer extends Component {
   }
 
   static mapDispatchToProps(dispatch: Dispatch) {
-    return bindActionCreators({ tryLogin,logout }, dispatch);
+    return bindActionCreators({ tryLogin }, dispatch);
   }
 
   props: {
     errorMessage: string,
     loading: boolean,
     isLoggedIn: boolean,
-    tryLogin: (user: UserLoginModel) => void,
-    logout:()=>void
+    tryLogin: (user: UserLoginModel) => void
   };
 
-  static getDerivedStateFromProps(props, state){
-    if(props.isLoggedIn){
-      props.navigation.navigate("walkThrough");
-return state;
+  componentWillReceiveProps(nextProps) {
+    debugger;
+    if (nextProps.isLoggedIn) {
+      nextProps.navigation.navigate("walkThrough");
     }
-    return state;
   }
 
   render() {
-    // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     return (
       <Login
         loading={this.props.loading}

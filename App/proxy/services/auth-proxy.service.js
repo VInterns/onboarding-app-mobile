@@ -4,7 +4,7 @@ import {
   UserLoginModel,
   UserConfirmModel
 } from "../models/index";
-
+import { Application } from "../../application";
 export class AuthProxyService {
   async login(user: UserLoginModel) {
     debugger;
