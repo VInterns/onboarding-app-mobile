@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 import {
     StyleSheet,
     View,
@@ -10,6 +11,7 @@ import {
     KeyboardAvoidingView,
     Text,
     Animated,
+    BackHandler
 
 } from 'react-native';
 
@@ -22,6 +24,17 @@ export default class walkTrough1 extends Component {
     static navigationOptions = {//header styling
       header:null
     };
+
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+    }
+    handleBackButton() {
+        return true;
+    } 
 
 
     render() {
