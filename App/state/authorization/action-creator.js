@@ -38,7 +38,7 @@ export async function tryLogin(user: UserLoginModel) {
     dispatch({ type: UiTypes.UI_LOADING });
     let response = await authProxyService.login(user);
     debugger;
-    // token = await response.json();
+    token = await response.json();
     if (response.status === 200) {
       debugger;
       dispatch(success());
@@ -50,11 +50,9 @@ export async function tryLogin(user: UserLoginModel) {
   };
 }
 
-
 export async function tryNavigate(nextScreen: string) {
   return async dispatch => {
     dispatch(onNextScreen(nextScreen));
-
   };
 }
 
@@ -116,13 +114,12 @@ export function registerFail(): REGISTER_FAIL_Action {
 export function logout() {
   return {
     type: types.LOGOUT
-  }
+  };
 }
 
 export function onNextScreen(nextScreen): NextScreenModel {
   return {
     type: types.ON_NEXT_SCREEN,
     payload: nextScreen
-  }
+  };
 }
-

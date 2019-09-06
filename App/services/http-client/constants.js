@@ -1,6 +1,6 @@
 const PROD_BASE_URL = "";
 
-const DEV_BASE_URL = "http://localhost:85/";
+const DEV_BASE_URL = "https://8a8170d4.ngrok.io/";
 
 // const PROD_BASE_URL = "";
 const DEV = true;

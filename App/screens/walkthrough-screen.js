@@ -5,17 +5,15 @@ import { connect } from "react-redux";
 import { State, tryNavigate } from "../state";
 import WalkThrough1 from "../component/walkThrough1";
 
-
 class Walkthrough1Container extends Component {
   constructor() {
     super();
     this.state = {};
   }
 
-
   static mapStateToProps(state: State) {
     return {
-      lastScreen: state.authorization
+      lastScreen: state.authorization.lastScreen
     };
   }
 
@@ -24,15 +22,11 @@ class Walkthrough1Container extends Component {
   }
 
   props: {
-    tryNavigate: (nextScreen: string) => void,
+    tryNavigate: (nextScreen: string) => void
   };
 
   static getDerivedStateFromProps(props, state) {
-    console.log("getDrived------------------------")
-    console.log(props.lastScreen);
-    // props.navigation.actions.push(props.lastScreen);
-    props.navigation.navigate("walkThrough2");
-
+    props.navigation.navigate(props.lastScreen);
 
     return state;
   }
@@ -49,7 +43,6 @@ class Walkthrough1Container extends Component {
     );
   }
 }
-
 
 export const walkThrough1Screen = connect(
   Walkthrough1Container.mapStateToProps,
