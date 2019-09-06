@@ -9,6 +9,7 @@ import {
 import * as UiTypes from "../ui/actions";
 
 import { NavigationActions } from "react-navigation";
+import walkTrough2 from "../../component/walkThrough2";
 // import NavigatorService from "../../services/navigator";
 
 /*************** */
@@ -46,6 +47,14 @@ export async function tryLogin(user: UserLoginModel) {
       dispatch({ type: UiTypes.UI_LOADING });
       dispatch(fail());
     }
+  };
+}
+
+
+export async function tryNavigate(nextScreen: string) {
+  return async dispatch => {
+    dispatch(onNextScreen(nextScreen));
+
   };
 }
 
@@ -109,3 +118,12 @@ export function logout(){
     type:types.LOGOUT
   }
 }
+
+export function onNextScreen(nextScreen): NextScreenModel{
+  console.log(lastScreen + "This is the last screen" );
+  return {
+    type: types.ON_NEXT_SCREEN,
+    payload: nextScreen
+  }
+}
+

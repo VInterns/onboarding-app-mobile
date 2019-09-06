@@ -6,3 +6,6 @@ export const LOGOUT ="[LOGOUT] logout";
 export const ON_REGISTER = "[auth] on Register";
 export const REGISTER_SUCCESS = "[auth] Register success";
 export const REGISTER_FAIL = "[auth] Register fail";
+
+
+export const ON_NEXT_SCREEN = "[auth] on Next";

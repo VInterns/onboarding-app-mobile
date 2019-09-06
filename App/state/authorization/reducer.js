@@ -9,7 +9,8 @@ type Action =
   | actions.LOGIN_FAIL_Action
   | actions.ON_REGISTER_Action
   | actions.REGISTER_SUCCESS_Action
-  | actions.REGISTER_FAIL_Action;
+  | actions.REGISTER_FAIL_Action
+  | actions.ON_NEXT_SCREEN;
 
 export function authorizationReducer(
   state: AuthorizationState = AuthorizationInitialState,
@@ -29,7 +30,8 @@ export function authorizationReducer(
         ...state,
         token: action.payload,
         isLoggedIn: true,
-        loading:false
+        loading:false,
+        lastScreen: "walkThrough"
         // username: action.payload.username
       };
     }
@@ -69,6 +71,13 @@ export function authorizationReducer(
       return {
         ...state,
         isLoggedIn:false,
+      }
+    }
+
+    case types.ON_NEXT_SCREEN:{
+      return {
+        ...state,
+        lastScreen: action.payload
       }
     }
     default:

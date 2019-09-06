@@ -9,3 +9,7 @@ export interface UserRegisterModel {
   email: string;
   mobileNumber: number;
 }
+
+export interface NextScreenModel {
+  nextScreen: String;
+}

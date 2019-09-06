@@ -19,7 +19,19 @@ import FadeInView from './FadeInView'
 import backgroundImg from '../assets/group.png';
 import mobile from '../assets/mobile.png'
 //import backgroundImg from '../assets/background.png';
-export default class walkTrough1 extends Component {
+export default class WalkThrough1 extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            lastScreen: ""
+        };
+      }
+
+    props: {
+        tryNavigate: (nextScreen: string) => void,
+      };
 
     static navigationOptions = {//header styling
       header:null
@@ -65,11 +77,11 @@ export default class walkTrough1 extends Component {
                 </View>
 
                 {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("walkThrough2", {})} >
+                <TouchableOpacity style={styles.button} onPress={() => 
+                        this.props.tryNavigate("walkthrought2")}
+                >
                         <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                </TouchableOpacity>
 
             </View >
 
