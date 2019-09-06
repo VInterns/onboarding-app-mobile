@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { State, tryLogin ,logout, onNextScreen} from "../state";
+import { State, tryLogin, logout, onNextScreen } from "../state";
 
 import { UserLoginModel } from "../proxy";
 import { Login } from "../component/Login";
 
 class LoginContainer extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {};
   }
@@ -22,7 +22,7 @@ class LoginContainer extends Component {
   }
 
   static mapDispatchToProps(dispatch: Dispatch) {
-    return bindActionCreators({ tryLogin,logout, onNextScreen }, dispatch);
+    return bindActionCreators({ tryLogin, logout, onNextScreen }, dispatch);
   }
 
   props: {
@@ -30,14 +30,14 @@ class LoginContainer extends Component {
     loading: boolean,
     isLoggedIn: boolean,
     tryLogin: (user: UserLoginModel) => void,
-    logout:()=>void,
+    logout: () => void,
     lastScreen: string,
     onNextScreen: (lastScreen: NextScreenModel) => void,
   };
 
-  static getDerivedStateFromProps(props, state){
-    if(props.isLoggedIn){
-       props.navigation.navigate("walkThrough");
+  static getDerivedStateFromProps(props, state) {
+    if (props.isLoggedIn) {
+      props.navigation.navigate(props.lastScreen);
 
       return state;
     }
