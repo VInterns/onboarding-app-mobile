@@ -113,14 +113,13 @@ export function registerFail(): REGISTER_FAIL_Action {
   return { type: types.REGISTER_FAIL, payload: errorMsg };
 }
 
-export function logout(){
+export function logout() {
   return {
-    type:types.LOGOUT
+    type: types.LOGOUT
   }
 }
 
-export function onNextScreen(nextScreen): NextScreenModel{
-  console.log(lastScreen + "This is the last screen" );
+export function onNextScreen(nextScreen): NextScreenModel {
   return {
     type: types.ON_NEXT_SCREEN,
     payload: nextScreen
