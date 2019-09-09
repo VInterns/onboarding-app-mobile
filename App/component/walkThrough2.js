@@ -9,7 +9,8 @@ import {
   Dimensions,
   KeyboardAvoidingView,
   Text,
-  Animated
+  Animated,
+  // BackHandler
 } from "react-native";
 
 import FadeInView from "./FadeInView";
@@ -17,14 +18,40 @@ import backgroundImg from "../assets/group.png";
 import mobile from "../assets/group4.png";
 
 export default class walkTrough2 extends Component {
+  
+  constructor() {
+    super();
+
+    this.state = {
+      lastScreen: ""
+    };
+  }
+  
+  props: {
+    tryNavigate: (nextScreen: string) => void
+  };
+  
   static navigationOptions = {
     //header styling
-    title: "walkThrough 2",
-    fontWeight: "bold"
+    header: null
+  };
+
+  // componentDidMount() {
+  //   BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
+  // }
+
+  // componentWillUnmount() {
+  //   BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+  // }
+  // handleBackButton() {
+  //   return true;
+  // }
+
+  tryNavigate = () => {
+    this.props.tryNavigate("walkThrough3");
   };
 
   render() {
-    console.log("HI ");
     const { navigate } = this.props.navigation;
 
     return (
@@ -64,7 +91,7 @@ export default class walkTrough2 extends Component {
         <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigate("walkThrough3", {})}
+            onPress={this.tryNavigate}
           >
             <Image
               source={require("../assets/arrow.png")}

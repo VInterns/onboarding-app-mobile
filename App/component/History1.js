@@ -43,8 +43,7 @@ import EletterRed from '../assets/active_5.png';
 export default class History1 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History1',
-        fontWeight: 'bold'
+        header: null
     };
 
     constructor() {

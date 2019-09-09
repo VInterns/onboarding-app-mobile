@@ -19,8 +19,7 @@ import centerImg from '../assets/group_1.png'
 export default class History5 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History5',
-        fontWeight: 'bold'
+        header: null
     };
 
 

@@ -19,8 +19,7 @@ import centerImg from '../assets/map.png'
 export default class History4 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History4',
-        fontWeight: 'bold'
+        header: null
     };
 
 

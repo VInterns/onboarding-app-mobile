@@ -118,6 +118,7 @@ export function logout() {
 }
 
 export function onNextScreen(nextScreen): NextScreenModel {
+  debugger;
   return {
     type: types.ON_NEXT_SCREEN,
     payload: nextScreen

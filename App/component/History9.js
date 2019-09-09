@@ -21,8 +21,9 @@ import centerImg from '../assets/subscibersRank.png'
 export default class History8 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History9',
-        fontWeight: 'bold'
+        // title: 'History9',
+        // fontWeight: 'bold'
+        header: null
     };
 
     render() {

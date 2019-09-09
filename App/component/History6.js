@@ -20,8 +20,7 @@ import centerImg from '../assets/undrawBuildingBlocksN0Nc.png'
 export default class History6 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History6',
-        fontWeight: 'bold'
+        header: null
     };
 
 

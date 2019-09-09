@@ -3,12 +3,12 @@ import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import { State, tryNavigate } from "../state";
-import WalkThrough1 from "../component/walkThrough1";
+import WalkThrough2 from "../component/walkThrough2";
 
-class Walkthrough1Container extends Component {
+class Walkthrough2Container extends Component {
   constructor() {
     super();
-    this.state = {};
+
   }
 
   static mapStateToProps(state: State) {
@@ -35,7 +35,7 @@ class Walkthrough1Container extends Component {
     // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     console.log(this.props.tryNavigate, "This is the tryNavigate");
     return (
-      <WalkThrough1
+      <WalkThrough2
         tryNavigate={this.props.tryNavigate}
         navigation={this.props.navigation}
         isLoggedIn={this.props.isLoggedIn}
@@ -44,7 +44,7 @@ class Walkthrough1Container extends Component {
   }
 }
 
-export const walkThrough1Screen = connect(
-  Walkthrough1Container.mapStateToProps,
-  Walkthrough1Container.mapDispatchToProps
-)(Walkthrough1Container);
+export const walkThrough2 = connect(
+  Walkthrough2Container.mapStateToProps,
+  Walkthrough2Container.mapDispatchToProps
+)(Walkthrough2Container);

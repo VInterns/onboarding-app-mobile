@@ -3,9 +3,9 @@ import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import { State, tryNavigate } from "../state";
-import WalkThrough1 from "../component/walkThrough1";
+import WalkThrough3 from "../component/walkThrough3";
 
-class Walkthrough1Container extends Component {
+class Walkthrough3Container extends Component {
   constructor() {
     super();
     this.state = {};
@@ -22,11 +22,16 @@ class Walkthrough1Container extends Component {
   }
 
   props: {
+    lastScreen:string,
     tryNavigate: (nextScreen: string) => void
   };
 
   static getDerivedStateFromProps(props, state) {
-    props.navigation.navigate(props.lastScreen);
+      if(props.lastScreen == "History"){
+        
+        props.navigation.navigate("Video1");
+      }
+    
 
     return state;
   }
@@ -35,7 +40,7 @@ class Walkthrough1Container extends Component {
     // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     console.log(this.props.tryNavigate, "This is the tryNavigate");
     return (
-      <WalkThrough1
+      <WalkThrough3
         tryNavigate={this.props.tryNavigate}
         navigation={this.props.navigation}
         isLoggedIn={this.props.isLoggedIn}
@@ -44,7 +49,7 @@ class Walkthrough1Container extends Component {
   }
 }
 
-export const walkThrough1Screen = connect(
-  Walkthrough1Container.mapStateToProps,
-  Walkthrough1Container.mapDispatchToProps
-)(Walkthrough1Container);
+export const walkThrough3 = connect(
+  Walkthrough3Container.mapStateToProps,
+  Walkthrough3Container.mapDispatchToProps
+)(Walkthrough3Container);

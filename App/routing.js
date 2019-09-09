@@ -17,8 +17,8 @@ import {
 } from "react-navigation-transitions";
 
 import { walkThrough1Screen } from "./screens/walkthrough-screen";
-import walkThrough2 from "./component/walkThrough2";
-import walkThrough3 from "./component/walkThrough3";
+import { walkThrough2 } from "./screens/walkthrough2-screen";
+import { walkThrough3 } from "./screens/walkthrough3-screen";
 import History from "./component/History";
 import History1 from "./component/History1";
 import History2 from "./component/History2";
