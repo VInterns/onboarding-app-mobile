@@ -37,7 +37,8 @@ class LoginContainer extends Component {
 
   static getDerivedStateFromProps(props, state) {
     if (props.isLoggedIn) {
-      props.navigation.navigate(props.lastScreen);
+      console.log("Login screen props-lastscreen",props.lastScreen);
+      props.navigation.navigate(props.lastScreen || "walkthrough");
 
       return state;
     }
@@ -45,7 +46,7 @@ class LoginContainer extends Component {
   }
 
   render() {
-    // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
+    this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     return (
       <Login
         loading={this.props.loading}

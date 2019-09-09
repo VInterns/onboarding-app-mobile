@@ -71,6 +71,7 @@ export function authorizationReducer(
       return {
         ...state,
         isLoggedIn:false,
+        // lastScreen:"walkThrough"
       }
     }
 
