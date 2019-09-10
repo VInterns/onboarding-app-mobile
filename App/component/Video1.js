@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    controlBar: {
+/*     controlBar: {
         position: 'absolute',
         bottom: 0,
         left: 0,
@@ -50,5 +50,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: "rgba(0, 0, 0, 0.5)",
-    }
+    } */
 });

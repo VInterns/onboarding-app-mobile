@@ -27,7 +27,6 @@ export default class App extends React.Component {
     this.setState({ isReady: true });
   }
   async componentWillUnmount() {
-    debugger;
     await Application.onClose();
   }
 

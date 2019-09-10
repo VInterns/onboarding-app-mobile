@@ -1,7 +1,8 @@
 import {
   StackNavigator,
   createStackNavigator,
-  createAppContainer
+  createAppContainer,
+  createSwitchNavigator //will handle back button of mobile to be disabled
 } from "react-navigation";
 import { LoginScreen } from "./screens/login-screen";
 
@@ -45,7 +46,7 @@ const handleCustomTransition = ({ scenes }) => { //handle transitions between sc
   } else if (prevScene
     && prevScene.route.routeName === 'walkThrough3'
     && nextScene.route.routeName === 'Video1') {
-    return zoomIn(600);
+    return fromLeft(600);
   } else if (prevScene
     && prevScene.route.routeName === 'History1'
     && nextScene.route.routeName === 'ErrorAlert') {
@@ -67,10 +68,10 @@ const handleCustomTransition = ({ scenes }) => { //handle transitions between sc
   } else if (prevScene
     && prevScene.route.routeName === 'Video1'
     && nextScene.route.routeName === 'History') {
-    return zoomIn(600);
+    return zoomIn(800);
   }
 
-  return fromRight(500);
+  return fromRight(800);
 }
 
 

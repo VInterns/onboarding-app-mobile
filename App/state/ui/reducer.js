@@ -11,7 +11,6 @@ export function uiReducer(
 ): UiState {
   switch (action.type) {
     case types.UI_LOADING: {
-      debugger;
       return {
         ...state,
         loading: !state.loading

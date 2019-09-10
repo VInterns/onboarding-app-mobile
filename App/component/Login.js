@@ -53,7 +53,7 @@ export class Login extends Component {
   handleEmail = text => {
     this.setState({ email: text });
   };
-s
+  s
   handlePassword = text => {
     this.setState({ password: text });
   };
@@ -61,7 +61,7 @@ s
   render() {
     const { navigate } = this.props.navigation;
     const loadingSpinner = this.props.loading ? (
-      <Spinner color="red" style={{position:'absolute'}}/>
+      <Spinner color="red" style={{ position: 'absolute' }} />
     ) : (
         <Text bold red margin20>
           {" "}
@@ -72,7 +72,7 @@ s
 
 
 
-      <View style={{ flex: 1,}}>
+      <View style={{ flex: 1, }}>
         <ImageBackground source={backgroundImg} style={styles.wallpaper}>
           {/*background*/}
 
@@ -83,7 +83,7 @@ s
           {/* top corner logo*/}
 
           {/*welcome To and Vodabuddy text view*/}
-          < KeyboardAwareScrollView style={{flex:1 }} resetScrollToCoords={{ x: 0, y: 0 }} scrollEnabled={true} >
+          < KeyboardAwareScrollView style={{ flex: 1 }} resetScrollToCoords={{ x: 0, y: 0 }} scrollEnabled={true} >
             <View style={{ flex: 1 }}>
 
               <View style={styles.TextContainer}>
@@ -103,6 +103,7 @@ s
                 <Image source={user} style={styles.userNameIconStyle} />
 
                 <UserInput
+                  disabled={this.props.loading}
                   placeholder={"E-mail"}
                   onChangeText={this.handleEmail}
                 />
@@ -114,6 +115,7 @@ s
                   placeholder={"Password"}
                   onChangeText={this.handlePassword}
                   secureTextEntry={true}
+                  disabled={this.props.loading}
                 />
               </View>
 
@@ -131,6 +133,7 @@ s
 
               <View>
                 <TouchableOpacity
+                  disabled={this.props.loading}
                   style={styles.button}
                   onPress={() => this.props.tryLogin(this.state)}
                 >

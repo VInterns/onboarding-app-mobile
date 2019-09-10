@@ -22,11 +22,9 @@ import readyButton from '../assets/group3.png'
 export default class walkThrough3 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'walkThrough 3',
-        fontWeight: 'bold'
+        header: null
     };
     constructor() {
-        debugger;
         super();
         this.state = {
             show: true,
@@ -43,10 +41,6 @@ export default class walkThrough3 extends Component {
 
     }
 
-    componentDidMount() {
-        debugger;
-        console.log("this state", this.state);
-    }
 
     ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.show == true) {
@@ -68,7 +62,7 @@ export default class walkThrough3 extends Component {
                 <View style={styles.TextContainer}>
                     <View style={styles.redView}>
                         <FadeInView>
-                            <Text style={styles.RedText}>The Future is  </Text>
+                            <Text style={styles.RedText}>The Future is</Text>
                         </FadeInView>
                     </View>
 
@@ -82,7 +76,7 @@ export default class walkThrough3 extends Component {
 
                 <ImageBackground source={backgroundImg} style={styles.wallpaper}>
                     <FadeInView>
-                        <Image source={rocket} style={{ justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.04, marginRight: DEVICE_WIDTH, }} />
+                        <Image source={rocket} style={{ justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.038, marginRight: DEVICE_WIDTH, }} />
                     </FadeInView>
                 </ImageBackground >
 
@@ -103,7 +97,7 @@ export default class walkThrough3 extends Component {
 
         const hide =
             <Animated.View style={this.moveAnimation.getLayout()}>
-                        <Image source={rocket} style={{ justifyContent: 'center', alignItems: 'center' }} />
+                <Image source={rocket} style={{ justifyContent: 'center', alignItems: 'center' }} />
             </Animated.View>
 
         return (
@@ -148,7 +142,9 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'center',
-        marginTop: DEVICE_HEIGHT * 0.05
+        marginTop: DEVICE_HEIGHT * 0.1,
+        marginRight: (DEVICE_WIDTH / 2) - (DEVICE_WIDTH * 0.09),
+
     },
 
     blackView: {

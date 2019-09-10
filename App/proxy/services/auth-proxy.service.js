@@ -4,7 +4,6 @@ import {
   UserLoginModel,
   UserConfirmModel
 } from "../models/index";
-import { Application } from "../../application";
 export class AuthProxyService {
   async login(user: UserLoginModel) {
     debugger;
@@ -20,7 +19,6 @@ export class AuthProxyService {
   }
 
   async register(user: UserRegisterModel) {
-    debugger;
     const data = {};
     data["email"] = user.email;
     data["password"] = user.password;
