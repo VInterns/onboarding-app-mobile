@@ -14,9 +14,9 @@ import {
 
 } from 'react-native';
 
-import FadeInView from './FadeInView'
+import FadeInView from './FadeInView';
 import styles from './styles/history9.styles';
-import centerImg from '../assets/subscibersRank.png'
+import centerImg from '../assets/subscibersRank.png';
 
 export default class History8 extends Component {
 
@@ -51,7 +51,7 @@ export default class History8 extends Component {
                     }>
                         <Text style={styles.ButtonText}>
                             NEXT
-                       </Text>
+                        </Text>
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
 
