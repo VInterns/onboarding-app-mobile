@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { State, tryLogin ,logout} from "../state";
+import { State, tryLogin, logout, onNextScreen } from "../state";
 
 import { UserLoginModel } from "../proxy";
 import { Login } from "../component/Login";
+
 class LoginContainer extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {};
   }
@@ -15,12 +16,13 @@ class LoginContainer extends Component {
     return {
       isLoggedIn: state.authorization.isLoggedIn,
       errorMessage: state.authorization.errorMessage,
-      loading: state.ui.loading
+      loading: state.ui.loading,
+      lastScreen: state.authorization.lastScreen
     };
   }
 
   static mapDispatchToProps(dispatch: Dispatch) {
-    return bindActionCreators({ tryLogin,logout }, dispatch);
+    return bindActionCreators({ tryLogin, logout, onNextScreen }, dispatch);
   }
 
   props: {
@@ -28,13 +30,17 @@ class LoginContainer extends Component {
     loading: boolean,
     isLoggedIn: boolean,
     tryLogin: (user: UserLoginModel) => void,
-    logout:()=>void
+    logout: () => void,
+    lastScreen: string,
+    onNextScreen: (lastScreen: NextScreenModel) => void,
   };
 
-  static getDerivedStateFromProps(props, state){
-    if(props.isLoggedIn){
-      props.navigation.navigate("walkThrough");
-return state;
+  static getDerivedStateFromProps(props, state) {
+    if (props.isLoggedIn) {
+      console.log("Login screen props-lastscreen",props.lastScreen);
+      props.navigation.navigate(props.lastScreen || "walkthrough");
+
+      return state;
     }
     return state;
   }

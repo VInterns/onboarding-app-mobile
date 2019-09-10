@@ -20,8 +20,7 @@ import centerImg from '../assets/group2_2.png'
 export default class History7 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History7',
-        fontWeight: 'bold'
+        header: null
     };
 
 

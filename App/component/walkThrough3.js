@@ -10,7 +10,8 @@ import {
     KeyboardAvoidingView,
     Text,
     Animated,
-    Alert
+    BackHandler
+
 
 } from 'react-native';
 
@@ -21,9 +22,15 @@ import readyButton from '../assets/group3.png'
 
 export default class walkTrough3 extends Component {
 
+      props: {
+        tryNavigate: (nextScreen: string) => void
+      };
+
+
+
+
     static navigationOptions = {//header styling
-        title: 'walkThrough 3',
-        fontWeight: 'bold'
+        header: null
     };
     constructor() {
         debugger;
@@ -34,7 +41,7 @@ export default class walkTrough3 extends Component {
         this.moveAnimation = new Animated.ValueXY({ x: 0, y: 0 })//create new animated object
     }
     _moveRocket = () => { //responsible for moving rocket
-
+        debugger;
         Animated.timing(this.moveAnimation, {
             toValue: { x: 350, y: -100 },//new coordinates
             delay: 1000, //start moving rocket after certain delay 
@@ -45,7 +52,9 @@ export default class walkTrough3 extends Component {
 
     componentDidMount() {
         debugger;
-        console.log("this state", this.state);
+        // console.log("this state", this.state);
+        BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
+
     }
 
     ShowHideComponent = () => {// responsible for showing and hiding component
@@ -55,6 +64,19 @@ export default class walkTrough3 extends Component {
             this.setState({ show: true });
         }
     };
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+      }
+    handleBackButton() {
+        return true;
+      }
+
+    tryNavigate = () => {
+        debugger;
+        this.props.tryNavigate("History");
+      };  
+
 
     render() {
 
@@ -90,9 +112,12 @@ export default class walkTrough3 extends Component {
                     <TouchableOpacity style={styles.button} onPress={() => {
                         this.ShowHideComponent(); //hide component except the rocket
                         this._moveRocket(); //then move rocket
-                        setTimeout(function () {//finally navigate after certain delay
-                            navigate("Video1", {})
-                        }, 3000)
+                        // setTimeout(function () {//finally navigate after certain delay
+                        //     // navigate("Video1", {})
+                        //     debugger;
+                        //     this.tryNavigate;
+                        // }, 3000)
+                        setTimeout(this.tryNavigate, 3000);
                     }} >
                         <Image source={readyButton} style={styles.ButtonimageStyle} />
                     </TouchableOpacity>

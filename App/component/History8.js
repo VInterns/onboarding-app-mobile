@@ -31,8 +31,7 @@ import { DeviceSensor } from 'expo-sensors';
 export default class History8 extends Component {
 
     static navigationOptions = {//header styling
-        title: 'History8',
-        fontWeight: 'bold'
+        header: null
     };
 
     constructor() {

@@ -4,6 +4,7 @@ export interface AuthorizationState {
   isLoggedIn: boolean;
   isRegistered: boolean;
   errorMessage: string;
+  lastScreen: string;
 }
 
 export const AuthorizationInitialState: AuthorizationState = {
@@ -11,5 +12,6 @@ export const AuthorizationInitialState: AuthorizationState = {
   token: null,
   isLoggedIn: false,
   isRegistered: false,
-  errorMessage: ""
+  errorMessage: "",
+  lastScreen: "walkThrough"
 };

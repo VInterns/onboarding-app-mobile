@@ -9,17 +9,21 @@ import {
     Dimensions,
     KeyboardAvoidingView,
     Text,
-
+    Button,
+    Linking,//for linking a button to a link
+    WebView,
+    Platform
 } from 'react-native';
 
-import FadeInView from './FadeInView'
+import FadeInView from './FadeInView';
+import halfTriLeft from '../assets/grouphalf.png';
+import halfTriRight from '../assets/groupright.png';
+import logoGif from '../assets/Vodafonebrandevolution.gif';
 
-import centerImg from '../assets/map.png'
-//import backgroundImg from '../assets/background.png';
-export default class History4 extends Component {
+export default class walkTrough1 extends Component {
 
     static navigationOptions = {//header styling
-        header: null
+      header:null
     };
 
 
@@ -27,54 +31,81 @@ export default class History4 extends Component {
         const { navigate } = this.props.navigation;
 
         return (
-
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+                <ImageBackground source={halfTriLeft} style={styles.wallpaper}>{/*background*/}
+                </ImageBackground>
+                <ImageBackground source={halfTriRight} style={styles.wallpaperRight}>{/*background*/}
+                </ImageBackground>
 
-                <Image source={centerImg} style={{ position: 'absolute', top: 60 }} />{/* centered mobile logo*/}
 
-                {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125, left: 4}}>
+
                         <Text style={styles.blackText}>
-                            <Text style={styles.BoldblackText}>Vodafone started back in UK in 1985, {'\n'}</Text>
-                            where after several acquisitions of other {'\n'}
-                            operators such as Omnitel, Airtel and {'\n'}
-                            Panafon which are now Vodafone Italy, {'\n'}
-                            Vodafone Spain & Vodafone Greece {'\n'}
-                            respectively.
+                            <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
+                            {'\n'}
+                            the video focuses on the constancy of human {'\n'}
+                            interaction even while technologies evolve over time, {'\n'}
+                            which makes us always think that The future is {'\n'}
+                            exciting.
                         </Text>
                     </View>
-                    
                 </View>
-
-                {/*  button view */}
                 <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History5", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("brand3", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
-                       </Text>
+                        </Text>
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("GreatJob", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("brand1", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
-                       </Text>
+                        </Text>
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
-
-
-            </View >
-
-
+            </View>
         );
     }
 }
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
+    wallpaper: { //background style
+        resizeMode: 'center',
+        height: 325,
+        width: 150,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        right: 250,
+        left: 1,
+        top: 50
+        //bottom: 25
+    },
+    wallpaperRight: { //background style
+        resizeMode: 'center',
+        height: 325,
+        width: 150,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        right: 1,
+        left: 260,
+        top: 50
+        //bottom: 25
+    },
+    
+    button: { // button design
+        width: 70,
+        height: 25,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
 
     BoldblackText: {//welcome to word style
         // alignItems: 'center',
@@ -88,37 +119,17 @@ const styles = StyleSheet.create({
     blackText: {//welcome to word style
         // alignItems: 'center',
         color: 'black',
-        fontSize: 17,
+        fontSize: 15,
         //fontWeight: 'bold'
         //position: 'absolute',
         // left: 40,
         //  top: 50
     },
-
-
-    blackView: {
-        alignItems: 'center',
-        justifyContent: 'center'
+    redText: {
+        color: 'red',
+        fontSize: 28,
+        fontWeight: 'bold'
     },
-
-    TextContainer: {/* Welcome back and vodabuddy wrapper */
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: 370,
-        //textAlign:'justify'
-        //left: 40
-    },
-
-
-    button: { // button design
-        width: 70,
-        height: 25,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-
     NextButtonView: { //wrapper for button 
         flexDirection: 'row',
         justifyContent: 'center',
@@ -143,5 +154,5 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         fontSize: 20,
-    },
+    }
 });
