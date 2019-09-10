@@ -45,14 +45,12 @@ export function authorizationReducer(
     }
 
     case types.ON_REGISTER: {
-      debugger;
       return {
         ...state
       };
     }
 
     case types.REGISTER_SUCCESS: {
-      debugger;
       return {
         ...state,
         isRegistered: true

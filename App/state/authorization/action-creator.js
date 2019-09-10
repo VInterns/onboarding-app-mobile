@@ -8,9 +8,6 @@ import {
 } from "../../proxy";
 import * as UiTypes from "../ui/actions";
 
-import { NavigationActions } from "react-navigation";
-import walkTrough2 from "../../component/walkThrough2";
-// import NavigatorService from "../../services/navigator";
 
 /*************** */
 export type ON_LOGIN_Action = { type: string, payload: any };
@@ -37,10 +34,10 @@ export async function tryLogin(user: UserLoginModel) {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_LOADING });
     let response = await authProxyService.login(user);
-    debugger;
+
     token = await response.json();
+
     if (response.status === 200) {
-      debugger;
       dispatch(success());
       dispatch({ type: UiTypes.UI_LOADING });
     } else {
@@ -57,14 +54,11 @@ export async function tryNavigate(nextScreen: string) {
 }
 
 export async function tryRegister(user: UserRegisterModel) {
-  debugger;
   let token = null;
   return async dispatch => {
     dispatch({ type: UiTypes.UI_LOADING });
     dispatch(onRegister());
     let response = await authProxyService.register(user);
-    debugger;
-    // token = await response.json();
     if (response.status === 200) {
       // HttpClient.requestInterceptor.push(request => {
       //   let _token: TokenDto;
@@ -78,7 +72,6 @@ export async function tryRegister(user: UserRegisterModel) {
       dispatch({ type: UiTypes.UI_LOADING });
       // dispatch(NavigationActions.navigate({ routeName: "Login" }));
     } else {
-      debugger;
       dispatch(registerFail());
       dispatch({ type: UiTypes.UI_LOADING });
     }

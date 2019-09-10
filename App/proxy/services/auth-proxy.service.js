@@ -20,7 +20,6 @@ export class AuthProxyService {
   }
 
   async register(user: UserRegisterModel) {
-    debugger;
     const data = {};
     data["email"] = user.email;
     data["password"] = user.password;

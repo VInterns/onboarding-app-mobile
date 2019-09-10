@@ -17,8 +17,9 @@ import FadeInView from "./FadeInView";
 import backgroundImg from "../assets/group.png";
 import mobile from "../assets/group4.png";
 
-export default class walkTrough2 extends Component {
-  
+
+export default class walkThrough2 extends Component {
+
   constructor() {
     super();
 
@@ -51,142 +52,113 @@ export default class walkTrough2 extends Component {
     this.props.tryNavigate("walkThrough3");
   };
 
-  render() {
-    const { navigate } = this.props.navigation;
 
-    return (
-      <View
-        style={{
-          width: "100%",
-          height: "100%",
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <ImageBackground source={backgroundImg} style={styles.wallpaper}>
-          {/*background*/}
-        </ImageBackground>
+    render() {
+        const { navigate } = this.props.navigation;
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
+        return (
+            <View style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', flex: 1 }}>
 
-        <FadeInView>
-          <Image source={mobile} style={{ marginLeft: 10 }} />
-          {/* centered logo*/}
-        </FadeInView>
+                <View style={styles.TextContainer}>
+                    <View style={styles.redView}>
+                        <FadeInView>
+                            <Text style={styles.RedText}>This app will guide you to </Text>
+                        </FadeInView>
+                    </View>
 
-        {/*header text view*/}
-        <View style={styles.TextContainer}>
-          <View style={styles.redView}>
-            <FadeInView>
-              <Text style={styles.RedText}>This app will guide you to </Text>
-            </FadeInView>
-          </View>
+                    <View style={styles.blackView}>
+                        <FadeInView>
+                            <Text style={styles.blackText}>know more about Vodafone</Text>
+                        </FadeInView>
+                    </View>
+                </View>
 
-          <View style={styles.blackView}>
-            <FadeInView>
-              <Text style={styles.blackText}>know more about Vodafone</Text>
-            </FadeInView>
-          </View>
-        </View>
+                <ImageBackground source={backgroundImg} style={styles.wallpaper}>
+                    <FadeInView>
+                        <Image source={mobile} style={{ justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.045, marginLeft: DEVICE_WIDTH, }} />
+                    </FadeInView>
+                </ImageBackground >
 
-        {/*  button view */}
-        <KeyboardAvoidingView behavior="padding" style={styles.buttonView}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={this.tryNavigate}
-          >
-            <Image
-              source={require("../assets/arrow.png")}
-              style={styles.ButtonimageStyle}
-            />
-          </TouchableOpacity>
-        </KeyboardAvoidingView>
-      </View>
-    );
-  }
+                {/*  button view */}
+                <View style={styles.buttonView}>
+                    <TouchableOpacity style={styles.button} onPress={this.tryNavigate} >
+                        <Image source={require('../assets/arrow.png')} style={styles.ButtonimageStyle} />
+                    </TouchableOpacity>
+                </View>
+
+            </View>
+
+
+        );
+    }
 }
 const DEVICE_WIDTH = Dimensions.get("window").width;
 const DEVICE_HEIGHT = Dimensions.get("window").height;
 const styles = StyleSheet.create({
-  wallpaper: {
-    //background style
-    resizeMode: "cover",
-    height: 340,
-    width: 340,
-    justifyContent: "center",
-    alignItems: "center",
-    position: "absolute",
-    //right: 220
-    left: DEVICE_WIDTH - (DEVICE_WIDTH + DEVICE_WIDTH / 2)
-  },
-  RedText: {
-    //welcome to word style
-    // alignItems: 'center',
-    color: "red",
-    fontSize: 25,
-    fontWeight: "bold"
-    //position: 'absolute',
-    // left: 40,
-    //  top: 50
-  },
+    wallpaper: { //background style
+        resizeMode: 'center',
+        marginTop: DEVICE_WIDTH * 0.05,
+        height: DEVICE_WIDTH * 0.93,
+        width: DEVICE_WIDTH * 0.93,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: DEVICE_WIDTH
+    },
+    RedText: {//welcome to word style
+        color: 'red',
+        fontSize: DEVICE_WIDTH * 0.065,
 
-  blackText: {
-    //login word text style
-    //textAlign: 'center',
-    color: "black",
-    // fontWeight: 'bold',
-    fontSize: 25
-    /*    position: 'absolute',
-           left: 40 */
-  },
+    },
 
-  redView: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
+    blackText: {//login word text style
+        color: 'black',
+        fontSize: DEVICE_WIDTH * 0.065,
+        fontWeight: 'bold'
+    },
 
-  TextContainer: {
-    /* Welcome back and vodabuddy wrapper */
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "absolute",
-    top: 40
-  },
+    redView: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
 
-  blackView: {
-    alignItems: "center",
-    justifyContent: "center"
-  },
+    TextContainer: {/* Welcome back and vodabuddy wrapper */
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        marginTop: DEVICE_HEIGHT * 0.1
+    },
 
-  button: {
-    // button design
-    width: 50,
-    height: 50,
-    backgroundColor: "red",
-    borderColor: "red",
-    transform: [
-      //to create rhombus shape by rotating the square shape
-      { rotate: "45deg" }
-    ],
-    borderRadius: 10
-  },
-  ButtonimageStyle: {
-    //button icon
-    margin: 13,
-    height: 25,
-    width: 25,
-    resizeMode: "stretch",
-    transform: [
-      //to adjust the arrow inside the button
-      { rotate: "315deg" }
-    ]
-  },
-  buttonView: {
-    //wrapper for button
+    blackView: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
 
-    justifyContent: "center",
-    alignItems: "center",
-    position: "absolute",
-    bottom: 30,
-    right: 30
-  }
+    button: { // button design
+        width: 50,
+        height: 50,
+        backgroundColor: 'red',
+        borderColor: 'red',
+        transform: [     //to create rhombus shape by rotating the square shape
+            { rotate: '45deg' }
+        ],
+        borderRadius: 10,
+
+    },
+    ButtonimageStyle: {//button icon
+        margin: 13,
+        height: 25,
+        width: 25,
+        resizeMode: 'stretch',
+        transform: [ //to adjust the arrow inside the button 
+            { rotate: '315deg' }
+        ],
+    },
+    buttonView: { //wrapper for button 
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        marginBottom: DEVICE_HEIGHT * 0.05,
+        marginLeft: DEVICE_WIDTH * 0.65,
+    },
 });

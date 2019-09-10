@@ -1,7 +1,8 @@
 import {
   StackNavigator,
   createStackNavigator,
-  createAppContainer
+  createAppContainer,
+  createSwitchNavigator //will handle back button of mobile to be disabled
 } from "react-navigation";
 import { LoginScreen } from "./screens/login-screen";
 
@@ -55,6 +56,7 @@ const handleCustomTransition = ({ scenes }) => {
     nextScene.route.routeName === "walkThrough"
   ) {
     return flipY(800);
+
   } else if (
     prevScene &&
     prevScene.route.routeName === "walkThrough3" &&
@@ -85,16 +87,15 @@ const handleCustomTransition = ({ scenes }) => {
     nextScene.route.routeName === "ErrorAlert4"
   ) {
     return fromTop(600);
-  } else if (
-    prevScene &&
-    prevScene.route.routeName === "Video1" &&
-    nextScene.route.routeName === "History"
-  ) {
-    return zoomIn(600);
+
+  } else if (prevScene
+    && prevScene.route.routeName === 'Video1'
+    && nextScene.route.routeName === 'History') {
+    return zoomIn(800);
   }
 
-  return fromRight(500);
-};
+  return fromRight(800);
+}
 
 const AppNavigator = createStackNavigator(
   {
@@ -104,6 +105,7 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
+    //AppIntroSlider: { screen: AppIntroSlider },
     walkThrough: {
       screen: walkThrough1Screen
     },
@@ -126,6 +128,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 }
+
   },
 
   {
