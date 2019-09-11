@@ -9,16 +9,13 @@ import {
     Dimensions,
     KeyboardAvoidingView,
     Text,
-    Alert
 
 } from 'react-native';
 
 import FadeInView from './FadeInView'
 
-import centerImg from '../assets/phone.png'
-import VoiceImg from '../assets/voice_1.png'
+import PhoneImg from '../assets/phone.png'
 
-import Vletter from '../assets/inactive.png';
 import VletterRed from '../assets/active.png';
 
 import Oletter from '../assets/inactive_1.png';
@@ -49,8 +46,7 @@ export default class History2 extends Component {
     constructor() {
         super();
         this.state = {
-            //  V_show: false,
-            //  O_show: false,
+
             D_show: false,
             A_show: false,
             F_show: false,
@@ -58,8 +54,6 @@ export default class History2 extends Component {
             N_show: false,
             E_show: false,
 
-            //  VimageURL: Vletter,
-            // OimageURL: Oletter,
             DimageURL: Dletter,
             AimageURL: Aletter,
             FimageURL: Fletter,
@@ -68,27 +62,11 @@ export default class History2 extends Component {
             EimageURL: Eletter,
 
             showHideVoiceWord: false,
-            counter: 0
+            counter: 0,
+            ButtonStateHolder: false,
+            // Default Value for ButtonStateHolder State. Now the button is Enabled.
         };
     }
-
-    /*  V_ShowHideComponent = () => {// responsible for showing and hiding component
-         if (this.state.V_show == true) {
-             this.setState({ V_show: false });
-         }
-         else {
-             this.setState({ V_show: true });
-         }
-     };
- 
-     O_ShowHideComponent = () => {// responsible for showing and hiding component
-         if (this.state.O_show == true) {
-             this.setState({ O_show: false });
-         }
-         else {
-             this.setState({ O_show: true });
-         }
-     }; */
 
     D_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.D_show == true) {
@@ -141,31 +119,6 @@ export default class History2 extends Component {
     };
 
 
-    /* load_V_letter = () => {
-        if (this.state.V_show == true) {
-            this.setState({
-                VimageURL: Vletter
-            })
-        } else {
-            this.setState({
-
-                VimageURL: VletterRed
-            })
-        }
-    }
-
-    load_O_letter = () => {
-        if (this.state.O_show == true) {
-            this.setState({
-                OimageURL: Oletter
-            })
-        } else {
-            this.setState({
-
-                OimageURL: OletterRed
-            })
-        }
-    } */
     load_D_letter = () => {
         if (this.state.D_show == true) {
             this.setState({
@@ -265,132 +218,145 @@ export default class History2 extends Component {
     }
 
 
+    DisableButtonFunction = () => {
+
+        this.setState({
+
+            // On State True it will Disable the button.
+            ButtonStateHolder: true,
+
+            ButtonTitle: 'Button Disabled'
+
+        })
+
+    }
+
+    DisableButtonFunction = () => {//disable button after pressing next 
+
+        this.setState({
+            // On State True it will Disable the button.
+            ButtonStateHolder: true,
+        })
+
+    }
 
     render() {
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         const { navigate } = this.props.navigation;
         const showVoiceWord =
-            <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                <Image source={FletterRed} style={{ flexBasis: 50, marginTop: 10 }} />{/* centered mobile logo*/}
-                <Image source={OletterRed} style={{ flexBasis: 50, marginTop: 10 }} />{/* centered mobile logo*/}
-                <Image source={NletterRed} style={{ flexBasis: 50, marginTop: 10 }} />{/* centered mobile logo*/}
-                <Image source={EletterRed} style={{ flexBasis: 50, marginTop: 10 }} />{/* centered mobile logo*/}
-                <View style={{ justifyContent: 'space-around', alignItems: 'center', marginBottom: 15 }}>
-                    <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 28 }}>
-                        = Phone
-                    </Text>
+            <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginTop: DEVICE_HEIGHT * 0.027 }}>
+                <Image source={FletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
+                <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
+                <Image source={NletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
+                <Image source={EletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
+                <View style={{ justifyContent: 'space-around', alignItems: 'center', marginBottom: DEVICE_HEIGHT * 0.03 }}>
+                    <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 28 }}> = Phone</Text>
                 </View>
             </View>
 
 
         return (
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+            <View style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', flex: 1 }}>
+                {/*vodafone group history text view*/}
+                <View style={styles.TextContainer}>
+                    <FadeInView>
+                        <Text style={styles.Text}>can you guess which two letters will form {'\n'}
+                            the following word "PHONE"?!{'\n'}
+                        </Text>
+                    </FadeInView>
+                </View>
 
-                <Image source={centerImg} />{/* centered mobile logo*/}
-                {/*              <View style={{ justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 350 }}>
-                    <Text style={{ color: 'red', fontSize: 28, fontWeight: 'bold' }}>
-                        Phone
-                    </Text>
-                </View> */}
-                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', position: 'absolute', top: 110, left: 10 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095 }}>
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} disabled={true}>
-                        <Image source={VletterRed} style={styles.ButtonimageStyle} />
+                    <TouchableOpacity disabled={true}>
+                        <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} disabled={true}>
-                        <Image source={OletterRed} style={styles.ButtonimageStyle} />
+                    <TouchableOpacity disabled={true} >
+                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.D_ShowHideComponent();
                         this.load_D_letter();
                     }} >
-                        <Image source={this.state.DimageURL} style={styles.ButtonimageStyle} />
+                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.A_ShowHideComponent();
                         this.load_A_letter();
                     }} >
-                        <Image source={this.state.AimageURL} style={styles.ButtonimageStyle} />
+                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.F_ShowHideComponent();
                         this.load_F_letter();
                     }}>
-                        <Image source={this.state.FimageURL} style={styles.ButtonimageStyle} />
+                        <Image source={this.state.FimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.O_ShowHideComponent_2();
                         this.load_O_letter_2();
                     }}>
-                        <Image source={this.state.OimageURL_2} style={styles.ButtonimageStyle} />
+                        <Image source={this.state.OimageURL_2} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, marginRight: 0, flexBasis: 40 }} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.N_ShowHideComponent();
                         this.load_N_letter();
                     }} >
-                        <Image source={this.state.NimageURL} style={styles.ButtonimageStyle} />
+                        <Image source={this.state.NimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ width: 50, height: 50, marginLeft: 0, flexBasis: 40 }} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.E_ShowHideComponent();
                         this.load_E_letter();
                     }}>
-                        <Image source={this.state.EimageURL} style={styles.ButtonimageStyle} />
+                        <Image source={this.state.EimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
                 </View>
 
-                {/*vodafone group history text view*/}
-                <View style={styles.TextContainer}>
 
-                    <View style={styles.TextView}>
-                        <FadeInView>
-                            <Text style={styles.Text}>can you guess which four letters will form </Text>
-                        </FadeInView>
-                    </View>
-
-                    <View style={styles.TextView}>
-                        <FadeInView>
-                            <Text style={styles.Text}>the following word "phone" ?!</Text>
-                        </FadeInView>
-                    </View>
-
-                </View>
-
-                {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => {
-                        //navigate("History1", {});
-                        this.validatePressedLetters();
-
-                    }}>
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
-
-                <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1", {})} >
-                        <Text style={styles.ButtonText}>
-                            BACK
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                <Image source={PhoneImg} style={{ justifyContent: 'center', alignItems: 'center' }} />{/*centered image*/}
 
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     {this.state.showHideVoiceWord ? showVoiceWord : null}
                 </View>
-            </View >
 
+                {/*  button view */}
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
+
+                    <View style={styles.BackButtonView}>
+
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History1", {})} >
+                            <Text style={styles.ButtonText}>
+                                BACK
+                        </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.NextButtonView}>
+                        <TouchableOpacity style={styles.button} onPress={() => {
+                            this.validatePressedLetters();
+                            this.DisableButtonFunction();
+                        }}>
+                            <Text style={styles.ButtonText}>
+                                NEXT
+                        </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
+
+            </View >
 
         );
     }
@@ -402,57 +368,32 @@ const styles = StyleSheet.create({
 
     Text: {//welcome to word style
         color: 'black',
-        fontSize: 20,
-        marginTop: 5
-        //  fontWeight: 'bold'
-
-    },
-
-
-    TextView: {
-        alignItems: 'flex-start',
-        justifyContent: 'center'
+        fontSize: DEVICE_WIDTH * 0.047,
     },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: 40,
-        left: 20
-    },
-
-    redView: {
-        alignItems: 'flex-start',
-        justifyContent: 'center'
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        marginTop: DEVICE_HEIGHT * 0.1
     },
 
     button: { // button design
-        width: 70,
-        height: 25,
+        /*   width: 70,
+          height: 25, */
         alignItems: 'center',
         justifyContent: 'center'
     },
 
     NextButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
+        justifyContent: 'center',
+        // backgroundColor:'red'
     },
     BackButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
+        justifyContent: 'center',
+        flex: 1,
 
     },
     ButtonText: { // text inside button
@@ -460,11 +401,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
-    ButtonimageStyle: {//button icon
-        margin: 13,
-        height: 50,
-        width: 50,
-        resizeMode: 'stretch',
-        flexBasis: 40
-    },
+    /*     ButtonimageStyle: {//button icon
+            margin: -15
+        }, */
 });

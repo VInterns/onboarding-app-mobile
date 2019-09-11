@@ -107,11 +107,25 @@ const AppNavigator = createStackNavigator(
     },
     //AppIntroSlider: { screen: AppIntroSlider },
     walkThrough: {
-      screen: walkThrough1Screen
+      screen: walkThrough1Screen,
+      navigationOptions: {
+        header: null
+      }
     },
-    walkThrough2: { screen: walkThrough2 },
-    walkThrough3: { screen: walkThrough3 },
-    Video1: { screen: Video1 },
+    walkThrough2: {
+      screen: walkThrough2, 
+      navigationOptions: {
+        header: null
+      }
+    },
+    walkThrough3: { screen: walkThrough3,
+      navigationOptions: {
+        header: null
+      } },
+    Video1: { screen: Video1 ,
+      navigationOptions: {
+        header: null
+      }},
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },

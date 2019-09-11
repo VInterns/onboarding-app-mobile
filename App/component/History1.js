@@ -69,7 +69,9 @@ export default class History1 extends Component {
             EimageURL: Eletter,
 
             showHideVoiceWord: false,
-            counter: 0
+            counter: 0,
+            ButtonStateHolder: false,
+            // Default Value for ButtonStateHolder State. Now the button is Enabled.
         };
     }
 
@@ -267,6 +269,29 @@ export default class History1 extends Component {
     }
 
 
+    DisableButtonFunction = () => {
+
+        this.setState({
+
+            // On State True it will Disable the button.
+            ButtonStateHolder: true,
+
+            ButtonTitle: 'Button Disabled'
+
+        })
+
+    }
+
+    DisableButtonFunction = () => {//disable button after pressing next 
+
+        this.setState({
+            // On State True it will Disable the button.
+            ButtonStateHolder: true,
+        })
+
+    }
+
+
     render() {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
@@ -295,35 +320,35 @@ export default class History1 extends Component {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095 }}>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.V_ShowHideComponent();
                         this.load_V_letter();
                     }} >
                         <Image source={this.state.VimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.O_ShowHideComponent();
                         this.load_O_letter();
                     }} >
                         <Image source={this.state.OimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.D_ShowHideComponent();
                         this.load_D_letter();
                     }} >
                         <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.A_ShowHideComponent();
                         this.load_A_letter();
                     }} >
                         <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.F_ShowHideComponent();
                         this.load_F_letter();
                     }}>
@@ -331,7 +356,7 @@ export default class History1 extends Component {
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.O_ShowHideComponent_2();
                         this.load_O_letter_2();
                     }}>
@@ -339,14 +364,14 @@ export default class History1 extends Component {
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.N_ShowHideComponent();
                         this.load_N_letter();
                     }} >
                         <Image source={this.state.NimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.E_ShowHideComponent();
                         this.load_E_letter();
                     }}>
@@ -366,21 +391,17 @@ export default class History1 extends Component {
 
                     <View style={styles.BackButtonView}>
 
-                        <TouchableHighlight style={styles.button} onPress={() => {
-                            console.log("here error")
-                            navigate("History", {})
-                        }
-                        } >
-
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History", {})} >
                             <Text style={styles.ButtonText}>
                                 BACK
                             </Text>
-                        </TouchableHighlight>
+                        </TouchableOpacity>
                     </View>
 
                     <View style={styles.NextButtonView}>
                         <TouchableOpacity style={styles.button} onPress={() => {
                             this.validatePressedLetters();
+                            this.DisableButtonFunction();
                         }}>
                             <Text style={styles.ButtonText}>
                                 NEXT
