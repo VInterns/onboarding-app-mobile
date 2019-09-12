@@ -28,11 +28,11 @@ export default class History8 extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-
-                <Image source={centerImg} />{/* centered mobile logo*/}
 
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
@@ -44,24 +44,28 @@ export default class History8 extends Component {
                     </FadeInView>
                 </View>
 
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.055 }} />{/* centered mobile logo*/}
                 {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Histry10", {})
-                        // this.validatePressedPhoto()
-                    }>
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                        </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
 
-                <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History8", {})} >
-                        <Text style={styles.ButtonText}>
-                            BACK
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                    <View style={styles.BackButtonView}>
+
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History7", {})} >
+                            <Text style={styles.ButtonText}>
+                                BACK
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.NextButtonView}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History11", {})}>
+                            <Text style={styles.ButtonText}>
+                                NEXT
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
             </View >
 
 

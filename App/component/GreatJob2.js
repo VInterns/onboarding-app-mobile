@@ -26,7 +26,7 @@ class GreatJob2 extends Component {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
-            this.props.navigation.navigate("History10")
+            this.props.navigation.navigate("History9")
         }, 2000);
     }
 
