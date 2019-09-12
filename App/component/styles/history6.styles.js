@@ -14,7 +14,6 @@ export default StyleSheet.create({
     },
 
     redText: {//login word text style
-
         color: 'red',
         fontWeight: 'bold',
         fontSize: 28,
@@ -28,61 +27,46 @@ export default StyleSheet.create({
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
         flexDirection: 'row',
-        //    alignItems: 'flex-start',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: 40,
-        left: 40
+        justifyContent: 'flex-start',
+        marginTop: DEVICE_HEIGHT * 0.1059,
     },
     LowerTextContainer: {/* Welcome back and vodabuddy wrapper */
         flexDirection: 'row',
-        //    alignItems: 'flex-start',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: (DEVICE_HEIGHT / 2) - 10,
-        left: 40
+        justifyContent: 'flex-start',
+        marginTop: DEVICE_HEIGHT * 0.055
     },
 
     LeftView: {
-        //marginTop: 10,
         alignItems: 'flex-start',
         justifyContent: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+     //   backgroundColor: 'green'
     },
     RightView: {
-        marginTop: 17,
-        marginLeft:30,
-    /*     position:'absolute',
-        left: (DEVICE_WIDTH / 2) + 10, */
-        alignItems: 'flex-end',
-        justifyContent: 'center'
+        //marginTop: 17,
+        marginLeft: 0.2 * DEVICE_WIDTH,
+        alignItems: 'flex-start',
+        justifyContent: 'flex-end',
+      //  backgroundColor: 'yellow'
     },
 
     button: { // button design
-        width: 70,
-        height: 25,
+        /*   width: 70,
+          height: 25, */
         alignItems: 'center',
         justifyContent: 'center'
     },
 
     NextButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
+        justifyContent: 'center',
+        // backgroundColor:'red'
     },
     BackButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
+        justifyContent: 'center',
+        flex: 1,
 
     },
     ButtonText: { // text inside button
@@ -90,4 +74,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
+    /*     ButtonimageStyle: {//button icon
+            margin: -15
+        }, */
 });

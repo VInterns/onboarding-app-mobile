@@ -262,7 +262,7 @@ export default class History2 extends Component {
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
                     <FadeInView>
-                        <Text style={styles.Text}>can you guess which two letters will form {'\n'}
+                        <Text style={styles.Text}>can you guess which four letters will form {'\n'}
                             the following word "PHONE"?!{'\n'}
                         </Text>
                     </FadeInView>

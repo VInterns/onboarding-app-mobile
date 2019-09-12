@@ -15,6 +15,7 @@ import {
 import FadeInView from './FadeInView'
 
 import centerImg from '../assets/group_1.png'
+import { DeviceSensor } from 'expo-sensors';
 //import backgroundImg from '../assets/background.png';
 export default class History5 extends Component {
 
@@ -25,12 +26,12 @@ export default class History5 extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
-                <Image source={centerImg} style={{ position: 'absolute', top: 300 }} />{/* centered mobile logo*/}
 
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
@@ -43,18 +44,11 @@ export default class History5 extends Component {
                             </FadeInView>
                         </View>
 
-                        <View style={{ flexDirection: 'row' ,alignItems:'center',justifyContent:'center'}}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
 
-                            <View style={{
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}>
+                            <View style={{ alignItems: 'center', justifyContent: 'center', }}>
                                 <FadeInView>
-                                    <Text style={{
-                                        color: 'red',
-                                        fontWeight: 'bold',
-                                        fontSize: 30,
-                                    }}>50 </Text>
+                                    <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 30, }}>50 </Text>
                                 </FadeInView>
                             </View>
 
@@ -64,30 +58,36 @@ export default class History5 extends Component {
                                 </FadeInView>
                             </View>
 
-
                         </View>
 
                     </View>
 
                 </View>
 
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />{/* centered mobile logo*/}
+
+
                 {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History6", {})} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
 
-                <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History4", {})} >
-                        <Text style={styles.ButtonText}>
-                            BACK
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                    <View style={styles.BackButtonView}>
 
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History4", {})} >
+                            <Text style={styles.ButtonText}>
+                                BACK
+                             </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.NextButtonView}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History6", {})}>
+                            <Text style={styles.ButtonText}>
+                                NEXT
+                             </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
 
             </View >
 
@@ -118,37 +118,26 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'absolute',
-        top: 200,
-        //left: 40
+        marginTop: DEVICE_HEIGHT * 0.295
     },
 
-
     button: { // button design
-        width: 70,
-        height: 25,
+        /*   width: 70,
+          height: 25, */
         alignItems: 'center',
         justifyContent: 'center'
     },
 
     NextButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
+        justifyContent: 'center',
+        // backgroundColor:'red'
     },
     BackButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
+        justifyContent: 'center',
+        flex: 1,
 
     },
     ButtonText: { // text inside button
@@ -156,4 +145,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
+    /*     ButtonimageStyle: {//button icon
+            margin: -15
+        }, */
 });

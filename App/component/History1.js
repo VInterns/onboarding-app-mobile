@@ -276,8 +276,6 @@ export default class History1 extends Component {
             // On State True it will Disable the button.
             ButtonStateHolder: true,
 
-            ButtonTitle: 'Button Disabled'
-
         })
 
     }
@@ -391,7 +389,7 @@ export default class History1 extends Component {
 
                     <View style={styles.BackButtonView}>
 
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("History", {})} >
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History")} >
                             <Text style={styles.ButtonText}>
                                 BACK
                             </Text>

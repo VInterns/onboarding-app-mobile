@@ -2,205 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f9710b-8fca-4939-a61e-c190372e61b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HR_OnBoarding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HR_OnBoarding.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/114096Oowlyf968_2019-08-22.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/2392519_2019-08-12.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/Group3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/GroupTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@2x_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active@3x_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (1).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (2).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (3).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (4).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (5).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (6).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19 (7).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/active_2019-08-19.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/arrow@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/arrow@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/arrow_2019-08-02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/backGr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/background@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/background@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/background_2019-08-02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/cal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/carKeyDev@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/carKeyDev@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/carKeyDev_2019-08-02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/cloudera-quickstart-vm-5.13.0-0-virtualbox.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/confused@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/confused@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/confused_2019-08-20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/current.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/data@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/data@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/data_2019-08-19.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/eye_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/future.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/grad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group1@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group1@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group2@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group2@2x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group2@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group2@3x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group2_2019-08-20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group2_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group3@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group3@2x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group3@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group3@3x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group3_2019-08-12.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group3_2019-08-20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group4@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group4@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group4_2019-08-09.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group9@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group9@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group@2x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group@3x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group_2019-08-08.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group_2019-08-09.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group_2019-08-12.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/group_2019-08-22.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@2x_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive@3x_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (1).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (2).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (3).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (4).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (5).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (6).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19 (7).zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/inactive_2019-08-19.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/left-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/light@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/light@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/light_2019-08-02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/logo-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/logo-wh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/map@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/map@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/meet-r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/meeting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/mobile@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/mobile@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/phone@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/phone@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/phone_2019-08-19.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon2@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon2@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon2_2019-07-15.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/polygon_2019-07-15.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rank@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rank@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy2@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy2@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy2_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy3@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy3@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy3_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy4@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy4@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy4_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy5@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy5@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy5_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy6@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy6@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy6_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy7@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy7@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy7_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy8@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy8@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy8_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rankCopy_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rank_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/red24@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/red24@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/red24_2019-07-15.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rocket2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/rocket@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/room.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/subscibersRank@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/subscibersRank@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/subscibersRank_2019-08-26.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/undrawBuildingBlocksN0Nc@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/undrawBuildingBlocksN0Nc@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/undrawBuildingBlocksN0Nc_2019-08-13.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/userLogInDev@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/userLogInDev@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/userLogInDev_2019-08-02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/username.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voice@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voice@2x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voice@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voice@3x_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voice_2019-08-19.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/voice_2019-08-20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/assets/wall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/FadeInView.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/FadeInView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/ErrorAlert.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/ErrorAlert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/GreatJob.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/GreatJob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/GreatJob2.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/GreatJob2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/component/History1.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/UserInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/UserInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/Video1.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/Video1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/walkThrough3.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/walkThrough3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/proxy/services/auth-proxy.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/proxy/services/auth-proxy.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/routing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History4.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History5.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History6.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/styles/history6.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/styles/history6.styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/screens/login-screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/screens/login-screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/services/http-client/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/services/http-client/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/state/authorization/action-creator.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/state/authorization/action-creator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/state/authorization/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/state/authorization/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/state/ui/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/state/ui/reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,10 +34,12 @@
     <session id="550279323">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">

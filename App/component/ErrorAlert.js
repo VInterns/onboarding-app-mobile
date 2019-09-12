@@ -22,14 +22,16 @@ import confused from '../assets/confused.png'
 
 class ErrorAlert extends Component {
     static navigationOptions = {
-        title: 'ERROR',
+        header: null
     };
     render() {
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         const { navigate } = this.props.navigation;
         return (
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
-                <View style={{ position: 'absolute', top: 80 }}>
+                <View style={{ marginTop: DEVICE_HEIGHT*0.13}}>
                     <Image source={confused} />{/* centered mobile logo*/}
                 </View>
 
@@ -67,8 +69,8 @@ const styles = StyleSheet.create({
         height: 38,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor:'red',
-        borderRadius :10
+        backgroundColor: 'red',
+        borderRadius: 10
     },
 
     ButtonView: { //wrapper for button 
@@ -76,10 +78,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         position: 'absolute',
         top: 462,
-      
+
 
     },
-     ButtonText: { // text inside button
+    ButtonText: { // text inside button
         color: 'white',
         fontSize: 20,
     },

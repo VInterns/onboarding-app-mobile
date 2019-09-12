@@ -25,12 +25,13 @@ export default class History4 extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-
+        const DEVICE_WIDTH = Dimensions.get('window').width;
+        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
-                <Image source={centerImg} style={{ position: 'absolute', top: 60 }} />{/* centered mobile logo*/}
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105 }} />{/* centered mobile logo*/}
 
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
@@ -45,26 +46,30 @@ export default class History4 extends Component {
                             respectively.
                         </Text>
                     </View>
-                    
+
                 </View>
 
                 {/*  button view */}
-                <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History5", {})} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
 
-                <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("GreatJob", {})} >
-                        <Text style={styles.ButtonText}>
-                            BACK
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
+                    <View style={styles.BackButtonView}>
 
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History1", {})} >
+                            <Text style={styles.ButtonText}>
+                                BACK
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.NextButtonView}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History5", {})}>
+                            <Text style={styles.ButtonText}>
+                                NEXT
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
 
             </View >
 
@@ -81,18 +86,12 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 17,
         fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
     },
     blackText: {//welcome to word style
         // alignItems: 'center',
         color: 'black',
         fontSize: 17,
-        //fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
+
     },
 
 
@@ -105,38 +104,27 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'absolute',
-        top: 370,
-        //textAlign:'justify'
-        //left: 40
+        marginTop: DEVICE_HEIGHT * 0.053
     },
 
 
     button: { // button design
-        width: 70,
-        height: 25,
+        /*   width: 70,
+          height: 25, */
         alignItems: 'center',
         justifyContent: 'center'
     },
 
     NextButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
+        justifyContent: 'center',
+        // backgroundColor:'red'
     },
     BackButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
+        justifyContent: 'center',
+        flex: 1,
 
     },
     ButtonText: { // text inside button
@@ -144,4 +132,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
+    /*     ButtonimageStyle: {//button icon
+            margin: -15
+        }, */
 });
