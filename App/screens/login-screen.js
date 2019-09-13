@@ -35,11 +35,12 @@ class LoginContainer extends Component {
     onNextScreen: (lastScreen: NextScreenModel) => void,
   };
 
-  
+
 
   static getDerivedStateFromProps(props, state) {
     if (props.isLoggedIn) {
-      props.navigation.navigate(props.lastScreen || "walkthrough");
+      // props.navigation.navigate(props.lastScreen || "walkthrough");
+      props.navigation.navigate("Brand");
       return state;
     }
     return state;

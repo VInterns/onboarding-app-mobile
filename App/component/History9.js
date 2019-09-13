@@ -46,7 +46,7 @@ export default class History8 extends Component {
 
                 {/*  button view */}
                 <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Histry10", {})
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand", {})
                         // this.validatePressedPhoto()
                     }>
                         <Text style={styles.ButtonText}>

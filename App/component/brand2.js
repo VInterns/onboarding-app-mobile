@@ -3,27 +3,21 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
-    Image,
     TouchableOpacity,
     ImageBackground,
     Dimensions,
     KeyboardAvoidingView,
-    Text,
-    Button,
-    Linking,//for linking a button to a link
-    WebView,
-    Platform
+    Text
 } from 'react-native';
 
-import FadeInView from './FadeInView';
-import halfTriLeft from '../assets/grouphalf.png';
-import halfTriRight from '../assets/groupright.png';
-import logoGif from '../assets/Vodafonebrandevolution.gif';
+import halfTriLeft from '../assets/group1.png';
+import halfTriRight from '../assets/group9.png';
+import logoGif from '../assets/loading.gif';
 
 export default class walkTrough1 extends Component {
 
     static navigationOptions = {//header styling
-      header:null
+        header: null
     };
 
 
@@ -40,7 +34,7 @@ export default class walkTrough1 extends Component {
 
                 <View style={styles.TextContainer}>
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125, left: 4}}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125, left: 4 }}>
 
                         <Text style={styles.blackText}>
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
@@ -53,7 +47,7 @@ export default class walkTrough1 extends Component {
                     </View>
                 </View>
                 <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("brand3", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand3", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
@@ -61,7 +55,7 @@ export default class walkTrough1 extends Component {
                 </KeyboardAvoidingView>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("brand1", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand1", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
@@ -99,7 +93,7 @@ const styles = StyleSheet.create({
         top: 50
         //bottom: 25
     },
-    
+
     button: { // button design
         width: 70,
         height: 25,

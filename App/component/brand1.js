@@ -5,36 +5,29 @@ import {
     View,
     Image,
     TouchableOpacity,
-    ImageBackground,
     Dimensions,
     KeyboardAvoidingView,
-    Text,
-    Button,
-    Linking,//for linking a button to a link
-    WebView,
-    Platform
+    Text
 } from 'react-native';
 
 import FadeInView from './FadeInView';
-import halfTriLeft from '../assets/grouphalf.png';
-import halfTriRight from '../assets/groupright.png';
-
-export default class walkTrough1 extends Component {
+import halfTriLeft from '../assets/group1.png';
+import halfTriRight from '../assets/group9.png';
+export default class Brand1 extends Component {
 
     static navigationOptions = {//header styling
-      header:null
+        header: null
     };
-
 
     render() {
         const { navigate } = this.props.navigation;
 
         return (
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-                <ImageBackground source={halfTriLeft} style={styles.wallpaper}>{/*background*/}
-                </ImageBackground>
-                <ImageBackground source={halfTriRight} style={styles.wallpaperRight}>{/*background*/}
-                </ImageBackground>
+                <Image source={halfTriLeft} style={styles.wallpaper}>{/*background*/}
+                </Image>
+                <Image source={halfTriRight} style={styles.wallpaperRight}>{/*background*/}
+                </Image>
 
 
                 <View style={styles.TextContainer}>
@@ -54,9 +47,9 @@ export default class walkTrough1 extends Component {
                         </Text>
                     </View>
                 </View>
-    
+
                 <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("brand2", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand2", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
@@ -64,7 +57,7 @@ export default class walkTrough1 extends Component {
                 </KeyboardAvoidingView>
 
                 <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("brand", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>

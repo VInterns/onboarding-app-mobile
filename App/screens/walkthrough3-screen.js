@@ -22,17 +22,15 @@ class Walkthrough3Container extends Component {
   }
 
   props: {
-    lastScreen:string,
+    lastScreen: string,
     tryNavigate: (nextScreen: string) => void
   };
 
   static getDerivedStateFromProps(props, state) {
-      if(props.lastScreen == "History"){
-        
-        props.navigation.navigate("Video1");
-      }
-    
+    if (props.lastScreen == "History") {
 
+      props.navigation.navigate("Video1");
+    }
     return state;
   }
   render() {

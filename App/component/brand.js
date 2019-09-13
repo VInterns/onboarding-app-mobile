@@ -5,32 +5,30 @@ import {
     View,
     Image,
     TouchableOpacity,
-    ImageBackground,
-    Dimensions,
-    KeyboardAvoidingView,
     Text,
-    Button,
-    Linking,//for linking a button to a link
+    Dimensions
 } from 'react-native';
 
 import FadeInView from './FadeInView';
-import backgroundImg from '../assets/grouplo.png';
-export default class brand extends Component {
-    static navigationOp = {
-        title: "Branding baby",
-        fontWeight: 'bold'
+import BrandImage from '../assets/BrandLogo/group.png';
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
+export default class Brand extends Component {
+    static navigationOptions = {
+        header: null
     };
-
     render() {
         const { navigate } = this.props.navigation;
+
         return (
-            <View>
+            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+
                 <View style={styles.TextContainer}>
-                        <View style={styles.blackTextView}>
-                            <FadeInView>
-                                <Text style={styles.blackText}>Our</Text>
-                            </FadeInView>
-                        </View>
+                    <View style={styles.blackTextView}>
+                        <FadeInView>
+                            <Text style={styles.blackText}>Our</Text>
+                        </FadeInView>
+                    </View>
                     <View style={styles.redView}>
                         <FadeInView>
                             <Text style={styles.redText}>BRAND</Text>
@@ -39,107 +37,62 @@ export default class brand extends Component {
 
                 </View>
 
-                <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <Image source={BrandImage} />
 
-                    <ImageBackground source={backgroundImg} style={styles.wallpaper}>{  /* background */}
-                    </ImageBackground>
+                <View style={styles.NextButtonView}>
 
-                    <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("brand1", {})} >
-                            <Text style={styles.ButtonText}>
-                                NEXT
-       </Text>
-                        </TouchableOpacity>
-                    </KeyboardAvoidingView>
-
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand1", {})} >
+                        <Text style={styles.ButtonText}>
+                            NEXT
+                            </Text>
+                    </TouchableOpacity>
                 </View>
-
-            </View>
-
+            </View >
         )
     }
 }
 const styles = StyleSheet.create({
-    wallpaper: { //background style
-        //    flex: 1,
-        height: 220,
-        width: 400,
-        resizeMode: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        aspectRatio: 2,
-        position: 'absolute',
-    },
-
     blackText: {//welcome to word style
-        // alignItems: 'center',
         color: 'black',
         fontSize: 35,
         fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
     },
-
     redText: {//login word text style
-
         color: 'red',
         fontWeight: 'bold',
         fontSize: 45,
-
     },
-
-    blackView: {
+    blackTextView: {
         alignItems: 'flex-start',
         justifyContent: 'center'
     },
-
     TextContainer: {/* Welcome back and vodabuddy wrapper */
         flexDirection: 'column',
         alignItems: 'flex-start',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: 40,
-        left: 40
+        justifyContent: 'flex-start',
+        marginTop: DEVICE_HEIGHT * 0.1,
+        marginRight: (DEVICE_WIDTH / 2) - (DEVICE_WIDTH * 0.09),
     },
-
     redView: {
         alignItems: 'flex-start',
         justifyContent: 'center'
     },
+    NextButtonView: { //wrapper for button 
+        // flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        flex: 1,
+        marginBottom: DEVICE_HEIGHT * 0.03,
+        marginLeft: DEVICE_WIDTH * 0.68
 
-    button: { // button design
-        width: 70,
-        height: 25,
+    },
+    button: {
         alignItems: 'center',
         justifyContent: 'center'
-    },
-
-    NextButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
-    },
-    BackButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
-
     },
     ButtonText: { // text inside button
         color: 'black',
         fontWeight: 'bold',
         fontSize: 20,
     },
-
-
 });
