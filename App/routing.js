@@ -39,6 +39,10 @@ import GreatJob from "./component/GreatJob";
 import GreatJob2 from "./component/GreatJob2";
 import Organisation from "./component/Organisation";
 import Organisation1 from "./component/Organisation1";
+import Organisation2 from "./component/Organisation2";
+import Organisation3 from "./component/Organisation3";
+
+
 
 
 const handleCustomTransition = ({ scenes }) => {
@@ -132,7 +136,11 @@ const AppNavigator = createStackNavigator(
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
     Organisation:{ screen: Organisation },
-    Organisation1:{ screen: Organisation1 }
+    Organisation1:{ screen: Organisation1 },
+    Organisation2:{ screen: Organisation2 },
+    Organisation3:{ screen: Organisation3 },
+    // Organisation4:{ screen: Organisation4 }
+
 
   },
 

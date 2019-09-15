@@ -13,16 +13,7 @@ import {
 
 import FadeInView from './FadeInView';
 
-import img1 from '../assets/group10.png';
-import img2 from '../assets/group12.png';
-import img3 from '../assets/group11.png';
-import img4 from '../assets/group13.png';
-import img5 from '../assets/group14.png';
-import img6 from '../assets/group18.png';
-import img7 from '../assets/group19.png';
-import img8 from '../assets/group17.png';
-import img9 from '../assets/group16.png';
-
+import img1 from '../assets/vssStructure.png';
 
 
 export default class Organisation1 extends Component {
@@ -41,25 +32,15 @@ export default class Organisation1 extends Component {
             <View style={styles.container}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>
-                        In Vodafone we have 9 Departments :
+                        VSS Organizational Structure is as follows :                    
                     </Text>
                 </View>
                 <View style={styles.imageContainer}>
                 <Image source={img1} style={styles.img}/> 
-                <Image source={img2} style={styles.img}/> 
-                <Image source={img3} style={styles.img}/> 
-                <Image source={img4} style={styles.img}/> 
-                <Image source={img5} style={styles.img}/> 
-                <Image source={img6} style={styles.img}/> 
-                <Image source={img7} style={styles.img}/> 
-                <Image source={img8} style={styles.img}/> 
-                <Image source={img9} style={styles.img}/> 
-
-
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation1")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -98,14 +79,15 @@ const styles = StyleSheet.create({
         color: "#4b464d"
     },
     imageContainer: {
+        justifyContent: 'flex-start',
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        alignItems: 'stretch',
+        alignItems: 'center',
         flex: 8
     },
     img:{
-        width: '31%',
-        margin: '1%',
+        // width: '100%',
+        // height: '70%',
+        marginRight: '10%',
     },
     button: { // button design
         /*    width: 70,
