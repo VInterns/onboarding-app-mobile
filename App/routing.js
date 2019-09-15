@@ -37,6 +37,9 @@ import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
 import GreatJob from "./component/GreatJob";
 import GreatJob2 from "./component/GreatJob2";
+import Organisation from "./component/Organisation";
+import Organisation1 from "./component/Organisation1";
+
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -127,7 +130,9 @@ const AppNavigator = createStackNavigator(
     GreatJob2: { screen: GreatJob2 },
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
-    ErrorAlert4: { screen: ErrorAlert4 }
+    ErrorAlert4: { screen: ErrorAlert4 },
+    Organisation:{ screen: Organisation },
+    Organisation1:{ screen: Organisation1 }
 
   },
 

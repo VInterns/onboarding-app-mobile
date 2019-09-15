@@ -43,5 +43,10 @@
     "babel-preset-expo": "^5.1.1",
     "redux-devtools": "^3.5.0"
   },
-  "private": true
+  "private": true,
+  "rnpm": {
+    "assets": [
+       "./assets/fonts/"
+    ]
+  }
 }
