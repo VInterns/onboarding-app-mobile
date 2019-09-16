@@ -10,13 +10,13 @@ export default StyleSheet.create({
 
     blackText: {//welcome to word style
         color: 'black',
-        fontSize: 20,
+        fontSize: DEVICE_WIDTH * 0.048,
     },
 
     redText: {//login word text style
         color: 'red',
         fontWeight: 'bold',
-        fontSize: 28,
+        fontSize: 0.067 * DEVICE_WIDTH,
 
     },
 
@@ -40,14 +40,14 @@ export default StyleSheet.create({
         alignItems: 'flex-start',
         justifyContent: 'center',
         flexDirection: 'column',
-     //   backgroundColor: 'green'
+        //   backgroundColor: 'green'
     },
     RightView: {
         //marginTop: 17,
         marginLeft: 0.2 * DEVICE_WIDTH,
         alignItems: 'flex-start',
         justifyContent: 'flex-end',
-      //  backgroundColor: 'yellow'
+        //  backgroundColor: 'yellow'
     },
 
     button: { // button design

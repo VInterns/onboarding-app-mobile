@@ -12,7 +12,7 @@ export default StyleSheet.create({
     Text: {//welcome to word style
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: DEVICE_WIDTH * 0.048,
     },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */

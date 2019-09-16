@@ -31,7 +31,7 @@ export default class History4 extends Component {
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
-                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105 }} />{/* centered mobile logo*/}
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105 ,resizeMode:'stretch'}} />{/* centered mobile logo*/}
 
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
@@ -84,13 +84,13 @@ const styles = StyleSheet.create({
     BoldblackText: {//welcome to word style
         // alignItems: 'center',
         color: 'black',
-        fontSize: 17,
+        fontSize: DEVICE_WIDTH * 0.041,
         fontWeight: 'bold'
     },
     blackText: {//welcome to word style
         // alignItems: 'center',
         color: 'black',
-        fontSize: 17,
+        fontSize: DEVICE_WIDTH * 0.041,
 
     },
 

@@ -48,7 +48,7 @@ export default class History5 extends Component {
 
                             <View style={{ alignItems: 'center', justifyContent: 'center', }}>
                                 <FadeInView>
-                                    <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 30, }}>50 </Text>
+                                    <Text style={{ color: 'red', fontWeight: 'bold', fontSize: DEVICE_WIDTH*0.072, }}>50 </Text>
                                 </FadeInView>
                             </View>
 
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     BoldblackText: {//welcome to word style
         // alignItems: 'center',
         color: 'black',
-        fontSize: 25,
+        fontSize: DEVICE_WIDTH*0.06,
         fontWeight: 'bold'
         //position: 'absolute',
         // left: 40,
