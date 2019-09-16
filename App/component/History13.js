@@ -19,6 +19,17 @@ import letter from "../assets/group_2.png";
 
 
 export default class walkThrough2 extends Component {
+    componentDidMount() {
+        // Start counting when the page is loaded
+        this.timeoutHandle = setTimeout(() => {
+            // Add your logic for the transition
+            this.props.navigation.navigate("Video2")
+        }, 2000);
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
+    }
 
     static navigationOptions = {//header styling
         header: null

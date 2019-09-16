@@ -51,7 +51,7 @@ export default class History extends Component {
                         </FadeInView>
                     </View>
 
-                </View>
+                </View> 
 
                 <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />{/* centered mobile logo*/}
 

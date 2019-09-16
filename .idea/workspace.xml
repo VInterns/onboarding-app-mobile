@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f9710b-8fca-4939-a61e-c190372e61b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/assets/rank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/GreatJob2.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/GreatJob2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/component/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/History10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/History8.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/History9.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/styles/history8.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/styles/history8.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/component/styles/history9.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/styles/history9.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/routing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History1.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History2.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/services/http-client/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/services/http-client/constants.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

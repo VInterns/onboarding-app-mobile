@@ -31,8 +31,10 @@ import History7 from "./component/History7";
 import History8 from "./component/History8";
 import History9 from "./component/History9";
 import History11 from "./component/History11";
+import History12 from "./component/History12";
 import History13 from "./component/History13";
 import Video1 from "./component/Video1";
+import Video2 from "./component/Video2";
 import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
@@ -128,6 +130,10 @@ const AppNavigator = createStackNavigator(
       navigationOptions: {
         header: null
       }},
+      Video2: { screen: Video2 ,
+        navigationOptions: {
+          header: null
+        }},
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },
@@ -145,6 +151,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
     History11: { screen: History11 },
+    History12: { screen: History12 },
     History13: { screen: History13 },
   },
 

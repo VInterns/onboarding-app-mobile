@@ -67,7 +67,9 @@ export default class History2 extends Component {
             // Default Value for ButtonStateHolder State. Now the button is Enabled.
         };
     }
-
+    componentWillUnmount() { // on closing screen using back button this screen is closed and unmounted then it calls onscreenRevisit function because the previous screen is still mounted so we need to change some state.
+        this.props.navigation.state.params.onScreenReVisit()
+    }
     D_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.D_show == true) {
             this.setState({ D_show: false });
@@ -243,13 +245,14 @@ export default class History2 extends Component {
     render() {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
+        let marginFraction = 15 / DEVICE_WIDTH
         const { navigate } = this.props.navigation;
         const showVoiceWord =
             <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginTop: DEVICE_HEIGHT * 0.027 }}>
-                <Image source={FletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
-                <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
-                <Image source={NletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
-                <Image source={EletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
+                <Image source={FletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />{/* centered mobile logo*/}
+                <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />{/* centered mobile logo*/}
+                <Image source={NletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />{/* centered mobile logo*/}
+                <Image source={EletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />{/* centered mobile logo*/}
                 <View style={{ justifyContent: 'space-around', alignItems: 'center', marginBottom: DEVICE_HEIGHT * 0.03 }}>
                     <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 28 }}> = Phone</Text>
                 </View>
@@ -271,32 +274,32 @@ export default class History2 extends Component {
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095 }}>
 
                     <TouchableOpacity disabled={true}>
-                        <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={true} >
-                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.D_ShowHideComponent();
                         this.load_D_letter();
                     }} >
-                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.A_ShowHideComponent();
                         this.load_A_letter();
                     }} >
-                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.F_ShowHideComponent();
                         this.load_F_letter();
                     }}>
-                        <Image source={this.state.FimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.FimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
 
@@ -304,7 +307,7 @@ export default class History2 extends Component {
                         this.O_ShowHideComponent_2();
                         this.load_O_letter_2();
                     }}>
-                        <Image source={this.state.OimageURL_2} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.OimageURL_2} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
 
@@ -312,14 +315,14 @@ export default class History2 extends Component {
                         this.N_ShowHideComponent();
                         this.load_N_letter();
                     }} >
-                        <Image source={this.state.NimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.NimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.E_ShowHideComponent();
                         this.load_E_letter();
                     }}>
-                        <Image source={this.state.EimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.EimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                 </View>

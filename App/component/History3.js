@@ -155,11 +155,12 @@ export default class History3 extends Component {
     render() {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
+        let marginFraction = 15 / DEVICE_WIDTH
         const { navigate } = this.props.navigation;
         const showVoiceWord =
             <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginTop: DEVICE_HEIGHT * 0.027 }}>
-                <Image source={DletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
-                <Image source={AletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />{/* centered mobile logo*/}
+                <Image source={DletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />{/* centered mobile logo*/}
+                <Image source={AletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />{/* centered mobile logo*/}
 
                 <View style={{ justifyContent: 'space-around', alignItems: 'center', marginBottom: DEVICE_HEIGHT * 0.03 }}>
                     <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 28 }}> = Data</Text>
@@ -182,43 +183,43 @@ export default class History3 extends Component {
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095 }}>
 
                     <TouchableOpacity disabled={true}>
-                        <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={true}>
-                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.D_ShowHideComponent();
                         this.load_D_letter();
                     }} >
-                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.A_ShowHideComponent();
                         this.load_A_letter();
                     }} >
-                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={true}>
-                        <Image source={FletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
-                    </TouchableOpacity>
-
-
-                    <TouchableOpacity disabled={true}>
-                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={FletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
 
                     <TouchableOpacity disabled={true}>
-                        <Image source={NletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity disabled={true}>
+                        <Image source={NletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                     <TouchableOpacity disabled={true}>
-                        <Image source={EletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={EletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                 </View>
