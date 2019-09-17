@@ -13,15 +13,15 @@ import {
 
 import FadeInView from './FadeInView';
 
-import img1 from '../assets/group10.png';
-import img2 from '../assets/group12.png';
-import img3 from '../assets/group11.png';
-import img4 from '../assets/group13.png';
-import img5 from '../assets/group14.png';
-import img6 from '../assets/group18.png';
-import img7 from '../assets/group19.png';
-import img8 from '../assets/group17.png';
-import img9 from '../assets/group16.png';
+import img1 from '../assets/DigitalBussiness.png';
+import img2 from '../assets/Enterprice.png';
+import img3 from '../assets/Care.png';
+import img4 from '../assets/FinanceOperation.png';
+import img5 from '../assets/TSS.png';
+import img6 from '../assets/supplyChain.png';
+import img7 from '../assets/GlobalBussiness.png';
+import img8 from '../assets/HrSharedService.png';
+import img9 from '../assets/deviceOperation.png';
 
 
 
@@ -59,7 +59,7 @@ export default class Organisation1 extends Component {
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation5")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>

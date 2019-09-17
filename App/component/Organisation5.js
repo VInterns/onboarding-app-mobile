@@ -13,7 +13,9 @@ import {
 
 import FadeInView from './FadeInView';
 
-import img1 from '../assets/vssStructure.png';
+import img1 from '../assets/VFEgyptEmp.png';
+
+
 
 
 export default class Organisation1 extends Component {
@@ -30,16 +32,18 @@ export default class Organisation1 extends Component {
         return (
 
             <View style={styles.container}>
-                <View style={styles.textContainer}>
-                    <Text style={styles.text}>
-                        VSS Organizational Structure              
-                    </Text>
-                    <Text style={styles.text}>
-                        is as follows :                    
-                    </Text>
-                </View>
+                
                 <View style={styles.imageContainer}>
                 <Image source={img1} style={styles.img}/> 
+                </View>
+                <View style={styles.textContainer}>
+                    <Text style={styles.text1}>
+                        VF Egypt 
+                    </Text>
+                    <Text style={styles.text2}> 6000 Employees </Text>
+                    <Text style={styles.text1}>and now you have become a </Text>
+                    <Text style={styles.text2}>+1. </Text>
+                    <Text style={styles.text1}>We can wait to have you on board.</Text>
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
@@ -68,40 +72,47 @@ const styles = StyleSheet.create({
     textContainer: {
         flex: 1,
         padding: DEVICE_WIDTH * 0.05,
-        flexWrap:'wrap',
-        flexDirection:'row',
-        marginTop: DEVICE_HEIGHT * 0.06,
-    },
-    text: {
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        //   fontFamily: "VodafoneRg",
-        fontSize: 19,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        lineHeight: 25,
-        letterSpacing: 0,
-        color: "#4b464d",
-    },
-    imageContainer: {
-        justifyContent: 'flex-start',
+        // backgroundColor: '#2E86C1',
         flexDirection: 'row',
-        alignItems: 'center',
-        flex: 8,
-        // marginRight: DEVICE_WIDTH * 0.2,
-        // backgroundColor: 'orange',
-        // paddingRight: DEVICE_HEIGHT * 0.1,
         flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+
 
     },
-    img:{
-        width: '100%',
-        height: '100%',
-        marginRight: '5%',
-        // justifyContent: 'flex-start',
-        // alignItems: 'center',
+    text2: {
+        // fontFamily: "VodafoneRg",
+        fontSize: 21,
+        fontWeight: "bold",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#e60000"
+    },
+    text1: {
+        // fontFamily: "VodafoneRg",
+        fontSize: 21,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#4b464d"
+    },
+    imageContainer: {
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        // padding:'10%',
         // flexWrap: 'wrap',
-        // backgroundColor: '#EEE8AA',
+        flex: 2,
+        // backgroundColor: '#34495E' 
+    },
+    img:{
+        justifyContent: 'center',
+        // width: '80%',
+        // height: '70%',
+        // marginRight: '20%',
+        marginLeft: '5%',
+        // backgroundColor: 'black'
+
     },
     button: { // button design
         /*    width: 70,

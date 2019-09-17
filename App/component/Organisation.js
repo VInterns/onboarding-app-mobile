@@ -42,7 +42,7 @@ export default class Organisation extends Component {
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}               
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation1")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation5")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
