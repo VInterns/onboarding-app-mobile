@@ -55,7 +55,6 @@ export default class Organisation1 extends Component {
                 <Image source={img8} style={styles.img}/> 
                 <Image source={img9} style={styles.img}/> 
 
-
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
