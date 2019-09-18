@@ -6,198 +6,162 @@ import {
     Image,
     TouchableOpacity,
     Dimensions,
-    KeyboardAvoidingView,
     Text
 } from 'react-native';
 
-import FadeInView from './FadeInView';
-import halfTriLeft from '../assets/group1.png';
-import halfTriRight from '../assets/group9.png';
+import halfTriLeft from '../assets/shape1.png';
+import halfTriRight from '../assets/shape2.png';
+import video from '../assets/01.mp4';
+import { Video } from 'expo-av';
+import YouTube from 'react-native-youtube';
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
+
 export default class Brand1 extends Component {
 
     static navigationOptions = {//header styling
         header: null
     };
+    _onPlaybackStatusUpdate = playbackStatus => {
+        if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500) { }
+    };
 
     render() {
+        console.log("Widht : " + DEVICE_WIDTH);
+        console.log("height : " + DEVICE_HEIGHT);
         const { navigate } = this.props.navigation;
-
         return (
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-                <Image source={halfTriLeft} style={styles.wallpaper}>{/*background*/}
-                </Image>
-                <Image source={halfTriRight} style={styles.wallpaperRight}>{/*background*/}
-                </Image>
+            <View style={{ width: '100%', height: '100%', flex: 1 }}>
+                <View style={{ flexDirection: 'row' }}>
+                    <Image source={halfTriLeft} style={styles.LeftImage}>{/*background*/}
+                    </Image>
+                    <Video
+                        source={video}
+                        onPlaybackStatusUpdate=
+                        {
+                            (playbackStatus) => this._onPlaybackStatusUpdate(playbackStatus)
+                        }
+                        shouldPlay
+                        resizeMode="cover"
+                        style={styles.Video}
+                    />
+                    <Image source={halfTriRight} style={styles.RightImage}>{/*background*/}
+                    </Image>
+                </View>
+
+
+
+                {/* <YouTube
+                    videoId="99PU7603o2Q" // The YouTube video ID
+                    play // control playback of video with true/false
+                    loop // control whether the video should loop when ended
+                    onReady={e => this.setState({ isReady: true })}
+                    onChangeState={e => this.setState({ status: e.state })}
+                    onChangeQuality={e => this.setState({ quality: e.quality })}
+                    onError={e => this.setState({ error: e.error })}
+                    style={{ alignSelf: 'stretch', height: 300 }}
+                /> */}
 
 
                 <View style={styles.TextContainer}>
-
-                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125 }}>
-                        <Text style={styles.blackText}>
-                            <Text style={styles.redText}>Vodafone </Text>
-                            introduced a new logo  {'\n'}
-                            designed by Brand Union as part of a {'\n'}
-                            global brand repositioning. As part of a {'\n'}
-                            major global rebranding and brand re- {'\n'}
-                            positioning, Vodafone Group has {'\n'}
-                            launched a new campaign called "Hello" {'\n'}
-                            which forms part of the brand's biggest {'\n'}
-                            advertising campaign in its 33-year {'\n'}
-                            history.
+                    <Text style={styles.blackText}>
+                        <Text style={styles.redText}>Vodafone </Text>
+                        introduced a new logo  {'\n'}
+                        designed by Brand Union as part of a {'\n'}
+                        global brand repositioning. As part of a {'\n'}
+                        major global rebranding and brand re- {'\n'}
+                        positioning, Vodafone Group has {'\n'}
+                        launched a new campaign called "Hello" {'\n'}
+                        which forms part of the brand's biggest {'\n'}
+                        advertising campaign in its 33-year {'\n'}
+                        history.
                         </Text>
-                    </View>
                 </View>
 
-                <KeyboardAvoidingView behavior="padding" style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand2", {})} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                        </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView>
 
-                <KeyboardAvoidingView behavior="padding" style={styles.BackButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand", {})} >
+                <View style={styles.ButtonsView}>
+                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
                     </TouchableOpacity>
-                </KeyboardAvoidingView>
+
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand2", {})} >
+                        <Text style={styles.ButtonText}>
+                            NEXT
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+
             </View>
         );
     }
 }
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
-    wallpaper: { //background style
-        resizeMode: 'center',
-        height: 325,
-        width: 150,
-        justifyContent: 'center',
+    LeftImage: { //background style
+        marginTop: DEVICE_HEIGHT * 0.1132, //80
+        zIndex: 1,
+        position: "absolute"
+    },
+    RightImage: { //background style
+        marginTop: DEVICE_HEIGHT * 0.1132,
+        marginLeft: DEVICE_WIDTH * 0.66,
+        zIndex: 1,
+        position: "absolute"
+    },
+    Video: {
+        zIndex: 5,
+        marginLeft: DEVICE_WIDTH * 0.11, //40
+        marginTop: DEVICE_HEIGHT * 0.2123, //150
+        width: DEVICE_WIDTH * 0.83, //300
+        height: DEVICE_HEIGHT * 0.241, // 170
+        borderWidth: 5,
+        borderColor: 'black'
+    },
+    TextContainer:
+    {
         alignItems: 'center',
-        position: 'absolute',
-        right: 250,
-        left: 1,
-        top: 50
-        //bottom: 25
+        marginTop: DEVICE_HEIGHT * 0.169
     },
-    wallpaperRight: { //background style
-        resizeMode: 'center',
-        height: 325,
-        width: 150,
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        right: 1,
-        left: 260,
-        top: 50
-        //bottom: 25
-    },
-    WelcomeText: {//welcome to word style
-        // alignItems: 'center',
-        color: 'red',
-        fontSize: 30,
-        fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
-    },
-
-    onBoardText: {//login word text style
-        //textAlign: 'center',
-        color: 'black',
-        // fontWeight: 'bold',
-        fontSize: 30,
-        /*    position: 'absolute',
-           left: 40 */
-    },
-
-    welcomTextView: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-
-    WelcomOnBoardTextContainer: {/* Welcome back and vodabuddy wrapper */
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: 40
-    },
-
-    onBoardView: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-
-    button: { // button design
-        width: 70,
-        height: 25,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    ButtonimageStyle: {//button icon
-        margin: 13,
-        height: 25,
-        width: 25,
-        resizeMode: 'stretch',
-        transform: [ //to adjust the arrow inside the button 
-            { rotate: '315deg' }
-        ],
-    },
-    buttonView: { //wrapper for button 
-
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 30,
-        right: 30
-
-    },
-    BoldblackText: {//welcome to word style
-        // alignItems: 'center',
+    blackText: {
         color: 'black',
         fontSize: 17,
-        fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
-    },
-    blackText: {//welcome to word style
-        // alignItems: 'center',
-        color: 'black',
-        fontSize: 17,
-        //fontWeight: 'bold'
-        //position: 'absolute',
-        // left: 40,
-        //  top: 50
     },
     redText: {
         color: 'red',
         fontSize: 17
     },
-    NextButtonView: { //wrapper for button 
+    ButtonsView: {
+        width: DEVICE_WIDTH,
+        height: DEVICE_HEIGHT * 0.063,
         flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
+        marginTop: DEVICE_HEIGHT * 0.95,
+        backgroundColor: "#0000",
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 10,
+            height: 10
+        },
+        shadowRadius: 22,
+        shadowOpacity: 1,
+        elevation: 3,
+        position: "absolute"
     },
-    BackButtonView: { //wrapper for button 
+    BackButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
         flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
-
+        marginLeft: DEVICE_WIDTH * 0.11
     },
-    ButtonText: { // text inside button
+    NextButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginLeft: DEVICE_WIDTH * 0.5,
+        bottom: 0
+    },
+    ButtonText: {
         color: 'black',
         fontWeight: 'bold',
         fontSize: 20,

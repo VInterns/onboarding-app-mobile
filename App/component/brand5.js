@@ -11,12 +11,11 @@ import {
 
 import halfTriLeft from '../assets/group1.png';
 import halfTriRight from '../assets/group9.png';
-import logoGif from '../assets/loading.gif';
 import { Video } from 'expo-av';
 import video from '../assets/GIFVID.mp4';
 
 
-export default class Brand2 extends Component {
+export default class Brand5 extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -58,21 +57,23 @@ export default class Brand2 extends Component {
                         <Text style={styles.blackText}>
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
                             {'\n'}
-                            the video focuses on the constancy of human {'\n'}
-                            interaction even while technologies evolve over time, {'\n'}
-                            which makes us always think that The future is {'\n'}
-                            exciting.
+                            But when it comes to Vodafone Logo, Vodafone  {'\n'}
+                            stood in place with the authentic speech mark Logo,  {'\n'}
+                            as Vodafone became very well known worldwide. {'\n'}
+                            Watch the next video to see how the Logo evolved
+
+
                         </Text>
                     </View>
                 </View>
                 <View style={styles.ButtonsView}>
-                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand1", {})} >
+                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand4", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand3", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand5", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>

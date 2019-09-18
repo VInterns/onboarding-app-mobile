@@ -37,7 +37,7 @@ export default class Brand extends Component {
 
                 </View>
 
-                <Image source={BrandImage} />
+                <Image source={BrandImage} style={styles.BrandImg} />
 
                 <View style={styles.NextButtonView}>
 
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         marginRight: (DEVICE_WIDTH / 2) - (DEVICE_WIDTH * 0.09),
     },
     redView: {
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'center'
     },
     NextButtonView: { //wrapper for button 
@@ -95,4 +95,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
+    BrandImg: {
+        marginTop: DEVICE_HEIGHT * 0.17
+    }
 });

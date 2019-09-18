@@ -11,12 +11,11 @@ import {
 
 import halfTriLeft from '../assets/group1.png';
 import halfTriRight from '../assets/group9.png';
-import logoGif from '../assets/loading.gif';
 import { Video } from 'expo-av';
 import video from '../assets/GIFVID.mp4';
 
 
-export default class Brand2 extends Component {
+export default class Brand4 extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -58,21 +57,22 @@ export default class Brand2 extends Component {
                         <Text style={styles.blackText}>
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
                             {'\n'}
-                            the video focuses on the constancy of human {'\n'}
-                            interaction even while technologies evolve over time, {'\n'}
-                            which makes us always think that The future is {'\n'}
-                            exciting.
+                            The language used in the brand tagline will vary from {'\n'}
+                            country to country so, for example, in Italy, it will be “il {'\n'}
+                            futuro e straordinario. Ready?”, and in Spain “El future {'\n'}
+                            es apasionate. Ready?” while in Egypt will be {'\n'}
+                            “اللي جاي أقوى. جاهز؟”.
                         </Text>
                     </View>
                 </View>
                 <View style={styles.ButtonsView}>
-                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand1", {})} >
+                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand3", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand3", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand5", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>

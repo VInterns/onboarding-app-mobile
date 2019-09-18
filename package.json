@@ -30,6 +30,7 @@
     "react-native-app-intro-slider": "^3.0.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-web": "^0.11.4",
+    "react-native-youtube": "^2.0.0-beta.2",
     "react-navigation": "^3.11.0",
     "react-navigation-transitions": "^1.0.12",
     "react-redux": "^7.1.0",

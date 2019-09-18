@@ -40,6 +40,9 @@ import GreatJob2 from "./component/GreatJob2";
 import Brand from "./component/brand";
 import Brand1 from "./component/brand1";
 import Brand2 from "./component/brand2";
+import Brand3 from "./component/brand3";
+import Brand4 from "./component/brand4";
+import Brand5 from "./component/brand5";
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -133,7 +136,10 @@ const AppNavigator = createStackNavigator(
     ErrorAlert4: { screen: ErrorAlert4 },
     Brand: { screen: Brand },
     Brand1: { screen: Brand1 },
-    Brand2: { screen: Brand2 }
+    Brand2: { screen: Brand2 },
+    Brand3: { screen: Brand3 },
+    Brand4: { screen: Brand4 },
+    Brand5: { screen: Brand5 },
   },
 
   {
