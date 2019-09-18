@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     textContainer: {
         flex: 1,
         padding: DEVICE_WIDTH * 0.05,
-        marginTop: DEVICE_HEIGHT * 0.04,
+        marginTop: DEVICE_HEIGHT * 0.1,
     },
     text1: {
         // width: 334,

@@ -77,8 +77,6 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-
-
     },
     text2: {
         // fontFamily: "VodafoneRg",
