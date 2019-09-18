@@ -13,9 +13,12 @@ import {
 
 import FadeInView from './FadeInView';
 
-import centerImg from '../assets/undrawConnectingTeams8Ntu.png';
+import img1 from '../assets/Congratulation-R.png';
 
-export default class Organisation extends Component {
+
+
+
+export default class Organisation1 extends Component {
 
     static navigationOptions = {
         //header styling
@@ -30,19 +33,17 @@ export default class Organisation extends Component {
 
             <View style={styles.container}>
                 <View style={styles.textContainer}>
-                    <Text style={styles.textOur}>
-                        Our
+                    <Text style={styles.text1}>
+                        Congratulations!
                     </Text>
-                    <Text style={styles.textOrganization}>
-                        Organizations
-                    </Text>
+                    <Text style={styles.text2}>You’ve been awarded with the letter</Text>
                 </View>
                 <View style={styles.imageContainer}>
-                    <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />{/* centered mobile logo*/}
+                    <Image source={img1} style={styles.img}/> 
                 </View>
                 <View style={styles.NextButtonView}>
-                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}               
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation1")} >
+                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -58,42 +59,50 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
 
-    container:{
+    container: {
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'stretch',
         flex: 1,
     },
-    textContainer:{
-        flex:2.5,
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        paddingLeft: DEVICE_WIDTH * 0.04
+    textContainer: {
+        flex: 1,
+        padding: DEVICE_WIDTH * 0.05,
+        marginTop: DEVICE_HEIGHT * 0.04,
     },
-    imageContainer:{
-        flex: 4,
-        alignItems: 'center',
-        height:200
-
-    },
-    textOur:{
-        marginTop: DEVICE_HEIGHT * 0.13,
+    text1: {
+        // width: 334,
+        // height: 44,
         // fontFamily: "VodafoneRg",
-        fontSize: 50,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        lineHeight: 55,
-        letterSpacing: 0,
-        color: "black",
-    },
-    textOrganization:{
-        fontSize: 50,
+        fontSize: 37,
         fontWeight: "bold",
         fontStyle: "normal",
-        lineHeight: 55,
+        lineHeight: 44,
         letterSpacing: 0,
-        color: "#e60000",
+        textAlign: "center",
+        color: "#e60000"
+    },
+    text2:{
+        // width: 334,
+        // height: 24,
+        // fontFamily: "VodafoneRg",
+        fontSize: 21,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        textAlign: "center",
+        color: "#4b464d"
+    },
+    imageContainer: {
+        flexDirection: 'column',
+        // flexWrap: 'wrap',
+        alignItems: 'center',
+        flex: 6,
+        marginTop: DEVICE_HEIGHT * 0.04,
+    },
+    img:{
+        // width: '90%',
+        // margin: '1%',
     },
     button: { // button design
         /*    width: 70,
@@ -106,7 +115,6 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         marginBottom: DEVICE_HEIGHT * 0.03,
         marginRight: DEVICE_WIDTH * 0.095,
-        // backgroundColor: 'red'
     },
     ButtonText: { // text inside button
         color: 'black',

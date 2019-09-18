@@ -43,6 +43,7 @@ import Organisation2 from "./component/Organisation2";
 import Organisation3 from "./component/Organisation3";
 import Organisation4 from "./component/Organisation4";
 import Organisation5 from "./component/Organisation5";
+import CongratulationsR from "./component/Congratulations-R";
 
 
 
@@ -145,6 +146,8 @@ const AppNavigator = createStackNavigator(
     Organisation3:{ screen: Organisation3 },
     Organisation4:{ screen: Organisation4 },
     Organisation5:{ screen: Organisation5 },
+    CongratulationsR:{ screen: CongratulationsR },
+
 
 
 
