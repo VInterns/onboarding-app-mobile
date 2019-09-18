@@ -43,6 +43,11 @@ export default class Organisation1 extends Component {
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                        <Text style={styles.ButtonText}>
+                            BACK
+                       </Text>
+                    </TouchableOpacity>
                     <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation4")} >
                         <Text style={styles.ButtonText}>
                             NEXT
@@ -110,10 +115,13 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     NextButtonView: { //wrapper for button 
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginBottom: DEVICE_HEIGHT * 0.03,
         marginRight: DEVICE_WIDTH * 0.095,
+        marginLeft: DEVICE_WIDTH * 0.095,
+        flexWrap: 'wrap',
+        flexDirection: 'row'
     },
     ButtonText: { // text inside button
         color: 'black',
