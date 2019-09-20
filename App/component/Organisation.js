@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        paddingLeft: DEVICE_WIDTH * 0.04
+        paddingLeft: DEVICE_WIDTH * 0.04,
+        paddingTop: DEVICE_HEIGHT * 0.1
     },
     imageContainer:{
         flex: 4,
@@ -78,12 +79,11 @@ const styles = StyleSheet.create({
 
     },
     textOur:{
-        marginTop: DEVICE_HEIGHT * 0.13,
         // fontFamily: "VodafoneRg",
         fontSize: 50,
         fontWeight: "normal",
         fontStyle: "normal",
-        lineHeight: 55,
+        lineHeight: 65,
         letterSpacing: 0,
         color: "black",
     },
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         fontWeight: "bold",
         fontStyle: "normal",
-        lineHeight: 55,
+        lineHeight: 65,
         letterSpacing: 0,
         color: "#e60000",
     },
@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         marginBottom: DEVICE_HEIGHT * 0.03,
         marginRight: DEVICE_WIDTH * 0.095,
-        // backgroundColor: 'red'
     },
     ButtonText: { // text inside button
         color: 'black',
