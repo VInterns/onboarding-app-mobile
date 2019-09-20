@@ -43,6 +43,9 @@ import Brand2 from "./component/brand2";
 import Brand3 from "./component/brand3";
 import Brand4 from "./component/brand4";
 import Brand5 from "./component/brand5";
+import Brand6 from "./component/brand6";
+import Brand7 from "./component/brand7";
+
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -140,6 +143,8 @@ const AppNavigator = createStackNavigator(
     Brand3: { screen: Brand3 },
     Brand4: { screen: Brand4 },
     Brand5: { screen: Brand5 },
+    Brand6: { screen: Brand6 },
+    Brand7: { screen: Brand7 }
   },
 
   {

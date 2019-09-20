@@ -11,7 +11,7 @@ import {
 
 import halfTriLeft from '../assets/shape1.png';
 import halfTriRight from '../assets/shape2.png';
-import video from '../assets/01.mp4';
+import video from '../assets/theStoryOfHello.mp4';
 import { Video } from 'expo-av';
 import YouTube from 'react-native-youtube';
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -32,7 +32,8 @@ export default class Brand1 extends Component {
         const { navigate } = this.props.navigation;
         return (
             <View style={{ width: '100%', height: '100%', flex: 1 }}>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={styles.ImagesView}>
+
                     <Image source={halfTriLeft} style={styles.LeftImage}>{/*background*/}
                     </Image>
                     <Video
@@ -99,30 +100,37 @@ export default class Brand1 extends Component {
 }
 
 const styles = StyleSheet.create({
+    ImagesView: {
+        flexDirection: 'row',
+        flex: 4,
+        alignItems: 'center'
+    },
     LeftImage: { //background style
-        marginTop: DEVICE_HEIGHT * 0.1132, //80
+        // marginTop: DEVICE_HEIGHT * 0.1132, //80
         zIndex: 1,
         position: "absolute"
     },
     RightImage: { //background style
-        marginTop: DEVICE_HEIGHT * 0.1132,
-        marginLeft: DEVICE_WIDTH * 0.66,
+        // marginTop: DEVICE_HEIGHT * 0.1132,
+        marginLeft: DEVICE_WIDTH - 134,
         zIndex: 1,
-        position: "absolute"
+        position: "absolute",
+        // right: DEVICE_WIDTH
+        marginRight: 120
     },
     Video: {
         zIndex: 5,
         marginLeft: DEVICE_WIDTH * 0.11, //40
-        marginTop: DEVICE_HEIGHT * 0.2123, //150
+        // marginTop: DEVICE_HEIGHT * 0.2123, //150
         width: DEVICE_WIDTH * 0.83, //300
-        height: DEVICE_HEIGHT * 0.241, // 170
-        borderWidth: 5,
-        borderColor: 'black'
+        height: DEVICE_HEIGHT * 0.241, // 170,
+        alignSelf: "center",
     },
     TextContainer:
     {
         alignItems: 'center',
-        marginTop: DEVICE_HEIGHT * 0.169
+        // marginTop: DEVICE_HEIGHT * 0.169
+        flex: 2
     },
     blackText: {
         color: 'black',
@@ -136,7 +144,8 @@ const styles = StyleSheet.create({
         width: DEVICE_WIDTH,
         height: DEVICE_HEIGHT * 0.063,
         flexDirection: 'row',
-        marginTop: DEVICE_HEIGHT * 0.95,
+        // marginTop: DEVICE_HEIGHT * 0.95,
+        marginBottom: DEVICE_HEIGHT * 0.03,
         backgroundColor: "#0000",
         shadowColor: 'black',
         shadowOffset: {
@@ -146,7 +155,7 @@ const styles = StyleSheet.create({
         shadowRadius: 22,
         shadowOpacity: 1,
         elevation: 3,
-        position: "absolute"
+        // position: "absolute"
     },
     BackButton: {
         alignItems: 'center',
@@ -159,7 +168,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flexDirection: 'row',
         marginLeft: DEVICE_WIDTH * 0.5,
-        bottom: 0
     },
     ButtonText: {
         color: 'black',

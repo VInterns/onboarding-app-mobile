@@ -9,13 +9,13 @@ import {
     Text
 } from 'react-native';
 
-import halfTriLeft from '../assets/group1.png';
-import halfTriRight from '../assets/group9.png';
+import halfTriLeft from '../assets/shape1L.png';
+import halfTriRight from '../assets/shape2R.png';
 import { Video } from 'expo-av';
-import video from '../assets/GIFVID.mp4';
+import video from '../assets/Vid6.mp4';
 
 
-export default class Brand2 extends Component {
+export default class Brand6 extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -31,7 +31,7 @@ export default class Brand2 extends Component {
         return (
             <View style={{ width: '100%', height: '100%', flex: 1 }}>
 
-                <View style={styles.ImagesView}>
+                <View style={{ flexDirection: 'row' }}>
 
                     <Image source={halfTriLeft} style={styles.LeftImage}>
                     </Image>
@@ -52,26 +52,27 @@ export default class Brand2 extends Component {
 
                 <View style={styles.TextContainer}>
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125, left: 4 }}>
 
                         <Text style={styles.blackText}>
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
                             {'\n'}
-                            the video focuses on the constancy of human {'\n'}
-                            interaction even while technologies evolve over time, {'\n'}
-                            which makes us always think that The future is {'\n'}
-                            exciting.
+                            The language used in the brand tagline will vary from {'\n'}
+                            country to country so, for example, in Italy, it will be “il {'\n'}
+                            futuro e straordinario. Ready?”, and in Spain “El future {'\n'}
+                            es apasionate. Ready?” while in Egypt will be {'\n'}
+                            “اللي جاي أقوى. جاهز؟”.
                         </Text>
                     </View>
                 </View>
                 <View style={styles.ButtonsView}>
-                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand1", {})} >
+                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand5", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand3", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand7", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
@@ -86,58 +87,43 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
-    ImagesView: {
-        flexDirection: 'row',
-        flex: 4,
-        alignItems: 'center'
-    },
     LeftImage: {
+        marginTop: DEVICE_HEIGHT * 0.113,
         zIndex: 1,
         position: "absolute"
     },
     RightImage: {
-        marginLeft: DEVICE_WIDTH - 165,
+        marginTop: DEVICE_HEIGHT * 0.113,
+        marginLeft: DEVICE_WIDTH * 0.55,
         zIndex: 1,
         position: "absolute"
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH - 310,
+        marginLeft: DEVICE_WIDTH * 0.1666,
+        marginTop: DEVICE_HEIGHT * 0.2123,
         width: 240,
         height: 220,
         borderRadius: 10
     },
     TextContainer:
     {
-        alignItems: 'center',
-        flex: 2,
+        alignItems: 'center'
     },
     blackText: {
-        // width: 334,
-        // height: 97,
-        // fontFamily: "VodafoneRg",
-        fontSize: 16,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        letterSpacing: 0,
-        color: "#4b464d"
+        color: 'black',
+        fontSize: 15,
     },
     redText: {
-        // width: 235,
-        // height: 31,
-        // fontFamily: "VodafoneRg",
+        color: 'red',
         fontSize: 28,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        letterSpacing: 0,
-        color: "#e60000"
+        fontWeight: 'bold',
     },
     ButtonsView: {
-        // width: DEVICE_WIDTH,
+        width: DEVICE_WIDTH,
         height: 45,
         flexDirection: 'row',
-        // marginTop: DEVICE_HEIGHT * 0.95,
-        marginBottom: DEVICE_HEIGHT * 0.03,
+        marginTop: DEVICE_HEIGHT * 0.95,
         backgroundColor: "#0000",
         shadowColor: 'black',
         shadowOffset: {
@@ -147,7 +133,7 @@ const styles = StyleSheet.create({
         shadowRadius: 22,
         shadowOpacity: 1,
         elevation: 3,
-        // position: "absolute"
+        position: "absolute"
     },
     BackButton: {
         alignItems: 'center',

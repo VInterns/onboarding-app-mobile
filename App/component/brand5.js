@@ -61,8 +61,6 @@ export default class Brand5 extends Component {
                             stood in place with the authentic speech mark Logo,  {'\n'}
                             as Vodafone became very well known worldwide. {'\n'}
                             Watch the next video to see how the Logo evolved
-
-
                         </Text>
                     </View>
                 </View>
@@ -73,7 +71,7 @@ export default class Brand5 extends Component {
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand5", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand7", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
