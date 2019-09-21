@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH - 310,
+        marginLeft: DEVICE_WIDTH - 305,
         width: 240,
         height: 220,
         borderRadius: 10
