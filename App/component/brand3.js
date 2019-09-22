@@ -64,6 +64,7 @@ export default class Brand3 extends Component {
                             Nearly 30,000 people in 17 countries had input into {'\n'}
                             the new branding through market research.
                         </Text>
+
                     </View>
                 </View>
                 <View style={styles.ButtonsView}>
@@ -79,6 +80,7 @@ export default class Brand3 extends Component {
                         </Text>
                     </TouchableOpacity>
                 </View>
+
             </View>
         );
     }
@@ -97,19 +99,20 @@ const styles = StyleSheet.create({
         position: "absolute"
     },
     RightImage: {
-        marginLeft: DEVICE_WIDTH * 0.55,
+        marginLeft: DEVICE_WIDTH - 165,
         zIndex: 1,
         position: "absolute"
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH * 0.1666,
+        marginLeft: [DEVICE_WIDTH - 240] / 2,
         width: 240,
         height: 220,
         borderRadius: 10
     },
     TextContainer:
     {
+        marginLeft: 15,
         alignItems: 'center',
         flex: 2,
     },
@@ -117,7 +120,7 @@ const styles = StyleSheet.create({
         // width: 334,
         // height: 97,
         // fontFamily: "VodafoneRg",
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: "normal",
         fontStyle: "normal",
         letterSpacing: 0,

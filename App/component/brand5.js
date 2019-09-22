@@ -31,7 +31,7 @@ export default class Brand5 extends Component {
         return (
             <View style={{ width: '100%', height: '100%', flex: 1 }}>
 
-                <View style={{ flexDirection: 'row' }}>
+                <View style={styles.ImagesView}>
 
                     <Image source={halfTriLeft} style={styles.LeftImage}>
                     </Image>
@@ -52,7 +52,7 @@ export default class Brand5 extends Component {
 
                 <View style={styles.TextContainer}>
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125, left: 4 }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
                         <Text style={styles.blackText}>
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
@@ -71,7 +71,7 @@ export default class Brand5 extends Component {
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand7", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand6", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
@@ -86,43 +86,59 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
+    ImagesView: {
+        flexDirection: 'row',
+        flex: 4,
+        alignItems: 'center'
+    },
     LeftImage: {
-        marginTop: DEVICE_HEIGHT * 0.113,
         zIndex: 1,
         position: "absolute"
     },
     RightImage: {
-        marginTop: DEVICE_HEIGHT * 0.113,
-        marginLeft: DEVICE_WIDTH * 0.55,
+        marginLeft: DEVICE_WIDTH - 165,
         zIndex: 1,
         position: "absolute"
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH * 0.1666,
-        marginTop: DEVICE_HEIGHT * 0.2123,
+        marginLeft: [DEVICE_WIDTH - 240] / 2,
         width: 240,
         height: 220,
         borderRadius: 10
     },
     TextContainer:
     {
-        alignItems: 'center'
+        marginLeft: 15,
+        alignItems: 'center',
+        flex: 2,
     },
     blackText: {
-        color: 'black',
+        // width: 334,
+        // height: 97,
+        // fontFamily: "VodafoneRg",
         fontSize: 15,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#4b464d"
     },
     redText: {
-        color: 'red',
+        // width: 235,
+        // height: 31,
+        // fontFamily: "VodafoneRg",
         fontSize: 28,
-        fontWeight: 'bold',
+        fontWeight: "bold",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#e60000"
     },
     ButtonsView: {
-        width: DEVICE_WIDTH,
+        // width: DEVICE_WIDTH,
         height: 45,
         flexDirection: 'row',
-        marginTop: DEVICE_HEIGHT * 0.95,
+        // marginTop: DEVICE_HEIGHT * 0.95,
+        marginBottom: DEVICE_HEIGHT * 0.03,
         backgroundColor: "#0000",
         shadowColor: 'black',
         shadowOffset: {
@@ -132,7 +148,7 @@ const styles = StyleSheet.create({
         shadowRadius: 22,
         shadowOpacity: 1,
         elevation: 3,
-        position: "absolute"
+        // position: "absolute"
     },
     BackButton: {
         alignItems: 'center',

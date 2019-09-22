@@ -115,16 +115,16 @@ const styles = StyleSheet.create({
         marginLeft: DEVICE_WIDTH - 134,
         zIndex: 1,
         position: "absolute",
-        // right: DEVICE_WIDTH
         marginRight: 120
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH * 0.11, //40
+        marginLeft: DEVICE_WIDTH * 0.09, //40
         // marginTop: DEVICE_HEIGHT * 0.2123, //150
         width: DEVICE_WIDTH * 0.83, //300
         height: DEVICE_HEIGHT * 0.241, // 170,
         alignSelf: "center",
+        borderRadius: 10
     },
     TextContainer:
     {

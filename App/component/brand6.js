@@ -9,10 +9,12 @@ import {
     Text
 } from 'react-native';
 
+import { Video } from 'expo-av';
+
 import halfTriLeft from '../assets/shape1L.png';
 import halfTriRight from '../assets/shape2R.png';
-import { Video } from 'expo-av';
 import video from '../assets/Vid6.mp4';
+
 
 
 export default class Brand6 extends Component {
@@ -31,7 +33,7 @@ export default class Brand6 extends Component {
         return (
             <View style={{ width: '100%', height: '100%', flex: 1 }}>
 
-                <View style={{ flexDirection: 'row' }}>
+                <View style={styles.ImagesView}>
 
                     <Image source={halfTriLeft} style={styles.LeftImage}>
                     </Image>
@@ -52,16 +54,18 @@ export default class Brand6 extends Component {
 
                 <View style={styles.TextContainer}>
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center', top: 125, left: 4 }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
                         <Text style={styles.blackText}>
-                            <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
+                            <Text style={styles.redText}>Vodafone logo evolution  {'\n'}</Text>
                             {'\n'}
-                            The language used in the brand tagline will vary from {'\n'}
-                            country to country so, for example, in Italy, it will be “il {'\n'}
-                            futuro e straordinario. Ready?”, and in Spain “El future {'\n'}
-                            es apasionate. Ready?” while in Egypt will be {'\n'}
-                            “اللي جاي أقوى. جاهز؟”.
+                            As you have seen, Vodafone redesigned its logo {'\n'}
+                            completely. All the older elements of the logo {'\n'}
+                            except the color have been removed. The red    {'\n'}
+                            color in the Vodafone logo represents talking, {'\n'}
+                            sound and passion. The “apostrophe” icon later {'\n'}
+                            becoming the Vodafone signature has been used {'\n'}
+                            for the first time.
                         </Text>
                     </View>
                 </View>
@@ -87,43 +91,59 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
+    ImagesView: {
+        flexDirection: 'row',
+        flex: 4,
+        alignItems: 'center'
+    },
     LeftImage: {
-        marginTop: DEVICE_HEIGHT * 0.113,
         zIndex: 1,
         position: "absolute"
     },
     RightImage: {
-        marginTop: DEVICE_HEIGHT * 0.113,
-        marginLeft: DEVICE_WIDTH * 0.55,
+        marginLeft: DEVICE_WIDTH - 53,
         zIndex: 1,
         position: "absolute"
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH * 0.1666,
-        marginTop: DEVICE_HEIGHT * 0.2123,
+        marginLeft: [DEVICE_WIDTH - 240] / 2,
         width: 240,
         height: 220,
         borderRadius: 10
     },
     TextContainer:
     {
-        alignItems: 'center'
+        marginLeft: 15,
+        alignItems: 'center',
+        flex: 2,
     },
     blackText: {
-        color: 'black',
+        // width: 334,
+        // height: 97,
+        // fontFamily: "VodafoneRg",
         fontSize: 15,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#4b464d"
     },
     redText: {
-        color: 'red',
+        // width: 235,
+        // height: 31,
+        // fontFamily: "VodafoneRg",
         fontSize: 28,
-        fontWeight: 'bold',
+        fontWeight: "bold",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#e60000"
     },
     ButtonsView: {
-        width: DEVICE_WIDTH,
+        // width: DEVICE_WIDTH,
         height: 45,
         flexDirection: 'row',
-        marginTop: DEVICE_HEIGHT * 0.95,
+        // marginTop: DEVICE_HEIGHT * 0.95,
+        marginBottom: DEVICE_HEIGHT * 0.03,
         backgroundColor: "#0000",
         shadowColor: 'black',
         shadowOffset: {
@@ -133,7 +153,7 @@ const styles = StyleSheet.create({
         shadowRadius: 22,
         shadowOpacity: 1,
         elevation: 3,
-        position: "absolute"
+        // position: "absolute"
     },
     BackButton: {
         alignItems: 'center',

@@ -102,13 +102,14 @@ const styles = StyleSheet.create({
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH - 305,
+        marginLeft: [DEVICE_WIDTH - 240] / 2,
         width: 240,
         height: 220,
         borderRadius: 10
     },
     TextContainer:
     {
+        marginLeft: 15,
         alignItems: 'center',
         flex: 2,
     },
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
         // width: 334,
         // height: 97,
         // fontFamily: "VodafoneRg",
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: "normal",
         fontStyle: "normal",
         letterSpacing: 0,
