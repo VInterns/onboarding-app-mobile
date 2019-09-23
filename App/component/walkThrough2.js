@@ -1,56 +1,56 @@
 import React, { Component } from "react";
 
 import {
-  StyleSheet,
-  View,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-  KeyboardAvoidingView,
-  Text,
-  Animated,
-  // BackHandler
+    StyleSheet,
+    View,
+    Image,
+    TouchableOpacity,
+    ImageBackground,
+    Dimensions,
+    KeyboardAvoidingView,
+    Text,
+    Animated,
+    // BackHandler
 } from "react-native";
 
 import FadeInView from "./FadeInView";
-import backgroundImg from "../assets/group.png";
+import backgroundImg from "../assets/group1.png";
 import mobile from "../assets/group4.png";
 
 
 export default class walkThrough2 extends Component {
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.state = {
-      lastScreen: ""
+        this.state = {
+            lastScreen: ""
+        };
+    }
+
+    props: {
+        tryNavigate: (nextScreen: string) => void
     };
-  }
-  
-  props: {
-    tryNavigate: (nextScreen: string) => void
-  };
-  
-  static navigationOptions = {
-    //header styling
-    header: null
-  };
 
-  // componentDidMount() {
-  //   BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
-  // }
+    static navigationOptions = {
+        //header styling
+        header: null
+    };
 
-  // componentWillUnmount() {
-  //   BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
-  // }
-  // handleBackButton() {
-  //   return true;
-  // }
+    // componentDidMount() {
+    //   BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
+    // }
 
-  tryNavigate = () => {
-    this.props.tryNavigate("walkThrough3");
-  };
+    // componentWillUnmount() {
+    //   BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+    // }
+    // handleBackButton() {
+    //   return true;
+    // }
+
+    tryNavigate = () => {
+        this.props.tryNavigate("walkThrough3");
+    };
 
 
     render() {

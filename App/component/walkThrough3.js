@@ -16,15 +16,15 @@ import {
 } from 'react-native';
 
 import FadeInView from './FadeInView'
-import backgroundImg from '../assets/group.png';
+import backgroundImg from '../assets/group9.png';
 import rocket from '../assets/rocket.png'
 import readyButton from '../assets/group3.png'
 
 export default class walkThrough3 extends Component {
 
-      props: {
+    props: {
         tryNavigate: (nextScreen: string) => void
-      };
+    };
 
 
 
@@ -66,15 +66,15 @@ export default class walkThrough3 extends Component {
 
     componentWillUnmount() {
         BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
-      }
+    }
     handleBackButton() {
         return true;
-      }
+    }
 
     tryNavigate = () => {
         debugger;
         this.props.tryNavigate("History");
-      };  
+    };
 
 
     render() {
