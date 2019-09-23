@@ -22,14 +22,28 @@ export default class Brand1 extends Component {
     static navigationOptions = {//header styling
         header: null
     };
-    _onPlaybackStatusUpdate = playbackStatus => {
-        if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500) { }
-    };
+    state = {
+        mute: false,
+        shouldPlay: true,
+        pause: true
+    }
+
+    // navigate = this.props.navigation;
+
+    // OnNextClicked = () => {
+    //     console.log("OnNextClicked");
+    //     this.state.shouldPlay = false;
+    //     navigate("Brand2", {});
+    // };
+
+
 
     render() {
         console.log("Widht : " + DEVICE_WIDTH);
         console.log("height : " + DEVICE_HEIGHT);
+
         const { navigate } = this.props.navigation;
+
         return (
             <View style={{ width: '100%', height: '100%', flex: 1 }}>
                 <View style={styles.ImagesView}>
@@ -37,12 +51,9 @@ export default class Brand1 extends Component {
                     <Image source={halfTriLeft} style={styles.LeftImage}>{/*background*/}
                     </Image>
                     <Video
+                        pause={this.state.pause}
                         source={video}
-                        onPlaybackStatusUpdate=
-                        {
-                            (playbackStatus) => this._onPlaybackStatusUpdate(playbackStatus)
-                        }
-                        shouldPlay
+                        shouldPlay={this.state.shouldPlay}
                         resizeMode="cover"
                         style={styles.Video}
                     />
@@ -87,7 +98,15 @@ export default class Brand1 extends Component {
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand2", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => {
+                        // this.state.shouldPlay = false;
+                        // this.state.pause = false;
+
+                        this.setState((prevState) => ({
+                            shouldPlay: !prevState.shouldPlay
+                        }));
+                        navigate("Brand2", {});
+                    }} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>

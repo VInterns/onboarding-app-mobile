@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
         flex: 1,
         marginBottom: DEVICE_HEIGHT * 0.03,
         marginLeft: DEVICE_WIDTH * 0.68
-
     },
     button: {
         alignItems: 'center',
