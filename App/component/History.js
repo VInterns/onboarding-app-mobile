@@ -55,7 +55,8 @@ export default class History extends Component {
 
                 {/*  button view */}
                 <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >               
+                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} > */}
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>

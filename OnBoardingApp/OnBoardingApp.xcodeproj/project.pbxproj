@@ -5,7 +5,6 @@
 	};
 	objectVersion = 50;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		099DF51F2313D2DD000DC8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099DF51E2313D2DD000DC8B7 /* AppDelegate.swift */; };
 		099DF5212313D2DD000DC8B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099DF5202313D2DD000DC8B7 /* ViewController.swift */; };
@@ -14,6 +13,7 @@
 		099DF5292313D2DE000DC8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 099DF5272313D2DE000DC8B7 /* LaunchScreen.storyboard */; };
 		099DF5342313D2DE000DC8B7 /* OnBoardingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099DF5332313D2DE000DC8B7 /* OnBoardingAppTests.swift */; };
 		099DF53F2313D2DE000DC8B7 /* OnBoardingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099DF53E2313D2DE000DC8B7 /* OnBoardingAppUITests.swift */; };
+		CDFA222C59B7408E8867089F /* Vodafone.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F37924F4D44A4294E49170 /* Vodafone.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,7 @@
 		099DF53A2313D2DE000DC8B7 /* OnBoardingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnBoardingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		099DF53E2313D2DE000DC8B7 /* OnBoardingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingAppUITests.swift; sourceTree = "<group>"; };
 		099DF5402313D2DE000DC8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F37924F4D44A4294E49170 /* Vodafone.ttf */ = {isa = PBXFileReference; name = "Vodafone.ttf"; path = "../assets/fonts/Vodafone.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 				099DF5322313D2DE000DC8B7 /* OnBoardingAppTests */,
 				099DF53D2313D2DE000DC8B7 /* OnBoardingAppUITests */,
 				099DF51C2313D2DD000DC8B7 /* Products */,
+				F22992F71F654BB9A5EFC579 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +126,15 @@
 			);
 			path = OnBoardingAppUITests;
 			sourceTree = "<group>";
+		};
+		F22992F71F654BB9A5EFC579 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				76F37924F4D44A4294E49170 /* Vodafone.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -232,6 +243,7 @@
 				099DF5292313D2DE000DC8B7 /* LaunchScreen.storyboard in Resources */,
 				099DF5262313D2DE000DC8B7 /* Assets.xcassets in Resources */,
 				099DF5242313D2DD000DC8B7 /* Main.storyboard in Resources */,
+				CDFA222C59B7408E8867089F /* Vodafone.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

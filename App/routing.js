@@ -37,6 +37,7 @@ import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
 import GreatJob from "./component/GreatJob";
 import GreatJob2 from "./component/GreatJob2";
+
 import Brand from "./component/brand";
 import Brand1 from "./component/brand1";
 import Brand2 from "./component/brand2";
@@ -45,6 +46,14 @@ import Brand4 from "./component/brand4";
 import Brand5 from "./component/brand5";
 import Brand6 from "./component/brand6";
 import Brand7 from "./component/brand7";
+
+import Organisation from "./component/Organisation";
+import Organisation1 from "./component/Organisation1";
+import Organisation2 from "./component/Organisation2";
+import Organisation3 from "./component/Organisation3";
+import Organisation4 from "./component/Organisation4";
+import Organisation5 from "./component/Organisation5";
+import CongratulationsR from "./component/Congratulations-R";
 
 
 const handleCustomTransition = ({ scenes }) => {
@@ -137,6 +146,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
+
     Brand: { screen: Brand },
     Brand1: { screen: Brand1 },
     Brand2: { screen: Brand2 },
@@ -144,7 +154,17 @@ const AppNavigator = createStackNavigator(
     Brand4: { screen: Brand4 },
     Brand5: { screen: Brand5 },
     Brand6: { screen: Brand6 },
-    Brand7: { screen: Brand7 }
+    Brand7: { screen: Brand7 },
+
+    Organisation:{ screen: Organisation },
+    Organisation1:{ screen: Organisation1 },
+    Organisation2:{ screen: Organisation2 },
+    Organisation3:{ screen: Organisation3 },
+    Organisation4:{ screen: Organisation4 },
+    Organisation5:{ screen: Organisation5 },
+    CongratulationsR:{ screen: CongratulationsR },
+
+
   },
 
   {
