@@ -39,11 +39,11 @@ export default class Organisation1 extends Component {
                     <Text style={styles.text2}>You’ve been awarded with the letter</Text>
                 </View>
                 <View style={styles.imageContainer}>
-                    <Image source={img1} style={styles.img}/> 
+                    <Image source={img1} style={styles.img} />
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "#e60000"
     },
-    text2:{
+    text2: {
         // width: 334,
         // height: 24,
         // fontFamily: "VodafoneRg",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         flex: 6,
         marginTop: DEVICE_HEIGHT * 0.04,
     },
-    img:{
+    img: {
         // width: '90%',
         // margin: '1%',
     },
