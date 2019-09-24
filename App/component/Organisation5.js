@@ -32,13 +32,13 @@ export default class Organisation1 extends Component {
         return (
 
             <View style={styles.container}>
-                
+
                 <View style={styles.imageContainer}>
-                <Image source={img1} style={styles.img}/> 
+                    <Image source={img1} style={styles.img} />
                 </View>
                 <View style={styles.textContainer}>
                     <Text style={styles.text1}>
-                        VF Egypt 
+                        VF Egypt
                     </Text>
                     <Text style={styles.text2}> 6000 Employees </Text>
                     <Text style={styles.text1}>and now you have become a </Text>
@@ -47,7 +47,7 @@ export default class Organisation1 extends Component {
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation4")} >
                         <Text style={styles.ButtonText}>
                             BACK
                        </Text>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         flex: 2,
         // backgroundColor: '#34495E' 
     },
-    img:{
+    img: {
         justifyContent: 'center',
         // width: '80%',
         // height: '70%',

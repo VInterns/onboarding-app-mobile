@@ -38,11 +38,11 @@ export default class Organisation1 extends Component {
                     </Text>
                 </View>
                 <View style={styles.imageContainer}>
-                <Image source={img1} style={styles.img}/> 
+                    <Image source={img1} style={styles.img} />
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation1")} >
                         <Text style={styles.ButtonText}>
                             BACK
                        </Text>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         // flexWrap: 'wrap',
         flex: 8
     },
-    img:{
+    img: {
         justifyContent: 'center',
         // width: '80%',
         // height: '70%',

@@ -45,20 +45,20 @@ export default class Organisation1 extends Component {
                     </Text>
                 </View>
                 <View style={styles.imageContainer}>
-                <Image source={img1} style={styles.img}/> 
-                <Image source={img2} style={styles.img}/> 
-                <Image source={img3} style={styles.img}/> 
-                <Image source={img4} style={styles.img}/> 
-                <Image source={img5} style={styles.img}/> 
-                <Image source={img6} style={styles.img}/> 
-                <Image source={img7} style={styles.img}/> 
-                <Image source={img8} style={styles.img}/> 
-                <Image source={img9} style={styles.img}/> 
+                    <Image source={img1} style={styles.img} />
+                    <Image source={img2} style={styles.img} />
+                    <Image source={img3} style={styles.img} />
+                    <Image source={img4} style={styles.img} />
+                    <Image source={img5} style={styles.img} />
+                    <Image source={img6} style={styles.img} />
+                    <Image source={img7} style={styles.img} />
+                    <Image source={img8} style={styles.img} />
+                    <Image source={img9} style={styles.img} />
 
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} >
                         <Text style={styles.ButtonText}>
                             BACK
                        </Text>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
         alignItems: 'stretch',
         flex: 8
     },
-    img:{
+    img: {
         width: '31%',
         margin: '1%',
     },
