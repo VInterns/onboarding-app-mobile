@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f9710b-8fca-4939-a61e-c190372e61b5" name="Default Changelist" comment="">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/component/brand2.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/brand2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/component/brand3.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/brand3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History12.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History4.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History8.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/History9.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/History9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/component/styles/history9.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/component/styles/history9.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/routing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/services/http-client/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/services/http-client/constants.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +21,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -20,6 +30,54 @@
     <option name="y" value="24" />
     <option name="width" value="1752" />
     <option name="height" value="972" />
+
+  <component name="FUSProjectUsageTrigger">
+    <session id="876794837">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="550279323">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
+
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -155,7 +213,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+
+    <!-- <frame x="-7" y="-7" width="1295" height="695" extended-state="6" /> -->
+
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3294204" />
       <window_info id="Structure" order="1" side_tool="true" />
@@ -168,7 +230,11 @@
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="2" side_tool="true" visible="true" weight="0.3285968" />
+
+      <!-- <window_info active="true" anchor="bottom" id="Event Log" order="2" side_tool="true" visible="true" weight="0.3285968" /> -->
+
+      <window_info active="true" anchor="bottom" id="Event Log" order="2" side_tool="true" visible="true" weight="0.30070922" />
+
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Logcat" order="4" />
       <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />

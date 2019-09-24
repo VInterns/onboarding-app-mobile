@@ -55,6 +55,7 @@ export default class walkThrough2 extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
+        this.navg
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (

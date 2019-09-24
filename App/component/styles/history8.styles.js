@@ -12,44 +12,37 @@ export default StyleSheet.create({
     Text: {//welcome to word style
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: DEVICE_WIDTH * 0.048,
     },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
         // flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'center',
-        position: 'absolute',
-        top: 40,
-        left: 20
+        marginTop: DEVICE_HEIGHT * 0.108
     },
 
 
     button: { // button design
-        width: 70,
-        height: 25,
+        /*   width: 70,
+          height: 25, */
         alignItems: 'center',
         justifyContent: 'center'
     },
 
     NextButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        right: 30,
-        //   backgroundColor:'#DDDD',
-
+        justifyContent: 'center',
+        // backgroundColor:'red'
     },
     BackButtonView: { //wrapper for button 
-        flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        bottom: 24,
-        left: 30,
-        //  backgroundColor:'#DDDD',
+        justifyContent: 'flex-end', 
+        flex: 1,
+       // backgroundColor:'red',
+        marginBottom: DEVICE_HEIGHT * 0.03,
+        marginRight:DEVICE_WIDTH * 0.68,
 
     },
     ButtonText: { // text inside button
@@ -57,17 +50,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
-    ButtonimageStyle: {//button icon
-        margin: 13,
-        height: 80,
-        width: 50,
-        resizeMode: 'stretch',
-    },
-    ButtonDesign: {
-        width: 50,
-        height: 80,
-        marginLeft: 0,
-        marginRight: 0,
-        flexBasis: 90
-    }
+    /*     ButtonimageStyle: {//button icon
+            margin: -15
+        }, */
 });

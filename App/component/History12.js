@@ -14,9 +14,9 @@ import {
 
 import FadeInView from './FadeInView'
 
-import centerImg from '../assets/map.png'
+import centerImg from '../assets/image1.png'
 //import backgroundImg from '../assets/background.png';
-export default class History4 extends Component {
+export default class History12 extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -31,30 +31,35 @@ export default class History4 extends Component {
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
-                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105, flex: 1}} />{/* centered mobile logo*/}
 
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105, }} />{/* centered mobile logo*/}
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
-
-                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <FadeInView>
                         <Text style={styles.blackText}>
-                            <Text style={styles.BoldblackText}>Vodafone started back in UK in 1985, {'\n'}</Text>
-                            where after several acquisitions of other {'\n'}
-                            operators such as Omnitel, Airtel and {'\n'}
-                            Panafon which are now Vodafone Italy, {'\n'}
-                            Vodafone Spain & Vodafone Greece {'\n'}
-                            respectively.
-                        </Text>
-                    </View>
-
+                            Vodafone is the largest mobile network{'\n'}
+                            operator in Egypt in terms of active{'\n'}
+                            subscribers.It was launched in 1998{'\n'}
+                            under its former name Click GSM. In{'\n'}
+                            January 2007, Egypt’s National Telecom{'\n'}
+                            Regulatory Agency (NTRA) awarded{'\n'}
+                            Vodafone Egypt a 15-year 3G licence.{'\n'}
+                            On October 16, 2016, Vodafone Egypt{'\n'}
+                            was awarded the fourth-generation 4G{'\n'}
+                            mobile services license for a royalty fee{'\n'}
+                            of $335 million from the Egyptian{'\n'}
+                            National Telecom Regulatory Authority{'\n'}
+                            (NTRA).
+                            </Text>
+                    </FadeInView>
                 </View>
 
-                {/*  button view */}
+
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
 
                     <View style={styles.BackButtonView}>
 
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("History1", {})} >
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History11", {})} >
                             <Text style={styles.ButtonText}>
                                 BACK
                             </Text>
@@ -62,7 +67,7 @@ export default class History4 extends Component {
                     </View>
 
                     <View style={styles.NextButtonView}>
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("History5", {})}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History13", {})}>
                             <Text style={styles.ButtonText}>
                                 NEXT
                             </Text>
@@ -73,7 +78,6 @@ export default class History4 extends Component {
 
             </View >
 
-
         );
     }
 }
@@ -81,32 +85,26 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
 
-    BoldblackText: {//welcome to word style
-        // alignItems: 'center',
-        color: 'black',
-        fontSize: DEVICE_WIDTH * 0.041,
-        fontWeight: 'bold'
-    },
     blackText: {//welcome to word style
-        // alignItems: 'center',
         color: 'black',
-        fontSize: DEVICE_WIDTH * 0.041,
-
+        fontSize: DEVICE_WIDTH * 0.05,
+        // fontWeight: 'bold'
     },
 
-
-    blackView: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: DEVICE_HEIGHT * 0.053
+        marginTop: DEVICE_HEIGHT * 0.027,
+        paddingLeft: 5
+
     },
 
+    redView: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
 
     button: { // button design
         /*   width: 70,

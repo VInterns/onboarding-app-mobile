@@ -30,7 +30,12 @@ import History6 from "./component/History6";
 import History7 from "./component/History7";
 import History8 from "./component/History8";
 import History9 from "./component/History9";
+import History10 from "./component/History10";
+import History11 from "./component/History11";
+import History12 from "./component/History12";
+import History13 from "./component/History13";
 import Video1 from "./component/Video1";
+import Video2 from "./component/Video2";
 import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
@@ -125,11 +130,29 @@ const AppNavigator = createStackNavigator(
     },
     //AppIntroSlider: { screen: AppIntroSlider },
     walkThrough: {
-      screen: walkThrough1Screen
+      screen: walkThrough1Screen,
+      navigationOptions: {
+        header: null
+      }
     },
-    walkThrough2: { screen: walkThrough2 },
-    walkThrough3: { screen: walkThrough3 },
-    Video1: { screen: Video1 },
+    walkThrough2: {
+      screen: walkThrough2, 
+      navigationOptions: {
+        header: null
+      }
+    },
+    walkThrough3: { screen: walkThrough3,
+      navigationOptions: {
+        header: null
+      } },
+    Video1: { screen: Video1 ,
+      navigationOptions: {
+        header: null
+      }},
+      Video2: { screen: Video2 ,
+        navigationOptions: {
+          header: null
+        }},
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },
@@ -146,7 +169,6 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
-
     Brand: { screen: Brand },
     Brand1: { screen: Brand1 },
     Brand2: { screen: Brand2 },
@@ -155,7 +177,6 @@ const AppNavigator = createStackNavigator(
     Brand5: { screen: Brand5 },
     Brand6: { screen: Brand6 },
     Brand7: { screen: Brand7 },
-
     Organisation:{ screen: Organisation },
     Organisation1:{ screen: Organisation1 },
     Organisation2:{ screen: Organisation2 },
@@ -163,8 +184,10 @@ const AppNavigator = createStackNavigator(
     Organisation4:{ screen: Organisation4 },
     Organisation5:{ screen: Organisation5 },
     CongratulationsR:{ screen: CongratulationsR },
-
-
+    History10: { screen: History10 },
+    History11: { screen: History11 },
+    History12: { screen: History12 },
+    History13: { screen: History13 },
   },
 
   {

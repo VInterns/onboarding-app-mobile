@@ -69,9 +69,13 @@ export default class History1 extends Component {
             EimageURL: Eletter,
 
             showHideVoiceWord: false,
-            counter: 0
+            counter: 0,
+            ButtonStateHolder: false,
+            // Default Value for ButtonStateHolder State. Now the button is Enabled.
         };
     }
+
+
 
     V_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.V_show == true) {
@@ -255,26 +259,60 @@ export default class History1 extends Component {
 
             }
             else {
-                this.props.navigation.navigate("History2", {})
+                this.props.navigation.navigate("History2", {
+                    onScreenReVisit: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
+                        this.setState({ ButtonStateHolder: false })
+                    } 
+                })
             }
         }
         else {
             this.setState({
                 showHideVoiceWord: false
             })
-            this.props.navigation.navigate("ErrorAlert", {});
+            this.props.navigation.navigate("ErrorAlert", { onScreenReVisit_FromError: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
+                this.setState({ ButtonStateHolder: false })
+            } });
         }
     }
+
+    /* 
+        DisableButtonFunction = () => {
+    
+            this.setState({
+    
+                // On State True it will Disable the button.
+                ButtonStateHolder: true,
+    
+            })
+    
+        } */
+
+    DisableButtonFunction = () => {//disable button after pressing next 
+
+        this.setState({
+            // On State True it will Disable the button.
+            ButtonStateHolder: true,
+        })
+
+    }
+
 
 
     render() {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
+        let marginFraction = 15 / DEVICE_WIDTH
+        /*         console.log(DEVICE_WIDTH)
+                console.log("heigh is")
+                console.log(DEVICE_HEIGHT) */
+        /* { DEVICE_WIDTH < 350 ? marginFraction = 0.046 : marginFraction = 0.04 }
+        { DEVICE_WIDTH > 500 ? marginFraction = 0.025 : marginFraction = 0.04 } */
         const { navigate } = this.props.navigation;
         const showVoiceWord =
             <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginTop: DEVICE_HEIGHT * 0.027 }}>
-                <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
-                <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                <Image source={VletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
+                <Image source={OletterRed} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                 <View style={{ justifyContent: 'space-around', alignItems: 'center', marginBottom: DEVICE_HEIGHT * 0.03 }}>
                     <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 28 }}> = Voice</Text>
                 </View>
@@ -293,64 +331,65 @@ export default class History1 extends Component {
                     </FadeInView>
                 </View>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095, /* backgroundColor: 'green'  */ }}>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.V_ShowHideComponent();
                         this.load_V_letter();
                     }} >
-                        <Image source={this.state.VimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.VimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.O_ShowHideComponent();
                         this.load_O_letter();
                     }} >
-                        <Image source={this.state.OimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.OimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.D_ShowHideComponent();
                         this.load_D_letter();
                     }} >
-                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.DimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.A_ShowHideComponent();
                         this.load_A_letter();
                     }} >
-                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.AimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.F_ShowHideComponent();
                         this.load_F_letter();
                     }}>
-                        <Image source={this.state.FimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.FimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.O_ShowHideComponent_2();
                         this.load_O_letter_2();
                     }}>
-                        <Image source={this.state.OimageURL_2} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.OimageURL_2} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.N_ShowHideComponent();
                         this.load_N_letter();
                     }} >
-                        <Image source={this.state.NimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.NimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => {
+                    <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.E_ShowHideComponent();
                         this.load_E_letter();
                     }}>
-                        <Image source={this.state.EimageURL} style={{ margin: -(DEVICE_WIDTH * 0.0356) }} />
+                        <Image source={this.state.EimageURL} style={{ margin: -(DEVICE_WIDTH * marginFraction) }} />
                     </TouchableOpacity>
 
                 </View>
@@ -366,21 +405,17 @@ export default class History1 extends Component {
 
                     <View style={styles.BackButtonView}>
 
-                        <TouchableHighlight style={styles.button} onPress={() => {
-                            console.log("here error")
-                            navigate("History", {})
-                        }
-                        } >
-
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History")} >
                             <Text style={styles.ButtonText}>
                                 BACK
                             </Text>
-                        </TouchableHighlight>
+                        </TouchableOpacity>
                     </View>
 
                     <View style={styles.NextButtonView}>
                         <TouchableOpacity style={styles.button} onPress={() => {
                             this.validatePressedLetters();
+                            this.DisableButtonFunction();
                         }}>
                             <Text style={styles.ButtonText}>
                                 NEXT

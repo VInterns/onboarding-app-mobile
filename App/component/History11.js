@@ -5,16 +5,18 @@ import {
     View,
     Image,
     TouchableOpacity,
+    ImageBackground,
     Dimensions,
+    KeyboardAvoidingView,
     Text,
 
 } from 'react-native';
 
 import FadeInView from './FadeInView'
 
-import centerImg from '../assets/undrawBuildingBlocksN0Nc.png'
+import centerImg from '../assets/House.png'
 //import backgroundImg from '../assets/background.png';
-export default class History extends Component {
+export default class History11 extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -38,7 +40,7 @@ export default class History extends Component {
                                 Vodafone
                                 </Text>
                             <Text style={styles.blackText}>
-                                Group
+                                Egypt
                                 </Text>
                         </FadeInView>
                     </View>
@@ -49,15 +51,13 @@ export default class History extends Component {
                         </FadeInView>
                     </View>
 
-                </View> 
+                </View>
 
                 <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />{/* centered mobile logo*/}
 
                 {/*  button view */}
                 <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >               
-                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} > */}
-
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History12")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -117,8 +117,7 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         flex: 1,
         marginBottom: DEVICE_HEIGHT * 0.03,
-        marginLeft: DEVICE_WIDTH * 0.68,
-        
+        marginLeft: DEVICE_WIDTH * 0.68
 
     },
     ButtonText: { // text inside button
