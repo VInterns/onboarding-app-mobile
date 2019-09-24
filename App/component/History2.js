@@ -215,7 +215,9 @@ export default class History2 extends Component {
             this.setState({
                 showHideVoiceWord: false
             })
-            this.props.navigation.navigate("ErrorAlert2", {});
+            this.props.navigation.navigate("ErrorAlert2", { onScreenReVisit_FromError: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
+                this.setState({ ButtonStateHolder: false })
+            }});
         }
     }
 

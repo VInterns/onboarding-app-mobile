@@ -79,27 +79,37 @@ export default class History8 extends Component {
                     </FadeInView>
                 </View>
 
-                <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.08 }}>
+                <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: DEVICE_HEIGHT * 0.075 }}>
 
                     <View style={{ flexDirection: 'row' }}>
                         <TouchableOpacity style={{ backgroundColor: this.state.ButtonBackgroundColor }} onPress={() => {
                             this.setState({ answer: true,/*  ButtonIsPressed: !this.state.ButtonIsPressed  */ });
-                            /*        setTimeout(() => {
-                                       this.checkButtonPressed();
-                                   }, 1); */
+                            setTimeout(() => {// delay 3lshan yedy wa2t lel state to be changed 
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
+                            //this.validatePressedPhoto();
 
                         }} >
                             <Image source={india} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
 
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }} >
                             <Image source={egypt} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
 
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }} >
                             <Image source={zambia} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
@@ -107,21 +117,33 @@ export default class History8 extends Component {
 
                     <View style={{ flexDirection: 'row' }}>
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }} >
                             <Image source={germany} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
 
 
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }}>
                             <Image source={turkey} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
 
 
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }}>
                             <Image source={italy} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
@@ -130,19 +152,31 @@ export default class History8 extends Component {
 
                     <View style={{ flexDirection: 'row' }}>
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }} >
                             <Image source={uk} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
 
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }}>
                             <Image source={spain} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
 
                         <TouchableOpacity style={{}} onPress={() => {
-                            this.setState({ answer: false })
+                            this.setState({ answer: false });
+                            setTimeout(() => {
+                                //his.checkButtonPressed();
+                                this.validatePressedPhoto();
+                            }, 1);
                         }}>
                             <Image source={romania} style={{ margin: DEVICE_WIDTH * 0.07 }} />
                         </TouchableOpacity>
@@ -151,8 +185,8 @@ export default class History8 extends Component {
                 </View>
 
                 {/*  button view */}
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
-
+{/*                 <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03, }}>
+ */}
                     <View style={styles.BackButtonView}>
 
                         <TouchableOpacity style={styles.button} onPress={() => navigate("History7", {})} >
@@ -162,7 +196,7 @@ export default class History8 extends Component {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.NextButtonView}>
+                    {/*    <View style={styles.NextButtonView}>
                         <TouchableOpacity style={styles.button} onPress={() => {
                             this.validatePressedPhoto()
                         }}>
@@ -170,9 +204,9 @@ export default class History8 extends Component {
                                 NEXT
                             </Text>
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
 
-                </View>
+                {/* </View> */}
             </View >
 
 

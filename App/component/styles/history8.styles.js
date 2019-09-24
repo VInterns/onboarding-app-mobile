@@ -38,8 +38,11 @@ export default StyleSheet.create({
     },
     BackButtonView: { //wrapper for button 
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-end', 
         flex: 1,
+       // backgroundColor:'red',
+        marginBottom: DEVICE_HEIGHT * 0.03,
+        marginRight:DEVICE_WIDTH * 0.68,
 
     },
     ButtonText: { // text inside button

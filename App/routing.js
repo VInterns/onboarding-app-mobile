@@ -30,6 +30,7 @@ import History6 from "./component/History6";
 import History7 from "./component/History7";
 import History8 from "./component/History8";
 import History9 from "./component/History9";
+import History10 from "./component/History10";
 import History11 from "./component/History11";
 import History12 from "./component/History12";
 import History13 from "./component/History13";
@@ -150,6 +151,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert2: { screen: ErrorAlert2 },
     ErrorAlert3: { screen: ErrorAlert3 },
     ErrorAlert4: { screen: ErrorAlert4 },
+    History10: { screen: History10 },
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },

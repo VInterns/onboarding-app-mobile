@@ -21,6 +21,19 @@ import FadeInView from './FadeInView'
 import confused from '../assets/confused.png'
 
 class ErrorAlert extends Component {
+
+    componentDidMount() {
+        // Start counting when the page is loaded
+        this.timeoutHandle = setTimeout(() => {
+            // Add your logic for the transition
+            this.props.navigation.navigate("History1")
+        }, 2000);
+    }
+
+    componentWillUnmount() {
+        this.props.navigation.state.params.onScreenReVisit_FromError()
+        clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
+    }
     static navigationOptions = {
         header: null
     };
@@ -31,30 +44,30 @@ class ErrorAlert extends Component {
         return (
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
-                <View style={{ marginTop: DEVICE_HEIGHT*0.13}}>
+                <View style={{ marginTop: DEVICE_HEIGHT * 0.1 }}>
                     <Image source={confused} />{/* centered mobile logo*/}
                 </View>
 
-                <View style={{ marginTop: 30 }}>
-                    <Text style={{ color: 'red', fontSize: 26, fontWeight: 'bold' }}>
+                <View style={{ marginTop: DEVICE_HEIGHT * (20 / DEVICE_HEIGHT) }}>
+                    <Text style={{ color: 'red', fontSize: DEVICE_WIDTH * (26 / DEVICE_WIDTH), fontWeight: 'bold' }}>
                         Oops !
                     </Text>
                 </View>
 
 
-                <View style={{ position: 'absolute', top: 350 }}>
+                <View style={{ marginTop: DEVICE_HEIGHT * (20 / DEVICE_HEIGHT) }}>
                     <Text style={{ color: 'black', fontSize: 21 }}>
                         you guessed wrong
                     </Text>
                 </View>
 
-                <KeyboardAvoidingView behavior="padding" style={styles.ButtonView}>
+                {/*      <KeyboardAvoidingView behavior="padding" style={styles.ButtonView}>
                     <TouchableOpacity style={styles.button} onPress={() => navigate("History1", {})} >
                         <Text style={styles.ButtonText}>
                             Try again
                        </Text>
                     </TouchableOpacity>
-                </KeyboardAvoidingView>
+                </KeyboardAvoidingView> */}
 
 
             </View>

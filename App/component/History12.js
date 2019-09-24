@@ -32,18 +32,18 @@ export default class History12 extends Component {
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
 
-                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105 }} />{/* centered mobile logo*/}
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105, }} />{/* centered mobile logo*/}
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
                     <FadeInView>
                         <Text style={styles.blackText}>
                             Vodafone is the largest mobile network{'\n'}
                             operator in Egypt in terms of active{'\n'}
-                            subscribers.[2] It was launched in 1998{'\n'}
+                            subscribers.It was launched in 1998{'\n'}
                             under its former name Click GSM. In{'\n'}
                             January 2007, Egypt’s National Telecom{'\n'}
                             Regulatory Agency (NTRA) awarded{'\n'}
-                            Vodafone Egypt a 15-year 3G licence.[5]{'\n'}
+                            Vodafone Egypt a 15-year 3G licence.{'\n'}
                             On October 16, 2016, Vodafone Egypt{'\n'}
                             was awarded the fourth-generation 4G{'\n'}
                             mobile services license for a royalty fee{'\n'}

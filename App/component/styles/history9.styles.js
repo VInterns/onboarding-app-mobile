@@ -11,6 +11,11 @@ const DEVICE_HEIGHT = Dimensions.get('window').height;
 export default StyleSheet.create({
     Text: {//welcome to word style
         color: 'black',
+        //fontWeight: 'bold',
+        fontSize: DEVICE_WIDTH * 0.048,
+    },
+    RedText: {//welcome to word style
+        color: 'red',
         fontWeight: 'bold',
         fontSize: DEVICE_WIDTH * 0.048,
     },

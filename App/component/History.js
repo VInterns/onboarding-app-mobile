@@ -57,7 +57,7 @@ export default class History extends Component {
 
                 {/*  button view */}
                 <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History8")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -117,7 +117,8 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         flex: 1,
         marginBottom: DEVICE_HEIGHT * 0.03,
-        marginLeft: DEVICE_WIDTH * 0.68
+        marginLeft: DEVICE_WIDTH * 0.68,
+        
 
     },
     ButtonText: { // text inside button

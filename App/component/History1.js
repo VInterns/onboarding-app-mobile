@@ -75,6 +75,8 @@ export default class History1 extends Component {
         };
     }
 
+
+
     V_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.V_show == true) {
             this.setState({ V_show: false });
@@ -260,7 +262,7 @@ export default class History1 extends Component {
                 this.props.navigation.navigate("History2", {
                     onScreenReVisit: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
                         this.setState({ ButtonStateHolder: false })
-                    }
+                    } 
                 })
             }
         }
@@ -268,7 +270,9 @@ export default class History1 extends Component {
             this.setState({
                 showHideVoiceWord: false
             })
-            this.props.navigation.navigate("ErrorAlert", {});
+            this.props.navigation.navigate("ErrorAlert", { onScreenReVisit_FromError: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
+                this.setState({ ButtonStateHolder: false })
+            } });
         }
     }
 
@@ -298,10 +302,10 @@ export default class History1 extends Component {
     render() {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
-        let marginFraction = 15/DEVICE_WIDTH
-/*         console.log(DEVICE_WIDTH)
-        console.log("heigh is")
-        console.log(DEVICE_HEIGHT) */
+        let marginFraction = 15 / DEVICE_WIDTH
+        /*         console.log(DEVICE_WIDTH)
+                console.log("heigh is")
+                console.log(DEVICE_HEIGHT) */
         /* { DEVICE_WIDTH < 350 ? marginFraction = 0.046 : marginFraction = 0.04 }
         { DEVICE_WIDTH > 500 ? marginFraction = 0.025 : marginFraction = 0.04 } */
         const { navigate } = this.props.navigation;
@@ -327,7 +331,7 @@ export default class History1 extends Component {
                     </FadeInView>
                 </View>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095, /* backgroundColor: 'green'  */}}>
+                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095, /* backgroundColor: 'green'  */ }}>
 
                     <TouchableOpacity disabled={this.state.ButtonStateHolder} onPress={() => {
                         this.V_ShowHideComponent();

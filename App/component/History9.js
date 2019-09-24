@@ -37,10 +37,15 @@ export default class History8 extends Component {
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
                     <FadeInView>
-                        <Text style={styles.Text}>
+                    {/*     <Text style={styles.Text}>
                             Can you guess which of the following {'\n'}
                             Vodafone operators have the most {'\n'}
-                            subscribers? </Text>
+                            subscribers? </Text> */}
+                            <Text style={styles.Text}>
+                                Vodafone now has more than <Text style={styles.RedText}>520+</Text>{'\n'}
+                                <Text style={styles.RedText}>million subscribers</Text> worldwide and {'\n'}
+                                <Text style={styles.RedText}>110+ Employees</Text> 
+                            </Text>
                     </FadeInView>
                 </View>
 
@@ -58,7 +63,7 @@ export default class History8 extends Component {
                     </View>
 
                     <View style={styles.NextButtonView}>
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("History11", {})}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("History10", {})}>
                             <Text style={styles.ButtonText}>
                                 NEXT
                             </Text>

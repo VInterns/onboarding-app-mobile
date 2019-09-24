@@ -42,7 +42,7 @@ export default class walkThrough3 extends Component {
     _moveRocket = () => { //responsible for moving rocket
         debugger;
         Animated.timing(this.moveAnimation, {
-            toValue: { x: 350, y: -100 },//new coordinates
+            toValue: { x: 350, y: -200 },//new coordinates
             delay: 1000, //start moving rocket after certain delay 
             duration: 2000
         }).start()//start animation

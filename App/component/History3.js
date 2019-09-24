@@ -126,7 +126,9 @@ export default class History3 extends Component {
             this.setState({
                 showHideVoiceWord: false
             })
-            this.props.navigation.navigate("ErrorAlert3", {});
+            this.props.navigation.navigate("ErrorAlert3", { onScreenReVisit_FromError: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
+                this.setState({ ButtonStateHolder: false })
+            }});
         }
     }
 
