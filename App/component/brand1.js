@@ -28,16 +28,6 @@ export default class Brand1 extends Component {
         pause: true
     }
 
-    // navigate = this.props.navigation;
-
-    // OnNextClicked = () => {
-    //     console.log("OnNextClicked");
-    //     this.state.shouldPlay = false;
-    //     navigate("Brand2", {});
-    // };
-
-
-
     render() {
         console.log("Widht : " + DEVICE_WIDTH);
         console.log("height : " + DEVICE_HEIGHT);

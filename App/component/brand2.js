@@ -21,10 +21,6 @@ export default class Brand2 extends Component {
         header: null
     };
 
-    _onPlaybackStatusUpdate = playbackStatus => {
-        if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500) { }
-    };
-
     render() {
         const { navigate } = this.props.navigation;
 
@@ -37,10 +33,6 @@ export default class Brand2 extends Component {
                     </Image>
                     <Video
                         source={video}
-                        onPlaybackStatusUpdate=
-                        {
-                            (playbackStatus) => this._onPlaybackStatusUpdate(playbackStatus)
-                        }
                         shouldPlay
                         resizeMode="cover"
                         isLooping
