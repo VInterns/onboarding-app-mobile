@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         //marginLeft: DEVICE_WIDTH * (20 / DEVICE_WIDTH),
         marginHorizontal:DEVICE_WIDTH * (10 / DEVICE_WIDTH),
         //backgroundColor: 'green',
-        paddingLeft:DEVICE_WIDTH * (15 / DEVICE_WIDTH)
+        paddingLeft:DEVICE_WIDTH * (18 / DEVICE_WIDTH)
         //marginLeft: DEVICE_WIDTH * (20 / DEVICE_WIDTH),
         //padding: 2,
         /* marginTop: DEVICE_HEIGHT * (20 / DEVICE_WIDTH),
