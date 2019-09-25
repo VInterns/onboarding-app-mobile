@@ -29,28 +29,28 @@ export default class History4 extends Component {
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+            <View style={{ /* width: '100%', height: '100%' *//* , justifyContent: 'center' */ alignItems: 'center', flex: 1 }}>
 
-                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.105, flex: 1}} />{/* centered mobile logo*/}
-
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * (80 / DEVICE_HEIGHT), backgroundColor: 'grey' }} />{/* centered mobile logo*/}
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
+                    {/*  <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'green' }}> */}
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={styles.blackText}>
-                            <Text style={styles.BoldblackText}>Vodafone started back in UK in 1985, {'\n'}</Text>
-                            where after several acquisitions of other {'\n'}
-                            operators such as Omnitel, Airtel and {'\n'}
-                            Panafon which are now Vodafone Italy, {'\n'}
-                            Vodafone Spain & Vodafone Greece {'\n'}
-                            respectively.
-                        </Text>
-                    </View>
+                    <Text style={styles.BoldblackText}>Vodafone started back in UK in 1985,</Text>
+                    <Text style={styles.blackText}>
+                        where after several acquisitions of other {'\n'}
+                        operators such as Omnitel, Airtel and {'\n'}
+                        Panafon which are now Vodafone Italy, {'\n'}
+                        Vodafone Spain & Vodafone Greece {'\n'}
+                        respectively.{'\n'}
+                    </Text>
+
+                    {/*       </View> */}
 
                 </View>
 
                 {/*  button view */}
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: DEVICE_HEIGHT * 0.03, }}>
 
                     <View style={styles.BackButtonView}>
 
@@ -90,21 +90,18 @@ const styles = StyleSheet.create({
     blackText: {//welcome to word style
         // alignItems: 'center',
         color: 'black',
-        fontSize: DEVICE_WIDTH * 0.041,
-
+        fontSize: DEVICE_WIDTH * 0.04,
     },
 
-
-    blackView: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
-        flexDirection: 'column',
+        //flexDirection: 'column',
+        flex: 1,
+        //flexWrap:'wrap',
         alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: DEVICE_HEIGHT * 0.053
+        justifyContent: 'flex-start',
+        marginTop: DEVICE_HEIGHT * 0.053,
+        // backgroundColor: 'yellow'
     },
 
 
