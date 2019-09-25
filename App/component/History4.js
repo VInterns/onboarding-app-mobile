@@ -31,7 +31,7 @@ export default class History4 extends Component {
 
             <View style={{ /* width: '100%', height: '100%' *//* , justifyContent: 'center' */ alignItems: 'center', flex: 1 }}>
 
-                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * (80 / DEVICE_HEIGHT), backgroundColor: 'grey' }} />{/* centered mobile logo*/}
+                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * (80 / DEVICE_HEIGHT),/*  backgroundColor: 'grey' */ }} />{/* centered mobile logo*/}
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
                     {/*  <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'green' }}> */}
