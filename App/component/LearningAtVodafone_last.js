@@ -13,17 +13,17 @@ import {
 
 import FadeInView from './FadeInView';
 
-import img1 from '../assets/A.png';
+import img1 from '../assets/E.png';
 
 
 
 
-export default class Organisation1 extends Component {
+export default class LearningAtVodafone_last extends Component {
     componentDidMount() {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
-            this.props.navigation.navigate("Video4")
+            this.props.navigation.navigate("Video6")
         }, 2000);
     }
 

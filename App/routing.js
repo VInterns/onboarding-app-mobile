@@ -20,6 +20,7 @@ import {
 import { walkThrough1Screen } from "./screens/walkthrough-screen";
 import { walkThrough2 } from "./screens/walkthrough2-screen";
 import { walkThrough3 } from "./screens/walkthrough3-screen";
+
 import History from "./component/History";
 import History1 from "./component/History1";
 import History2 from "./component/History2";
@@ -34,12 +35,20 @@ import History10 from "./component/History10";
 import History11 from "./component/History11";
 import History12 from "./component/History12";
 import History13 from "./component/History13";
+
 import Video1 from "./component/Video1";
 import Video2 from "./component/Video2";
+import Video3 from "./component/Video3";
+import Video4 from "./component/Video4";
+import Video5 from "./component/Video5";
+import Video6 from "./component/Video6";
+import Video7 from "./component/Video7";
+
 import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
+
 import GreatJob from "./component/GreatJob";
 import GreatJob2 from "./component/GreatJob2";
 
@@ -60,6 +69,13 @@ import Organisation4 from "./component/Organisation4";
 import Organisation5 from "./component/Organisation5";
 import CongratulationsR from "./component/Congratulations-R";
 
+import LearningAtVodafone_last from "./component/LearningAtVodafone_last";
+import LearningAtVodafone from "./component/LearningAtVodafone";
+
+import WorkingAtVodafone from "./component/WorkingAtVodafone";
+import WorkingAtVodafone2 from "./component/WorkingAtVodafone2";
+
+import HealthAndSafety from "./component/HealthAndSafety";
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -115,6 +131,30 @@ const handleCustomTransition = ({ scenes }) => {
     && prevScene.route.routeName === 'Video1'
     && nextScene.route.routeName === 'History') {
     return zoomIn(800);
+  } else if (prevScene
+    && prevScene.route.routeName === 'Video2'
+    && nextScene.route.routeName === 'Organisation') {
+    return zoomIn(800);
+  }
+  else if (prevScene
+    && prevScene.route.routeName === 'Video3'
+    && nextScene.route.routeName === 'Brand') {
+    return zoomIn(800);
+  }
+  else if (prevScene
+    && prevScene.route.routeName === 'Video4'
+    && nextScene.route.routeName === 'HealthAndSafety') {
+    return zoomIn(700);
+  }
+  else if (prevScene
+    && prevScene.route.routeName === 'Video5'
+    && nextScene.route.routeName === 'LearningAtVodafone') {
+    return zoomIn(800);
+  }
+  else if (prevScene
+    && prevScene.route.routeName === 'Video6'
+    && nextScene.route.routeName === 'WorkingAtVodafone') {
+    return zoomIn(800);
   }
 
   return fromRight(800);
@@ -136,23 +176,59 @@ const AppNavigator = createStackNavigator(
       }
     },
     walkThrough2: {
-      screen: walkThrough2, 
+      screen: walkThrough2,
       navigationOptions: {
         header: null
       }
     },
-    walkThrough3: { screen: walkThrough3,
+    walkThrough3: {
+      screen: walkThrough3,
       navigationOptions: {
         header: null
-      } },
-    Video1: { screen: Video1 ,
+      }
+    },
+    Video1: {
+      screen: Video1,
       navigationOptions: {
         header: null
-      }},
-      Video2: { screen: Video2 ,
-        navigationOptions: {
-          header: null
-        }},
+      }
+    },
+    Video2: {
+      screen: Video2,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Video3: {
+      screen: Video3,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Video4: {
+      screen: Video4,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Video5: {
+      screen: Video5,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Video6: {
+      screen: Video6,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Video7: {
+      screen: Video7,
+      navigationOptions: {
+        header: null
+      }
+    },
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },
@@ -177,17 +253,22 @@ const AppNavigator = createStackNavigator(
     Brand5: { screen: Brand5 },
     Brand6: { screen: Brand6 },
     Brand7: { screen: Brand7 },
-    Organisation:{ screen: Organisation },
-    Organisation1:{ screen: Organisation1 },
-    Organisation2:{ screen: Organisation2 },
-    Organisation3:{ screen: Organisation3 },
-    Organisation4:{ screen: Organisation4 },
-    Organisation5:{ screen: Organisation5 },
-    CongratulationsR:{ screen: CongratulationsR },
+    Organisation: { screen: Organisation },
+    Organisation1: { screen: Organisation1 },
+    Organisation2: { screen: Organisation2 },
+    Organisation3: { screen: Organisation3 },
+    Organisation4: { screen: Organisation4 },
+    Organisation5: { screen: Organisation5 },
+    CongratulationsR: { screen: CongratulationsR },
     History10: { screen: History10 },
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },
+    LearningAtVodafone: { screen: LearningAtVodafone },
+    LearningAtVodafone_last: { screen: LearningAtVodafone_last },
+    WorkingAtVodafone: { screen: WorkingAtVodafone },
+    WorkingAtVodafone2: { screen: WorkingAtVodafone2 },
+    HealthAndSafety: { screen: HealthAndSafety }
   },
 
   {

@@ -19,6 +19,17 @@ import img1 from '../assets/Congratulation-R.png';
 
 
 export default class Organisation1 extends Component {
+    componentDidMount() {
+        // Start counting when the page is loaded
+        this.timeoutHandle = setTimeout(() => {
+            // Add your logic for the transition
+            this.props.navigation.navigate("Video3")
+        }, 2000);
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
+    }
 
     static navigationOptions = {
         //header styling
@@ -41,14 +52,14 @@ export default class Organisation1 extends Component {
                 <View style={styles.imageContainer}>
                     <Image source={img1} style={styles.img} />
                 </View>
-                <View style={styles.NextButtonView}>
-                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand")} >
+                {/*  <View style={styles.NextButtonView}> */}
+                {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
+                {/*   <TouchableOpacity style={styles.button} onPress={() => navigate("Brand")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </View >
 
         );
