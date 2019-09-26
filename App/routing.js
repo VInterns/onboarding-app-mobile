@@ -60,6 +60,8 @@ import Organisation4 from "./component/Organisation4";
 import Organisation5 from "./component/Organisation5";
 import CongratulationsR from "./component/Congratulations-R";
 
+import HealthAndSafety from "./component/HealthAndSafety"
+
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -136,23 +138,29 @@ const AppNavigator = createStackNavigator(
       }
     },
     walkThrough2: {
-      screen: walkThrough2, 
+      screen: walkThrough2,
       navigationOptions: {
         header: null
       }
     },
-    walkThrough3: { screen: walkThrough3,
+    walkThrough3: {
+      screen: walkThrough3,
       navigationOptions: {
         header: null
-      } },
-    Video1: { screen: Video1 ,
+      }
+    },
+    Video1: {
+      screen: Video1,
       navigationOptions: {
         header: null
-      }},
-      Video2: { screen: Video2 ,
-        navigationOptions: {
-          header: null
-        }},
+      }
+    },
+    Video2: {
+      screen: Video2,
+      navigationOptions: {
+        header: null
+      }
+    },
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },
@@ -177,17 +185,18 @@ const AppNavigator = createStackNavigator(
     Brand5: { screen: Brand5 },
     Brand6: { screen: Brand6 },
     Brand7: { screen: Brand7 },
-    Organisation:{ screen: Organisation },
-    Organisation1:{ screen: Organisation1 },
-    Organisation2:{ screen: Organisation2 },
-    Organisation3:{ screen: Organisation3 },
-    Organisation4:{ screen: Organisation4 },
-    Organisation5:{ screen: Organisation5 },
-    CongratulationsR:{ screen: CongratulationsR },
+    Organisation: { screen: Organisation },
+    Organisation1: { screen: Organisation1 },
+    Organisation2: { screen: Organisation2 },
+    Organisation3: { screen: Organisation3 },
+    Organisation4: { screen: Organisation4 },
+    Organisation5: { screen: Organisation5 },
+    CongratulationsR: { screen: CongratulationsR },
     History10: { screen: History10 },
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },
+    HealthAndSafety: { screen: HealthAndSafety }
   },
 
   {
