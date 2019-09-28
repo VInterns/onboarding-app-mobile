@@ -60,6 +60,11 @@ import Organisation4 from "./component/Organisation4";
 import Organisation5 from "./component/Organisation5";
 import CongratulationsR from "./component/Congratulations-R";
 
+import HealthandSafety2 from "./component/HealthandSafety2";
+import Screen1 from "./component/Screen1";
+
+
+
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -188,6 +193,9 @@ const AppNavigator = createStackNavigator(
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },
+    HealthandSafety2: { screen: HealthandSafety2 },
+    Screen1: { screen: Screen1 },
+
   },
 
   {
