@@ -41,7 +41,7 @@ export default class HealthAndSafety extends Component {
 
                 <View style={styles.NextButtonView}>
 
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Brand1", {})} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("HealthAndSafety1", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                             </Text>
@@ -54,13 +54,12 @@ export default class HealthAndSafety extends Component {
 const styles = StyleSheet.create({
     blackText: {//welcome to word style
         color: 'black',
-        fontSize: 35,
-        fontWeight: 'bold'
+        fontSize: 45,
     },
     redText: {//login word text style
         color: 'red',
         fontWeight: 'bold',
-        fontSize: 45,
+        fontSize: 44,
     },
     blackTextView: {
         alignItems: 'flex-start',
