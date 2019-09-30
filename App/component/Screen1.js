@@ -10,6 +10,8 @@ export default class Screen extends Component {
 
   props: {
     imageurl: any,
+    moveY: number,
+    moveX: number,
   };
 
   render() {
@@ -17,11 +19,15 @@ export default class Screen extends Component {
     return (
       <View style={styles.mainContainer}>
         <View style={styles.dropZone}>
-          <Text style={styles.text}>Drop them here!</Text>
+          {/* <Text style={styles.text}>Drop them here!</Text> */}
         </View>
         <View style={styles.ballContainer} />
         <View style={styles.row}>
-          <Draggable imageurl={centerImg}/>
+          <Draggable imageurl={centerImg} moveY={120} moveX={40} dropAreaCallback={()=>{
+            this
+          }}/>
+          <Draggable imageurl={centerImg} moveY={140} moveX={80}/>
+        
          
         </View>
       </View>
@@ -29,6 +35,7 @@ export default class Screen extends Component {
   }
 }
 
+let CIRCLE_RADIUS = 30;
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1
@@ -41,7 +48,10 @@ const styles = StyleSheet.create({
   },  
   dropZone: {
     height: 200,
-    backgroundColor: "#00334d"
+    backgroundColor: "#00334d",
+    width: CIRCLE_RADIUS * 2,
+    height: CIRCLE_RADIUS * 2,
+    borderRadius: CIRCLE_RADIUS,
   },
   text: {
     marginTop: 25,

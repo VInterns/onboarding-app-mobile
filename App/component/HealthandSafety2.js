@@ -17,9 +17,15 @@ import FadeInView from './FadeInView';
 
 import centerImg from '../assets/drugs.png';
 
+const q1 : Boolean = false;
+const q2 : Boolean = false;
+const q3 : Boolean = false;
+
+
 export default class Draggable extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
       showDraggable: true,
       dropAreaValues: null,
@@ -30,70 +36,88 @@ export default class Draggable extends Component {
 
   props: {
     imageurl: any,
+    moveY: number,
+    moveX: number,
+    dropAreaCallback:()=>Boolean,
+    answer:Boolean
   };
 
+  
   componentWillMount() {
-    debugger;
-    // Add a listener for the delta value change
-    this._val = { x: 10, y: 100 }
+    this._val = { x: 0, y: 0 }
     this.state.pan.addListener((value) => this._val = value);
 
-    // Initialize PanResponder with move handling
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: (e, gesture) => true,
+      onPanResponderGrant: (e, gesture) => {
+        this.state.pan.setOffset({
+          x: this._val.x,
+          y: this._val.y
+        })
+        this.state.pan.setValue({ x: 0, y: 0 })
+      },
       onPanResponderMove: Animated.event([
         null, { dx: this.state.pan.x, dy: this.state.pan.y }
       ]),
       onPanResponderRelease: (e, gesture) => {
-        console.log('release');
-        if (this.isDropArea(gesture)) {
+        console.log(gesture);
+        if (this.isDropArea(gesture, props.answerId)) {
           Animated.timing(this.state.opacity, {
             toValue: 0,
             duration: 1000
-          }).start(() =>
-            this.setState({
-              showDraggable: false
-            }),
-            console.log('dragable false')
-          );
-        } else {
-          Animated.spring(this.state.pan, {
-            toValue: { x: 0, y: 0 },
-            friction: 5
-          }).start();
-        }
+          }).start(() => {
 
+            //I WANT TO CHANGE Q1 TO TRUE
+
+
+            // this.setState({
+            //   showDraggable: false
+            // })
+          }
+          );
+        }
       }
 
-      // adjusting delta value
+
     });
-
-    // this.state.pan.setValue({ x:100, y:200})
-  }
-  isDropArea(gesture) {
-    return gesture.moveY < 200;
   }
 
-  // getDerivedStateFromProps(){
+  isDropArea(gesture, answerId) {
 
-  // }
+    if(gesture.moveY < this.props.moveY & gesture.moveX < this.props.moveX)
+    {
+      //set state answer = true
+      q3
+
+      //this.dropAreaCallback();
+      return true
+    }else{
+      return false;
+    }
+  }
 
   render() {
-    debugger;
-    const image = this.props.imageurl;
-    console.log(image);
+    return (
+      <View style={{ width: "20%", alignItems: "center" }}>
+        {this.renderDraggable()}
+      </View>
+    );
+  }
+
+  renderDraggable() {
     const panStyle = {
       transform: this.state.pan.getTranslateTransform()
     }
-    return (
-      <Animated.View
-        {...this.panResponder.panHandlers}
-        style={[panStyle, styles.circle,]}
-      >
-
-        {/* <Image source={centerImg} /> */}
-      </Animated.View>
-    );
+    if (this.state.showDraggable) {
+      return (
+        <View style={{ position: "absolute" }}>
+          <Animated.View
+            {...this.panResponder.panHandlers}
+            style={[panStyle, styles.circle, { opacity: this.state.opacity }]}
+          />
+        </View>
+      );
+    }
   }
 }
 
