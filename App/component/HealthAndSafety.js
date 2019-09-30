@@ -21,79 +21,80 @@ export default class HealthAndSafety extends Component {
         const { navigate } = this.props.navigation;
 
         return (
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+            <View style={styles.MainView}>
 
                 <View style={styles.TextContainer}>
-                    <View style={styles.blackTextView}>
-                        <FadeInView>
-                            <Text style={styles.blackText}>Health</Text>
-                        </FadeInView>
-                    </View>
-                    <View style={styles.redView}>
-                        <FadeInView>
-                            <Text style={styles.redText}>and Safety</Text>
-                        </FadeInView>
-                    </View>
+                    <Text style={styles.blackText}>Health</Text>
 
+                    <Text style={styles.redText}>and Safety</Text>
                 </View>
-
-                <Image source={HSImage} style={styles.HSImg} />
-
-                <View style={styles.NextButtonView}>
-
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("HealthAndSafety1", {})} >
+                <View style={styles.ImageContainer}>
+                    <Image source={HSImage} />
+                </View>
+                <View style={styles.ButtonsView}>
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("HealthAndSafety1", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
-                            </Text>
+                        </Text>
                     </TouchableOpacity>
                 </View>
-            </View >
+            </View>
+
         )
     }
 }
 const styles = StyleSheet.create({
-    blackText: {//welcome to word style
+    MainView: {
+        flex: 1
+    },
+    TextContainer: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        flex: 2,
+        marginLeft: 20,
+        marginTop: DEVICE_HEIGHT * 0.07
+    },
+    blackText: {
         color: 'black',
         fontSize: 45,
     },
-    redText: {//login word text style
+    redText: {
         color: 'red',
         fontWeight: 'bold',
         fontSize: 44,
     },
-    blackTextView: {
-        alignItems: 'flex-start',
-        justifyContent: 'center'
+    ImageContainer:
+    {
+        flex: 5,
+        alignItems: "center",
+        justifyContent: "center",
     },
-    TextContainer: {/* Welcome back and vodabuddy wrapper */
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        marginTop: DEVICE_HEIGHT * 0.1,
-        marginRight: (DEVICE_WIDTH / 2) - (DEVICE_WIDTH * 0.09),
+    HSImg: {
     },
-    redView: {
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    NextButtonView: { //wrapper for button 
-        // flexDirection: 'row',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
-        flex: 1,
+    ButtonsView: {
+        height: 45,
+        flexDirection: 'row',
         marginBottom: DEVICE_HEIGHT * 0.03,
-        marginLeft: DEVICE_WIDTH * 0.68
+        backgroundColor: "#0000",
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 10,
+            height: 10
+        },
+        shadowRadius: 22,
+        shadowOpacity: 1,
+        elevation: 3,
     },
-    button: {
+    NextButton: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginLeft: DEVICE_WIDTH * 0.74
     },
-    ButtonText: { // text inside button
+    ButtonText: {
         color: 'black',
         fontWeight: 'bold',
         fontSize: 20,
-    },
-    HSImg: {
-        marginTop: DEVICE_HEIGHT * 0.17
     }
 });

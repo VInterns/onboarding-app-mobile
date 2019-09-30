@@ -40,7 +40,7 @@ export default class HealthAndSafety1 extends Component {
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("HealthAndSafety10", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("HealthAndSafety9", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
@@ -62,10 +62,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         flex: 5,
         marginTop: DEVICE_HEIGHT * 0.1
-
-    },
-    ImageStyle:
-    {
     },
     TextContainer:
     {

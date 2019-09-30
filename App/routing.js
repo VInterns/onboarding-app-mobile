@@ -62,8 +62,9 @@ import CongratulationsR from "./component/Congratulations-R";
 
 import HealthAndSafety from "./component/HealthAndSafety"
 import HealthAndSafety1 from "./component/HealthAndSafety1"
+import HealthAndSafety9 from "./component/HealthAndSafety9"
 import HealthAndSafety10 from "./component/HealthAndSafety10"
-
+import HealthAndSafety11 from "./component/HealthAndSafety11"
 
 
 const handleCustomTransition = ({ scenes }) => {
@@ -201,8 +202,9 @@ const AppNavigator = createStackNavigator(
     History13: { screen: History13 },
     HealthAndSafety: { screen: HealthAndSafety },
     HealthAndSafety1: { screen: HealthAndSafety1 },
+    HealthAndSafety9: { screen: HealthAndSafety9 },
     HealthAndSafety10: { screen: HealthAndSafety10 },
-
+    HealthAndSafety11: { screen: HealthAndSafety11 },
   },
 
   {
