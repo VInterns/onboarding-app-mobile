@@ -49,16 +49,16 @@ export default class History extends Component {
                         </FadeInView>
                     </View>
 
-                </View> 
+                </View>
 
                 <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />{/* centered mobile logo*/}
 
                 {/*  button view */}
                 <View style={styles.NextButtonView}>
-                 <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} >  
-                 {/* <TouchableOpacity style={styles.button} onPress={() => navigate("LearningAtVodafone")} >   */} 
-                    {/*  <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >      */}         
-                    {/*  <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} >  */}
+                    {/*  <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} >   */}
+                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("LearningAtVodafone")} >   */}
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >
+                        {/*  <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} >  */}
 
                         <Text style={styles.ButtonText}>
                             NEXT
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginBottom: DEVICE_HEIGHT * 0.03,
         marginLeft: DEVICE_WIDTH * 0.68,
-        
+
 
     },
     ButtonText: { // text inside button
