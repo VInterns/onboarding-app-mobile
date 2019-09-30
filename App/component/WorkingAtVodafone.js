@@ -16,7 +16,7 @@ import FadeInView from './FadeInView'
 
 import centerImg from '../assets/WorkingAtVodafone.png'
 //import backgroundImg from '../assets/background.png';
-export default class LearningAtVodafone extends Component {
+export default class WorkingAtVodafone extends Component {
 
     static navigationOptions = {//header styling
         header: null

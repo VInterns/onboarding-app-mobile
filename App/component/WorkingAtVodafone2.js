@@ -16,7 +16,7 @@ import FadeInView from './FadeInView'
 
 import centerImg from '../assets/DressCode.png'
 //import backgroundImg from '../assets/background.png';
-export default class LearningAtVodafone extends Component {
+export default class WorkingAtVodafone2 extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -29,7 +29,7 @@ export default class LearningAtVodafone extends Component {
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+            <View style={{  justifyContent: 'center', alignItems: 'stretch', flex: 1 }}>
                 <View style={styles.TextContainer}>
                     <Text style={styles.blackText}>Dress</Text>
                     <Text style={styles.redText}>Code</Text>
@@ -41,7 +41,12 @@ export default class LearningAtVodafone extends Component {
 
 
                 <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} >
+                        <Text style={styles.ButtonText}>
+                            Back
+                       </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone3")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -97,12 +102,22 @@ const styles = StyleSheet.create({
     },
 
     NextButtonView: { //wrapper for button 
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
+     /*    width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
         flex: 0.1,
+        marginBottom: DEVICE_HEIGHT * (15 / DEVICE_HEIGHT),  */
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: DEVICE_HEIGHT * 0.03,
+        marginRight: DEVICE_WIDTH * 0.095,
+        marginLeft: DEVICE_WIDTH * 0.095,
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        /*
         marginRight: (70 / DEVICE_WIDTH) * DEVICE_WIDTH,
-        marginBottom: DEVICE_HEIGHT * (15 / DEVICE_HEIGHT),
+        marginBottom: DEVICE_HEIGHT * (15 / DEVICE_HEIGHT), */
         //marginLeft: DEVICE_WIDTH * 0.68,
         //backgroundColor: 'green'
 

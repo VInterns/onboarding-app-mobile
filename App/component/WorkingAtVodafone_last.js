@@ -13,17 +13,17 @@ import {
 
 import FadeInView from './FadeInView';
 
-import img1 from '../assets/E.png';
+import img1 from '../assets/workingAtVodafoneCongrats.png';
 
 
 
 
-export default class LearningAtVodafone_last extends Component {
+export default class Organisation1 extends Component {
     componentDidMount() {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
-            this.props.navigation.navigate("Video6")
+            this.props.navigation.navigate("Video7")
         }, 2000);
     }
 
@@ -52,7 +52,14 @@ export default class LearningAtVodafone_last extends Component {
                 <View style={styles.imageContainer}>
                     <Image source={img1} style={styles.img} />
                 </View>
-
+                {/*  <View style={styles.NextButtonView}> */}
+                {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
+                {/*   <TouchableOpacity style={styles.button} onPress={() => navigate("Brand")} >
+                        <Text style={styles.ButtonText}>
+                            NEXT
+                       </Text>
+                    </TouchableOpacity>
+                </View> */}
             </View >
 
         );

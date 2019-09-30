@@ -74,6 +74,9 @@ import LearningAtVodafone from "./component/LearningAtVodafone";
 
 import WorkingAtVodafone from "./component/WorkingAtVodafone";
 import WorkingAtVodafone2 from "./component/WorkingAtVodafone2";
+import WorkingAtVodafone3 from "./component/WorkingAtVodafone3";
+import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
+import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 
 import HealthAndSafety from "./component/HealthAndSafety";
 
@@ -268,6 +271,10 @@ const AppNavigator = createStackNavigator(
     LearningAtVodafone_last: { screen: LearningAtVodafone_last },
     WorkingAtVodafone: { screen: WorkingAtVodafone },
     WorkingAtVodafone2: { screen: WorkingAtVodafone2 },
+    WorkingAtVodafone3: { screen: WorkingAtVodafone3 },
+    WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
+    WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },  
+
     HealthAndSafety: { screen: HealthAndSafety }
   },
 
