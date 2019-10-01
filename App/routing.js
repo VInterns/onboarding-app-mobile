@@ -61,7 +61,7 @@ import Organisation5 from "./component/Organisation5";
 import CongratulationsR from "./component/Congratulations-R";
 
 import HealthandSafety2 from "./component/HealthandSafety2";
-import Screen1 from "./component/Screen1";
+import Screen1 from "./component/HealthandSafety2";
 
 
 
@@ -194,7 +194,6 @@ const AppNavigator = createStackNavigator(
     History12: { screen: History12 },
     History13: { screen: History13 },
     HealthandSafety2: { screen: HealthandSafety2 },
-    Screen1: { screen: Screen1 },
 
   },
 

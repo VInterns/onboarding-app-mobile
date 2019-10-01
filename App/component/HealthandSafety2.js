@@ -1,137 +1,63 @@
-import React, { Component } from 'react';
-
-import {
-  StyleSheet,
-  View,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-  KeyboardAvoidingView,
-  PanResponder,
-  Animated,
-  Text,
-} from 'react-native';
-
-import FadeInView from './FadeInView';
-
-import centerImg from '../assets/drugs.png';
-
-const q1 : Boolean = false;
-const q2 : Boolean = false;
-const q3 : Boolean = false;
+import React, { Component } from "react";
+import { StyleSheet, View, Text } from "react-native";
+import Draggable from "./Draggable";
 
 
-export default class Draggable extends Component {
-  constructor(props) {
-    super(props);
+// import { centerImg } from '../assets/undrawConnectingTeams8Ntu.png';
+const centerImg = '../assets/group10.png';
 
-    this.state = {
-      showDraggable: true,
-      dropAreaValues: null,
-      pan: new Animated.ValueXY(),
-      opacity: new Animated.Value(1)
-    };
-  }
+export default class HealthandSafety2 extends Component {
 
   props: {
     imageurl: any,
     moveY: number,
     moveX: number,
-    dropAreaCallback:()=>Boolean,
-    answer:Boolean
   };
 
-  
-  componentWillMount() {
-    this._val = { x: 0, y: 0 }
-    this.state.pan.addListener((value) => this._val = value);
-
-    this.panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: (e, gesture) => true,
-      onPanResponderGrant: (e, gesture) => {
-        this.state.pan.setOffset({
-          x: this._val.x,
-          y: this._val.y
-        })
-        this.state.pan.setValue({ x: 0, y: 0 })
-      },
-      onPanResponderMove: Animated.event([
-        null, { dx: this.state.pan.x, dy: this.state.pan.y }
-      ]),
-      onPanResponderRelease: (e, gesture) => {
-        console.log(gesture);
-        if (this.isDropArea(gesture, this.props.answerId)) {
-          Animated.timing(this.state.opacity, {
-            toValue: 0,
-            duration: 1000
-          }).start(() => {
-
-            //I WANT TO CHANGE Q1 TO TRUE
-
-
-            // this.setState({
-            //   showDraggable: false
-            // })
-          }
-          );
-        }
-      }
-
-
-    });
-  }
-
-  isDropArea(gesture, answerId) {
-
-    if(gesture.moveY < this.props.moveY & gesture.moveX < this.props.moveX)
-    {
-      //set state answer = true
-      q3
-
-      //this.dropAreaCallback();
-      return true
-    }else{
-      return false;
-    }
-  }
-
   render() {
+    debugger;
     return (
-      <View style={{ width: "20%", alignItems: "center" }}>
-        {this.renderDraggable()}
+      <View style={styles.mainContainer}>
+        <View style={styles.dropZone}>
+          {/* <Text style={styles.text}>Drop them here!</Text> */}
+        </View>
+        <View style={styles.ballContainer} />
+        <View style={styles.row}>
+          <Draggable imageurl={centerImg} moveY={120} moveX={40} answerId={1}/>
+          <Draggable imageurl={centerImg} moveY={140} moveX={80}/>
+        
+         
+        </View>
       </View>
     );
-  }
-
-  renderDraggable() {
-    const panStyle = {
-      transform: this.state.pan.getTranslateTransform()
-    }
-    if (this.state.showDraggable) {
-      return (
-        <View style={{ position: "absolute" }}>
-          <Animated.View
-            {...this.panResponder.panHandlers}
-            style={[panStyle, styles.circle, { opacity: this.state.opacity }]}
-          />
-        </View>
-      );
-    }
   }
 }
 
 let CIRCLE_RADIUS = 30;
-let styles = StyleSheet.create({
-  circle: {
-    backgroundColor: "skyblue",
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1
+  },
+  ballContainer: {
+    height:200
+  },
+  row: {
+    flexDirection: "row"
+  },  
+  dropZone: {
+    height: 200,
+    backgroundColor: "#00334d",
     width: CIRCLE_RADIUS * 2,
     height: CIRCLE_RADIUS * 2,
     borderRadius: CIRCLE_RADIUS,
-
-    // ImageBackground: require(props.imageUri)
   },
-  Container: {
-    backgroundColor: 'red'
+  text: {
+    marginTop: 25,
+    marginLeft: 5,
+    marginRight: 5,
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 25,
+    fontWeight: "bold"
   }
 });
