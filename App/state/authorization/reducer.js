@@ -30,7 +30,6 @@ export function authorizationReducer(
         ...state,
         token: action.payload,
         isLoggedIn: true,
-        loading:false,
         lastScreen: "walkThrough"
         // username: action.payload.username
       };

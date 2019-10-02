@@ -32,16 +32,16 @@ export type REGISTER_FAIL_Action = { type: string, payload: string };
 export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
     dispatch(onLogin(user));
-    dispatch({ type: UiTypes.UI_LOADING });
+    dispatch({ type: UiTypes.UI_START_LOADING });
     let response = await authProxyService.login(user);
 
     token = await response.json();
 
     if (response.status === 200) {
       dispatch(success());
-      dispatch({ type: UiTypes.UI_LOADING });
+      dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
-      dispatch({ type: UiTypes.UI_LOADING });
+      dispatch({ type: UiTypes.UI_STOP_LOADING });
       dispatch(fail());
     }
   };
@@ -56,7 +56,7 @@ export async function tryNavigate(nextScreen: string) {
 export async function tryRegister(user: UserRegisterModel) {
   let token = null;
   return async dispatch => {
-    dispatch({ type: UiTypes.UI_LOADING });
+    dispatch({ type: UiTypes.UI_START_LOADING });
     dispatch(onRegister());
     let response = await authProxyService.register(user);
     if (response.status === 200) {
@@ -69,11 +69,11 @@ export async function tryRegister(user: UserRegisterModel) {
       //   return request;
       // });
       dispatch(registerSuccess());
-      dispatch({ type: UiTypes.UI_LOADING });
+      dispatch({ type: UiTypes.UI_STOP_LOADING });
       // dispatch(NavigationActions.navigate({ routeName: "Login" }));
     } else {
       dispatch(registerFail());
-      dispatch({ type: UiTypes.UI_LOADING });
+      dispatch({ type: UiTypes.UI_STOP_LOADING });
     }
   };
 }
@@ -105,9 +105,10 @@ export function registerFail(): REGISTER_FAIL_Action {
 }
 
 export function logout() {
-  return {
-    type: types.LOGOUT
-  };
+  return (dispatch) => {
+    dispatch({ type: types.LOGOUT });
+    dispatch({ type: UiTypes.UI_STOP_LOADING });
+  }
 }
 
 export function onNextScreen(nextScreen): NextScreenModel {

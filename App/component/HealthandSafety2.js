@@ -24,9 +24,7 @@ export default class HealthandSafety2 extends Component {
         <View style={styles.ballContainer} />
         <View style={styles.row}>
           <Draggable imageurl={centerImg} moveY={120} moveX={40} answerId={1}/>
-          <Draggable imageurl={centerImg} moveY={140} moveX={80}/>
-        
-         
+          <Draggable imageurl={centerImg} moveY={140} moveX={80} answerId={2}/>
         </View>
       </View>
     );
@@ -42,7 +40,8 @@ const styles = StyleSheet.create({
     height:200
   },
   row: {
-    flexDirection: "row"
+    flexDirection: "row",
+    backgroundColor: "yellow",
   },  
   dropZone: {
     height: 200,
