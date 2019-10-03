@@ -40,7 +40,7 @@ import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
-import GreatJob from "./component/GreatJob";
+import { greatJob } from "./screens/greatJob-screen";
 import GreatJob2 from "./component/GreatJob2";
 
 import Brand from "./component/brand";
@@ -170,7 +170,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert: { screen: ErrorAlert },
     History2: { screen: History2 },
     History3: { screen: History3 },
-    GreatJob: { screen: GreatJob },
+    greatJob: { screen: greatJob },
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },

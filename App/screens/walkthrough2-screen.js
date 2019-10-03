@@ -8,7 +8,6 @@ import WalkThrough2 from "../component/walkThrough2";
 class Walkthrough2Container extends Component {
   constructor() {
     super();
-
   }
 
   static mapStateToProps(state: State) {

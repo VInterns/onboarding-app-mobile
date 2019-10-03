@@ -1,32 +1,38 @@
-
 import React, { Component } from 'react';
-
-
 
 import {
     StyleSheet,
     View,
     Image,
-    TouchableOpacity,
-    ImageBackground,
     Dimensions,
-    KeyboardAvoidingView,
     Text,
-    Alert
 
 } from 'react-native';
-
-import FadeInView from './FadeInView'
 
 import ThumbsUp from '../assets/group2_1.png'
 
 class GreatJob extends Component {
 
+    props: {
+        tryNavigate: (nextScreen: string) => void
+    };
+
+    tryNavigate = () => {
+        console.log("Try navigate");
+
+        this.props.tryNavigate("History4");
+    };
+
     componentDidMount() {
         // Start counting when the page is loaded
+        console.log("----------will mount-------");
+
         this.timeoutHandle = setTimeout(() => {
+            console.log("SetTimeOut");
             // Add your logic for the transition
-            this.props.navigation.navigate("History4")
+            // this.tryNavigate
+            this.props.tryNavigate("History4");
+            // this.props.navigation.navigate("History4");
         }, 2000);
     }
 
@@ -53,7 +59,6 @@ class GreatJob extends Component {
                     </Text>
                 </View>
 
-
                 <View style={{ marginTop: DEVICE_HEIGHT * 0.027, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ color: 'black', fontSize: DEVICE_WIDTH * 0.050 }}>
                         Vodafone stands for
@@ -63,16 +68,6 @@ class GreatJob extends Component {
                         Voice, Data and Phone
                     </Text>
                 </View>
-
-                {/*                 <KeyboardAvoidingView behavior="padding" style={styles.ButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History4", {})} >
-                        <Text style={styles.ButtonText}>
-                            Done
-                       </Text>
-                    </TouchableOpacity>
-                </KeyboardAvoidingView> */}
-
-
             </View>
         );
     }

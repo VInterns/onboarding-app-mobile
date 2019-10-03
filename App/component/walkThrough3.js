@@ -26,9 +26,6 @@ export default class walkThrough3 extends Component {
         tryNavigate: (nextScreen: string) => void
     };
 
-
-
-
     static navigationOptions = {//header styling
         header: null
     };
