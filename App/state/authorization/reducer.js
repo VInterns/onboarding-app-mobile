@@ -20,7 +20,6 @@ export function authorizationReducer(
     case types.ON_LOGIN: {
       return {
         ...state,
-        loading: true,
         username: action.payload.username
       };
     }
@@ -30,7 +29,6 @@ export function authorizationReducer(
         ...state,
         token: action.payload,
         isLoggedIn: true,
-        loading:false,
         lastScreen: "walkThrough"
         // username: action.payload.username
       };
@@ -65,15 +63,15 @@ export function authorizationReducer(
       };
     }
 
-    case types.LOGOUT:{
+    case types.LOGOUT: {
       return {
         ...state,
-        isLoggedIn:false,
+        isLoggedIn: false,
         // lastScreen:"walkThrough"
       }
     }
 
-    case types.ON_NEXT_SCREEN:{
+    case types.ON_NEXT_SCREEN: {
       return {
         ...state,
         lastScreen: action.payload
