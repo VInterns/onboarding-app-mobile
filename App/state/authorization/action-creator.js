@@ -49,6 +49,7 @@ export async function tryLogin(user: UserLoginModel) {
 
 export async function tryNavigate(nextScreen: string) {
   return async dispatch => {
+    debugger;
     dispatch(onNextScreen(nextScreen));
   };
 }

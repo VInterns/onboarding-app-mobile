@@ -90,12 +90,14 @@ export default class Draggable extends Component {
       //set state answer = true
       if (answerId == 1) {
         q1 = true;
-        console.log('q1 now is = true', q1);
+        this.props.qtrue();
         
       }if (answerId == 2) {
         q2 = true;
+        this.props.qtrue();
       }if (answerId == 3) {
         q3 = true;
+        this.props.qtrue();
       }
 
       //this.dropAreaCallback();

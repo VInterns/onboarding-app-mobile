@@ -2,7 +2,6 @@ import { AnyAction } from "redux";
 import { UiState, UiInitialState } from "./state";
 // import * as actions from "./action-creator";
 import * as types from "./actions";
-import * as authTypes from '../authorization/actions';
 // type Action = actions.L;
 
 export function uiReducer(

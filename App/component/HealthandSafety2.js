@@ -6,7 +6,30 @@ import Draggable from "./Draggable";
 // import { centerImg } from '../assets/undrawConnectingTeams8Ntu.png';
 const centerImg = '../assets/group10.png';
 
+let question1 : Boolean = false;
+let question2 : Boolean = false;
+let question3 : Boolean = false;
+
+
+function q1true() { 
+  question1 = true;
+  console.log('q1 now is = true', question1);  
+}
+function q2true() { 
+  question2 = true;
+  console.log('q2 now is = true', question2);
+}
+function q3true() { 
+  question3 = true;
+}
+
 export default class HealthandSafety2 extends Component {
+
+  constructor() {
+    super();
+    this.state = {};
+    // this.q1true = this.q1true.bind(this);
+}
 
   props: {
     imageurl: any,
@@ -23,8 +46,8 @@ export default class HealthandSafety2 extends Component {
         </View>
         <View style={styles.ballContainer} />
         <View style={styles.row}>
-          <Draggable imageurl={centerImg} moveY={120} moveX={40} answerId={1}/>
-          <Draggable imageurl={centerImg} moveY={140} moveX={80} answerId={2}/>
+          <Draggable imageurl={centerImg} moveY={120} moveX={40} answerId={1} qtrue={q1true}/>
+          <Draggable imageurl={centerImg} moveY={140} moveX={80} answerId={2} qtrue={q2true}/>
         </View>
       </View>
     );

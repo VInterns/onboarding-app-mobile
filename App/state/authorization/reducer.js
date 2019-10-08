@@ -68,7 +68,7 @@ export function authorizationReducer(
       return {
         ...state,
         isLoggedIn:false,
-        // lastScreen:"walkThrough"
+        lastScreen: "walkThrough"
       }
     }
 
@@ -76,7 +76,6 @@ export function authorizationReducer(
       return {
         ...state,
         lastScreen: action.payload,
-        lastScreen: "walkThrough"
       }
     }
     default:
