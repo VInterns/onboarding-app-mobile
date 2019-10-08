@@ -40,7 +40,7 @@ import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
-import GreatJob from "./component/GreatJob";
+import { greatJob } from "./screens/greatJob-screen";
 import GreatJob2 from "./component/GreatJob2";
 
 import Brand from "./component/brand";
@@ -60,9 +60,14 @@ import Organisation4 from "./component/Organisation4";
 import Organisation5 from "./component/Organisation5";
 import CongratulationsR from "./component/Congratulations-R";
 
+
 import HealthandSafety2 from "./component/HealthandSafety2";
 import Screen1 from "./component/HealthandSafety2";
-
+import HealthAndSafety from "./component/HealthAndSafety"
+import HealthAndSafety1 from "./component/HealthAndSafety1"
+import HealthAndSafety9 from "./component/HealthAndSafety9"
+import HealthAndSafety10 from "./component/HealthAndSafety10"
+import HealthAndSafety11 from "./component/HealthAndSafety11"
 
 
 
@@ -141,29 +146,35 @@ const AppNavigator = createStackNavigator(
       }
     },
     walkThrough2: {
-      screen: walkThrough2, 
+      screen: walkThrough2,
       navigationOptions: {
         header: null
       }
     },
-    walkThrough3: { screen: walkThrough3,
+    walkThrough3: {
+      screen: walkThrough3,
       navigationOptions: {
         header: null
-      } },
-    Video1: { screen: Video1 ,
+      }
+    },
+    Video1: {
+      screen: Video1,
       navigationOptions: {
         header: null
-      }},
-      Video2: { screen: Video2 ,
-        navigationOptions: {
-          header: null
-        }},
+      }
+    },
+    Video2: {
+      screen: Video2,
+      navigationOptions: {
+        header: null
+      }
+    },
     History: { screen: History },
     History1: { screen: History1 },
     ErrorAlert: { screen: ErrorAlert },
     History2: { screen: History2 },
     History3: { screen: History3 },
-    GreatJob: { screen: GreatJob },
+    greatJob: { screen: greatJob },
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },
@@ -182,19 +193,24 @@ const AppNavigator = createStackNavigator(
     Brand5: { screen: Brand5 },
     Brand6: { screen: Brand6 },
     Brand7: { screen: Brand7 },
-    Organisation:{ screen: Organisation },
-    Organisation1:{ screen: Organisation1 },
-    Organisation2:{ screen: Organisation2 },
-    Organisation3:{ screen: Organisation3 },
-    Organisation4:{ screen: Organisation4 },
-    Organisation5:{ screen: Organisation5 },
-    CongratulationsR:{ screen: CongratulationsR },
+    Organisation: { screen: Organisation },
+    Organisation1: { screen: Organisation1 },
+    Organisation2: { screen: Organisation2 },
+    Organisation3: { screen: Organisation3 },
+    Organisation4: { screen: Organisation4 },
+    Organisation5: { screen: Organisation5 },
+    CongratulationsR: { screen: CongratulationsR },
     History10: { screen: History10 },
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },
-    HealthandSafety2: { screen: HealthandSafety2 },
 
+    HealthandSafety2: { screen: HealthandSafety2 },
+    HealthAndSafety: { screen: HealthAndSafety },
+    HealthAndSafety1: { screen: HealthAndSafety1 },
+    HealthAndSafety9: { screen: HealthAndSafety9 },
+    HealthAndSafety10: { screen: HealthAndSafety10 },
+    HealthAndSafety11: { screen: HealthAndSafety11 },
   },
 
   {

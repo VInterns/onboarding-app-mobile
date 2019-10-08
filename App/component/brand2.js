@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
     ImagesView: {
         flexDirection: 'row',
         flex: 4,
-        alignItems: 'center'
+        // alignItems: 'center',
+        marginTop: DEVICE_HEIGHT * 0.3
     },
     LeftImage: {
         zIndex: 1,
