@@ -71,8 +71,10 @@ import CongratulationsR from "./component/Congratulations-R";
 
 import LearningAtVodafone_last from "./component/LearningAtVodafone_last";
 import LearningAtVodafone from "./component/LearningAtVodafone";
+import LearningAtVodafone1 from "./component/LearningAtVodafone1";
 
 import WorkingAtVodafone from "./component/WorkingAtVodafone";
+import WorkingAtVodafone1 from "./component/WorkingAtVodafone1";
 import WorkingAtVodafone2 from "./component/WorkingAtVodafone2";
 import WorkingAtVodafone3 from "./component/WorkingAtVodafone3";
 import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
@@ -268,8 +270,10 @@ const AppNavigator = createStackNavigator(
     History12: { screen: History12 },
     History13: { screen: History13 },
     LearningAtVodafone: { screen: LearningAtVodafone },
+    LearningAtVodafone1: { screen: LearningAtVodafone1 },
     LearningAtVodafone_last: { screen: LearningAtVodafone_last },
     WorkingAtVodafone: { screen: WorkingAtVodafone },
+    WorkingAtVodafone1: { screen: WorkingAtVodafone1 },
     WorkingAtVodafone2: { screen: WorkingAtVodafone2 },
     WorkingAtVodafone3: { screen: WorkingAtVodafone3 },
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },

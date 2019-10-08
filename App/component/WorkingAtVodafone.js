@@ -41,7 +41,7 @@ export default class WorkingAtVodafone extends Component {
 
 
                 <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone1")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
