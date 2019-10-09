@@ -29,7 +29,7 @@ export function authorizationReducer(
         ...state,
         token: action.payload,
         isLoggedIn: true,
-        lastScreen: "walkThrough"
+        // lastScreen: "walkThrough"
         // username: action.payload.username
       };
     }

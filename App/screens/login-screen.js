@@ -52,7 +52,7 @@ class LoginContainer extends Component {
       // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
 
     return (
-      this.props.isLoggedIn ? null :
+      // this.props.isLoggedIn ? null :
         <Login
           loading={this.props.loading}
           errorMessage={this.props.errorMessage}
@@ -60,7 +60,6 @@ class LoginContainer extends Component {
           navigation={this.props.navigation}
           isLoggedIn={this.props.isLoggedIn}
         />
-
     );
 
   }

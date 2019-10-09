@@ -17,11 +17,6 @@ import FadeInView from './FadeInView';
 
 import centerImg from '../assets/drugs.png';
 
-let q1 : Boolean = false;
-let q2 : Boolean = false;
-let q3 : Boolean = false;
-
-
 export default class Draggable extends Component {
   constructor(props) {
     super(props);
@@ -89,14 +84,12 @@ export default class Draggable extends Component {
     {
       //set state answer = true
       if (answerId == 1) {
-        q1 = true;
+   
         this.props.qtrue();
         
       }if (answerId == 2) {
-        q2 = true;
         this.props.qtrue();
       }if (answerId == 3) {
-        q3 = true;
         this.props.qtrue();
       }
 
