@@ -117,8 +117,9 @@ export default class Draggable extends Component {
         <View style={{ position: "absolute" }}>
           <Animated.View
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.circle, { opacity: this.state.opacity }]}
-          />
+            style={[panStyle, styles.circle, { opacity: this.state.opacity }]}>
+                    <Image source={this.props.imageurl} />
+            </Animated.View>
         </View>
       );
     }

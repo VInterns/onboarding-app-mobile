@@ -4,14 +4,19 @@ import Draggable from "./Draggable";
 import {
   StyleSheet,
   View,
+  Image,
   TouchableOpacity,
   Dimensions,
   Text,
 } from 'react-native';
 
 
-// import { centerImg } from '../assets/undrawConnectingTeams8Ntu.png';
-const centerImg = '../assets/group10.png';
+// import { drgus } from '../assets/drugs.png';
+const drugs = '../assets/drugs.png';
+const speedlimit = '../assets/speedlimit.png';
+const streetwork = '../assets/streetwork.png';
+const nomobile = '../assets/nomobile.png';
+
 
 let question1 : Boolean = false;
 let question2 : Boolean = false;
@@ -59,25 +64,27 @@ static navigationOptions = {
         </View>
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <View style={styles.dropZone}>
-            {/* <Text style={styles.text}>Drop them here!</Text> */}
-          </View>
-          <View style={styles.dropZone}>
-            {/* <Text style={styles.text}>Drop them here!</Text> */}
-          </View>
-          <View style={styles.dropZone}>
-            {/* <Text style={styles.text}>Drop them here!</Text> */}
-          </View>
-          <View style={styles.dropZone}>
-            {/* <Text style={styles.text}>Drop them here!</Text> */}
-          </View>
+          <Draggable imageurl={require(drugs)} moveY={120} moveX={40} answerId={1} qtrue={q1true}/>
+          <Draggable imageurl={require(nomobile)} moveY={140} moveX={80} answerId={2} qtrue={q2true}/>
+          <Draggable imageurl={require(speedlimit)} moveY={120} moveX={40} answerId={1} qtrue={q1true}/>
+          <Draggable imageurl={require(streetwork)} moveY={120} moveX={40} answerId={1} qtrue={q1true}/>
         </View>
+
         <View style={styles.answersContainer}>
           {/* answers here */}
+          <View style={styles.dropZone}>
+            {/* <Image source={drgus} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />centered mobile logo             */}
+          </View>
+          <View style={styles.dropZone}>
+            {/* <Text style={styles.text}>Drop them here!</Text> */}
+          </View>
+          <View style={styles.dropZone}>
+            {/* <Text style={styles.text}>Drop them here!</Text> */}
+          </View>
+          <View style={styles.dropZone}>
+            {/* <Text style={styles.text}>Drop them here!</Text> */}
+          </View>
           
-
-          {/* <Draggable imageurl={centerImg} moveY={120} moveX={40} answerId={1} qtrue={q1true}/> */}
-          {/* <Draggable imageurl={centerImg} moveY={140} moveX={80} answerId={2} qtrue={q2true}/> */}
         </View>
       </View>
     );
