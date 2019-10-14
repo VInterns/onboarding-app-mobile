@@ -54,17 +54,18 @@ export default class HealthandSafety2 extends Component {
   };
 
   render() {
-    debugger;
     return (
       <View style={styles.mainContainer}>
+
         <View style={styles.titleContainer}>
           <Text style={styles.textlarge}>Match
             <Text style={styles.text}> Match the image with the matching text :</Text>
           </Text>
         </View>
+
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable imageurl={require(drugs)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(drugs)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
           <Draggable imageurl={require(nomobile)} moveY={140} moveX={80} answerId={2} qtrue={q2true} />
           <Draggable imageurl={require(speedlimit)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
           <Draggable imageurl={require(streetwork)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
@@ -97,6 +98,7 @@ export default class HealthandSafety2 extends Component {
             </View>
           </View>
         </View>
+
       </View>
     );
   }
@@ -114,12 +116,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     padding: DEVICE_WIDTH * 0.03,
     backgroundColor: '#EE82EE',
-  },
-  ballContainer: {
-    // height:200
-  },
-  row: {
-    // flexDirection: "row",
+    zIndex: 1,
   },
   dropZone: {
     // flex: 1,
@@ -129,7 +126,11 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: "#cccccc",
     borderRadius: CIRCLE_RADIUS,
-    backgroundColor: '#F4A460'
+    zIndex: 1,
+    // position:'absolute',
+
+    // position: 'absolute'
+    // backgroundColor: '#F4A460',
   },
   titleContainer: {
     flexDirection: 'row',
@@ -161,24 +162,32 @@ const styles = StyleSheet.create({
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    zIndex: 1,
+    // position: 'relative',
+    // position:'absolute',
     // padding:10,
   },
   answersContainer: {
-    backgroundColor: 'orange',
+    // backgroundColor: 'orange',
     flexDirection: 'column',
     flex: 8,
+    zIndex: 1,
+    // backgroundColor: 'transparent',
     // padding: 36
   },
   questionContainer: {
     flexDirection: 'row',
     // padding: DEVICE_WIDTH * 0.02,
-    backgroundColor: '#A52A2A',
-    borderWidth: 3,
-    flex: 1
+    // backgroundColor: '#A52A2A',
+    // borderWidth: 3,
+    flex: 1,
+    zIndex: 1,
   },
   questionTextContainer: {
-    flex: 3, 
-    marginLeft: 10
+    flex: 3,
+    marginLeft: 10,
+    zIndex: 0,
+    // position: 'absolute',
   },
   questionTextLarge: {
     flexWrap: 'wrap',
@@ -189,8 +198,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     // lineHeight: 20,
     letterSpacing: 0,
-    color: "#4b464d"
-
+    color: "#4b464d",
   },
   questionTextSmall: {
     flexWrap: 'wrap',
@@ -201,6 +209,10 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     letterSpacing: 0,
     color: "#4b464d"
+  },
+  draggable: {
+    zIndex: 100,
+    position: 'absolute',
   }
 
 
