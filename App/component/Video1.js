@@ -3,14 +3,28 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { Video } from 'expo-av';
 import video from '../assets/01.mp4';
 export default class Video1 extends React.Component {
+    // constructor() {
+    //     super();
+
+    //     this.state = {
+    //         lastScreen: ""
+    //     };
+    // }
+    // props: {
+    //     tryNavigate: (nextScreen: string) => void
+    // };
+    // tryNavigate = () => {
+    //     this.props.tryNavigate("History");
+    // };
     static navigationOptions = {//header styling
-       header:null
+        header: null
     };
     _onPlaybackStatusUpdate = playbackStatus => {
         if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500)
             // The player has just finished playing and will stop.
 
             this.props.navigation.navigate("History", {})
+        //   this.tryNavigate();
     };
     render() {
         const { width } = Dimensions.get('window');
@@ -40,15 +54,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-/*     controlBar: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 45,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-    } */
 });

@@ -20,6 +20,8 @@ import {
 import { walkThrough1Screen } from "./screens/walkthrough-screen";
 import { walkThrough2 } from "./screens/walkthrough2-screen";
 import { walkThrough3 } from "./screens/walkthrough3-screen";
+//import walkThrough3 from "./component/walkThrough3";
+
 import History from "./component/History";
 import History1 from "./component/History1";
 import History2 from "./component/History2";
@@ -35,6 +37,7 @@ import History11 from "./component/History11";
 import History12 from "./component/History12";
 import History13 from "./component/History13";
 import Video1 from "./component/Video1";
+// import { Video1 } from "./screens/video1-screen";
 import Video2 from "./component/Video2";
 import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
