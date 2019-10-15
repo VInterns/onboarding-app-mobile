@@ -1,7 +1,7 @@
 const PROD_BASE_URL = "";
 
 // const DEV_BASE_URL = "https://66b0bf91.ngrok.io/";
-const DEV_BASE_URL = "https://8b8c273b.ngrok.io/";
+const DEV_BASE_URL = "https://cf0fcb89.ngrok.io/";
 
 // const PROD_BASE_URL = "";
 const DEV = true;

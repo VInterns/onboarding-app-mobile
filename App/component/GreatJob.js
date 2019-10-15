@@ -17,11 +17,11 @@ class GreatJob extends Component {
         tryNavigate: (nextScreen: string) => void
     };
 
-    tryNavigate = () => {
-        console.log("Try navigate");
+    // tryNavigate = () => {
+    //     console.log("Try navigate");
 
-        this.props.tryNavigate("History4");
-    };
+    //     this.props.tryNavigate("History4");
+    // };
 
     componentDidMount() {
         // Start counting when the page is loaded

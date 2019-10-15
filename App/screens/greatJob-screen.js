@@ -43,7 +43,7 @@ class GreatJobContainer extends Component {
     };
 
     static getDerivedStateFromProps(props, state) {
-        // props.navigation.navigate(props.lastScreen);
+        props.navigation.navigate(props.lastScreen);
 
         return state;
     }

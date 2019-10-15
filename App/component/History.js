@@ -10,9 +10,11 @@ import {
 
 } from 'react-native';
 
-import FadeInView from './FadeInView'
+import FadeInView from './FadeInView';
 
-import centerImg from '../assets/undrawBuildingBlocksN0Nc.png'
+import centerImg from '../assets/undrawBuildingBlocksN0Nc.png';
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 //import backgroundImg from '../assets/background.png';
 export default class History extends Component {
 
@@ -23,8 +25,7 @@ export default class History extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-        const DEVICE_WIDTH = Dimensions.get('window').width;
-        const DEVICE_HEIGHT = Dimensions.get('window').height;
+
         return (
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
@@ -69,8 +70,7 @@ export default class History extends Component {
         );
     }
 }
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
 
     blackText: {//welcome to word style
