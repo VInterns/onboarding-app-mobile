@@ -82,6 +82,9 @@ import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 
 import HealthAndSafety from "./component/HealthAndSafety";
 
+import Survey from "./component/Survey";
+
+
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
   const prevScene = scenes[scenes.length - 2];
@@ -277,9 +280,11 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone2: { screen: WorkingAtVodafone2 },
     WorkingAtVodafone3: { screen: WorkingAtVodafone3 },
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
-    WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },  
+    WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
 
-    HealthAndSafety: { screen: HealthAndSafety }
+    HealthAndSafety: { screen: HealthAndSafety },
+    Survey: { screen: Survey },
+
   },
 
   {

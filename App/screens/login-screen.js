@@ -42,11 +42,11 @@ class LoginContainer extends Component {
       // props.navigation.navigate("Brand");
       return state;
     }
-    return state;
+    return state;s
   }
 
   render() {
-      //this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
+     // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     return (
       <Login
         loading={this.props.loading}
