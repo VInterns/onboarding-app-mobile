@@ -10,13 +10,13 @@ import {
 } from 'react-native';
 
 import ThumbsUp from '../assets/group2_1.png'
+import { Button } from 'native-base';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class GreatJob extends Component {
-
     props: {
         tryNavigate: (nextScreen: string) => void
     };
-
     // tryNavigate = () => {
     //     console.log("Try navigate");
 
@@ -24,18 +24,15 @@ class GreatJob extends Component {
     // };
 
     componentDidMount() {
+        console.log(this.props);
         // Start counting when the page is loaded
         console.log("----------will mount-------");
 
         this.timeoutHandle = setTimeout(() => {
-            console.log("SetTimeOut");
-            // Add your logic for the transition
-            // this.tryNavigate
             this.props.tryNavigate("History4");
-            // this.props.navigation.navigate("History4");
+            this.props.navigation.navigate("History4");
         }, 2000);
     }
-
     componentWillUnmount() {
         clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
     }
@@ -43,7 +40,6 @@ class GreatJob extends Component {
         header: null
     };
     render() {
-        //const { navigate } = this.props.navigation;
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (

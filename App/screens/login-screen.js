@@ -42,14 +42,14 @@ class LoginContainer extends Component {
 
       props.navigation.navigate(props.lastScreen || "walkThrough");
       // props.navigation.navigate("walkThrough");
- 
+
       return state;
     }
     return state;
   }
 
   render() {
-    // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
+    //this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
 
     return (
       // this.props.isLoggedIn ? null :

@@ -287,17 +287,6 @@ export default class History1 extends Component {
         }
     }
 
-    /* 
-        DisableButtonFunction = () => {
-    
-            this.setState({
-    
-                // On State True it will Disable the button.
-                ButtonStateHolder: true,
-    
-            })
-    
-        } */
 
     DisableButtonFunction = () => {//disable button after pressing next 
 
@@ -312,11 +301,7 @@ export default class History1 extends Component {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         let marginFraction = 15 / DEVICE_WIDTH
-        /*         console.log(DEVICE_WIDTH)
-                console.log("heigh is")
-                console.log(DEVICE_HEIGHT) */
-        /* { DEVICE_WIDTH < 350 ? marginFraction = 0.046 : marginFraction = 0.04 }
-        { DEVICE_WIDTH > 500 ? marginFraction = 0.025 : marginFraction = 0.04 } */
+
         const { navigate } = this.props.navigation;
         const showVoiceWord =
             <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginTop: DEVICE_HEIGHT * 0.027 }}>
@@ -333,11 +318,9 @@ export default class History1 extends Component {
             <View style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', flex: 1 }}>
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
-                    <FadeInView>
-                        <Text style={styles.Text}>can you guess which two letters will form {'\n'}
-                            the following word "VOICE"?!{'\n'}
-                        </Text>
-                    </FadeInView>
+                    <Text style={styles.Text}>can you guess which two letters will form {'\n'}
+                        the following word "VOICE"?!{'\n'}
+                    </Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095, /* backgroundColor: 'green'  */ }}>

@@ -20,6 +20,7 @@ import {
 import { walkThrough1Screen } from "./screens/walkthrough-screen";
 import { walkThrough2 } from "./screens/walkthrough2-screen";
 import { walkThrough3 } from "./screens/walkthrough3-screen";
+import { greatJob } from './screens/greatJob-screen';
 //import walkThrough3 from "./component/walkThrough3";
 
 import History from "./component/History";
@@ -43,7 +44,7 @@ import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
-import { greatJob } from "./screens/greatJob-screen";
+import GreatJob from "./component/GreatJob";
 import GreatJob2 from "./component/GreatJob2";
 
 import Brand from "./component/brand";
@@ -177,7 +178,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert: { screen: ErrorAlert },
     History2: { screen: History2 },
     History3: { screen: History3 },
-    greatJob: { screen: greatJob },
+    GreatJob: { screen: greatJob },
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },
