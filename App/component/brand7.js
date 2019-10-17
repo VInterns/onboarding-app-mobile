@@ -1,135 +1,113 @@
 import React, { Component } from 'react';
-
 import {
     StyleSheet,
     View,
-    Image,
     TouchableOpacity,
-    ImageBackground,
+    Image,
     Dimensions,
-    KeyboardAvoidingView,
-    Text,
+    Text
 } from 'react-native';
 
-import FadeInView from './FadeInView';
+import A from '../assets/A.png';
 
-import img1 from '../assets/A.png';
-
-
-
-
-export default class Organisation1 extends Component {
-    componentDidMount() {
-        // Start counting when the page is loaded
-        this.timeoutHandle = setTimeout(() => {
-            // Add your logic for the transition
-            this.props.navigation.navigate("Video4")
-        }, 2000);
-    }
-
-    componentWillUnmount() {
-        clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
-    }
-
-    static navigationOptions = {
-        //header styling
+export default class Brand7 extends Component {
+    static navigationOptions = {//header styling
         header: null
     };
-
     render() {
         const { navigate } = this.props.navigation;
-        const DEVICE_WIDTH = Dimensions.get('window').width;
-        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
+            <View>
+                <View style={{ width: '100%', height: '100%', flex: 6, alignItems: "center", flexDirection: "column" }}>
 
-            <View style={styles.container}>
-                <View style={styles.textContainer}>
-                    <Text style={styles.text1}>
-                        Congratulations!
-                    </Text>
-                    <Text style={styles.text2}>You’ve been awarded with the letter</Text>
-                </View>
-                <View style={styles.imageContainer}>
-                    <Image source={img1} style={styles.img} />
-                </View>
-                {/*  <View style={styles.NextButtonView}> */}
-                {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
-                {/*   <TouchableOpacity style={styles.button} onPress={() => navigate("Brand")} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                       </Text>
-                    </TouchableOpacity>
-                </View> */}
-            </View >
+                    <View style={styles.TextContainer}>
+                        <Text style={styles.redText}>
+                            Congratulations!
+                </Text>
+                        <Text style={styles.blackText}>
+                            You’ve been awarded with the letter
+                </Text>
+                    </View>
+                    <Image source={A} style={styles.Letter}>
+                    </Image>
 
+                </View>
+                <View style={{ flex: 1 }}>
+                    <View style={styles.ButtonsView}>
+                        <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand5", {})} >
+                            <Text style={styles.ButtonText}>
+                                BACK
+                 </Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.NextButton} onPress={() => navigate("Brand", {})} >
+                            <Text style={styles.ButtonText}>
+                                NEXT
+                 </Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
         );
     }
-
 }
+
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
-const styles = StyleSheet.create({
 
-    container: {
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'stretch',
-        flex: 1,
+const styles = StyleSheet.create({
+    TextContainer:
+    {
+        // flex: 1
     },
-    textContainer: {
-        flex: 1,
-        padding: DEVICE_WIDTH * 0.05,
-        marginTop: DEVICE_HEIGHT * 0.1,
+    Letter:
+    {
+        // marginLeft: DEVICE_WIDTH / 2 - 107,
+        marginTop: DEVICE_HEIGHT / 3.2,
+        // flex: 2
     },
-    text1: {
-        // width: 334,
-        // height: 44,
-        // fontFamily: "VodafoneRg",
-        fontSize: 37,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        lineHeight: 44,
-        letterSpacing: 0,
-        textAlign: "center",
-        color: "#e60000"
+    blackText: {
+        color: 'black',
+        fontSize: 15,
     },
-    text2: {
-        // width: 334,
-        // height: 24,
-        // fontFamily: "VodafoneRg",
-        fontSize: 21,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        letterSpacing: 0,
-        textAlign: "center",
-        color: "#4b464d"
+    redText: {
+        color: 'red',
+        fontSize: 28,
+        fontWeight: 'bold',
+        marginTop: DEVICE_HEIGHT / 6
     },
-    imageContainer: {
-        flexDirection: 'column',
-        // flexWrap: 'wrap',
+    ButtonsView: {
+        // width: DEVICE_WIDTH,
+        height: 45,
+        flexDirection: 'row',
+        marginTop: DEVICE_HEIGHT * 0.93,
+        // marginBottom: DEVICE_HEIGHT * 0.03,
+        backgroundColor: "#0000",
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 10,
+            height: 10
+        },
+        shadowRadius: 22,
+        shadowOpacity: 1,
+        elevation: 3,
+        // position: "absolute"
+    },
+    BackButton: {
         alignItems: 'center',
-        flex: 6,
-        marginTop: DEVICE_HEIGHT * 0.04,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginLeft: DEVICE_WIDTH * 0.11
     },
-    img: {
-        // width: '90%',
-        // margin: '1%',
-    },
-    button: { // button design
-        /*    width: 70,
-           height: 25, */
+    NextButton: {
         alignItems: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginLeft: DEVICE_WIDTH * 0.5
     },
-    NextButtonView: { //wrapper for button 
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
-        marginBottom: DEVICE_HEIGHT * 0.03,
-        marginRight: DEVICE_WIDTH * 0.095,
-    },
-    ButtonText: { // text inside button
+    ButtonText: {
         color: 'black',
         fontWeight: 'bold',
         fontSize: 20,
-    },
+    }
 });
