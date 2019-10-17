@@ -82,18 +82,15 @@ import WorkingAtVodafone3 from "./component/WorkingAtVodafone3";
 import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
 import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 
-import HealthAndSafety from "./component/HealthAndSafety";
-
 import Survey from "./component/Survey";
 
 
 import HealthandSafety2 from "./component/HealthandSafety2";
-import Screen1 from "./component/HealthandSafety2";
-import HealthAndSafety from "./component/HealthAndSafety"
-import HealthAndSafety1 from "./component/HealthAndSafety1"
-import HealthAndSafety9 from "./component/HealthAndSafety9"
-import HealthAndSafety10 from "./component/HealthAndSafety10"
-import HealthAndSafety11 from "./component/HealthAndSafety11"
+import HealthAndSafety from "./component/HealthAndSafety";
+import HealthAndSafety1 from "./component/HealthAndSafety1";
+import HealthAndSafety9 from "./component/HealthAndSafety9";
+import HealthAndSafety10 from "./component/HealthAndSafety10";
+import HealthAndSafety11 from "./component/HealthAndSafety11";
 
 
 
