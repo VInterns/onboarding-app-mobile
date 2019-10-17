@@ -21,9 +21,7 @@ import { walkThrough1Screen } from "./screens/walkthrough-screen";
 import { walkThrough2 } from "./screens/walkthrough2-screen";
 import { walkThrough3 } from "./screens/walkthrough3-screen";
 
-import { greatJob } from './screens/greatJob-screen';
 //import walkThrough3 from "./component/walkThrough3";
-
 
 import History from "./component/History";
 import History1 from "./component/History1";
