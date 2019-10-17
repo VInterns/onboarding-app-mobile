@@ -70,7 +70,7 @@ export default class walkThrough3 extends Component {
 
     tryNavigate = () => {
         debugger;
-        this.props.tryNavigate("History");
+        this.props.tryNavigate("Video1");
     };
 
 
@@ -110,9 +110,7 @@ export default class walkThrough3 extends Component {
                         this.ShowHideComponent(); //hide component except the rocket
                         this._moveRocket(); //then move rocket
                         // setTimeout(function () {//finally navigate after certain delay
-                        //     // navigate("Video1", {})
-                        //     debugger;
-                        //     this.tryNavigate;
+                        //     navigate("Video1", {})
                         // }, 3000)
                         setTimeout(this.tryNavigate, 3000);
                     }} >

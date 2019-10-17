@@ -21,6 +21,10 @@ import { walkThrough1Screen } from "./screens/walkthrough-screen";
 import { walkThrough2 } from "./screens/walkthrough2-screen";
 import { walkThrough3 } from "./screens/walkthrough3-screen";
 
+import { greatJob } from './screens/greatJob-screen';
+//import walkThrough3 from "./component/walkThrough3";
+
+
 import History from "./component/History";
 import History1 from "./component/History1";
 import History2 from "./component/History2";
@@ -37,6 +41,7 @@ import History12 from "./component/History12";
 import History13 from "./component/History13";
 
 import Video1 from "./component/Video1";
+// import { Video1 } from "./screens/video1-screen";
 import Video2 from "./component/Video2";
 import Video3 from "./component/Video3";
 import Video4 from "./component/Video4";
@@ -49,8 +54,8 @@ import ErrorAlert2 from "./component/ErrorAlert2";
 import ErrorAlert3 from "./component/ErrorAlert3";
 import ErrorAlert4 from "./component/ErrorAlert4";
 
-import { greatJob } from "./screens/greatJob-screen";
 
+import { greatJob } from "./screens/greatJob-screen";
 //import GreatJob from "./component/GreatJob";  >>>>>> TO ASK HAGER 
 import GreatJob2 from "./component/GreatJob2";
 
@@ -251,7 +256,7 @@ const AppNavigator = createStackNavigator(
     ErrorAlert: { screen: ErrorAlert },
     History2: { screen: History2 },
     History3: { screen: History3 },
-    greatJob: { screen: greatJob },
+    GreatJob: { screen: greatJob },
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },

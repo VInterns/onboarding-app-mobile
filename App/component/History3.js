@@ -119,7 +119,7 @@ export default class History3 extends Component {
                 })
             }
             else {
-                this.props.navigation.navigate("greatJob", {})
+                this.props.navigation.navigate("GreatJob", {})
             }
         }
         else {

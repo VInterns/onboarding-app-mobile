@@ -10,7 +10,7 @@ export default class Video2 extends React.Component {
         if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500)
             // The player has just finished playing and will stop.
 
-            this.props.navigation.navigate("Organisation", {})
+            this.props.navigation.navigate("Brand", {})
     };
     render() {
         const { width } = Dimensions.get('window');

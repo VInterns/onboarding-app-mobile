@@ -40,6 +40,8 @@ import NletterRed from '../assets/active_4.png';
 import Eletter from '../assets/inactive_7.png';
 import EletterRed from '../assets/active_5.png';
 
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 export default class History1 extends Component {
 
@@ -73,6 +75,7 @@ export default class History1 extends Component {
             ButtonStateHolder: false,
             // Default Value for ButtonStateHolder State. Now the button is Enabled.
         };
+        console.log("load History1")
     }
 
 
@@ -112,6 +115,7 @@ export default class History1 extends Component {
             this.setState({ A_show: true });
         }
     };
+
     F_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.F_show == true) {
             this.setState({ F_show: false });
@@ -120,6 +124,7 @@ export default class History1 extends Component {
             this.setState({ F_show: true });
         }
     };
+
     O_ShowHideComponent_2 = () => {// responsible for showing and hiding component
         if (this.state.O_show_2 == true) {
             this.setState({ O_show_2: false });
@@ -128,6 +133,7 @@ export default class History1 extends Component {
             this.setState({ O_show_2: true });
         }
     };
+
     N_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.N_show == true) {
             this.setState({ N_show: false });
@@ -136,6 +142,7 @@ export default class History1 extends Component {
             this.setState({ N_show: true });
         }
     };
+
     E_ShowHideComponent = () => {// responsible for showing and hiding component
         if (this.state.E_show == true) {
             this.setState({ E_show: false });
@@ -144,7 +151,6 @@ export default class History1 extends Component {
             this.setState({ E_show: true });
         }
     };
-
 
     load_V_letter = () => {
         if (this.state.V_show == true) {
@@ -171,6 +177,7 @@ export default class History1 extends Component {
             })
         }
     }
+
     load_D_letter = () => {
         if (this.state.D_show == true) {
             this.setState({
@@ -183,6 +190,7 @@ export default class History1 extends Component {
             })
         }
     }
+
     load_A_letter = () => {
         if (this.state.A_show == true) {
             this.setState({
@@ -195,6 +203,7 @@ export default class History1 extends Component {
             })
         }
     }
+
     load_F_letter = () => {
         if (this.state.F_show == true) {
             this.setState({
@@ -262,7 +271,7 @@ export default class History1 extends Component {
                 this.props.navigation.navigate("History2", {
                     onScreenReVisit: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
                         this.setState({ ButtonStateHolder: false })
-                    } 
+                    }
                 })
             }
         }
@@ -270,23 +279,14 @@ export default class History1 extends Component {
             this.setState({
                 showHideVoiceWord: false
             })
-            this.props.navigation.navigate("ErrorAlert", { onScreenReVisit_FromError: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
-                this.setState({ ButtonStateHolder: false })
-            } });
+            this.props.navigation.navigate("ErrorAlert", {
+                onScreenReVisit_FromError: () => { // on revisting screen using back button the next screen will call this function (using component-unmount) 
+                    this.setState({ ButtonStateHolder: false })
+                }
+            });
         }
     }
 
-    /* 
-        DisableButtonFunction = () => {
-    
-            this.setState({
-    
-                // On State True it will Disable the button.
-                ButtonStateHolder: true,
-    
-            })
-    
-        } */
 
     DisableButtonFunction = () => {//disable button after pressing next 
 
@@ -297,17 +297,11 @@ export default class History1 extends Component {
 
     }
 
-
-
     render() {
         const DEVICE_WIDTH = Dimensions.get('window').width;
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         let marginFraction = 15 / DEVICE_WIDTH
-        /*         console.log(DEVICE_WIDTH)
-                console.log("heigh is")
-                console.log(DEVICE_HEIGHT) */
-        /* { DEVICE_WIDTH < 350 ? marginFraction = 0.046 : marginFraction = 0.04 }
-        { DEVICE_WIDTH > 500 ? marginFraction = 0.025 : marginFraction = 0.04 } */
+
         const { navigate } = this.props.navigation;
         const showVoiceWord =
             <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginTop: DEVICE_HEIGHT * 0.027 }}>
@@ -324,11 +318,9 @@ export default class History1 extends Component {
             <View style={{ width: '100%', height: '100%', justifyContent: 'flex-start', alignItems: 'center', flex: 1 }}>
                 {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
-                    <FadeInView>
-                        <Text style={styles.Text}>can you guess which two letters will form {'\n'}
-                            the following word "VOICE"?!{'\n'}
-                        </Text>
-                    </FadeInView>
+                    <Text style={styles.Text}>can you guess which two letters will form {'\n'}
+                        the following word "VOICE"?!{'\n'}
+                    </Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', flex: 1, marginTop: DEVICE_HEIGHT * 0.095, /* backgroundColor: 'green'  */ }}>
@@ -405,7 +397,10 @@ export default class History1 extends Component {
 
                     <View style={styles.BackButtonView}>
 
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("History")} >
+                        <TouchableOpacity style={styles.button} onPress={() => {
+                            console.log("Call back Button ");
+                            navigate("History");
+                        }} >
                             <Text style={styles.ButtonText}>
                                 BACK
                             </Text>
@@ -430,9 +425,6 @@ export default class History1 extends Component {
         );
     }
 }
-
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
 

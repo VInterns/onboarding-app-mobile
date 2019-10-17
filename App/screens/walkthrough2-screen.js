@@ -31,9 +31,9 @@ class Walkthrough2Container extends Component {
     return state;
   }
   render() {
-    console.log("props", this.props);
+    // console.log("props", this.props);
     // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
-    console.log(this.props.tryNavigate, "This is the tryNavigate");
+    console.log(this.props.tryNavigate, "This is the tryNavigate in walkthrouh2-screen");
     return (
       <WalkThrough2
         tryNavigate={this.props.tryNavigate}

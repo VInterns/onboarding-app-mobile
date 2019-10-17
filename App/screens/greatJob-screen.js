@@ -42,15 +42,14 @@ class GreatJobContainer extends Component {
         tryNavigate: (nextScreen: string) => void
     };
 
-    static getDerivedStateFromProps(props, state) {
-        // props.navigation.navigate(props.lastScreen);
+    // static getDerivedStateFromProps(props, state) {
+    //     props.navigation.navigate(props.lastScreen);
 
-        return state;
-    }
+    //     return state;
+    // }
     render() {
-        console.log("props", this.props);
-        // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
-        console.log(this.props.tryNavigate, "This is the tryNavigate");
+        // console.log("props", this.props);
+        // console.log(this.props.tryNavigate, "This is the tryNavigate");
         return (
             <GreatJob
                 tryNavigate={this.props.tryNavigate}
