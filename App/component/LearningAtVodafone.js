@@ -5,16 +5,18 @@ import {
     View,
     Image,
     TouchableOpacity,
+    ImageBackground,
     Dimensions,
+    KeyboardAvoidingView,
     Text,
 
 } from 'react-native';
 
 import FadeInView from './FadeInView'
 
-import centerImg from '../assets/undrawBuildingBlocksN0Nc.png'
+import centerImg from '../assets/LearningAtVodafone.png'
 //import backgroundImg from '../assets/background.png';
-export default class History extends Component {
+export default class LearningAtVodafone extends Component {
 
     static navigationOptions = {//header styling
         header: null
@@ -28,39 +30,18 @@ export default class History extends Component {
         return (
 
             <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-
-                {/*vodafone group history text view*/}
                 <View style={styles.TextContainer}>
-
-                    <View style={styles.blackView}>
-                        <FadeInView>
-                            <Text style={styles.blackText}>
-                                Vodafone
-                                </Text>
-                            <Text style={styles.blackText}>
-                                Group
-                                </Text>
-                        </FadeInView>
-                    </View>
-
-                    <View style={styles.redView}>
-                        <FadeInView>
-                            <Text style={styles.redText}>History</Text>
-                        </FadeInView>
-                    </View>
-
+                    <Text style={styles.blackText}>Learning</Text>
+                    <Text style={styles.redText}>at Vodafone</Text>
                 </View>
 
-                <Image source={centerImg} style={{ marginTop: DEVICE_HEIGHT * 0.08 }} />{/* centered mobile logo*/}
+                <View style={styles.imageContainer}>
+                    <Image source={centerImg} /* style={styles.imageStyle}  */ />
+                </View>
 
-                {/*  button view */}
+
                 <View style={styles.NextButtonView}>
-                    {/*  <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} > */}
-                    {/* <TouchableOpacity style={styles.button} onPress={() => navigate("LearningAtVodafone")} >    */}
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} >
-                        {/*  <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} >  */}
-                        {/* <TouchableOpacity style={styles.button} onPress={() => navigate("Survey")} > */}
-
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("LearningAtVodafone1")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
@@ -75,6 +56,13 @@ export default class History extends Component {
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
+    imageContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
+        marginTop: (10 / DEVICE_HEIGHT) * DEVICE_HEIGHT,
+        //backgroundColor: 'yellow'
+    },
 
     blackText: {//welcome to word style
         color: 'black',
@@ -88,23 +76,17 @@ const styles = StyleSheet.create({
         fontSize: DEVICE_WIDTH * 0.1,
     },
 
-    blackView: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
+        flex: 0.2,
+        width: '100%',
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
+        // backgroundColor: 'green',
+        marginLeft: DEVICE_WIDTH * (40 / DEVICE_WIDTH),
         marginTop: DEVICE_HEIGHT * 0.1,
-        marginRight: (DEVICE_WIDTH / 2) - (DEVICE_WIDTH * 0.09),
-    },
-
-    redView: {
-        alignItems: 'center',
-        justifyContent: 'center'
+        //marginRight: (DEVICE_WIDTH / 2) - (DEVICE_WIDTH * 0.09),
     },
 
     button: { // button design
@@ -115,13 +97,14 @@ const styles = StyleSheet.create({
     },
 
     NextButtonView: { //wrapper for button 
-        // flexDirection: 'row',
-        justifyContent: 'flex-end',
+        width: '100%',
+        justifyContent: 'center',
         alignItems: 'flex-end',
-        flex: 1,
-        marginBottom: DEVICE_HEIGHT * 0.03,
-        marginLeft: DEVICE_WIDTH * 0.68,
-
+        flex: 0.1,
+        marginRight: (70 / DEVICE_WIDTH) * DEVICE_WIDTH,
+        marginBottom: DEVICE_HEIGHT * (15 / DEVICE_HEIGHT),
+        //marginLeft: DEVICE_WIDTH * 0.68,
+        //backgroundColor: 'green'
 
     },
     ButtonText: { // text inside button

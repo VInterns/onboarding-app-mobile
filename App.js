@@ -17,6 +17,7 @@ import { Application } from "./App/application";
 import { Provider } from "react-redux";
 import { AsyncStorage } from "react-native";
 import { State, reducer, success } from "./App/state";
+import Swiper from "react-native-web-swiper";
 
 const persistConfig = {
   key: "root",
