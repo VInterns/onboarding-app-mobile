@@ -40,7 +40,9 @@ import History13 from "./component/History13";
 
 //import Video1 from "./component/Video1";
 import { video1 } from "./screens/video1-screen";
-import Video2 from "./component/Video2";
+import { video2 } from "./screens/video2-screen";
+
+// import Video2 from "./component/Video2";
 import Video3 from "./component/Video3";
 import Video4 from "./component/Video4";
 import Video5 from "./component/Video5";
@@ -119,7 +121,7 @@ const handleCustomTransition = ({ scenes }) => {
   } else if (
     prevScene &&
     prevScene.route.routeName === "walkThrough3" &&
-    nextScene.route.routeName === "Video1"
+    nextScene.route.routeName === "video1"
   ) {
     return zoomIn(600);
   } else if (
@@ -148,11 +150,11 @@ const handleCustomTransition = ({ scenes }) => {
     return fromTop(600);
 
   } else if (prevScene
-    && prevScene.route.routeName === 'Video1'
+    && prevScene.route.routeName === 'video1'
     && nextScene.route.routeName === 'History') {
     return zoomIn(800);
   } else if (prevScene
-    && prevScene.route.routeName === 'Video2'
+    && prevScene.route.routeName === 'video2'
     && nextScene.route.routeName === 'Organisation') {
     return zoomIn(800);
   }
@@ -213,8 +215,8 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    Video2: {
-      screen: Video2,
+    video2: {
+      screen: video2,
       navigationOptions: {
         header: null
       }
