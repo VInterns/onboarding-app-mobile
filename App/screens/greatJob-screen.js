@@ -21,35 +21,11 @@ class GreatJobContainer extends Component {
         return bindActionCreators({ tryNavigate }, dispatch);
     }
 
-    // static componentDidMountMount() {
-    //     // Start counting when the page is loaded
-    //     console.log("---------------------------------Did Mount ---------------------------");
-
-    //     // this.timeoutHandle = setTimeout(() => {
-    //     //     console.log("SetTimeOut");
-    //     //     // Add your logic for the transition
-    //     //     // this.tryNavigate
-    //     //     this.props.tryNavigate("History4");
-    //     //     // this.props.navigation.navigate("History4");
-    //     // }, 2000);
-    // }
-
-    // static componentWillUnmount() {
-    //     clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
-    // }
-
     props: {
         tryNavigate: (nextScreen: string) => void
     };
 
-    // static getDerivedStateFromProps(props, state) {
-    //     props.navigation.navigate(props.lastScreen);
-
-    //     return state;
-    // }
     render() {
-        // console.log("props", this.props);
-        // console.log(this.props.tryNavigate, "This is the tryNavigate");
         return (
             <GreatJob
                 tryNavigate={this.props.tryNavigate}
