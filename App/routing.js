@@ -38,8 +38,8 @@ import History11 from "./component/History11";
 import History12 from "./component/History12";
 import History13 from "./component/History13";
 
-import Video1 from "./component/Video1";
-// import { Video1 } from "./screens/video1-screen";
+//import Video1 from "./component/Video1";
+import { video1 } from "./screens/video1-screen";
 import Video2 from "./component/Video2";
 import Video3 from "./component/Video3";
 import Video4 from "./component/Video4";
@@ -207,8 +207,8 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    Video1: {
-      screen: Video1,
+    video1: {
+      screen: video1,
       navigationOptions: {
         header: null
       }

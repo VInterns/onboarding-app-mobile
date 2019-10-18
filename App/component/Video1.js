@@ -10,43 +10,25 @@ export default class Video1 extends React.Component {
             navigated: false
         };
     }
-    // props: {
-    //     tryNavigate: (nextScreen: string) => void
-    // };
-    // tryNavigate = () => {
-    //     this.props.tryNavigate("History");
-    // };
+    props: {
+        tryNavigate: (nextScreen: string) => void
+    };
+    tryNavigate = () => {
+        console.log("Before try naviate vid")
+        this.props.tryNavigate("History");
+        console.log("After try naviate vid")
+    };
     // static navigationOptions = {//header styling
     //     header: null
     // };
-    // _onPlaybackStatusUpdate = playbackStatus => {
-    //     console.log("subscription")
-    //     if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.
-    //         console.log("navigate to history from video")
-    //         this.setState({ navigated: true });
-    //         this.props.navigation.navigate("History");
-    //     }
-    //     //   this.tryNavigate();
-    // };
-
-
-    componentDidMount() {
-        // Start counting when the page is loaded
-        console.log("----------will mount-------");
-
-        this.timeoutHandle = setTimeout(() => {
-            console.log("SetTimeOut");
-            // Add your logic for the transition
-            // this.tryNavigate
-            // this.props.tryNavigate("History");
+    _onPlaybackStatusUpdate = playbackStatus => {
+        if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.
+            // console.log("navigate to history from video")
+            this.setState({ navigated: true });
+            this.tryNavigate();
             this.props.navigation.navigate("History");
-        }, 4000);
-    }
-
-    componentWillUnmount() {
-        clearTimeout(this.timeoutHandle); // This is just necessary in the case that the screen is closed before the timeout fires, otherwise it would cause a memory leak that would trigger the transition regardless, breaking the user experience.
-    }
-
+        }
+    };
 
     render() {
         const { width } = Dimensions.get('window');
@@ -56,11 +38,11 @@ export default class Video1 extends React.Component {
 
                 <Video
                     source={video}
-                    // onPlaybackStatusUpdate=
-                    // {
-                    //     (playbackStatus) => this._onPlaybackStatusUpdate(playbackStatus)
-                    // }
-                    // shouldPlay={!this.state.navigated}
+                    onPlaybackStatusUpdate=
+                    {
+                        (playbackStatus) => this._onPlaybackStatusUpdate(playbackStatus)
+                    }
+                    shouldPlay={!this.state.navigated}
                     resizeMode="cover"
                     style={{ width, height: height }}
                 />
