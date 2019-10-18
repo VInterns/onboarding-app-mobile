@@ -70,7 +70,8 @@ export default class walkThrough3 extends Component {
 
     tryNavigate = () => {
         debugger;
-        this.props.tryNavigate("Video1");
+        this.props.tryNavigate("video1");
+        props.navigation.navigate("video1")
     };
 
 
