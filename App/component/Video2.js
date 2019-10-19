@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
 import { Video } from 'expo-av';
 import video from '../assets/02.mp4';
 export default class Video2 extends React.Component {
@@ -14,15 +14,16 @@ export default class Video2 extends React.Component {
         tryNavigate: (nextScreen: string) => void
     };
     tryNavigate = () => {
-        console.log("Before try naviate vid")
-        this.props.tryNavigate("Brand");
-        console.log("After try naviate vid")
+        this.props.tryNavigate("Organisation");
     };
     _onPlaybackStatusUpdate = playbackStatus => {
+        console.log("before if");
+        console.log("this.state.navigated : " + this.state.navigated);
         if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.
+            console.log("inside if");
             this.setState({ navigated: true });
             this.tryNavigate();
-            this.props.navigation.navigate("Brand");
+            this.props.navigation.navigate("Organisation");
         }
     };
     render() {
@@ -30,7 +31,6 @@ export default class Video2 extends React.Component {
         const { height } = Dimensions.get('window');
         return (
             <View style={styles.container}>
-
                 <Video
                     source={video}
                     onPlaybackStatusUpdate=
@@ -53,15 +53,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    /*     controlBar: {
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 45,
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-        } */
 });
