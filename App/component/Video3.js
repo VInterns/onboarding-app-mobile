@@ -14,15 +14,10 @@ export default class Video3 extends React.Component {
         tryNavigate: (nextScreen: string) => void
     };
     tryNavigate = () => {
-        console.log("Before try naviate vid")
         this.props.tryNavigate("Brand");
-        console.log("After try naviate vid")
     };
     _onPlaybackStatusUpdate = playbackStatus => {
-        console.log("before if");
-        console.log("this.state.navigated : " + this.state.navigated);
         if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.
-            console.log("inside if");
             this.setState({ navigated: true });
             this.tryNavigate();
             this.props.navigation.navigate("Brand");
@@ -56,15 +51,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    /*     controlBar: {
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 45,
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-        } */
 });
