@@ -43,8 +43,8 @@ import { video2 } from "./screens/video2-screen";
 import { video3 } from "./screens/video3-screen";
 import { video4 } from "./screens/video4-screen";
 import { video5 } from "./screens/video5-screen";
+import { video6 } from "./screens/video6-screen";
 
-import Video6 from "./component/Video6";
 import Video7 from "./component/Video7";
 
 import ErrorAlert from "./component/ErrorAlert";
@@ -172,7 +172,7 @@ const handleCustomTransition = ({ scenes }) => {
     return zoomIn(800);
   }
   else if (prevScene
-    && prevScene.route.routeName === 'Video6'
+    && prevScene.route.routeName === 'video6'
     && nextScene.route.routeName === 'WorkingAtVodafone') {
     return zoomIn(800);
   }
@@ -237,8 +237,8 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    Video6: {
-      screen: Video6,
+    video6: {
+      screen: video6,
       navigationOptions: {
         header: null
       }

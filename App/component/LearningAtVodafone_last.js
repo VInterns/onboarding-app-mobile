@@ -23,7 +23,7 @@ export default class LearningAtVodafone_last extends Component {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
-            this.props.navigation.navigate("Video6")
+            this.props.navigation.navigate("video6")
         }, 2000);
     }
 
