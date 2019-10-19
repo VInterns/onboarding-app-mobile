@@ -44,8 +44,8 @@ import { video3 } from "./screens/video3-screen";
 import { video4 } from "./screens/video4-screen";
 import { video5 } from "./screens/video5-screen";
 import { video6 } from "./screens/video6-screen";
+import { video7 } from "./screens/video7-screen";
 
-import Video7 from "./component/Video7";
 
 import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
@@ -243,8 +243,8 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    Video7: {
-      screen: Video7,
+    video7: {
+      screen: video7,
       navigationOptions: {
         header: null
       }
