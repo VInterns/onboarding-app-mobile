@@ -42,8 +42,8 @@ import { video1 } from "./screens/video1-screen";
 import { video2 } from "./screens/video2-screen";
 import { video3 } from "./screens/video3-screen";
 import { video4 } from "./screens/video4-screen";
+import { video5 } from "./screens/video5-screen";
 
-import Video5 from "./component/Video5";
 import Video6 from "./component/Video6";
 import Video7 from "./component/Video7";
 
@@ -167,7 +167,7 @@ const handleCustomTransition = ({ scenes }) => {
     return zoomIn(700);
   }
   else if (prevScene
-    && prevScene.route.routeName === 'Video5'
+    && prevScene.route.routeName === 'video5'
     && nextScene.route.routeName === 'LearningAtVodafone') {
     return zoomIn(800);
   }
@@ -231,8 +231,8 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    Video5: {
-      screen: Video5,
+    video5: {
+      screen: video5,
       navigationOptions: {
         header: null
       }
