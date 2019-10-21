@@ -21,6 +21,8 @@ const nomobile = '../assets/nomobile.png';
 let question1: Boolean = false;
 let question2: Boolean = false;
 let question3: Boolean = false;
+let question4: Boolean = false;
+
 
 
 function q1true() {
@@ -33,6 +35,12 @@ function q2true() {
 }
 function q3true() {
   question3 = true;
+  console.log('q3 now is = true', question3);
+
+}
+function q4true() {
+  question4 = true;
+  console.log('q4 now is = true', question4);
 }
 
 export default class HealthandSafety2 extends Component {
@@ -49,13 +57,18 @@ export default class HealthandSafety2 extends Component {
 
   props: {
     imageurl: any,
-    moveY: number,
-    moveX: number,
+    moveYfirst: number,
+    moveYsecond: number,
+    moveXfirst: number,
+    moveXsecond: number
   };
 
   render() {
     return (
       <View style={styles.mainContainer}>
+
+
+        
 
         <View style={styles.titleContainer}>
           <Text style={styles.textlarge}>Match
@@ -65,12 +78,12 @@ export default class HealthandSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(drugs)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
-          <Draggable imageurl={require(nomobile)} moveY={140} moveX={80} answerId={2} qtrue={q2true} />
-          <Draggable imageurl={require(speedlimit)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
-          <Draggable imageurl={require(streetwork)} moveY={120} moveX={40} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={360} moveYsecond={390} moveXfirst={30} moveXsecond={60} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={470} moveYsecond={530} moveXfirst={30} moveXsecond={60} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={590} moveYsecond={660} moveXfirst={30} moveXsecond={60} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={740} moveYsecond={820} moveXfirst={30} moveXsecond={60} answerId={4} qtrue={q4true} />
         </View>
-
+        
         <View style={styles.answersContainer}>
           {/* answers here */}
           <View style={styles.questionContainer}>
@@ -99,6 +112,7 @@ export default class HealthandSafety2 extends Component {
           </View>
         </View>
 
+        
       </View>
     );
   }
@@ -116,7 +130,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     padding: DEVICE_WIDTH * 0.03,
     backgroundColor: '#EE82EE',
-    zIndex: 1,
+    // zIndex: 1,
   },
   dropZone: {
     // flex: 1,
@@ -126,7 +140,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: "#cccccc",
     borderRadius: CIRCLE_RADIUS,
-    zIndex: 1,
+    // zIndex: 1,
     // position:'absolute',
 
     // position: 'absolute'
@@ -135,7 +149,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     backgroundColor: '#00BFFF',
-    flex: 2,
+    flex: 2.5,
     paddingTop: DEVICE_HEIGHT * 0.03,
     flexWrap: 'wrap',
   },
@@ -162,16 +176,18 @@ const styles = StyleSheet.create({
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    zIndex: 1,
+    // zIndex: 2,
     // position: 'relative',
     // position:'absolute',
+    // left:DEVICE_WIDTH * 0.095,
+    // top: DEVICE_HEIGHT * 0.13
     // padding:10,
   },
   answersContainer: {
-    // backgroundColor: 'orange',
+    backgroundColor: 'orange',
     flexDirection: 'column',
     flex: 8,
-    zIndex: 1,
+    zIndex: -1,
     // backgroundColor: 'transparent',
     // padding: 36
   },
@@ -179,14 +195,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // padding: DEVICE_WIDTH * 0.02,
     // backgroundColor: '#A52A2A',
-    // borderWidth: 3,
+    borderWidth: 3,
     flex: 1,
-    zIndex: 1,
+    // zIndex: 1,
   },
   questionTextContainer: {
     flex: 3,
     marginLeft: 10,
-    zIndex: 0,
+    // zIndex: 1,
     // position: 'absolute',
   },
   questionTextLarge: {
@@ -213,6 +229,10 @@ const styles = StyleSheet.create({
   draggable: {
     zIndex: 100,
     position: 'absolute',
+    // marginBottom: DEVICE_HEIGHT * 0.9,
+    // top: '20%',
+    // left:200
+
   }
 
 
