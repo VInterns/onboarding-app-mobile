@@ -81,55 +81,41 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
 
-    BoldblackText: {//welcome to word style
-        // alignItems: 'center',
+    BoldblackText: {
         color: 'black',
-        fontSize: DEVICE_WIDTH * 0.041,
+        fontSize: DEVICE_WIDTH * 0.05,
         fontWeight: 'bold'
     },
-    blackText: {//welcome to word style
-        // alignItems: 'center',
+    blackText: {
         color: 'black',
-        fontSize: DEVICE_WIDTH * 0.04,
+        fontSize: DEVICE_WIDTH * 0.05,
     },
-
-
-    TextContainer: {/* Welcome back and vodabuddy wrapper */
-        //flexDirection: 'column',
+    TextContainer: {
         flex: 1,
-        //flexWrap:'wrap',
         alignItems: 'center',
         justifyContent: 'flex-start',
         marginTop: DEVICE_HEIGHT * 0.053,
-        // backgroundColor: 'yellow'
     },
 
-
-    button: { // button design
-        /*   width: 70,
-          height: 25, */
+    button: {
         alignItems: 'center',
         justifyContent: 'center'
     },
 
-    NextButtonView: { //wrapper for button 
+    NextButtonView: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor:'red'
     },
-    BackButtonView: { //wrapper for button 
+    BackButtonView: {
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
 
     },
-    ButtonText: { // text inside button
+    ButtonText: {
         color: 'black',
         fontWeight: 'bold',
         fontSize: 20,
     },
-    /*     ButtonimageStyle: {//button icon
-            margin: -15
-        }, */
 });
