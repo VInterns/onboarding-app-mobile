@@ -69,7 +69,7 @@ export default class History6 extends Component {
 
                 <View style={styles.LowerTextContainer}>
 
-                    <View style={[styles.LeftView,{paddingLeft:DEVICE_WIDTH*0.0483}]}>
+                    <View style={[styles.LeftView, { paddingLeft: DEVICE_WIDTH * 0.0483 }]}>
                         <FadeInView>
                             <Text style={styles.redText}>AMAP</Text>
                             <View style={{ marginTop: DEVICE_HEIGHT * 0.0135 }}>
@@ -77,7 +77,7 @@ export default class History6 extends Component {
                                     -Australia {'\n'}
                                     -Ghana {'\n'}
                                     -Kenya {'\n'}
-                                    -Qatar {'\n'}
+                                    -Oman {'\n'}
                                     -Vodacom Group {'\n'}
                                 </Text>
                             </View>
