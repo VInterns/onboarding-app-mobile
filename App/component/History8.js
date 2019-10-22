@@ -73,7 +73,7 @@ export default class History8 extends Component {
                 <View style={styles.TextContainer}>
                     <FadeInView>
                         <Text style={styles.Text}>
-                            Can you guess which of the following {'\n'}
+                            Can you <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 20 }}>guess</Text> which of the following {'\n'}
                             Vodafone operators have the most {'\n'}
                             subscribers? </Text>
                     </FadeInView>
@@ -196,17 +196,7 @@ export default class History8 extends Component {
                     </TouchableOpacity>
                 </View>
 
-                {/*    <View style={styles.NextButtonView}>
-                        <TouchableOpacity style={styles.button} onPress={() => {
-                            this.validatePressedPhoto()
-                        }}>
-                            <Text style={styles.ButtonText}>
-                                NEXT
-                            </Text>
-                        </TouchableOpacity>
-                    </View> */}
 
-                {/* </View> */}
             </View >
 
 
