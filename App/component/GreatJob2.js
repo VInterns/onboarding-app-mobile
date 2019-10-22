@@ -27,7 +27,7 @@ class GreatJob2 extends Component {
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
             this.props.navigation.navigate("History9")
-        }, 2000);
+        }, 3000);
     }
 
     componentWillUnmount() {
