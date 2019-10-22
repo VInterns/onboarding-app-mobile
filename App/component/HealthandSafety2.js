@@ -189,8 +189,9 @@ const styles = StyleSheet.create({
   },
   textlarge: {
     fontSize: 28,
-    fontWeight: "bold",
-    fontStyle: "normal",
+    fontWeight: "bold", 
+    fontFamily: "VodafoneRg",
+    // fontStyle: "normal",
     lineHeight: 25,
     letterSpacing: 0,
     color: "#e60000",
@@ -199,6 +200,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 21,
     fontWeight: "bold",
+    fontFamily: "VodafoneRg",
     fontStyle: "normal",
     lineHeight: 25,
     letterSpacing: 0,
@@ -229,7 +231,7 @@ const styles = StyleSheet.create({
   questionTextLarge: {
     flexWrap: 'wrap',
     backgroundColor: '#C0C0C0',
-    // fontFamily: "VodafoneRg",
+    fontFamily: "VodafoneRg",
     fontSize: 16,
     fontWeight: "bold",
     fontStyle: "normal",
@@ -238,7 +240,7 @@ const styles = StyleSheet.create({
   },
   questionTextSmall: {
     flexWrap: 'wrap',
-    // fontFamily: "VodafoneRg",
+    fontFamily: "VodafoneRg",
     fontSize: 16,
     fontWeight: "normal",
     fontStyle: "normal",

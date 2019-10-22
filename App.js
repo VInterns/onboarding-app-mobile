@@ -17,6 +17,9 @@ import { Application } from "./App/application";
 import { Provider } from "react-redux";
 import { AsyncStorage } from "react-native";
 import { State, reducer, success } from "./App/state";
+import * as Font from "expo-font";
+const VodafoneBold = require("./assets/fonts/VodafoneBd.ttf");
+const VodafoneRg = require("./assets/fonts/VodafoneRg.ttf");
 
 const persistConfig = {
   key: "root",
@@ -41,11 +44,23 @@ export default class App extends React.Component {
   }
   async componentDidMount() {
     await Application.run();
+      const promises = [];
+      promises.push(Font.loadAsync({
+          "VodafoneBold": VodafoneBold,
+          "VodafoneRg": VodafoneRg,
+      }));
     // await Expo.Font.loadAsync({
     //   Roboto: require("native-base/Fonts/Roboto.ttf"),
     //   Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
     //   Ionicons: require("native-base/Fonts/Ionicons.ttf")
     // });
+
+    // await Font.loadAsync({
+      // "VodafoneRg": require("./assets/fonts/Vodafone.ttf"),
+      // "VodaBold": require("./assets/fonts/VodafoneBold.ttf")
+
+    // });
+
     this.setState({ isReady: true });
   }
   async componentWillUnmount() {
