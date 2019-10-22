@@ -24,7 +24,6 @@ let question3: Boolean = false;
 let question4: Boolean = false;
 
 
-
 function q1true() {
   question1 = true;
   console.log('q1 now is = true', question1);
@@ -43,6 +42,12 @@ function q4true() {
   console.log('q4 now is = true', question4);
 }
 
+
+
+
+
+
+
 export default class HealthandSafety2 extends Component {
 
   constructor() {
@@ -55,6 +60,25 @@ export default class HealthandSafety2 extends Component {
     header: null
   };
 
+  checkAnswers = () => {
+    debugger;
+    // const { navigate } = this.props.navigation;
+    console.log('inside checkAnswers function', this.props.navigation.navigate);
+    console.log(question1 , question2 , question3 , question4)
+    // ()=> navigate("HealthAndSafety9");
+    if (question1 && question2 && question3 && question4) {
+      this.props.navigation.navigate("HealthAndSafety9");
+      // ()=> navigate("HealthAndSafety9");
+      // this.props.navigation.navigate("HealthAndSafety9", {})
+      // this.props.navigation.navigate("HealthAndSafety9");
+    } else {
+      // ()=> navigate("HealthAndSafety");
+    }
+
+  };
+
+
+
   props: {
     imageurl: any,
     moveYfirst: number,
@@ -63,12 +87,10 @@ export default class HealthandSafety2 extends Component {
     moveXsecond: number
   };
 
+
   render() {
     return (
       <View style={styles.mainContainer}>
-
-
-        
 
         <View style={styles.titleContainer}>
           <Text style={styles.textlarge}>Match
@@ -83,7 +105,7 @@ export default class HealthandSafety2 extends Component {
           <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={590} moveYsecond={660} moveXfirst={30} moveXsecond={60} answerId={3} qtrue={q3true} />
           <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={740} moveYsecond={820} moveXfirst={30} moveXsecond={60} answerId={4} qtrue={q4true} />
         </View>
-        
+
         <View style={styles.answersContainer}>
           {/* answers here */}
           <View style={styles.questionContainer}>
@@ -112,7 +134,26 @@ export default class HealthandSafety2 extends Component {
           </View>
         </View>
 
-        
+
+        <View style={styles.NextButtonView}>
+          {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
+          <TouchableOpacity style={styles.button} onPress={
+            () => { console.log('inside Back button'); navigate("Organisation"), {}; }} >
+            <Text style={styles.ButtonText}>
+              BACK
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => {
+            console.log('props is ->>>>', this.props.navigation.navigate);
+            this.checkAnswers();
+          }} >
+            <Text style={styles.ButtonText}>
+              NEXT
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+
       </View>
     );
   }
@@ -130,21 +171,14 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     padding: DEVICE_WIDTH * 0.03,
     backgroundColor: '#EE82EE',
-    // zIndex: 1,
   },
   dropZone: {
-    // flex: 1,
     width: CIRCLE_RADIUS * 2,
     height: CIRCLE_RADIUS * 2,
     borderStyle: "solid",
     borderWidth: 3,
     borderColor: "#cccccc",
     borderRadius: CIRCLE_RADIUS,
-    // zIndex: 1,
-    // position:'absolute',
-
-    // position: 'absolute'
-    // backgroundColor: '#F4A460',
   },
   titleContainer: {
     flexDirection: 'row',
@@ -176,34 +210,21 @@ const styles = StyleSheet.create({
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // zIndex: 2,
-    // position: 'relative',
-    // position:'absolute',
-    // left:DEVICE_WIDTH * 0.095,
-    // top: DEVICE_HEIGHT * 0.13
-    // padding:10,
   },
   answersContainer: {
     backgroundColor: 'orange',
     flexDirection: 'column',
     flex: 8,
     zIndex: -1,
-    // backgroundColor: 'transparent',
-    // padding: 36
   },
   questionContainer: {
     flexDirection: 'row',
-    // padding: DEVICE_WIDTH * 0.02,
-    // backgroundColor: '#A52A2A',
     borderWidth: 3,
     flex: 1,
-    // zIndex: 1,
   },
   questionTextContainer: {
     flex: 3,
     marginLeft: 10,
-    // zIndex: 1,
-    // position: 'absolute',
   },
   questionTextLarge: {
     flexWrap: 'wrap',
@@ -212,7 +233,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     fontStyle: "normal",
-    // lineHeight: 20,
     letterSpacing: 0,
     color: "#4b464d",
   },
@@ -229,11 +249,25 @@ const styles = StyleSheet.create({
   draggable: {
     zIndex: 100,
     position: 'absolute',
-    // marginBottom: DEVICE_HEIGHT * 0.9,
-    // top: '20%',
-    // left:200
-
-  }
+  },
+  button: { // button design
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  NextButtonView: { //wrapper for button 
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: DEVICE_HEIGHT * 0.03,
+    marginRight: DEVICE_WIDTH * 0.095,
+    marginLeft: DEVICE_WIDTH * 0.095,
+    flexWrap: 'wrap',
+    flexDirection: 'row'
+  },
+  ButtonText: { // text inside button
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
 
 
 

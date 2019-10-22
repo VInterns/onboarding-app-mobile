@@ -92,10 +92,11 @@ export default class Draggable extends Component {
       if (answerId == 1) {
         console.log('inside answer id -> 1');
         this.props.qtrue();
-        
       }if (answerId == 2) {
         this.props.qtrue();
       }if (answerId == 3) {
+        this.props.qtrue();
+      }if (answerId == 4) {
         this.props.qtrue();
       }
 
