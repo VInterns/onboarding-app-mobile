@@ -11,6 +11,21 @@ class Video1Container extends Component {
         this.state = {};
     }
 
+    static mapStateToProps(state: State) {
+        return {
+            lastScreen: state.authorization.lastScreen
+        };
+    }
+
+    static mapDispatchToProps(dispatch: Dispatch) {
+        return bindActionCreators({ tryNavigate }, dispatch);
+    }
+
+    props: {
+        tryNavigate: (nextScreen: string) => void
+    };
+
+
     render() {
         console.log("Here in video1 screen render");
         return (

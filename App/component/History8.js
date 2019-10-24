@@ -73,7 +73,7 @@ export default class History8 extends Component {
                 <View style={styles.TextContainer}>
                     <FadeInView>
                         <Text style={styles.Text}>
-                            Can you guess which of the following {'\n'}
+                            Can you <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 20 }}>guess</Text> which of the following {'\n'}
                             Vodafone operators have the most {'\n'}
                             subscribers? </Text>
                     </FadeInView>
@@ -185,28 +185,18 @@ export default class History8 extends Component {
                 </View>
 
                 {/*  button view */}
-{/*                 <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03, }}>
+                {/*                 <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flex: 1, marginBottom: DEVICE_HEIGHT * 0.03, }}>
  */}
-                    <View style={styles.BackButtonView}>
+                <View style={styles.BackButtonView}>
 
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("History7", {})} >
-                            <Text style={styles.ButtonText}>
-                                BACK
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("History6", {})} >
+                        <Text style={styles.ButtonText}>
+                            BACK
                             </Text>
-                        </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
+                </View>
 
-                    {/*    <View style={styles.NextButtonView}>
-                        <TouchableOpacity style={styles.button} onPress={() => {
-                            this.validatePressedPhoto()
-                        }}>
-                            <Text style={styles.ButtonText}>
-                                NEXT
-                            </Text>
-                        </TouchableOpacity>
-                    </View> */}
 
-                {/* </View> */}
             </View >
 
 

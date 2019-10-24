@@ -54,6 +54,7 @@ export default class Brand2 extends Component {
                             which makes us always think that The future is {'\n'}
                             exciting.
                         </Text>
+
                     </View>
                 </View>
                 <View style={styles.ButtonsView}>
@@ -81,8 +82,7 @@ const styles = StyleSheet.create({
     ImagesView: {
         flexDirection: 'row',
         flex: 4,
-        // alignItems: 'center',
-        marginTop: DEVICE_HEIGHT * 0.3
+        alignItems: 'center'
     },
     LeftImage: {
         zIndex: 1,

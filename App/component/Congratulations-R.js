@@ -23,7 +23,7 @@ export default class Organisation1 extends Component {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
-            this.props.navigation.navigate("Video3")
+            this.props.navigation.navigate("video3")
         }, 2000);
     }
 

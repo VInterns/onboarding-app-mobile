@@ -23,7 +23,7 @@ export default class walkThrough2 extends Component {
         // Start counting when the page is loaded
         this.timeoutHandle = setTimeout(() => {
             // Add your logic for the transition
-            this.props.navigation.navigate("Video2")
+            this.props.navigation.navigate("video2")
         }, 2000);
     }
 

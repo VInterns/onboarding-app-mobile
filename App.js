@@ -46,16 +46,6 @@ export default class App extends React.Component {
   }
   async componentDidMount() {
     await Application.run();
-      // const promises = [];
-      // promises.push(Font.loadAsync({
-      //     "VodafoneBd": VodafoneBd,
-      //     "VodafoneRg": VodafoneRg,
-      // }));
-    // await Expo.Font.loadAsync({
-    //   Roboto: require("native-base/Fonts/Roboto.ttf"),
-    //   Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-    //   Ionicons: require("native-base/Fonts/Ionicons.ttf")
-    // });
 
     await Font.loadAsync({
       "VodafoneRg": require("./assets/fonts/Vodafone.ttf"),

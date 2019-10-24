@@ -38,14 +38,14 @@ import History11 from "./component/History11";
 import History12 from "./component/History12";
 import History13 from "./component/History13";
 
-import Video1 from "./component/Video1";
-// import { Video1 } from "./screens/video1-screen";
-import Video2 from "./component/Video2";
-import Video3 from "./component/Video3";
-import Video4 from "./component/Video4";
-import Video5 from "./component/Video5";
-import Video6 from "./component/Video6";
-import Video7 from "./component/Video7";
+import { video1 } from "./screens/video1-screen";
+import { video2 } from "./screens/video2-screen";
+import { video3 } from "./screens/video3-screen";
+import { video4 } from "./screens/video4-screen";
+import { video5 } from "./screens/video5-screen";
+import { video6 } from "./screens/video6-screen";
+import { video7 } from "./screens/video7-screen";
+
 
 import ErrorAlert from "./component/ErrorAlert";
 import ErrorAlert2 from "./component/ErrorAlert2";
@@ -85,7 +85,7 @@ import WorkingAtVodafone3 from "./component/WorkingAtVodafone3";
 import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
 import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 
-import Survey from "./component/Survey";
+// import Survey from "./component/Survey";
 
 
 import HealthAndSafety from "./component/HealthAndSafety"
@@ -119,7 +119,7 @@ const handleCustomTransition = ({ scenes }) => {
   } else if (
     prevScene &&
     prevScene.route.routeName === "walkThrough3" &&
-    nextScene.route.routeName === "Video1"
+    nextScene.route.routeName === "video1"
   ) {
     return zoomIn(600);
   } else if (
@@ -148,31 +148,31 @@ const handleCustomTransition = ({ scenes }) => {
     return fromTop(600);
 
   } else if (prevScene
-    && prevScene.route.routeName === 'Video1'
+    && prevScene.route.routeName === 'video1'
     && nextScene.route.routeName === 'History') {
     return zoomIn(800);
   } else if (prevScene
-    && prevScene.route.routeName === 'Video2'
+    && prevScene.route.routeName === 'video2'
     && nextScene.route.routeName === 'Organisation') {
     return zoomIn(800);
   }
   else if (prevScene
-    && prevScene.route.routeName === 'Video3'
+    && prevScene.route.routeName === 'video3'
     && nextScene.route.routeName === 'Brand') {
     return zoomIn(800);
   }
   else if (prevScene
-    && prevScene.route.routeName === 'Video4'
+    && prevScene.route.routeName === 'video4'
     && nextScene.route.routeName === 'HealthAndSafety') {
     return zoomIn(700);
   }
   else if (prevScene
-    && prevScene.route.routeName === 'Video5'
+    && prevScene.route.routeName === 'video5'
     && nextScene.route.routeName === 'LearningAtVodafone') {
     return zoomIn(800);
   }
   else if (prevScene
-    && prevScene.route.routeName === 'Video6'
+    && prevScene.route.routeName === 'video6'
     && nextScene.route.routeName === 'WorkingAtVodafone') {
     return zoomIn(800);
   }
@@ -207,44 +207,44 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    Video1: {
-      screen: Video1,
+    video1: {
+      screen: video1,
       navigationOptions: {
         header: null
       }
     },
-    Video2: {
-      screen: Video2,
+    video2: {
+      screen: video2,
       navigationOptions: {
         header: null
       }
     },
-    Video3: {
-      screen: Video3,
+    video3: {
+      screen: video3,
       navigationOptions: {
         header: null
       }
     },
-    Video4: {
-      screen: Video4,
+    video4: {
+      screen: video4,
       navigationOptions: {
         header: null
       }
     },
-    Video5: {
-      screen: Video5,
+    video5: {
+      screen: video5,
       navigationOptions: {
         header: null
       }
     },
-    Video6: {
-      screen: Video6,
+    video6: {
+      screen: video6,
       navigationOptions: {
         header: null
       }
     },
-    Video7: {
-      screen: Video7,
+    video7: {
+      screen: video7,
       navigationOptions: {
         header: null
       }
@@ -303,7 +303,7 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
 
     HealthAndSafety: { screen: HealthAndSafety },
-    Survey: { screen: Survey },
+    // Survey: { screen: Survey },
   },
 
   {

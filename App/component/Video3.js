@@ -3,14 +3,25 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { Video } from 'expo-av';
 import video from '../assets/03.mp4';
 export default class Video3 extends React.Component {
-    static navigationOptions = {//header styling
-       header:null
+    constructor() {
+        super();
+
+        this.state = {
+            navigated: false
+        };
+    }
+    props: {
+        tryNavigate: (nextScreen: string) => void
+    };
+    tryNavigate = () => {
+        this.props.tryNavigate("Brand");
     };
     _onPlaybackStatusUpdate = playbackStatus => {
-        if (playbackStatus.durationMillis + 500 === playbackStatus.positionMillis + 500)
-            // The player has just finished playing and will stop.
-
-            this.props.navigation.navigate("Brand", {})
+        if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.
+            this.setState({ navigated: true });
+            this.tryNavigate();
+            this.props.navigation.navigate("Brand");
+        }
     };
     render() {
         const { width } = Dimensions.get('window');
@@ -24,7 +35,7 @@ export default class Video3 extends React.Component {
                     {
                         (playbackStatus) => this._onPlaybackStatusUpdate(playbackStatus)
                     }
-                    shouldPlay
+                    shouldPlay={!this.state.navigated}
                     resizeMode="cover"
                     style={{ width, height: height }}
                 />
@@ -40,15 +51,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-/*     controlBar: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 45,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-    } */
 });

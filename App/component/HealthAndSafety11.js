@@ -13,7 +13,7 @@ import img1 from '../assets/D.png';
 export default class HealthAndSafety11 extends Component {
     componentDidMount() {
         this.timeoutHandle = setTimeout(() => {
-            this.props.navigation.navigate("HealthAndSafety")
+            this.props.navigation.navigate("video5")
         }, 2000);
     }
 

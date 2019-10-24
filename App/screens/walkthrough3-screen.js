@@ -26,18 +26,10 @@ class Walkthrough3Container extends Component {
     tryNavigate: (nextScreen: string) => void
   };
 
-  static getDerivedStateFromProps(props, state) {
-    // if (props.lastScreen == "History") {
-    props.navigation.navigate(props.lastScreen);
-
-    // props.navigation.navigate("Video1");
-    // }
-    return state;
-  }
   render() {
     console.log("props", this.props);
     // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
-    console.log(this.props.tryNavigate, "This is the tryNavigate");
+    console.log(this.props.tryNavigate, "This is the render in walkThrough 3");
     return (
       <WalkThrough3
         tryNavigate={this.props.tryNavigate}

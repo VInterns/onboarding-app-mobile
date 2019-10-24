@@ -45,19 +45,19 @@ class LoginContainer extends Component {
 
       return state;
     }
-    return state;s
+    return state;
   }
 
   render() {
-      // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
+    // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     return (
-        <Login
-          loading={this.props.loading}
-          errorMessage={this.props.errorMessage}
-          tryLogin={this.props.tryLogin}
-          navigation={this.props.navigation}
-          isLoggedIn={this.props.isLoggedIn}
-        />
+      <Login
+        loading={this.props.loading}
+        errorMessage={this.props.errorMessage}
+        tryLogin={this.props.tryLogin}
+        navigation={this.props.navigation}
+        isLoggedIn={this.props.isLoggedIn}
+      />
     );
 
   }

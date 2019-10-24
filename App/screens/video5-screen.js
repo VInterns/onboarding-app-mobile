@@ -3,9 +3,10 @@ import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import { State, tryNavigate } from "../state";
-import GreatJob from "../component/GreatJob";
+import Video5 from "../component/Video5";
 
-class GreatJobContainer extends Component {
+class Video5Container extends Component {
+
     constructor() {
         super();
         this.state = {};
@@ -25,9 +26,11 @@ class GreatJobContainer extends Component {
         tryNavigate: (nextScreen: string) => void
     };
 
+
     render() {
+        console.log("Here in video5 screen render");
         return (
-            <GreatJob
+            <Video5
                 tryNavigate={this.props.tryNavigate}
                 navigation={this.props.navigation}
                 isLoggedIn={this.props.isLoggedIn}
@@ -36,7 +39,7 @@ class GreatJobContainer extends Component {
     }
 }
 
-export const greatJob = connect(
-    GreatJobContainer.mapStateToProps,
-    GreatJobContainer.mapDispatchToProps
-)(GreatJobContainer);
+export const video5 = connect(
+    Video5Container.mapStateToProps,
+    Video5Container.mapDispatchToProps
+)(Video5Container);
