@@ -15,7 +15,7 @@ class HealthAndSafety9 extends Component {
 
     componentDidMount() {
         this.timeoutHandle = setTimeout(() => {
-            this.props.navigation.navigate("HealthAndSafety10")
+            this.props.navigation.navigate("HealthAndSafety3")
         }, 2000);
     }
 

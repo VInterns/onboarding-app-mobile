@@ -128,7 +128,7 @@ export default class HealthAndSafety2 extends Component {
         <View style={styles.NextButtonView}>
           {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
           <TouchableOpacity style={styles.button} onPress={
-            () => { console.log('inside Back button'); navigate("Organisation"), {}; }} >
+            () => { console.log('inside Back button'); navigate("HealthAndSafety1"), {}; }} >
             <Text style={styles.ButtonText}>
               BACK
             </Text>

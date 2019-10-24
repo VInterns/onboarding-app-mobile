@@ -40,7 +40,7 @@ export default class HealthAndSafety1 extends Component {
                         </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("HealthAndSafety9", {})} >
+                    <TouchableOpacity style={styles.NextButton} onPress={() => navigate("HealthAndSafety2", {})} >
                         <Text style={styles.ButtonText}>
                             NEXT
                         </Text>
