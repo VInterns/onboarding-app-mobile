@@ -51,20 +51,6 @@ export default class Brand1 extends Component {
                     </Image>
                 </View>
 
-
-
-                {/* <YouTube
-                    videoId="99PU7603o2Q" // The YouTube video ID
-                    play // control playback of video with true/false
-                    loop // control whether the video should loop when ended
-                    onReady={e => this.setState({ isReady: true })}
-                    onChangeState={e => this.setState({ status: e.state })}
-                    onChangeQuality={e => this.setState({ quality: e.quality })}
-                    onError={e => this.setState({ error: e.error })}
-                    style={{ alignSelf: 'stretch', height: 300 }}
-                /> */}
-
-
                 <View style={styles.TextContainer}>
                     <Text style={styles.blackText}>
                         <Text style={styles.redText}>Vodafone </Text>
@@ -128,10 +114,10 @@ const styles = StyleSheet.create({
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH * 0.09, //40
+        marginLeft: DEVICE_WIDTH * 0.075, //40
         // marginTop: DEVICE_HEIGHT * 0.2123, //150
-        width: DEVICE_WIDTH * 0.83, //300
-        height: DEVICE_HEIGHT * 0.241, // 170,
+        width: DEVICE_WIDTH * 0.87, //300
+        height: DEVICE_HEIGHT * 0.3, // 170,
         alignSelf: "center",
         borderRadius: 10
     },
