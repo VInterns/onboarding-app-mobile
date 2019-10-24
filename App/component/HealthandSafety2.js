@@ -134,7 +134,7 @@ export default class HealthAndSafety2 extends Component {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => {
-            console.log('props is ->>>>', this.props.navigation.navigate);
+            // console.log('props is ->>>>', this.props.navigation.navigate);
             this.checkAnswers();
           }} >
             <Text style={styles.ButtonText}>
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     paddingLeft: DEVICE_WIDTH * 0.08,
     paddingRight: DEVICE_WIDTH * 0.08,
-    backgroundColor: '#EE82EE',
+    // backgroundColor: '#EE82EE',
   },
   dropZone: {
     width: CIRCLE_RADIUS * 2,
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
-    backgroundColor: '#00BFFF',
+    // backgroundColor: '#00BFFF',
     flex: 2.5,
     paddingTop: DEVICE_HEIGHT * 0.08,
     flexWrap: 'wrap',
@@ -199,20 +199,20 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   imagesContainer: {
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   answersContainer: {
-    backgroundColor: 'orange',
+    // backgroundColor: 'orange',
     flexDirection: 'column',
     flex: 8,
     zIndex: -1,
   },
   questionContainer: {
     flexDirection: 'row',
-    borderWidth: 3,
+    // borderWidth: 3,
     flex: 1,
   },
   questionTextContainer: {
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
   },
   questionTextLarge: {
     flexWrap: 'wrap',
-    backgroundColor: '#C0C0C0',
+    // backgroundColor: '#C0C0C0',
     fontFamily: "VodafoneBold",
     fontSize: 16,
     fontWeight: "bold",
