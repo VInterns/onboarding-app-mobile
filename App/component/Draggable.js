@@ -31,10 +31,12 @@ export default class Draggable extends Component {
 
   props: {
     imageurl: any,
-    moveY: number,
-    moveX: number,
+    moveYfirst: number,
+    moveYsecond: number,
+    moveXfirst: number,
+    moveXsecond: number,
     dropAreaCallback:()=>Boolean,
-    answer:Boolean
+    answer:Boolean,
   };
 
   
@@ -79,17 +81,22 @@ export default class Draggable extends Component {
   }
 
   isDropArea(gesture, answerId) {
+    console.log('GUESTURE IS ---->',gesture)
 
-    if(gesture.moveY < this.props.moveY & gesture.moveX < this.props.moveX)
+    console.log('inside isDropArea',gesture,gesture.moveYfirst ,this.props.moveYfirst,gesture.moveYfirst >= this.props.moveYfirst);
+
+    if(gesture.moveY >= this.props.moveYfirst && gesture.moveY <= this.props.moveYsecond && gesture.moveX >= this.props.moveXfirst && gesture.moveX <= this.props.moveXsecond)
     {
+      console.log('inside isDropArea 2');
       //set state answer = true
       if (answerId == 1) {
-   
+        console.log('inside answer id -> 1');
         this.props.qtrue();
-        
       }if (answerId == 2) {
         this.props.qtrue();
       }if (answerId == 3) {
+        this.props.qtrue();
+      }if (answerId == 4) {
         this.props.qtrue();
       }
 
@@ -117,8 +124,9 @@ export default class Draggable extends Component {
         <View style={{ position: "absolute" }}>
           <Animated.View
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.circle, { opacity: this.state.opacity }]}
-          />
+            style={[panStyle, styles.circle, { opacity: this.state.opacity }]}>
+                    <Image source={this.props.imageurl} />
+            </Animated.View>
         </View>
       );
     }

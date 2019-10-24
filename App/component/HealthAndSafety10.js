@@ -43,7 +43,7 @@ export default class HealthAndSafety10 extends Component {
                     </Text>
                 </View>
                 <View style={styles.ButtonsView}>
-                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("HealthAndSafety1", {})} >
+                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("HealthAndSafety2", {})} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
