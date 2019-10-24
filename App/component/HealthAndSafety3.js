@@ -11,10 +11,9 @@ import {
 } from 'react-native';
 
 
-const drugs = '../assets/drugs.png';
-const speedlimit = '../assets/speedlimit.png';
-const streetwork = '../assets/streetwork.png';
-const nomobile = '../assets/nomobile.png';
+const electric = '../assets/electric.png';
+const seatbelt = '../assets/seatbelt.png';
+const workingatheight = '../assets/workingatheight.png';
 
 
 let question1: Boolean = false;
@@ -36,13 +35,9 @@ function q3true() {
   console.log('q3 now is = true', question3);
 
 }
-function q4true() {
-  question4 = true;
-  console.log('q4 now is = true', question4);
-}
 
 
-export default class HealthAndSafety2 extends Component {
+export default class HealthandSafety2 extends Component {
 
   constructor() {
     super();
@@ -90,10 +85,9 @@ export default class HealthAndSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={360} moveYsecond={390} moveXfirst={30} moveXsecond={60} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={470} moveYsecond={530} moveXfirst={30} moveXsecond={60} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={590} moveYsecond={660} moveXfirst={30} moveXsecond={60} answerId={3} qtrue={q3true} />
-          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={740} moveYsecond={820} moveXfirst={30} moveXsecond={60} answerId={4} qtrue={q4true} />
+          <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={360} moveYsecond={390} moveXfirst={30} moveXsecond={60} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={470} moveYsecond={530} moveXfirst={30} moveXsecond={60} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={590} moveYsecond={660} moveXfirst={30} moveXsecond={60} answerId={3} qtrue={q3true} />
         </View>
 
         <View style={styles.answersContainer}>
@@ -101,27 +95,22 @@ export default class HealthAndSafety2 extends Component {
           <View style={styles.questionContainer}>
             <View style={styles.dropZone}></View>
             <View style={styles.questionTextContainer}>
-              <Text style={styles.questionTextLarge}>WE ALWAYS drive safely and legally: <Text style={styles.questionTextSmall}>we never use a handheld mobile device when driving</Text></Text>
+            <Text style={styles.questionTextSmall}>When working at height,<Text style={styles.questionTextLarge}> ALWAYS</Text> When working at height, ALWAYS wear protective gear, attach a safety harness and use fall protection equipment</Text>
             </View>
           </View>
           <View style={styles.questionContainer}>
             <View style={styles.dropZone}></View>
             <View style={styles.questionTextContainer}>
-              <Text style={styles.questionTextLarge}>WE ALWAYS drive safely and legally: <Text style={styles.questionTextSmall}>we always obey the speed limit</Text></Text>
+              <Text style={styles.questionTextLarge}>NEVER<Text style={styles.questionTextSmall}> carry out work on any electrical equipment unless you’re qualified</Text></Text>
             </View>
           </View>
           <View style={styles.questionContainer}>
             <View style={styles.dropZone}></View>
             <View style={styles.questionTextContainer}>
-              <Text style={styles.questionTextLarge}>WE NEVER <Text style={styles.questionTextSmall}>work under the influence of alcohol or drugs</Text></Text>
+              <Text style={styles.questionTextLarge}>WE ALWAYS drive safely and legally: <Text style={styles.questionTextSmall}>we always wear a seatbelt</Text></Text>
             </View>
           </View>
-          <View style={styles.questionContainer}>
-            <View style={styles.dropZone}></View>
-            <View style={styles.questionTextContainer}>
-              <Text style={styles.questionTextLarge}>NEVER <Text style={styles.questionTextSmall}>undertake any street or underground work activities unless competent to do so</Text></Text>
-            </View>
-          </View>
+          
         </View>
 
 
@@ -160,7 +149,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch',
     padding: DEVICE_WIDTH * 0.08,
-    backgroundColor: '#EE82EE',
+    // backgroundColor: '#EE82EE',
   },
   dropZone: {
     width: CIRCLE_RADIUS * 2,
@@ -172,7 +161,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
-    backgroundColor: '#00BFFF',
+    // backgroundColor: '#00BFFF',
     flex: 2.5,
     paddingTop: DEVICE_HEIGHT * 0.08,
     flexWrap: 'wrap',
@@ -198,20 +187,21 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   imagesContainer: {
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   answersContainer: {
-    backgroundColor: 'orange',
+    // backgroundColor: 'orange',
     flexDirection: 'column',
-    flex: 8,
+    flex: 6,
     zIndex: -1,
+    marginBottom: DEVICE_HEIGHT * 0.1
   },
   questionContainer: {
     flexDirection: 'row',
-    borderWidth: 3,
+    // borderWidth: 3,
     flex: 1,
   },
   questionTextContainer: {
@@ -220,11 +210,11 @@ const styles = StyleSheet.create({
   },
   questionTextLarge: {
     flexWrap: 'wrap',
-    backgroundColor: '#C0C0C0',
+    // backgroundColor: '#C0C0C0',
     fontFamily: "VodafoneBold",
     fontSize: 16,
-    fontWeight: "bold",
-    fontStyle: "normal",
+    // fontWeight: "bold",
+    // fontStyle: "normal",
     letterSpacing: 0,
     color: "#4b464d",
   },
@@ -232,11 +222,11 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     fontFamily: "VodafoneRg",
     fontSize: 16,
-    fontWeight: "normal",
-    fontStyle: "normal",
+    // fontWeight: "normal",
+    // fontStyle: "normal",
     lineHeight: 20,
     letterSpacing: 0,
-    color: "#4b464d"
+    // color: "#4b464d"
   },
   draggable: {
     zIndex: 100,
