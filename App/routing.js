@@ -67,6 +67,7 @@ import Brand6 from "./component/brand6";
 import Brand7 from "./component/brand7";
 
 import Organisation from "./component/Organisation";
+import Organisation0 from "./component/Organisation0";
 import Organisation1 from "./component/Organisation1";
 import Organisation2 from "./component/Organisation2";
 import Organisation3 from "./component/Organisation3";
@@ -275,6 +276,7 @@ const AppNavigator = createStackNavigator(
     Brand6: { screen: Brand6 },
     Brand7: { screen: Brand7 },
     Organisation: { screen: Organisation },
+    Organisation0: { screen: Organisation0 },
     Organisation1: { screen: Organisation1 },
     Organisation2: { screen: Organisation2 },
     Organisation3: { screen: Organisation3 },
