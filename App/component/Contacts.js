@@ -45,12 +45,53 @@ export default class Contacts extends Component {
                         - 0225292525
                     </Text>
                     <View style={styles.separator}></View>
-
-                    <View style={styles.directorsContainer}>
-
-                    </View>
                 </View>
-                <View style={styles.NextButtonView}>
+                <View style={styles.blockContainer}>
+                    {/* <Image source={img1} style={styles.img} /> */}
+                    <Text style={styles.blockBigHeader}>For transportation inquiries please contact</Text>
+                    <Text style={styles.blockHeader}>
+                        Fleet Help Desk :
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        Phone Numbers:
+                    </Text>
+                    <Text style={styles.blockText}>
+                        - 0225294858
+                    </Text>
+                    <View style={styles.separator}></View>
+                </View>
+                <View style={styles.blockContainer}>
+                    {/* <Image source={img1} style={styles.img} /> */}
+                    <Text style={styles.blockHeader}>
+                        Health and safety :
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        Phone Numbers:
+                    </Text>
+                    <Text style={styles.blockText}>
+                        - 01001793777 {"\n"}
+                        - 02-25292525 {"\n"}
+                        - 82525
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        Email:
+                    </Text>
+                    <Text style={styles.blockText}>
+                        H&Shelpdeskteam@Vodafone.com
+                    </Text>
+                    <View style={styles.separator}></View>
+                    <Text style={styles.blockHeader}>
+                        For any other inquiries please email using email subject ( new hire inquiry )
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        Email:
+                    </Text>
+                    <Text style={styles.blockText}>
+                        Welcome.tovodafone@vodafone.com
+                    </Text>
+
+                </View>
+                {/* <View style={styles.NextButtonView}>
                     <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} >
                         <Text style={styles.ButtonText}>
                             BACK
@@ -61,7 +102,7 @@ export default class Contacts extends Component {
                             NEXT
                        </Text>
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </ScrollView>
         );
     }
@@ -74,14 +115,14 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         flex: 1,
-        backgroundColor: '#EC6AA9',
+        // backgroundColor: '#EC6AA9',
     },
     textContainer: {
         flex: 1,
         padding: DEVICE_WIDTH * 0.05,
         paddingTop: DEVICE_HEIGHT * 0.08,
         flexWrap: 'wrap',
-        backgroundColor: '#ECB76A'
+        // backgroundColor: '#ECB76A'
     },
     textTitleLarge: {
         fontFamily: "VodafoneBold",
@@ -107,7 +148,15 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         // backgroundColor: '#6AE0EC',
         flex: 8,
-        padding: DEVICE_WIDTH * 0.05,
+        paddingHorizontal: DEVICE_WIDTH * 0.05,
+    },
+    blockBigHeader: {
+        fontFamily: "VodafoneBold",
+        fontSize: 24,
+        fontWeight: "bold",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#4b464d"
     },
     blockHeader: {
         fontFamily: "VodafoneBold",
@@ -116,7 +165,8 @@ const styles = StyleSheet.create({
         fontStyle: "normal",
         letterSpacing: 0,
         color: "#e60000",
-        paddingBottom: DEVICE_HEIGHT * 0.02,
+        // paddingBottom: DEVICE_HEIGHT * 0.02,
+        // backgroundColor: '#6AA7EC',
     },
     blockTitle: {
         fontFamily: "VodafoneBold",
@@ -126,7 +176,9 @@ const styles = StyleSheet.create({
         letterSpacing: 0,
         color: "#4b464d",
         paddingLeft: DEVICE_WIDTH * 0.05,
-        paddingBottom: DEVICE_HEIGHT * 0.01
+        paddingBottom: DEVICE_HEIGHT * 0.01,
+        paddingTop: DEVICE_HEIGHT * 0.02,
+
     },
     blockText: {
         fontFamily: "VodafoneRg",
@@ -146,65 +198,7 @@ const styles = StyleSheet.create({
         borderStyle: "solid",
         borderWidth: 1,
         borderColor: "#4a4d4e",
-        marginVertical : DEVICE_HEIGHT * 0.02,
-    },
-    img: {
-        justifyContent: 'center',
-        marginLeft: '5%',
-    },
-    ceoBoxContainer: {
-        flex: 1,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        alignContent: 'stretch',
-        width: '100%',
-        backgroundColor: '#AD6AEC',
-    },
-    directorsContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        alignContent: 'space-between',
-        alignItems: 'center',
-    },
-    boxItem: {
-        width: DEVICE_WIDTH * 0.35,
-        height: DEVICE_HEIGHT * 0.21,
-        borderRadius: 8,
-        backgroundColor: "#ffffff",
-        shadowColor: "rgba(0, 0, 0, 0.23)",
-        shadowOffset: {
-            width: 0,
-            height: 5
-        },
-        shadowRadius: 25,
-        shadowOpacity: 1,
-        margin: DEVICE_HEIGHT * 0.03,
-        alignItems: 'center',
-    },
-    upperText: {
-        width: 111,
-        height: 28,
-        fontFamily: "VodafoneRg",
-        fontSize: 12,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        letterSpacing: 0,
-        textAlign: "center",
-        color: "#4b464d",
-        alignItems: 'center',
-    },
-    lowerText: {
-        width: 111,
-        height: 18,
-        fontFamily: "VodafoneBold",
-        fontSize: 16,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        lineHeight: 18,
-        letterSpacing: 0,
-        textAlign: "center",
-        color: "#4b464d",
-        alignItems: 'center',
+        marginVertical: DEVICE_HEIGHT * 0.02,
     },
     button: {
         alignItems: 'center',
