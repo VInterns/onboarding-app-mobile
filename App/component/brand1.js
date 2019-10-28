@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     },
     Video: {
         zIndex: 5,
-        marginLeft: DEVICE_WIDTH * 0.075, //40
+        marginLeft: DEVICE_WIDTH * 0.069, //40
         // marginTop: DEVICE_HEIGHT * 0.2123, //150
         width: DEVICE_WIDTH * 0.87, //300
         height: DEVICE_HEIGHT * 0.3, // 170,
