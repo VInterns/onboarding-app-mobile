@@ -88,7 +88,6 @@ import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 
 import Survey from "./component/Survey";
 
-
 import HealthAndSafety from "./component/HealthAndSafety"
 import HealthAndSafety1 from "./component/HealthAndSafety1"
 import HealthAndSafety2 from "./component/HealthAndSafety2";
@@ -97,6 +96,7 @@ import HealthAndSafety5 from "./component/HealthAndSafety5";
 import HealthAndSafety9 from "./component/HealthAndSafety9"
 import HealthAndSafety10 from "./component/HealthAndSafety10"
 import HealthAndSafety11 from "./component/HealthAndSafety11"
+import Contacts from "./component/Contacts"
 
 
 const handleCustomTransition = ({ scenes }) => {
@@ -287,7 +287,6 @@ const AppNavigator = createStackNavigator(
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },
-
     HealthAndSafety: { screen: HealthAndSafety },
     HealthAndSafety1: { screen: HealthAndSafety1 },
     HealthAndSafety2: { screen: HealthAndSafety2 },
@@ -305,9 +304,9 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone3: { screen: WorkingAtVodafone3 },
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
-
     HealthAndSafety: { screen: HealthAndSafety },
     Survey: { screen: Survey },
+    Contacts: { screen: Contacts },
   },
 
   {
