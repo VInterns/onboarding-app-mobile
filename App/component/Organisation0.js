@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 
-export default class Organisation1 extends Component {
+export default class Organisation0 extends Component {
 
     static navigationOptions = {
         header: null

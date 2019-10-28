@@ -11,8 +11,6 @@ import {
     Text,
 } from 'react-native';
 
-import FadeInView from './FadeInView';
-
 import img1 from '../assets/group10.png';
 import img2 from '../assets/group12.png';
 import img3 from '../assets/group11.png';
@@ -23,8 +21,6 @@ import img7 from '../assets/group19.png';
 import img8 from '../assets/group17.png';
 import img9 from '../assets/group16.png';
 
-
-
 export default class Organisation1 extends Component {
 
     static navigationOptions = {
@@ -34,8 +30,6 @@ export default class Organisation1 extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-        const DEVICE_WIDTH = Dimensions.get('window').width;
-        const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
             <View style={styles.container}>
@@ -45,15 +39,33 @@ export default class Organisation1 extends Component {
                     </Text>
                 </View>
                 <View style={styles.imageContainer}>
-                    <Image source={img1} style={styles.img} />
-                    <Image source={img2} style={styles.img} />
-                    <Image source={img3} style={styles.img} />
-                    <Image source={img4} style={styles.img} />
-                    <Image source={img5} style={styles.img} />
-                    <Image source={img6} style={styles.img} />
-                    <Image source={img7} style={styles.img} />
-                    <Image source={img8} style={styles.img} />
-                    <Image source={img9} style={styles.img} />
+                    <View style={styles.image}>
+                        <Image source={img1} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img2} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img3} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img4} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img5} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img6} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img7} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img8} style={styles.img} />
+                    </View>
+                    <View style={styles.image}>
+                        <Image source={img9} style={styles.img} />
+                    </View>
 
                 </View>
                 <View style={styles.NextButtonView}>
@@ -84,6 +96,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'stretch',
         flex: 1,
+        flexWrap: 'wrap',
     },
     textContainer: {
         flex: 1,
@@ -93,27 +106,29 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
         marginTop: DEVICE_HEIGHT * 0.06,
-        //   fontFamily: "VodafoneRg",
-        fontSize: 19,
+        fontFamily: "VodafoneBold",
+        fontSize: 21,
         fontWeight: "bold",
-        fontStyle: "normal",
         lineHeight: 25,
         letterSpacing: 0,
-        color: "#4b464d"
     },
     imageContainer: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         alignItems: 'stretch',
-        flex: 8
+        flex: 8,
+        // backgroundColor: '#EC6AEA',
+    },
+    image:{
+        flexWrap: 'wrap',
+        alignContent: 'space-around',
+        padding: '2.5%',
     },
     img: {
-        width: '31%',
-        margin: '1%',
+        flexWrap: 'wrap',
+        alignContent: 'space-between',
     },
     button: { // button design
-        /*    width: 70,
-           height: 25, */
         alignItems: 'center',
         justifyContent: 'flex-end',
     },
