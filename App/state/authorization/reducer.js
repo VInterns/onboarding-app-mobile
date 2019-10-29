@@ -10,12 +10,14 @@ type Action =
   | actions.ON_REGISTER_Action
   | actions.REGISTER_SUCCESS_Action
   | actions.REGISTER_FAIL_Action
-  | actions.ON_NEXT_SCREEN;
+  | actions.ON_NEXT_SCREEN
+  | actions.RESET_VALIDATION_MSG;
 
 export function authorizationReducer(
   state: AuthorizationState = AuthorizationInitialState,
   action: Action
 ): AuthorizationState {
+  debugger;
   switch (action.type) {
     case types.ON_LOGIN: {
       return {
@@ -75,6 +77,13 @@ export function authorizationReducer(
       return {
         ...state,
         lastScreen: action.payload,
+      }
+    }
+
+    case types.RESET_VALIDATION_MSG:{
+      return {
+        ...state,
+        errorMessage: '',
       }
     }
     default:

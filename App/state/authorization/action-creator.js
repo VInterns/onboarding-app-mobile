@@ -31,19 +31,24 @@ export type REGISTER_FAIL_Action = { type: string, payload: string };
 
 export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
+    debugger;
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_START_LOADING });
+    debugger;
     let response = await authProxyService.login(user);
 
-    token = await response.json();
-
+    debugger;
     if (response.status === 200) {
+      token = await response.json();
       dispatch(success());
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
+      debugger;
+      console.log('inside ui else section ... ');
+      dispatch(fail("Invalid credentials"));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
-      dispatch(fail());
     }
+    dispatch({ type: UiTypes.UI_STOP_LOADING });
   };
 }
 
@@ -73,8 +78,8 @@ export async function tryRegister(user: UserRegisterModel) {
       dispatch({ type: UiTypes.UI_STOP_LOADING });
       // dispatch(NavigationActions.navigate({ routeName: "Login" }));
     } else {
-      dispatch(registerFail());
       dispatch({ type: UiTypes.UI_STOP_LOADING });
+      dispatch(registerFail());
     }
   };
 }
@@ -87,9 +92,10 @@ export function success(): LOGIN_SUCCESS_Action {
   return { type: types.LOGIN_SUCCESS };
 }
 
-export function fail(): LOGIN_FAIL_Action {
-  const errorMsg = "Invalid Credentials";
-  return { type: types.LOGIN_FAIL, payload: errorMsg };
+export async function fail(errorMsg): LOGIN_FAIL_Action {
+  return async dispatch => {
+    dispatch( {type: UiTypes.UI_STOP_LOADING, payload: errorMsg});
+    dispatch( {type: types.LOGIN_FAIL, payload: errorMsg})};
 }
 
 export function onRegister(): ON_REGISTER_Action {
@@ -100,8 +106,7 @@ export function registerSuccess(): REGISTER_SUCCESS_Action {
   return { type: types.REGISTER_SUCCESS };
 }
 
-export function registerFail(): REGISTER_FAIL_Action {
-  const errorMsg = "Invalid Credentials";
+export function registerFail(errorMsg): REGISTER_FAIL_Action {
   return { type: types.REGISTER_FAIL, payload: errorMsg };
 }
 
@@ -117,5 +122,10 @@ export function onNextScreen(nextScreen): NextScreenModel {
   return {
     type: types.ON_NEXT_SCREEN,
     payload: nextScreen
-  };
+  };  
+}
+
+export function resetMsg(): RESET_VALIDATION_MSG_Action {
+  console.log('inside resetMsg() function');
+  return { type: types.RESET_VALIDATION_MSG};
 }

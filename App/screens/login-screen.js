@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { State, tryLogin, logout, onNextScreen } from "../state";
+import { State, tryLogin, logout, onNextScreen, resetMsg} from "../state";
 
 import { UserLoginModel } from "../proxy";
 import { Login } from "../component/Login";
@@ -22,7 +22,11 @@ class LoginContainer extends Component {
   }
 
   static mapDispatchToProps(dispatch: Dispatch) {
-    return bindActionCreators({ tryLogin, logout, onNextScreen }, dispatch);
+    return bindActionCreators({ tryLogin, logout, onNextScreen, resetMsg }, dispatch);
+  }
+  
+  componentDidMount(){
+
   }
 
   props: {
@@ -33,23 +37,32 @@ class LoginContainer extends Component {
     logout: () => void,
     lastScreen: string,
     onNextScreen: (lastScreen: NextScreenModel) => void,
+    resetMsg: () => void
   };
 
 
   static getDerivedStateFromProps(props, state) {
+    console.log('error message 1',props.errorMessage);
+    props.errorMessage = '';
+    console.log('error message 2', props.errorMessage);
+
     console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
-      // props.navigation.navigate(props.lastScreen || "walkThrough");
-      props.navigation.navigate("Contacts");
+      props.navigation.navigate(props.lastScreen || "walkThrough");
+      // props.navigation.navigate("Contacts");
 
       return state;
     }
+    debugger;
     return state;
   }
 
   render() {
-    // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
+    // this.props.logout()  /// --> TO LOGOUT AND CLEAR PRESIST STATE
+      
+    // this.props.resetMsg()
+
     return (
       <Login
         loading={this.props.loading}
@@ -59,7 +72,6 @@ class LoginContainer extends Component {
         isLoggedIn={this.props.isLoggedIn}
       />
     );
-
   }
 }
 

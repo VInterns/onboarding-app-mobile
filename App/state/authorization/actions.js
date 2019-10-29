@@ -9,3 +9,5 @@ export const REGISTER_FAIL = "[auth] Register fail";
 
 
 export const ON_NEXT_SCREEN = "[auth] on Next";
+
+export const RESET_VALIDATION_MSG = "[auth] on Reset";

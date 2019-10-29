@@ -24,9 +24,13 @@ export default class Contacts extends Component {
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.textContainer}>
-                    <Text style={styles.textTitleLarge}>
-                        Important
+
+                    <View style={{ flexDirection: 'row', flexwrap: 'wrap' }}>
+                        <View style={styles.iconBox}></View>
+                        <Text style={styles.textTitleLarge}>
+                            Important
                     </Text>
+                    </View>
                     <Text style={styles.textTitleSmall}>
                         Contacts
                     </Text>
@@ -199,6 +203,16 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#4a4d4e",
         marginVertical: DEVICE_HEIGHT * 0.02,
+    },
+    iconBox: {
+        width: 23,
+        height: 20,
+        borderRadius: 3,
+        backgroundColor: "#ebebeb",
+        zIndex: -1,
+        position: 'absolute',
+        top: 4
+
     },
     button: {
         alignItems: 'center',
