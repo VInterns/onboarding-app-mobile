@@ -72,7 +72,7 @@ export default class WorkingAtVodafone extends Component {
                             Back
                        </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("events")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>

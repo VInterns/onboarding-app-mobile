@@ -29,7 +29,7 @@ export default class WorkingAtVodafone2 extends Component {
         const DEVICE_HEIGHT = Dimensions.get('window').height;
         return (
 
-            <View style={{  justifyContent: 'center', alignItems: 'stretch', flex: 1 }}>
+            <View style={{ justifyContent: 'center', alignItems: 'stretch', flex: 1 }}>
                 <View style={styles.TextContainer}>
                     <Text style={styles.blackText}>Dress</Text>
                     <Text style={styles.redText}>Code</Text>
@@ -41,7 +41,7 @@ export default class WorkingAtVodafone2 extends Component {
 
 
                 <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("events")} >
                         <Text style={styles.ButtonText}>
                             Back
                        </Text>
@@ -102,12 +102,12 @@ const styles = StyleSheet.create({
     },
 
     NextButtonView: { //wrapper for button 
-     /*    width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flex: 0.1,
-        marginBottom: DEVICE_HEIGHT * (15 / DEVICE_HEIGHT),  */
+        /*    width: '100%',
+           flexDirection: 'row',
+           justifyContent: 'space-around',
+           alignItems: 'center',
+           flex: 0.1,
+           marginBottom: DEVICE_HEIGHT * (15 / DEVICE_HEIGHT),  */
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: DEVICE_HEIGHT * 0.03,
