@@ -12,6 +12,20 @@ import {
     ScrollView,
 } from 'react-native';
 
+import alexandre from "../assets/Alexandre.png";
+import Rasha from "../assets/Rasha.png";
+import Ayman from "../assets/Ayman.png";
+import Emad from "../assets/Emad.png";
+import Osama from "../assets/Osama.png";
+import Nagla from "../assets/Nagla.png";
+import MohamedAbdullah from "../assets/MohamedAbdullah.png";
+import Shahinaz from "../assets/Shahinaz.png";
+import KarimShehata from "../assets/KarimShehata.png";
+import KareemEid from "../assets/KareemEid.png";
+
+
+
+
 
 export default class Organisation0 extends Component {
 
@@ -32,6 +46,7 @@ export default class Organisation0 extends Component {
                     {/* <Image source={img1} style={styles.img} /> */}
                     <View style={styles.ceoBoxContainer}>
                         <View style={styles.boxItem}>
+                            <Image source={alexandre} />
                             <Text style={styles.upperText}>
                                 Alexandre {"\n"} Froment-Curtil
                             </Text>
@@ -43,67 +58,73 @@ export default class Organisation0 extends Component {
                     </View>
                     <View style={styles.directorsContainer}>
                         <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
+                            <Image source={Rasha} />
+                            <Text style={styles.upperText}>
+                                Rasha{"\n"}ElAzhary
+                            </Text>
+                            <Text style={styles.lowerText}>
+                                Finance Director
+                            </Text>
+                        </View>
+                        {/* ------------- */}
+                        <View style={styles.boxItem}>
+                            <Image source={Ayman} />
+                            <Text style={styles.upperText}>
+                            Ayman {"\n"} Essam
+                            </Text>
+                            <Text style={styles.lowerText}>
+                                External Affairs Director
+                            </Text>
+                        </View>
+                        {/* ------------- */}
+                        <View style={styles.boxItem}>
+                            <Image source={Emad} />
+                            <Text style={styles.upperText}>
+                                Emad {"\n"} ElAzhary
+                            </Text>
+                            <Text style={styles.lowerText}>
+                                Strategy Director
+                            </Text>
+                        </View>
+                        {/* ------------- */}
+                        <View style={styles.boxItem}>
+                            <Image source={Osama} />
+                            <Text style={styles.upperText}>
+                            Osama {"\n"} Said
+                            </Text>
+                            <Text style={styles.lowerText}>
+                                Technology Director
+                            </Text>
+                        </View>
+                        {/* ------------- */}
+                        <View style={styles.boxItem}>
+                            <Image source={Nagla} />
+                            <Text style={styles.upperText}>
+                            Nagla {"\n"} Kinawi
                             </Text>
                             <Text style={styles.lowerText}>
                                 CEO
                             </Text>
                         </View>
+                        
+                        {/* ------------- */}
                         <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
+                            <Image source={KarimShehata} />
+                            <Text style={styles.upperText}>
+                            Karim {"\n"} Shehata
                             </Text>
                             <Text style={styles.lowerText}>
-                                CEO
+                                Consumer Business Unit Director
                             </Text>
                         </View>
+                        {/* ------------- */}
                         <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
+                            <Image source={KareemEid} />
+                            <Text style={styles.upperText}>
+                            Kareem {"\n"} Eid
                             </Text>
                             <Text style={styles.lowerText}>
-                                CEO
-                            </Text>
-                        </View>
-                        <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                CEO
-                            </Text>
-                        </View>
-                        <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                CEO
-                            </Text>
-                        </View>
-                        <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                CEO
-                            </Text>
-                        </View>
-                        <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                CEO
-                            </Text>
-                        </View>
-                        <View style={styles.boxItem}>
-                        <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                CEO
+                                Consumer Marketing Digital Director
                             </Text>
                         </View>
                     </View>
@@ -132,14 +153,14 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         flex: 1,
-        backgroundColor: '#EC6AA9',
+        // backgroundColor: '#EC6AA9',
     },
     textContainer: {
         flex: 1,
         padding: DEVICE_WIDTH * 0.05,
         paddingTop: DEVICE_HEIGHT * 0.08,
         flexWrap: 'wrap',
-        backgroundColor: '#ECB76A'
+        // backgroundColor: '#ECB76A'
     },
     text: {
         fontFamily: "VodafoneBold",
@@ -153,7 +174,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#6AE0EC',
+        // backgroundColor: '#6AE0EC',
         flex: 8
     },
     img: {
@@ -166,7 +187,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'stretch',
         width: '100%',
-        backgroundColor: '#AD6AEC',
+        // backgroundColor: '#AD6AEC',
     },
     directorsContainer: {
         flexDirection: 'row',
@@ -179,7 +200,7 @@ const styles = StyleSheet.create({
         height: DEVICE_HEIGHT * 0.21,
         borderRadius: 8,
         backgroundColor: "#ffffff",
-        shadowColor: "rgba(0, 0, 0, 0.23)",
+        shadowColor: "rgba(0, 0, 0, 0.11)",
         shadowOffset: {
             width: 0,
             height: 5
@@ -188,10 +209,12 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         margin: DEVICE_HEIGHT * 0.03,
         alignItems: 'center',
+        paddingVertical: DEVICE_HEIGHT * 0.02,
+        paddingHorizontal: DEVICE_HEIGHT * 0.02,
     },
     upperText: {
-        width: 111,
-        height: 28,
+        // width: 111,
+        // height: 28,
         fontFamily: "VodafoneRg",
         fontSize: 12,
         fontWeight: "normal",
@@ -202,8 +225,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     lowerText: {
-        width: 111,
-        height: 18,
+        // width: 111,
+        // height: 18,
         fontFamily: "VodafoneBold",
         fontSize: 16,
         fontWeight: "bold",
@@ -214,7 +237,7 @@ const styles = StyleSheet.create({
         color: "#4b464d",
         alignItems: 'center',
     },
-    button: { 
+    button: {
         alignItems: 'center',
         justifyContent: 'flex-end',
     },
