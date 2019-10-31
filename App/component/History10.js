@@ -61,7 +61,7 @@ export default class History10 extends Component {
                 <View style={styles.paragraphContainer}>
 
                     <Text style={styles.NickText}>
-                        He worked for United Business Media Plc{'\n'}
+                        {/* He worked for United Business Media Plc{'\n'}
                         and Federal Express Worldwide, rising to{'\n'}
                         chief financial officer for the EMEA{'\n'}
                         (Europe, Middle East and Africa) region.{'\n'}
@@ -76,6 +76,22 @@ export default class History10 extends Component {
                         In May 2018, Vittorio Colao announced{'\n'}
                         that he would step down as Vodafone{'\n'}
                         CEO, effective October 2018, and that he{'\n'}
+                        would be succeeded by Read. */}
+                        He worked for United Business Media Plc
+                        and Federal Express Worldwide, rising to
+                        chief financial officer for the EMEA
+                        (Europe, Middle East and Africa) region.
+                        He joined Vodafone UK in 2001,
+                        becoming chief executive on 1 May
+                        2006, when Arun Sarin was the chief
+                        executive of Vodafone.
+                        He has served as the chief financial
+                        officer of Vodafone since 2014 and
+                        became the chief executive officer of
+                        Vodafone Group in October 2018.
+                        In May 2018, Vittorio Colao announced
+                        that he would step down as Vodafone
+                        CEO, effective October 2018, and that he
                         would be succeeded by Read.
                     </Text>
 
@@ -114,18 +130,30 @@ const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
 
     Text: {//welcome to word style
-        color: 'black',
-        fontSize: DEVICE_WIDTH * 0.047,
-        fontWeight: 'bold'
+        fontFamily: "VodafoneBold",
+        fontSize: 21,
+        fontWeight: "bold",
+        fontStyle: "normal",
+        lineHeight: 20,
+        letterSpacing: 0,
+        color: "#4b464d"
     },
     NickText: {//welcome to word style
-        color: 'black',
-        fontSize: DEVICE_WIDTH * 0.047,
+        fontFamily: "VodafoneRg",
+        fontSize: 21,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#4a4d4e"
     },
     RedText: {//welcome to word style
-        color: 'red',
-        fontSize: DEVICE_WIDTH * 0.047,
-        fontWeight: 'bold'
+        fontFamily: "VodafoneBold",
+        fontSize: 21,
+        fontWeight: "bold",
+        fontStyle: "normal",
+        lineHeight: 25,
+        letterSpacing: 0,
+        color: "#e60000"
     },
 
     TextContainer: {/* Welcome back and vodabuddy wrapper */
@@ -137,24 +165,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         flex: 3,
-        marginTop:DEVICE_HEIGHT * (5 / DEVICE_WIDTH),
-        //marginLeft: DEVICE_WIDTH * (20 / DEVICE_WIDTH),
-        marginHorizontal:DEVICE_WIDTH * (10 / DEVICE_WIDTH),
-        //backgroundColor: 'green',
-        paddingLeft:DEVICE_WIDTH * (18 / DEVICE_WIDTH)
-        //marginLeft: DEVICE_WIDTH * (20 / DEVICE_WIDTH),
-        //padding: 2,
-        /* marginTop: DEVICE_HEIGHT * (20 / DEVICE_WIDTH),
- */
-        //backgroundColor: 'green',
-        /*    marginLeft:20,
-           paddingLeft:20 */
+        marginTop: DEVICE_HEIGHT * (5 / DEVICE_WIDTH),
+        marginHorizontal: DEVICE_WIDTH * (10 / DEVICE_WIDTH),
+        paddingLeft: DEVICE_WIDTH * (18 / DEVICE_WIDTH)
 
     },
 
     button: { // button design
-        /*   width: 70,
-          height: 25, */
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -163,7 +180,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor:'red'
     },
     BackButtonView: { //wrapper for button 
         alignItems: 'center',
@@ -176,7 +192,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
-    /*     ButtonimageStyle: {//button icon
-            margin: -15
-        }, */
 });

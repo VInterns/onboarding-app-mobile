@@ -43,7 +43,7 @@ export default class Organisation1 extends Component {
                     <Text style={styles.text2}> 6000 Employees </Text>
                     <Text style={styles.text1}>and now you have become a </Text>
                     <Text style={styles.text2}>+1. </Text>
-                    <Text style={styles.text1}>We can wait to have you on board.</Text>
+                    <Text style={styles.textBold}>We can wait to have you on board.</Text>
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         flex: 1,
-        padding: DEVICE_WIDTH * 0.05,
+        padding: DEVICE_WIDTH * 0.07,
         // backgroundColor: '#2E86C1',
         flexDirection: 'row',
         flexWrap: 'wrap',
@@ -93,6 +93,14 @@ const styles = StyleSheet.create({
     },
     text1: {
         // fontFamily: "VodafoneRg",
+        fontSize: 21,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        letterSpacing: 0,
+        color: "#4b464d"
+    },
+    textBold: {
+        fontFamily: "VodafoneBold",
         fontSize: 21,
         fontWeight: "normal",
         fontStyle: "normal",

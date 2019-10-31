@@ -96,14 +96,34 @@ export default class Organisation0 extends Component {
                                 Technology Director
                             </Text>
                         </View>
-                        {/* ------------- */}
+                        {/* -------Naglaa------ */}
                         <View style={styles.boxItem}>
                             <Image source={Nagla} />
                             <Text style={styles.upperText}>
                             Nagla {"\n"} Kinawi
                             </Text>
                             <Text style={styles.lowerText}>
-                                CEO
+                                HR Director
+                            </Text>
+                        </View>
+                        {/* ------Mohamed Abulallah------- */}
+                        <View style={styles.boxItem}>
+                            <Image source={MohamedAbdullah} />
+                            <Text style={styles.upperText}>
+                            Mohamed {"\n"} Abdallah
+                            </Text>
+                            <Text style={styles.lowerText}>
+                                Consumer Business Unit Director
+                            </Text>
+                        </View>
+                        {/* ------Shahinaz------- */}
+                        <View style={styles.boxItem}>
+                            <Image source={Shahinaz} />
+                            <Text style={styles.upperText}>
+                            Shahinaz {"\n"} Ghazy
+                            </Text>
+                            <Text style={styles.lowerText}>
+                                Customer Care Director
                             </Text>
                         </View>
                         
@@ -114,7 +134,7 @@ export default class Organisation0 extends Component {
                             Karim {"\n"} Shehata
                             </Text>
                             <Text style={styles.lowerText}>
-                                Consumer Business Unit Director
+                                Vodafone Business Unit Director                            
                             </Text>
                         </View>
                         {/* ------------- */}
@@ -210,7 +230,7 @@ const styles = StyleSheet.create({
         margin: DEVICE_HEIGHT * 0.03,
         alignItems: 'center',
         paddingVertical: DEVICE_HEIGHT * 0.02,
-        paddingHorizontal: DEVICE_HEIGHT * 0.02,
+        paddingHorizontal: DEVICE_HEIGHT * 0.01,
     },
     upperText: {
         // width: 111,
