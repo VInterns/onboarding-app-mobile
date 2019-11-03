@@ -24,9 +24,6 @@ import KarimShehata from "../assets/KarimShehata.png";
 import KareemEid from "../assets/KareemEid.png";
 
 
-
-
-
 export default class Organisation0 extends Component {
 
     static navigationOptions = {

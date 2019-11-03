@@ -97,13 +97,13 @@ const styles = StyleSheet.create({
     },
     ScrollView:
     {
-        marginLeft: 0.0628 * DEVICE_WIDTH,
+        paddingHorizontal: 0.0628 * DEVICE_WIDTH,
     },
     HeaderBlackBoldText:
     {
         width: 163,
         height: 61,
-        fontFamily: "VodafoneRg",
+        fontFamily: "VodafoneBold",
         fontSize: DEVICE_WIDTH * 0.1304,
         fontWeight: "bold",
         fontStyle: "normal",
@@ -154,9 +154,9 @@ const styles = StyleSheet.create({
     },
     BlackBoldText:
     {
-        width: 139,
+        // width: 139,
         height: 33,
-        fontFamily: "VodafoneRg",
+        fontFamily: "VodafoneBold",
         fontSize: 0.0676 * DEVICE_WIDTH,
         fontWeight: "bold",
         fontStyle: "normal",

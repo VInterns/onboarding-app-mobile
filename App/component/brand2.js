@@ -58,7 +58,9 @@ export default class Brand2 extends Component {
                     </View>
                 </View>
                 <View style={styles.ButtonsView}>
-                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand1", {})} >
+                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand1", {
+                        shouldPlay: true, 
+                    })} >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>

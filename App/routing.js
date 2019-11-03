@@ -87,7 +87,7 @@ import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
 import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 import events from "./component/events";
 
-// import Survey from "./component/Survey";
+import Survey from "./component/Survey";
 
 import HealthAndSafety from "./component/HealthAndSafety"
 import HealthAndSafety1 from "./component/HealthAndSafety1"

@@ -28,11 +28,27 @@ export default class Brand1 extends Component {
         pause: true
     }
 
+    props:{
+        shouldPlay: Boolean,
+    }
+
+    static getDerivedStateFromProps(props, state){
+     
+        // this.setState((prevState) => ({
+        //     // shouldPlay: !prevState.shouldPlay
+        //     shouldPlay: props.shouldPlay
+
+        // }));
+    
+        return state;
+    }
+
     render() {
         console.log("Widht : " + DEVICE_WIDTH);
         console.log("height : " + DEVICE_HEIGHT);
 
         const { navigate } = this.props.navigation;
+
 
         return (
             <View style={{ width: '100%', height: '100%', flex: 1 }}>
@@ -68,7 +84,14 @@ export default class Brand1 extends Component {
 
 
                 <View style={styles.ButtonsView}>
-                    <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand", {})} >
+                    <TouchableOpacity style={styles.BackButton} onPress={() => {
+                        // this.setState((prevState) => ({
+                        //     // shouldPlay: !prevState.shouldPlay
+                        //     shouldPlay: true
+
+                        // }));
+                        navigate("Brand", {})}
+                    } >
                         <Text style={styles.ButtonText}>
                             BACK
                         </Text>
@@ -79,7 +102,9 @@ export default class Brand1 extends Component {
                         // this.state.pause = false;
 
                         this.setState((prevState) => ({
-                            shouldPlay: !prevState.shouldPlay
+                            // shouldPlay: !prevState.shouldPlay
+                            shouldPlay: false
+
                         }));
                         navigate("Brand2", {});
                     }} >
