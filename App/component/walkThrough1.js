@@ -14,7 +14,7 @@ import {
 } from "react-native";
 
 import FadeInView from "./FadeInView";
-import backgroundImg from "../assets/WalkThrough1.png";
+import backgroundImg from "../assets/Group2.png";
 import mobile from "../assets/mobile.png";
 //import backgroundImg from '../assets/background.png';
 

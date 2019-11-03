@@ -54,7 +54,7 @@ export default class Brand1 extends Component {
                 <View style={styles.TextContainer}>
                     <Text style={styles.blackText}>
                         <Text style={styles.redText}>Vodafone </Text>
-                        introduced a new logo  {'\n'}
+                        introduced it's current logo {'\n'}
                         designed by Brand Union as part of a {'\n'}
                         global brand repositioning. As part of a {'\n'}
                         major global rebranding and brand re- {'\n'}

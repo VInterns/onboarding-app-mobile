@@ -14,7 +14,7 @@ import {
 
 import FadeInView from './FadeInView'
 
-import centerImg from '../assets/DressCodeMale.png'
+import centerImg from '../assets/male.png'
 //import backgroundImg from '../assets/background.png';
 export default class WorkingAtVodafone3 extends Component {
 
@@ -38,23 +38,23 @@ export default class WorkingAtVodafone3 extends Component {
                     <View style={styles.TextPointsContainer}>
                         <Text style={styles.text}>
                             - Jackets{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Shirts{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Pants{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Non-ripped Jeans{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Classic footwear{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Sneakers{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - T-shirts{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Sweatshirts{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - V-cut shirts{'\n'}
-                            <Text style={{fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH,}}>{'\n'}</Text>
+                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
                             - Hoodies{'\n'}
                         </Text>
 
