@@ -19,8 +19,6 @@ import {
 export class Application {
   static current: Application;
 
-
-
   persistor ;
   
 

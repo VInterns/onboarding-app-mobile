@@ -93,7 +93,7 @@ export default class walkThrough3 extends Component {
 
                     <View style={styles.blackView}>
                         <FadeInView>
-                            <Text style={styles.blackText}>exciting,</Text>
+                            <Text style={styles.RedText}>exciting.</Text>
                         </FadeInView>
                     </View>
                 </View>
@@ -148,8 +148,13 @@ const styles = StyleSheet.create({
         marginLeft: DEVICE_WIDTH
     },
     RedText: {//red text style
-        color: 'red',
-        fontSize: DEVICE_WIDTH * 0.08,
+        fontFamily: "VodafoneRg",
+        fontSize: 37,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        lineHeight: 44,
+        letterSpacing: 0,
+        color: "#e60000",
 
     },
 

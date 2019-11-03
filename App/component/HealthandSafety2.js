@@ -90,10 +90,10 @@ export default class HealthAndSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={360} moveYsecond={390} moveXfirst={30} moveXsecond={60} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={470} moveYsecond={530} moveXfirst={30} moveXsecond={60} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={590} moveYsecond={660} moveXfirst={30} moveXsecond={60} answerId={3} qtrue={q3true} />
-          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={740} moveYsecond={820} moveXfirst={30} moveXsecond={60} answerId={4} qtrue={q4true} />
+          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={590} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={360} moveYsecond={390} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={470} moveYsecond={530} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={740} moveYsecond={820} moveXfirst={40} moveXsecond={80} answerId={4} qtrue={q4true} />
         </View>
 
         <View style={styles.answersContainer}>
@@ -134,7 +134,7 @@ export default class HealthAndSafety2 extends Component {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => {
-            console.log('props is ->>>>', this.props.navigation.navigate);
+            // console.log('props is ->>>>', this.props.navigation.navigate);
             this.checkAnswers();
           }} >
             <Text style={styles.ButtonText}>
@@ -159,8 +159,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'stretch',
-    padding: DEVICE_WIDTH * 0.08,
-    backgroundColor: '#EE82EE',
+    paddingLeft: DEVICE_WIDTH * 0.08,
+    paddingRight: DEVICE_WIDTH * 0.08,
+    // backgroundColor: '#EE82EE',
   },
   dropZone: {
     width: CIRCLE_RADIUS * 2,
@@ -172,7 +173,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
-    backgroundColor: '#00BFFF',
+    // backgroundColor: '#00BFFF',
     flex: 2.5,
     paddingTop: DEVICE_HEIGHT * 0.08,
     flexWrap: 'wrap',
@@ -198,20 +199,20 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   imagesContainer: {
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   answersContainer: {
-    backgroundColor: 'orange',
+    // backgroundColor: 'orange',
     flexDirection: 'column',
     flex: 8,
     zIndex: -1,
   },
   questionContainer: {
     flexDirection: 'row',
-    borderWidth: 3,
+    // borderWidth: 3,
     flex: 1,
   },
   questionTextContainer: {
@@ -220,7 +221,7 @@ const styles = StyleSheet.create({
   },
   questionTextLarge: {
     flexWrap: 'wrap',
-    backgroundColor: '#C0C0C0',
+    // backgroundColor: '#C0C0C0',
     fontFamily: "VodafoneBold",
     fontSize: 16,
     fontWeight: "bold",

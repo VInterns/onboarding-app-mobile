@@ -61,7 +61,7 @@ export class Login extends Component {
   render() {
     const { navigate } = this.props.navigation;
     const loadingSpinner = this.props.loading ? (
-      <Spinner color="red" style={{ position: 'absolute' }} />
+      <Spinner color="red" />
     ) : (
         <Text bold red margin20>
           {" "}

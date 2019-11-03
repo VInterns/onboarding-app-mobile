@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
     },
     imageStyle: {
         flex: 1,
-        resizeMode: 'stretch'
+        resizeMode: 'stretch',
+        width: DEVICE_HEIGHT * 0.09,
     },
 
     blackText: {//welcome to word style

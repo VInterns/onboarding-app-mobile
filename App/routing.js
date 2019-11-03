@@ -67,6 +67,7 @@ import Brand6 from "./component/brand6";
 import Brand7 from "./component/brand7";
 
 import Organisation from "./component/Organisation";
+import Organisation0 from "./component/Organisation0";
 import Organisation1 from "./component/Organisation1";
 import Organisation2 from "./component/Organisation2";
 import Organisation3 from "./component/Organisation3";
@@ -88,14 +89,15 @@ import events from "./component/events";
 
 // import Survey from "./component/Survey";
 
-
 import HealthAndSafety from "./component/HealthAndSafety"
 import HealthAndSafety1 from "./component/HealthAndSafety1"
 import HealthAndSafety2 from "./component/HealthAndSafety2";
 import HealthAndSafety3 from "./component/HealthAndSafety3";
+import HealthAndSafety5 from "./component/HealthAndSafety5";
 import HealthAndSafety9 from "./component/HealthAndSafety9"
 import HealthAndSafety10 from "./component/HealthAndSafety10"
 import HealthAndSafety11 from "./component/HealthAndSafety11"
+import Contacts from "./component/Contacts"
 
 
 const handleCustomTransition = ({ scenes }) => {
@@ -275,6 +277,7 @@ const AppNavigator = createStackNavigator(
     Brand6: { screen: Brand6 },
     Brand7: { screen: Brand7 },
     Organisation: { screen: Organisation },
+    Organisation0: { screen: Organisation0 },
     Organisation1: { screen: Organisation1 },
     Organisation2: { screen: Organisation2 },
     Organisation3: { screen: Organisation3 },
@@ -285,11 +288,11 @@ const AppNavigator = createStackNavigator(
     History11: { screen: History11 },
     History12: { screen: History12 },
     History13: { screen: History13 },
-
     HealthAndSafety: { screen: HealthAndSafety },
     HealthAndSafety1: { screen: HealthAndSafety1 },
     HealthAndSafety2: { screen: HealthAndSafety2 },
     HealthAndSafety3: { screen: HealthAndSafety3 },
+    HealthAndSafety5: { screen: HealthAndSafety5 },
     HealthAndSafety9: { screen: HealthAndSafety9 },
     HealthAndSafety10: { screen: HealthAndSafety10 },
     HealthAndSafety11: { screen: HealthAndSafety11 },
@@ -303,8 +306,8 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
     events: { screen: events },
-    HealthAndSafety: { screen: HealthAndSafety },
-    // Survey: { screen: Survey },
+    Survey: { screen: Survey },
+    Contacts: { screen: Contacts },
   },
 
   {

@@ -19,8 +19,6 @@ const workingatheight = '../assets/workingatheight.png';
 let question1: Boolean = false;
 let question2: Boolean = false;
 let question3: Boolean = false;
-let question4: Boolean = false;
-
 
 function q1true() {
   question1 = true;
@@ -54,8 +52,8 @@ export default class HealthandSafety2 extends Component {
     // const { navigate } = this.props.navigation;
     // console.log('inside checkAnswers function', this.props.navigation.navigate);
     // console.log(question1 , question2 , question3 , question4);
-    if (question1 && question2 && question3 && question4) {
-      this.props.navigation.navigate("HealthAndSafety9");
+    if (question1 && question2 && question3) {
+      this.props.navigation.navigate("HealthAndSafety5");
     } else {
       // ()=> navigate("HealthAndSafety");
     }
@@ -85,17 +83,19 @@ export default class HealthandSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={360} moveYsecond={390} moveXfirst={30} moveXsecond={60} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={470} moveYsecond={530} moveXfirst={30} moveXsecond={60} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={590} moveYsecond={660} moveXfirst={30} moveXsecond={60} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={500} moveYsecond={540} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={590} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={380} moveYsecond={420} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
         </View>
-
+        {/* 470 530 */}
+        {/* 590 660 */}
+        {/* 360 390 */}
         <View style={styles.answersContainer}>
           {/* answers here */}
           <View style={styles.questionContainer}>
             <View style={styles.dropZone}></View>
             <View style={styles.questionTextContainer}>
-            <Text style={styles.questionTextSmall}>When working at height,<Text style={styles.questionTextLarge}> ALWAYS</Text> When working at height, ALWAYS wear protective gear, attach a safety harness and use fall protection equipment</Text>
+            <Text style={styles.questionTextSmall}>When working at height,<Text style={styles.questionTextLarge}> ALWAYS</Text> wear protective gear, attach a safety harness and use fall protection equipment</Text>
             </View>
           </View>
           <View style={styles.questionContainer}>
@@ -148,7 +148,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'stretch',
-    padding: DEVICE_WIDTH * 0.08,
+    paddingLeft: DEVICE_WIDTH * 0.08,
+    paddingRight: DEVICE_WIDTH * 0.08,
     // backgroundColor: '#EE82EE',
   },
   dropZone: {
@@ -213,8 +214,6 @@ const styles = StyleSheet.create({
     // backgroundColor: '#C0C0C0',
     fontFamily: "VodafoneBold",
     fontSize: 16,
-    // fontWeight: "bold",
-    // fontStyle: "normal",
     letterSpacing: 0,
     color: "#4b464d",
   },
@@ -222,11 +221,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     fontFamily: "VodafoneRg",
     fontSize: 16,
-    // fontWeight: "normal",
-    // fontStyle: "normal",
     lineHeight: 20,
     letterSpacing: 0,
-    // color: "#4b464d"
+    color: "#4b464d"
   },
   draggable: {
     zIndex: 100,
