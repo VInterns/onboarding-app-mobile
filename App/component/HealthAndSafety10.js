@@ -29,7 +29,7 @@ export default class HealthAndSafety10 extends Component {
                 <View style={styles.TextContainer}>
                     <Text style={styles.Text}>
                         <Text style={styles.BoldText}>
-                            please pick up your phone now and {'\n'}
+                            Please pick up your phone now and {'\n'}
                             save the following contacts for any {'\n'}
                             emergancies{'\n'}
                             {'\n'}

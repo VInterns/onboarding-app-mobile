@@ -36,7 +36,7 @@ export default class History10 extends Component {
 
         return (
 
-            <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+            <View style={styles.mainContainer}>
 
                 {/* text view*/}
                 <View style={styles.TextContainer}>
@@ -129,6 +129,12 @@ const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
 
+    mainContainer:{
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        flex: 1,
+        paddingHorizontal: DEVICE_WIDTH * 0.04
+    },
     Text: {//welcome to word style
         fontFamily: "VodafoneBold",
         fontSize: 21,
@@ -155,7 +161,6 @@ const styles = StyleSheet.create({
         letterSpacing: 0,
         color: "#e60000"
     },
-
     TextContainer: {/* Welcome back and vodabuddy wrapper */
         alignItems: 'center',
         justifyContent: 'center',
@@ -168,14 +173,11 @@ const styles = StyleSheet.create({
         marginTop: DEVICE_HEIGHT * (5 / DEVICE_WIDTH),
         marginHorizontal: DEVICE_WIDTH * (10 / DEVICE_WIDTH),
         paddingLeft: DEVICE_WIDTH * (18 / DEVICE_WIDTH)
-
     },
-
     button: { // button design
         alignItems: 'center',
         justifyContent: 'center'
     },
-
     NextButtonView: { //wrapper for button 
         flex: 1,
         alignItems: 'center',
@@ -185,7 +187,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
-
     },
     ButtonText: { // text inside button
         color: 'black',
