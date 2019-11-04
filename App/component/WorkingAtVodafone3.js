@@ -14,7 +14,7 @@ import {
 
 import FadeInView from './FadeInView'
 
-import centerImg from '../assets/male.png'
+import maleImg from '../assets/male.png'
 //import backgroundImg from '../assets/background.png';
 export default class WorkingAtVodafone3 extends Component {
 
@@ -30,54 +30,56 @@ export default class WorkingAtVodafone3 extends Component {
         return (
 
             <View style={styles.ScreenContainer}>
-                <View style={styles.TextContainer}>
-                    <Text style={styles.blackText}>You are</Text>
-                    <Text style={styles.redText}>Free to wear</Text>
-                </View>
-                <View style={styles.imageAndTextContainer}>
-                    <View style={styles.TextPointsContainer}>
-                        <Text style={styles.text}>
-                            - Jackets{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Shirts{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Pants{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Non-ripped Jeans{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Classic footwear{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Sneakers{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - T-shirts{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Sweatshirts{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - V-cut shirts{'\n'}
-                            <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
-                            - Hoodies{'\n'}
-                        </Text>
+                <ImageBackground source={maleImg} style={styles.wallpaper}>
 
+                    <View style={styles.TextContainer}>
+                        <Text style={styles.blackText}>You are</Text>
+                        <Text style={styles.redText}>Free to wear</Text>
                     </View>
+                    <View style={styles.imageAndTextContainer}>
+                        <View style={styles.TextPointsContainer}>
+                            <Text style={styles.text}>
+                                - Jackets{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Shirts{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Pants{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Non-ripped Jeans{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Classic footwear{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Sneakers{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - T-shirts{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Sweatshirts{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - V-cut shirts{'\n'}
+                                <Text style={{ fontSize: (10 / DEVICE_WIDTH) * DEVICE_WIDTH, }}>{'\n'}</Text>
+                                - Hoodies{'\n'}
+                            </Text>
 
-                    <View style={styles.imageContainer}>
+                        </View>
+
+                        {/* <View style={styles.imageContainer}>
                         <Image source={centerImg} style={styles.imageStyle} />
+                    </View> */}
                     </View>
-                </View>
 
-                <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone2")} >
-                        <Text style={styles.ButtonText}>
-                            Back
+                    <View style={styles.NextButtonView}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone2")} >
+                            <Text style={styles.ButtonText}>
+                                Back
                        </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone4")} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone4")} >
+                            <Text style={styles.ButtonText}>
+                                NEXT
                        </Text>
-                    </TouchableOpacity>
-                </View>
-
+                        </TouchableOpacity>
+                    </View>
+                </ImageBackground>
             </View >
 
         );
@@ -86,6 +88,11 @@ export default class WorkingAtVodafone3 extends Component {
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
+    wallpaper:
+    {
+        height: "100%",
+        width: "100%",
+    },
     ScreenContainer: {
         //flexWrap:'wrap',
         justifyContent: 'center',
