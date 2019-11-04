@@ -50,7 +50,7 @@ export default class Brand5 extends Component {
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
                             {'\n'}
                             But when it comes to Vodafone Logo, Vodafone  {'\n'}
-                            stood in place with the authentic speech mark Logo,  {'\n'}
+                            stood in place with the authentic Speechmark Logo,  {'\n'}
                             as Vodafone became very well known worldwide. {'\n'}
                             Watch the next video to see how the Logo evolved
                         </Text>
