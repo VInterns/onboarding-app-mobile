@@ -13,3 +13,11 @@ export interface UserRegisterModel {
 export interface NextScreenModel {
   nextScreen: String;
 }
+
+export interface SurveyModel {
+
+  userId: String,
+  useful: Number,
+  engaging: Number,
+  comment: String
+}
