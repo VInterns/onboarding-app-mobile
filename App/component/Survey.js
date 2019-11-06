@@ -3,11 +3,8 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
-    Image,
     TouchableOpacity,
-    ImageBackground,
     Dimensions,
-    KeyboardAvoidingView,
     Text,
     TextInput,
 

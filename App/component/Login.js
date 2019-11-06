@@ -44,9 +44,6 @@ export class Login extends Component {
   };
 
   static navigationOptions = {
-    //header styling
-    // title: "Welcome",
-    // fontWeight: "bold"
     header: null
   };
 
