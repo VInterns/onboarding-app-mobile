@@ -49,7 +49,7 @@ export default class walkThrough1 extends Component {
     }
 
     tryNavigate = () => {
-        console.log("inside tryNavigate walkThrough1");
+        // console.log("inside tryNavigate walkThrough1");
         this.props.tryNavigate("walkThrough2");
         this.props.navigation.navigate("walkThrough2");
     };

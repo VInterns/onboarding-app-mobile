@@ -42,16 +42,16 @@ class LoginContainer extends Component {
 
 
   static getDerivedStateFromProps(props, state) {
-    console.log('error message 1',props.errorMessage);
-    props.errorMessage = '';
-    console.log('error message 2', props.errorMessage);
+    // console.log('error message 1',props.errorMessage);
+    // props.errorMessage = '';
+    // console.log('error message 2', props.errorMessage);
 
-    console.log("Is loggedin " + props.isLoggedIn);
+    // console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
-      // props.navigation.navigate(props.lastScreen || "walkThrough");
-      console.log("navigate to last screen :",props.lastScreen);
-      props.navigation.navigate("Survey");
+      props.navigation.navigate(props.lastScreen || "walkThrough");
+      // console.log("navigate to last screen :",props.lastScreen);
+      // props.navigation.navigate("Survey");
 
 
       return state;
@@ -63,11 +63,8 @@ class LoginContainer extends Component {
   render() {
 
     // this.props.logout()
-    
-    /// --> TO LOGOUT AND CLEAR PRESIST STATE
-      
     // this.props.resetMsg()
-
+    /// --> TO LOGOUT AND CLEAR PRESIST STATE
     return (
       <Login
         loading={this.props.loading}

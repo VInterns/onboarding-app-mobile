@@ -2,7 +2,7 @@ const PROD_BASE_URL = "";
 
 
 // const DEV_BASE_URL = "https://6bb22b13.ngrok.io/";
-const DEV_BASE_URL = "https://ab4677a2.ngrok.io/";
+const DEV_BASE_URL = "https://71b50bd4.ngrok.io/";
 
 
 // const PROD_BASE_URL = "";

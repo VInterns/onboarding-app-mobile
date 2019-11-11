@@ -36,15 +36,16 @@ export async function tryLogin(user: UserLoginModel) {
     dispatch({ type: UiTypes.UI_START_LOADING });
     debugger;
     let response = await authProxyService.login(user);
+    // console.log('response inside action creator tryLogin',response);
 
     debugger;
     if (response.status === 200) {
-      token = await response.json();
+      // token = await response.json();
       dispatch(success());
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
       debugger;
-      console.log('inside ui else section ... ');
+      // console.log('inside ui else section ... ');
       dispatch(fail("Invalid credentials"));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     }
