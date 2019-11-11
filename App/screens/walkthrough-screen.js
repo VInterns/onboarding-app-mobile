@@ -26,7 +26,7 @@ class Walkthrough1Container extends Component {
   };
 
   static getDerivedStateFromProps(props, state) {
-    props.navigation.navigate(props.lastScreen);
+    // props.navigation.navigate(props.lastScreen);
 
     return state;
   }

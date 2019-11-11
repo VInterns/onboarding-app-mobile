@@ -84,7 +84,7 @@ export default class HealthandSafety2 extends Component {
         <View style={styles.imagesContainer}>
           {/* images here  */}
           <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={500} moveYsecond={540} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={590} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={620} moveYsecond={680} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
           <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={380} moveYsecond={420} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
         </View>
         {/* 470 530 */}

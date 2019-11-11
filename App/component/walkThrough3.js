@@ -68,16 +68,26 @@ export default class walkThrough3 extends Component {
         return true;
     }
 
+    // static mapStateToProps(state: State) {
+    //     return {
+    //         lastScreen: state.authorization.lastScreen
+    //     };
+    // }
+
+    // static mapDispatchToProps(dispatch: Dispatch) {
+    //     return bindActionCreators({ tryNavigate }, dispatch);
+    // }
+
     tryNavigate = () => {
         debugger;
         this.props.tryNavigate("video1");
-        props.navigation.navigate("video1")
+        // props.navigation.navigate("video1")
     };
 
 
     render() {
 
-        const { navigate } = this.props.navigation;
+        // const { navigate } = this.props.navigation;
 
         const show =
 

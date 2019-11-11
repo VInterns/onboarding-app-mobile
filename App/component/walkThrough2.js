@@ -50,6 +50,7 @@ export default class walkThrough2 extends Component {
 
     tryNavigate = () => {
         this.props.tryNavigate("walkThrough3");
+        this.props.navigation.navigate("walkThrough3");
     };
 
 

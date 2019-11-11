@@ -50,7 +50,8 @@ class LoginContainer extends Component {
     if (props.isLoggedIn) {
 
       // props.navigation.navigate(props.lastScreen || "walkThrough");
-      props.navigation.navigate("WorkingAtVodafone");
+      console.log("navigate to last screen :",props.lastScreen);
+      props.navigation.navigate("Survey");
 
 
       return state;
@@ -61,7 +62,9 @@ class LoginContainer extends Component {
 
   render() {
 
-    // this.props.logout()  /// --> TO LOGOUT AND CLEAR PRESIST STATE
+    // this.props.logout()
+    
+    /// --> TO LOGOUT AND CLEAR PRESIST STATE
       
     // this.props.resetMsg()
 

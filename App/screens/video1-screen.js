@@ -28,6 +28,7 @@ class Video1Container extends Component {
 
     render() {
         console.log("Here in video1 screen render");
+        console.log('This is the props of Video1 --->',this.props)
         return (
             <Video1
                 tryNavigate={this.props.tryNavigate}
