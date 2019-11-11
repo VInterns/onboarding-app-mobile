@@ -38,7 +38,7 @@ export async function tryLogin(user: UserLoginModel) {
     // let res = response.json();
     debugger;
     if (response.status === 200) {
-      token = await response.json();
+      // token = await response.json();
       dispatch(success());
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
