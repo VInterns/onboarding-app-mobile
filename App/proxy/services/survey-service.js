@@ -4,9 +4,14 @@ import {
 } from "../models/index";
 
 export class SurveyService {
+    constructor() {
+
+    }
+
     async addSurvey(survey: SurveyModel) {
+        debugger;
         const data = {};
-        data["id"] = survey.userId;
+        data["id"] = survey.id;
         data["useful"] = survey.useful;
         data["enggaging"] = survey.engaging;
         data["comment"] = survey.comment;

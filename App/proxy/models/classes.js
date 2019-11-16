@@ -15,8 +15,7 @@ export interface NextScreenModel {
 }
 
 export interface SurveyModel {
-
-  userId: String,
+  id: String,
   useful: Number,
   engaging: Number,
   comment: String

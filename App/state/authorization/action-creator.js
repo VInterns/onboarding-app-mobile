@@ -4,7 +4,9 @@ import {
   authProxyService,
   TokenDto,
   UserLoginModel,
-  UserRegisterModel
+  UserRegisterModel,
+  SurveyModel,
+  surveyService
 } from "../../proxy";
 import * as UiTypes from "../ui/actions";
 
@@ -28,6 +30,18 @@ export type REGISTER_SUCCESS_Action = { type: string, payload: any };
 export type REGISTER_FAIL_Action = { type: string, payload: string };
 
 /*************************** */
+// export async function addSurvey(survey: SurveyModel) {
+//   debugger;
+//   return async dispatch => {
+//     let response = await surveyService.addSurvey(survey);
+//     if (response.status === 200) {
+//       console.log("1 Survey added successfully");
+//     }
+//     else {
+//       console.log("an error occured while adding the survey");
+//     }
+//   };
+// }
 
 export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
@@ -39,7 +53,7 @@ export async function tryLogin(user: UserLoginModel) {
     debugger;
     if (response.status === 200) {
       // token = await response.json();
-      dispatch(success());
+      dispatch(success(response.userId));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
       console.log('inside ui else section ... ');
@@ -86,8 +100,8 @@ export function onLogin(user): ON_LOGIN_Action {
   return { type: types.ON_LOGIN, payload: user };
 }
 
-export function success(): LOGIN_SUCCESS_Action {
-  return { type: types.LOGIN_SUCCESS };
+export function success(userId): LOGIN_SUCCESS_Action {
+  return { type: types.LOGIN_SUCCESS, payload: userId };
 }
 
 export async function fail(errorMsg): LOGIN_FAIL_Action {

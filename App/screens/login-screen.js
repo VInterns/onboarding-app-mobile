@@ -25,9 +25,6 @@ class LoginContainer extends Component {
     return bindActionCreators({ tryLogin, logout, onNextScreen, resetMsg }, dispatch);
   }
 
-  componentDidMount() {
-
-  }
 
   props: {
     errorMessage: string,
@@ -42,20 +39,13 @@ class LoginContainer extends Component {
 
 
   static getDerivedStateFromProps(props, state) {
-    // console.log('error message 1', props.errorMessage);
-    // props.errorMessage = '';
-    // console.log('error message 2', props.errorMessage);
-
     console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
-      props.navigation.navigate(props.lastScreen || "walkThrough");
-      // props.navigation.navigate("Survey");
-
-
+      // props.navigation.navigate(props.lastScreen || "walkThrough");
+      props.navigation.navigate("survey");
       return state;
     }
-    // debugger;
     return state;
   }
 
