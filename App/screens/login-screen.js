@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { State, tryLogin, logout, onNextScreen, resetMsg } from "../state";
 
 import { UserLoginModel } from "../proxy";
-import { Login } from "../component/Login";
+import { Login } from "../component/newLogin";
 
 class LoginContainer extends Component {
   constructor() {
@@ -51,7 +51,7 @@ class LoginContainer extends Component {
 
   render() {
 
-    this.props.logout()  /// --> TO LOGOUT AND CLEAR PRESIST STATE
+    //this.props.logout()  /// --> TO LOGOUT AND CLEAR PRESIST STATE
 
     // this.props.resetMsg()
 

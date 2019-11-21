@@ -126,7 +126,7 @@ export class Login extends Component {
               </View>
 
               {/*  button view */}
-              {loadingSpinner}
+              {/* {loadingSpinner} */}
 
               <View>
                 <TouchableOpacity

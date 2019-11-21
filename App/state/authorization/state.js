@@ -17,4 +17,3 @@ export const AuthorizationInitialState: AuthorizationState = {
   lastScreen: "walkThrough",
   userId: ""
 };
-
