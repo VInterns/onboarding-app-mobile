@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { State, tryLogin, logout, onNextScreen, resetMsg} from "../state";
+import { State, tryLogin, logout, onNextScreen, resetMsg } from "../state";
 
 import { UserLoginModel } from "../proxy";
-import { Login } from "../component/Login";
+import { Login } from "../component/newLogin";
 
 class LoginContainer extends Component {
   constructor() {
@@ -24,10 +24,7 @@ class LoginContainer extends Component {
   static mapDispatchToProps(dispatch: Dispatch) {
     return bindActionCreators({ tryLogin, logout, onNextScreen, resetMsg }, dispatch);
   }
-  
-  componentDidMount(){
 
-  }
 
   props: {
     errorMessage: string,
@@ -42,21 +39,15 @@ class LoginContainer extends Component {
 
 
   static getDerivedStateFromProps(props, state) {
-    // console.log('error message 1',props.errorMessage);
-    // props.errorMessage = '';
-    // console.log('error message 2', props.errorMessage);
 
-    // console.log("Is loggedin " + props.isLoggedIn);
+    console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
       props.navigation.navigate(props.lastScreen || "walkThrough");
-      // console.log("navigate to last screen :",props.lastScreen);
-      // props.navigation.navigate("HealthAndSafety2");
-
+      // props.navigation.navigate("Menu");
 
       return state;
     }
-    debugger;
     return state;
   }
 
@@ -65,6 +56,7 @@ class LoginContainer extends Component {
     // this.props.logout()
     // this.props.resetMsg()
     /// --> TO LOGOUT AND CLEAR PRESIST STATE
+
     return (
       <Login
         loading={this.props.loading}

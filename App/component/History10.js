@@ -17,7 +17,7 @@ import {
 import FadeInView from './FadeInView'
 
 
-import NickImg from '../assets/group_3.png'
+import NickImg from '../assets/nick.png'
 import { Left } from 'native-base';
 
 export default class History10 extends Component {
@@ -129,9 +129,9 @@ const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
 
-    mainContainer:{
-        justifyContent: 'center', 
-        alignItems: 'center', 
+    mainContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
         flex: 1,
         paddingHorizontal: DEVICE_WIDTH * 0.04
     },

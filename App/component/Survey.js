@@ -3,34 +3,65 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
-    Image,
     TouchableOpacity,
-    ImageBackground,
     Dimensions,
-    KeyboardAvoidingView,
     Text,
     TextInput,
 
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Card } from 'react-native-elements'
-import { Rating, AirbnbRating } from 'react-native-ratings';
+import { AirbnbRating } from 'react-native-ratings';
+import { surveyService } from "../proxy";
+import { SurveyModel } from "../proxy";
 
 export default class Survey extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            id: "",  //// to be changed to be dynamic
+            useful: 3,
+            engaging: 3,
+            comment: "test"
+        };
+    }
+    componentDidMount() {
+        debugger;
+        this.setState({ id: this.props.userId });
+    }
+
+    props: {
+        userId: string,
+        // addSurvey: (survey: SurveyModel) => void,
+    };
 
     static navigationOptions = {//header styling
         header: null
     };
-    ratingCompleted(rating) {
-        console.log(`Rating is: ${rating}`);
+    setUseful(rating) {
+        this.setState({ useful: rating });
     }
 
-    render() {
-        const { navigate } = this.props.navigation;
-        const DEVICE_WIDTH = Dimensions.get('window').width;
-        const DEVICE_HEIGHT = Dimensions.get('window').height;
-        return (
+    setEngaging(rating) {
+        this.setState({ engaging: rating });
+    }
 
+    handleComment(text) {
+        this.setState({ comment: text });
+    }
+
+    async OnDoneClicked() {
+        debugger;
+        let response = await surveyService.addSurvey(this.state);
+        if (response.status === 200) {
+            console.log("1 Survey added successfully");
+        }
+        else {
+            console.log("an error occured while adding the survey");
+        }
+    }
+    render() {
+        return (
             <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
                 <Card title="Survey Questions" containerStyle={styles.card} titleStyle={styles.titleStyle}>
@@ -39,7 +70,7 @@ export default class Survey extends Component {
                     </Text>
 
                     <View style={styles.StarContainer}>
-                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} />
+                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} onFinishRating={this.setUseful.bind(this)} />
                     </View>
 
                     <Text style={styles.text}>
@@ -47,32 +78,27 @@ export default class Survey extends Component {
                     </Text>
 
                     <View style={styles.StarContainer}>
-                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} />
+                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} onFinishRating={this.setEngaging.bind(this)} />
                     </View>
 
                     <View style={styles.textContainer}>
                         <Text style={styles.text}>
-                            Please share with us any comment
-                        </Text>
-
-                        <Text style={styles.text}>
-                            that would enhance the experience.
+                            Please share with us any comment that would enhance the experience.
                         </Text>
                     </View>
 
                     <View style={styles.textAreaContainer}>
-                        <TextInput multiline={true} numberOfLines={10} placeholder="Comment...." placeholderTextColor="grey" style={styles.textArea} />
+                        <TextInput multiline={true} numberOfLines={10} placeholder="Comment...." placeholderTextColor="grey" style={styles.textArea} onChangeText={this.handleComment.bind(this)} />
                     </View>
 
                     <View style={styles.ButtonView}>
-                        <TouchableOpacity style={styles.button} onPress={() => navigate("Survey")} >
+                        <TouchableOpacity style={styles.button} onPress={this.OnDoneClicked.bind(this)} >
                             <Text style={styles.ButtonText}>
                                 Done
                             </Text>
                         </TouchableOpacity>
                     </View>
                 </Card>
-
             </View >
 
         );

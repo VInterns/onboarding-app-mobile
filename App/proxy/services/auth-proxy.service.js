@@ -6,6 +6,12 @@ import {
 } from "../models/index";
 
 export class AuthProxyService {
+
+  constructor() {
+    this.state = {
+      userId: ""
+    };
+  }
   async login(user: UserLoginModel) {
     debugger;
     const data = {};
@@ -16,10 +22,8 @@ export class AuthProxyService {
       method: "post",
       headers: { "content-Type": "application/json" },
       body: JSON.stringify(data)
-    }).then((response) => {
-      // console.log('response inside fetch.then',response.json());
-      return response.json();
-     });
+    }).then(response => { return response.json() });
+
   }
 
   async register(user: UserRegisterModel) {

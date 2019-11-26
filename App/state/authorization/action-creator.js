@@ -4,7 +4,9 @@ import {
   authProxyService,
   TokenDto,
   UserLoginModel,
-  UserRegisterModel
+  UserRegisterModel,
+  SurveyModel,
+  surveyService
 } from "../../proxy";
 import * as UiTypes from "../ui/actions";
 
@@ -28,24 +30,34 @@ export type REGISTER_SUCCESS_Action = { type: string, payload: any };
 export type REGISTER_FAIL_Action = { type: string, payload: string };
 
 /*************************** */
+// export async function addSurvey(survey: SurveyModel) {
+//   debugger;
+//   return async dispatch => {
+//     let response = await surveyService.addSurvey(survey);
+//     if (response.status === 200) {
+//       console.log("1 Survey added successfully");
+//     }
+//     else {
+//       console.log("an error occured while adding the survey");
+//     }
+//   };
+// }
 
 export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
-    debugger;
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_START_LOADING });
-    debugger;
     let response = await authProxyService.login(user);
-    // console.log('response inside action creator tryLogin',response);
 
+    console.log("this is the login response : ", response);
+    // let res = response.json();
     debugger;
     if (response.status === 200) {
       // token = await response.json();
-      dispatch(success());
+      dispatch(success(response.userId));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
-      debugger;
-      // console.log('inside ui else section ... ');
+      console.log('inside ui else section ... ');
       dispatch(fail("Invalid credentials"));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     }
@@ -89,14 +101,15 @@ export function onLogin(user): ON_LOGIN_Action {
   return { type: types.ON_LOGIN, payload: user };
 }
 
-export function success(): LOGIN_SUCCESS_Action {
-  return { type: types.LOGIN_SUCCESS };
+export function success(userId): LOGIN_SUCCESS_Action {
+  return { type: types.LOGIN_SUCCESS, payload: userId };
 }
 
 export async function fail(errorMsg): LOGIN_FAIL_Action {
   return async dispatch => {
-    dispatch( {type: UiTypes.UI_STOP_LOADING, payload: errorMsg});
-    dispatch( {type: types.LOGIN_FAIL, payload: errorMsg})};
+    dispatch({ type: UiTypes.UI_STOP_LOADING, payload: errorMsg });
+    dispatch({ type: types.LOGIN_FAIL, payload: errorMsg })
+  };
 }
 
 export function onRegister(): ON_REGISTER_Action {
@@ -123,10 +136,10 @@ export function onNextScreen(nextScreen): NextScreenModel {
   return {
     type: types.ON_NEXT_SCREEN,
     payload: nextScreen
-  };  
+  };
 }
 
 export function resetMsg(): RESET_VALIDATION_MSG_Action {
   console.log('inside resetMsg() function');
-  return { type: types.RESET_VALIDATION_MSG};
+  return { type: types.RESET_VALIDATION_MSG };
 }

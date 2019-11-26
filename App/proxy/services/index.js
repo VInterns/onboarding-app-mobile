@@ -1,5 +1,5 @@
 import { AuthProxyService } from "./auth-proxy.service";
-
+import { SurveyService } from "./survey-service"
 const authProxyService = new AuthProxyService();
-
-export { authProxyService };
+const surveyService = new SurveyService()
+export { authProxyService, surveyService };

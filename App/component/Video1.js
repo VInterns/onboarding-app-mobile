@@ -15,12 +15,12 @@ export default class Video1 extends React.Component {
     };
     tryNavigate = () => {
         // console.log("Before try naviate vid")
-        this.props.tryNavigate("History");
+
+        // this.props.tryNavigate("History");
+
         // console.log("After try naviate vid")
     };
-    // static navigationOptions = {//header styling
-    //     header: null
-    // };
+
     _onPlaybackStatusUpdate = playbackStatus => {
         if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.
             this.setState({ navigated: true });

@@ -17,7 +17,6 @@ export function authorizationReducer(
   state: AuthorizationState = AuthorizationInitialState,
   action: Action
 ): AuthorizationState {
-  debugger;
   switch (action.type) {
     case types.ON_LOGIN: {
       return {
@@ -31,6 +30,7 @@ export function authorizationReducer(
         ...state,
         token: action.payload,
         isLoggedIn: true,
+        userId: action.payload.userId
         // lastScreen: "walkThrough"
         // username: action.payload.username
       };
@@ -68,7 +68,7 @@ export function authorizationReducer(
     case types.LOGOUT: {
       return {
         ...state,
-        isLoggedIn:false,
+        isLoggedIn: false,
         lastScreen: "walkThrough"
       }
     }
@@ -80,7 +80,7 @@ export function authorizationReducer(
       }
     }
 
-    case types.RESET_VALIDATION_MSG:{
+    case types.RESET_VALIDATION_MSG: {
       return {
         ...state,
         errorMessage: '',

@@ -34,7 +34,7 @@ const handleCustomTransition = ({ scenes }) => { //handle transitions between sc
   } else if (prevScene
     && prevScene.route.routeName === 'walkThrough3'
     && nextScene.route.routeName === 'History') {
-    return fromTop(600);  
+    return fromTop(600);
   } else if (prevScene
     && prevScene.route.routeName === 'History1'
     && nextScene.route.routeName === 'ErrorAlert') {
@@ -67,8 +67,8 @@ const MainNavigator = createStackNavigator({
   History4: { screen: History4 },
   History5: { screen: History5 },
 }, {
-    transitionConfig: (nav) => handleCustomTransition(nav)
-  });
+  transitionConfig: (nav) => handleCustomTransition(nav)
+});
 
 const Main = createAppContainer(MainNavigator);
 

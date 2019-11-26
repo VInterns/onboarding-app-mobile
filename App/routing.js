@@ -87,18 +87,18 @@ import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
 import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 import events from "./component/events";
 
-import Survey from "./component/Survey";
+import { survey } from "./screens/survey-screen";
 
 import HealthAndSafety from "./component/HealthAndSafety"
 import HealthAndSafety1 from "./component/HealthAndSafety1"
 import HealthAndSafety2 from "./component/HealthAndSafety2";
 import HealthAndSafety3 from "./component/HealthAndSafety3";
 import HealthAndSafety5 from "./component/HealthAndSafety5";
-import HealthAndSafety9 from "./component/HealthAndSafety9"
-import HealthAndSafety10 from "./component/HealthAndSafety10"
-import HealthAndSafety11 from "./component/HealthAndSafety11"
-import Contacts from "./component/Contacts"
-
+import HealthAndSafety9 from "./component/HealthAndSafety9";
+import HealthAndSafety10 from "./component/HealthAndSafety10";
+import HealthAndSafety11 from "./component/HealthAndSafety11";
+import Contacts from "./component/Contacts";
+import Menu from "./component/Menu";
 
 const handleCustomTransition = ({ scenes }) => {
   //handle transitions between screens
@@ -306,8 +306,10 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
     events: { screen: events },
-    Survey: { screen: Survey },
+    survey: { screen: survey },
+
     Contacts: { screen: Contacts },
+    Menu: { screen: Menu },
   },
 
   {

@@ -44,9 +44,6 @@ export class Login extends Component {
   };
 
   static navigationOptions = {
-    //header styling
-    // title: "Welcome",
-    // fontWeight: "bold"
     header: null
   };
 
@@ -129,7 +126,7 @@ export class Login extends Component {
               </View>
 
               {/*  button view */}
-              {loadingSpinner}
+              {/* {loadingSpinner} */}
 
               <View>
                 <TouchableOpacity

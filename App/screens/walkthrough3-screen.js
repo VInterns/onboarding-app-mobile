@@ -27,8 +27,6 @@ class Walkthrough3Container extends Component {
   };
 
   render() {
-    console.log("props", this.props);
-    // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
     console.log(this.props.tryNavigate, "This is the render in walkThrough 3");
     return (
       <WalkThrough3
