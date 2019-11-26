@@ -43,7 +43,7 @@ class LoginContainer extends Component {
     if (props.isLoggedIn) {
 
       // props.navigation.navigate(props.lastScreen || "walkThrough");
-      props.navigation.navigate("survey");
+      props.navigation.navigate("Menu");
       return state;
     }
     return state;
@@ -53,7 +53,7 @@ class LoginContainer extends Component {
 
     //this.props.logout()  /// --> TO LOGOUT AND CLEAR PRESIST STATE
 
-    // this.props.resetMsg()
+    //    this.props.resetMsg()
 
     return (
       <Login

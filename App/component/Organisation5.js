@@ -38,12 +38,13 @@ export default class Organisation1 extends Component {
                 </View>
                 <View style={styles.textContainer}>
                     <Text style={styles.text1}>
-                        VF Egypt
+                        Vodafone Egypt and Vodafone shared services Egypt ( VSSE) have 6000 &
+                        7000 respectively
                     </Text>
-                    <Text style={styles.text2}> 6000 Employees </Text>
-                    <Text style={styles.text1}>and now you have become a </Text>
-                    <Text style={styles.text2}>+1. </Text>
-                    <Text style={styles.textBold}>We can wait to have you on board.</Text>
+                    <Text style={styles.textBold}>and now Vodafone has a +1! .</Text>
+                    <Text style={styles.text2}>
+                        We can’t wait to have you on board.  </Text>
+
                 </View>
                 <View style={styles.NextButtonView}>
                     {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}

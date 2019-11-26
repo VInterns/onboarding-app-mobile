@@ -19,7 +19,6 @@ import img5 from '../assets/group14.png';
 import img6 from '../assets/group18.png';
 import img7 from '../assets/group19.png';
 import img8 from '../assets/group17.png';
-import img9 from '../assets/group16.png';
 
 export default class Organisation1 extends Component {
 
@@ -35,7 +34,7 @@ export default class Organisation1 extends Component {
             <View style={styles.container}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>
-                        In Vodafone we have 9 Departments :
+                        In Vodafone we have 8 Departments :
                     </Text>
                 </View>
                 <View style={styles.imageContainer}>
@@ -62,9 +61,6 @@ export default class Organisation1 extends Component {
                     </View>
                     <View style={styles.image}>
                         <Image source={img8} style={styles.img} />
-                    </View>
-                    <View style={styles.image}>
-                        <Image source={img9} style={styles.img} />
                     </View>
 
                 </View>
@@ -117,12 +113,13 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         alignItems: 'stretch',
         flex: 8,
+        marginTop: 50
         // backgroundColor: '#EC6AEA',
     },
-    image:{
+    image: {
         flexWrap: 'wrap',
         alignContent: 'space-around',
-        padding: '2.5%',
+        // padding: '2.5%',
     },
     img: {
         flexWrap: 'wrap',

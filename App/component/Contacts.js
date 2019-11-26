@@ -12,6 +12,11 @@ import {
     ScrollView,
 } from 'react-native';
 
+import mapLocation from "../assets/mapLocation.png";
+import directory from "../assets/directory.png";
+import presentation from "../assets/presentation.png";
+import callAnswer from "../assets/callAnswer.png";
+import mail from "../assets/mail.png";
 
 export default class Contacts extends Component {
 
@@ -28,27 +33,100 @@ export default class Contacts extends Component {
                     <View style={{ flexDirection: 'row', flexwrap: 'wrap' }}>
                         <View style={styles.iconBox}></View>
                         <Text style={styles.textTitleLarge}>
-                            Important
+                            References
+                        </Text>
+                    </View>
+                    <View style={styles.HeaderAndImageView}>
+                        <Image source={mapLocation} />
+                        <Text style={styles.textTitleSmall}>
+                            Locations
+                        </Text>
+                    </View>
+                    <View style={styles.separator}></View>
+
+                    <Text style={styles.blockHeader}>
+                        {"\n"}
+                        VSSE Premises
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        -VHUB 1 , VHUB 2
+                    </Text>
+                    <Text style={styles.blockText}>
+                        KM28, Smart Village، Alexandria Desert Rd
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        - MCCP
+                    </Text>
+                    <Text style={styles.blockText}>
+                        Maadi Technology Park، Etisalat Club Rd, Ezbet Fahmy, El Basatin, Cairo Governorate 11435                    </Text>
+                    <Text style={styles.blockTitle}>
+                        - Horizon
+                    </Text>
+                    <Text style={styles.blockText}>
+                        Vodafone Square, Second 6th of October, Giza Governorate
+                    </Text>
+
+                    <Text style={styles.blockHeader}>
+                        {"\n"}
+                        Vodafone Egypt Premises
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        -C2 , C3, Facilities                    </Text>
+                    <Text style={styles.blockText}>
+                        KM28, Smart Village، Alexandria Desert Rd
+                    </Text>
+                    <Text style={styles.blockTitle}>
+                        - Zahraa
+                    </Text>
+                    <Text style={styles.blockText}>
+                        Block 89, El Shatr 13, Zahraa El Maadi Cairo </Text>
+                    <Text style={styles.blockTitle}>
+                        - Dallah
+                    </Text>
+                    <Text style={styles.blockText}>
+                        7A Corniche El Maadi, Maadi Al Khabiri Al Wasti, Maadi, Cairo Governorate
+                    {"\n"}
+                    </Text>
+
+                    <View style={styles.HeaderAndImageView}>
+                        <Image source={presentation} />
+                        <Text style={styles.textTitleSmall}>
+                            Induction Session
                     </Text>
                     </View>
-                    <Text style={styles.textTitleSmall}>
-                        Contacts
+                    <View style={styles.separator}></View>
+                    <Text style={styles.blockTitle}>
+                        Shortly an invitation will be sent to you to attend Vodafone’s Induction for new hires within your 1st week at Vodafone                             {"\n"}
                     </Text>
+
+
+                    <View style={styles.HeaderAndImageView}>
+                        <Image source={directory} />
+                        <Text style={styles.textTitleSmall}>
+                            Contacts
+                    </Text>
+                    </View>
+
+                    <View style={styles.separator}></View>
+
                 </View>
                 <View style={styles.blockContainer}>
                     {/* <Image source={img1} style={styles.img} /> */}
                     <Text style={styles.blockHeader}>
                         Help Desk :
                     </Text>
-                    <Text style={styles.blockTitle}>
-                        Phone Numbers:
+                    <View style={styles.HeaderAndImageView}>
+                        <Image style={styles.smallIcon} source={callAnswer} />
+                        <Text style={styles.blockTitle}>
+                            Phone Numbers:
                     </Text>
+                    </View>
+
                     <Text style={styles.blockText}>
                         - 01001793777 {"\n"}
                         - 0235370766 {"\n"}
                         - 0225292525
                     </Text>
-                    <View style={styles.separator}></View>
                 </View>
                 <View style={styles.blockContainer}>
                     {/* <Image source={img1} style={styles.img} /> */}
@@ -56,57 +134,56 @@ export default class Contacts extends Component {
                     <Text style={styles.blockHeader}>
                         Fleet Help Desk :
                     </Text>
-                    <Text style={styles.blockTitle}>
-                        Phone Numbers:
+                    <View style={styles.HeaderAndImageView}>
+                        <Image style={styles.smallIcon} source={callAnswer} />
+                        <Text style={styles.blockTitle}>
+                            Phone Numbers:
                     </Text>
+                    </View>
                     <Text style={styles.blockText}>
                         - 0225294858
                     </Text>
-                    <View style={styles.separator}></View>
                 </View>
                 <View style={styles.blockContainer}>
                     {/* <Image source={img1} style={styles.img} /> */}
                     <Text style={styles.blockHeader}>
                         Health and safety :
                     </Text>
-                    <Text style={styles.blockTitle}>
-                        Phone Numbers:
+                    <View style={styles.HeaderAndImageView}>
+                        <Image style={styles.smallIcon} source={callAnswer} />
+                        <Text style={styles.blockTitle}>
+                            Phone Numbers:
                     </Text>
+                    </View>
                     <Text style={styles.blockText}>
                         - 01001793777 {"\n"}
                         - 02-25292525 {"\n"}
                         - 82525
                     </Text>
-                    <Text style={styles.blockTitle}>
-                        Email:
+
+                    <View style={styles.HeaderAndImageView}>
+                        <Image style={styles.smallIcon} source={mail} />
+                        <Text style={styles.blockTitle}>
+                            Email:
                     </Text>
+                    </View>
                     <Text style={styles.blockText}>
                         H&Shelpdeskteam@Vodafone.com
                     </Text>
-                    <View style={styles.separator}></View>
-                    <Text style={styles.blockHeader}>
+                    <Text style={styles.blockBigHeader}>
                         For any other inquiries please email using email subject ( new hire inquiry )
                     </Text>
-                    <Text style={styles.blockTitle}>
-                        Email:
+                    <View style={styles.HeaderAndImageView}>
+                        <Image style={styles.smallIcon} source={mail} />
+                        <Text style={styles.blockTitle}>
+                            Email:
                     </Text>
+                    </View>
                     <Text style={styles.blockText}>
                         Welcome.tovodafone@vodafone.com
                     </Text>
 
                 </View>
-                {/* <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation")} >
-                        <Text style={styles.ButtonText}>
-                            BACK
-                       </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation1")} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
-                       </Text>
-                    </TouchableOpacity>
-                </View> */}
             </ScrollView>
         );
     }
@@ -135,16 +212,18 @@ const styles = StyleSheet.create({
         fontStyle: "normal",
         lineHeight: 44,
         letterSpacing: 0,
-        color: "#4b464d"
+        color: "#4b464d",
+        marginBottom: 25
     },
     textTitleSmall: {
-        fontFamily: "VodafoneRg",
-        fontSize: 37,
+        fontFamily: "VodafoneBold",
+        fontSize: 28,
         fontWeight: "normal",
         fontStyle: "normal",
         lineHeight: 44,
         letterSpacing: 0,
-        color: "#e60000"
+        color: "#BD0000",
+        marginLeft: 8
     },
     blockContainer: {
         // justifyContent: 'center',
@@ -156,19 +235,19 @@ const styles = StyleSheet.create({
     },
     blockBigHeader: {
         fontFamily: "VodafoneBold",
-        fontSize: 24,
+        fontSize: 18,
         fontWeight: "bold",
         fontStyle: "normal",
         letterSpacing: 0,
         color: "#4b464d"
     },
     blockHeader: {
-        fontFamily: "VodafoneBold",
-        fontSize: 24,
+        fontFamily: "VodafoneRg",
+        fontSize: 20,
         fontWeight: "bold",
         fontStyle: "normal",
         letterSpacing: 0,
-        color: "#e60000",
+        color: "#BD0000",
         // paddingBottom: DEVICE_HEIGHT * 0.02,
         // backgroundColor: '#6AA7EC',
     },
@@ -186,7 +265,7 @@ const styles = StyleSheet.create({
     },
     blockText: {
         fontFamily: "VodafoneRg",
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: "normal",
         fontStyle: "normal",
         lineHeight: 32,
@@ -202,7 +281,7 @@ const styles = StyleSheet.create({
         borderStyle: "solid",
         borderWidth: 1,
         borderColor: "#4a4d4e",
-        marginVertical: DEVICE_HEIGHT * 0.02,
+        marginVertical: DEVICE_HEIGHT * 0.01,
     },
     iconBox: {
         width: 23,
@@ -232,4 +311,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20,
     },
+    HeaderAndImageView:
+    {
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        // height: 45,
+    },
+    smallIcon:
+    {
+        marginTop: 20
+    }
 });

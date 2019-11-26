@@ -5,15 +5,14 @@ import {
     View,
     Image,
     TouchableOpacity,
-    ImageBackground,
     Dimensions,
-    KeyboardAvoidingView,
     Text,
-
 } from 'react-native';
 
-
+import { ScrollView } from 'react-native-gesture-handler';
 import centerImg from '../assets/workingHours.png'
+import WPImg from '../assets/workingPlace.png'
+
 //import backgroundImg from '../assets/background.png';
 export default class WorkingAtVodafone extends Component {
 
@@ -26,59 +25,63 @@ export default class WorkingAtVodafone extends Component {
         const { navigate } = this.props.navigation;
         return (
 
-            <View style={{ justifyContent: 'center', alignItems: 'stretch', flex: 1 }}>
+            <View style={{ justifyContent: 'center', alignItems: 'stretch', flex: 1, marginTop: 90 }}>
+                <ScrollView>
 
-                <View style={styles.imageContainer}>
-                    <Image source={centerImg} />
-                </View>
+                    <View style={styles.imageContainer}>
+                        <Image source={centerImg} />
+                    </View>
 
-                <View style={styles.TextContainer}>
-                    <Text style={styles.redText}>Flexible <Text style={styles.headerblackText}>Hours</Text>
+                    <View style={styles.TextContainer}>
+                        <Text style={styles.redText}>Flexible</Text>
+                        <Text style={styles.headerblackText}>Working Hours</Text>
+                        <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
+                            {'\n'}
+                        </Text>
+                        <Text>
+                            Based on your department you can start as early </Text>
+                        <Text>
+                            as 8:00 AM and finish at 4:30 PM or as late as </Text>
+                        <Text>
+                            10 AM and finish at 6:30 PM.This includes half an hour daily break.
                     </Text>
-                    <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
-                        {'\n'}
-                    </Text>
-                    <Text>
-                        You can start as early as 8:00 AM and
-                    </Text>
-                    <Text>
-                        finish at 4:30 PM or as late as 10 AM and
-                    </Text>
-                    <Text>
-                        finish at 6:30 PM.This includes half an hour daily break.
-                    </Text>
-                </View>
+                    </View>
 
-                <View style={styles.LowerTextContainer}>
-                    <Text style={styles.redText}>Flexible</Text>
-                    <Text style={styles.headerblackText}>Working Place</Text>
-                    <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
-                        {'\n'}
+                    <View style={styles.imageContainer}>
+                        <Image source={WPImg} />
+                    </View>
+                    <View style={styles.LowerTextContainer}>
+                        <Text style={styles.redText}>Flexible</Text>
+                        <Text style={styles.headerblackText}>Working Place</Text>
+                        <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
+                            {'\n'}
+                        </Text>
+                        <Text>
+                            Based on your department you can work from ANYWHERE once per
                     </Text>
-                    <Text>
-                        You can work from ANYWHERE once per
+                        <Text>
+                            week or you can even work from nearest
                     </Text>
-                    <Text>
-                        week or you can even work from nearest
-                    </Text>
-                    <Text>
-                        Vodafone premises.
-                    </Text>
-                </View>
+                        <Text>
+                            Vodafone premises.
+                            {'\n'}
 
-                <View style={styles.NextButtonView}>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} >
-                        <Text style={styles.ButtonText}>
-                            Back
+                        </Text>
+                    </View>
+
+                    <View style={styles.NextButtonView}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("WorkingAtVodafone")} >
+                            <Text style={styles.ButtonText}>
+                                Back
                        </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("events")} >
-                        <Text style={styles.ButtonText}>
-                            NEXT
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.button} onPress={() => navigate("events")} >
+                            <Text style={styles.ButtonText}>
+                                NEXT
                        </Text>
-                    </TouchableOpacity>
-                </View>
-
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
             </View >
 
         );
