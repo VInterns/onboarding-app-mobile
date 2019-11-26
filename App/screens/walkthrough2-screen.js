@@ -25,14 +25,18 @@ class Walkthrough2Container extends Component {
     tryNavigate: (nextScreen: string) => void
   };
 
-
-  static getDerivedStateFromProps(props, state) {
-    // props.navigation.navigate(props.lastScreen);
+  // static getDerivedStateFromProps(props, state) {
+  //   // props.navigation.navigate(props.lastScreen);
+  //   return state;
+  // }
 
   render() {
     // console.log("props", this.props);
     // this.props.logout()   /// --> TO LOGOUT AND CLEAR PRESIST STATE
-    console.log(this.props.tryNavigate, "This is the tryNavigate in walkthrouh2-screen");
+    console.log(
+      this.props.tryNavigate,
+      "This is the tryNavigate in walkthrouh2-screen"
+    );
     return (
       <WalkThrough2
         tryNavigate={this.props.tryNavigate}
@@ -41,7 +45,6 @@ class Walkthrough2Container extends Component {
       />
     );
   }
-};
 }
 
 export const walkThrough2 = connect(

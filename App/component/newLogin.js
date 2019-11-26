@@ -58,7 +58,7 @@ export class Login extends Component {
             );
 
         return (
-            < View style={{ flex: 1 }}>
+            < View style={{ flex: 1}}>
                 {/* <ImageBackground source={backgroundImg} style={styles.wallpaper}> */}
                 <View style={styles.blankArea}></View>
                 <Image source={logoImg} style={styles.Logo} />
@@ -114,11 +114,7 @@ const DEVICE_HEIGHT = Dimensions.get("window").height;
 
 
 const styles = StyleSheet.create({
-    wallpaper: {
-        //background style
-        height: "100%",
-        width: "100%"
-    },
+
     blankArea: {
         flex: 1.3,
     },
@@ -133,6 +129,7 @@ const styles = StyleSheet.create({
         flex: 3,
         alignContent: "center",
         alignItems: "center",
+        padding: DEVICE_WIDTH * 0.05
     },
     HelloText:
     {

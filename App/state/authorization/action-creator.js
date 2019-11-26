@@ -54,6 +54,8 @@ export async function tryLogin(user: UserLoginModel) {
     debugger;
     if (response.status === 200) {
       // token = await response.json();
+      debugger;
+      console.log('response of trylogin is --->', response);
       dispatch(success(response.userId));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
