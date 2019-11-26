@@ -90,10 +90,10 @@ export default class HealthAndSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={590} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={360} moveYsecond={390} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={470} moveYsecond={530} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
-          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={740} moveYsecond={820} moveXfirst={40} moveXsecond={80} answerId={4} qtrue={q4true} />
+          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={560} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={330} moveYsecond={390} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={450} moveYsecond={530} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={680} moveYsecond={820} moveXfirst={40} moveXsecond={80} answerId={4} qtrue={q4true} />
         </View>
 
         <View style={styles.answersContainer}>
