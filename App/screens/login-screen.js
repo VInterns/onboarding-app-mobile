@@ -21,7 +21,7 @@ class LoginContainer extends Component {
     };
   }
 
-  static mapDispatchToProps(dispatc : Dispatch) {
+  static mapDispatchToProps(dispatch : Dispatch) {
     return bindActionCreators({ tryLogin, logout, onNextScreen, resetMsg }, dispatch);
   }
 
