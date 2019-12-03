@@ -111,13 +111,16 @@ const styles = StyleSheet.create({
     RedText: {//welcome to word style
         color: 'red',
         fontSize: DEVICE_WIDTH * 0.065,
+        fontFamily: "VodafoneRg"
 
     },
 
     blackText: {//login word text style
         color: 'black',
         fontSize: DEVICE_WIDTH * 0.065,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "VodafoneBold"
+
     },
 
     redView: {
