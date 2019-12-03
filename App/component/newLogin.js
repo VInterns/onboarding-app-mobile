@@ -24,8 +24,8 @@ export class Login extends Component {
         super();
         //  _onLoginPressed=this._onLoginPressed.bind(this);
         this.state = {
-            email: "",
-            password: ""
+            email: "Osama@gmail.com",
+            password: "123"
         };
     }
     props: {

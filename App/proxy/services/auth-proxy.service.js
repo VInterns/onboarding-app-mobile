@@ -22,7 +22,7 @@ export class AuthProxyService {
       method: "post",
       headers: { "content-Type": "application/json" },
       body: JSON.stringify(data)
-    }).then(response => { return response.json() });
+    });
 
   }
 

@@ -21,7 +21,7 @@ class LoginContainer extends Component {
     };
   }
 
-  static mapDispatchToProps(dispatch: Dispatch) {
+  static mapDispatchToProps(dispatc : Dispatch) {
     return bindActionCreators({ tryLogin, logout, onNextScreen, resetMsg }, dispatch);
   }
 
@@ -43,8 +43,8 @@ class LoginContainer extends Component {
     console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
-      props.navigation.navigate(props.lastScreen || "walkThrough");
-      // props.navigation.navigate("HealthAndSafety11");
+      // props.navigation.navigate(props.lastScreen || "walkThrough");
+      props.navigation.navigate("survey");
 
       return state;
     }

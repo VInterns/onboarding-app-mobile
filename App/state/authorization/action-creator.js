@@ -10,6 +10,8 @@ import {
 } from "../../proxy";
 import * as UiTypes from "../ui/actions";
 
+var jwtDecode = require("jwt-decode");
+
 
 /*************** */
 export type ON_LOGIN_Action = { type: string, payload: any };
@@ -44,19 +46,36 @@ export type REGISTER_FAIL_Action = { type: string, payload: string };
 // }
 
 export async function tryLogin(user: UserLoginModel) {
+  let result = null;
   return async dispatch => {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_START_LOADING });
     let response = await authProxyService.login(user);
-
     console.log("this is the login response : ", response);
+
+    result = await response.json();
+    var tokenPayload = result["token"];
+
+    console.log("this is the token response : ", tokenPayload);
+
+    var decoded = jwtDecode(tokenPayload);
+    var token = {};
+    token["email"] = decoded["email"];
+    token["id"] = decoded["_id"];
+    token["payload"] = tokenPayload;
+
+    console.log("token is ---> ", token);
+    console.log("status is ---> ", result.status);
+
+
+
     // let res = response.json();
     debugger;
     if (response.status === 200) {
       // token = await response.json();
       debugger;
       console.log('response of trylogin is --->', response);
-      dispatch(success(response.userId));
+      dispatch(success(token));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } else {
       console.log('inside ui else section ... ');

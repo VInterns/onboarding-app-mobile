@@ -17,7 +17,7 @@ class SurveyContainer extends Component {
     static mapStateToProps(state: State) {
         debugger;
         return {
-            userId: state.authorization.token
+            userId: state.authorization.userId
         };
     }
 
