@@ -11,7 +11,9 @@ export default class Video1 extends React.Component {
         };
     }
     props: {
-        tryNavigate: (nextScreen: string) => void
+        tryNavigate: (nextScreen: string) => void,
+        userId: string
+
     };
     tryNavigate = () => {
         // console.log("Before try naviate vid")

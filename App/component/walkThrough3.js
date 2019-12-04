@@ -23,7 +23,8 @@ import readyButton from '../assets/group3.png'
 export default class walkThrough3 extends Component {
 
     props: {
-        tryNavigate: (nextScreen: string) => void
+        tryNavigate: (nextScreen: string) => void,
+        userId: string
     };
 
     static navigationOptions = {//header styling
@@ -80,7 +81,7 @@ export default class walkThrough3 extends Component {
 
     tryNavigate = () => {
         debugger;
-        this.props.tryNavigate("video1");
+        this.props.tryNavigate("video1", this.props.userId);
         // props.navigation.navigate("video1")
     };
 

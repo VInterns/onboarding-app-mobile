@@ -20,3 +20,8 @@ export interface SurveyModel {
   engaging: Number,
   comment: String
 }
+
+export interface UserLastSectionModel {
+  id: String,
+  lastSection: String
+}

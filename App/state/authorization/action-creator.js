@@ -45,6 +45,7 @@ export type REGISTER_FAIL_Action = { type: string, payload: string };
 //   };
 // }
 
+
 export async function tryLogin(user: UserLoginModel) {
   let result = null;
   return async dispatch => {
@@ -86,9 +87,21 @@ export async function tryLogin(user: UserLoginModel) {
   };
 }
 
-export async function tryNavigate(nextScreen: string) {
+export async function tryNavigate(nextScreen: string, userId: String) {
   return async dispatch => {
-    debugger;
+    let user =
+    {
+      id: userId,
+      lastSection: nextScreen
+    };
+    let response = await authProxyService.updateLastSection(user);
+    if (response.status === 200) {
+      console.log("last section added successfully");
+    }
+    else {
+      console.log("an error occured while adding the last section");
+    }
+    // debugger;
     dispatch(onNextScreen(nextScreen));
   };
 }

@@ -11,10 +11,11 @@ export default class Video4 extends React.Component {
         };
     }
     props: {
-        tryNavigate: (nextScreen: string) => void
+        tryNavigate: (nextScreen: string) => void,
+        userId: string
     };
     tryNavigate = () => {
-        this.props.tryNavigate("HealthAndSafety");
+        this.props.tryNavigate("HealthAndSafety", this.props.userId);
     };
     _onPlaybackStatusUpdate = playbackStatus => {
         if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.

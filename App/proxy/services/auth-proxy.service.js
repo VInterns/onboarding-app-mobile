@@ -39,4 +39,17 @@ export class AuthProxyService {
       body: JSON.stringify(data)
     });
   }
+
+
+  async updateLastSection(user: UserLastSectionModel) {
+    const data = {};
+    data["_id"] = user.id;
+    data["lastSection"] = user.lastSection;
+
+    return await fetch(`${BASE_URL}api/account/sectionupdate`, {
+      method: "post",
+      headers: { "content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+  }
 }

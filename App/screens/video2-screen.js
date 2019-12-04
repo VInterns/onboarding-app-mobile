@@ -13,7 +13,9 @@ class Video2Container extends Component {
 
     static mapStateToProps(state: State) {
         return {
-            lastScreen: state.authorization.lastScreen
+            lastScreen: state.authorization.lastScreen,
+            userId: state.authorization.userId
+
         };
     }
 
@@ -22,7 +24,8 @@ class Video2Container extends Component {
     }
 
     props: {
-        tryNavigate: (nextScreen: string) => void
+        tryNavigate: (nextScreen: string) => void,
+        userId: String,
     };
 
 
@@ -33,6 +36,7 @@ class Video2Container extends Component {
                 tryNavigate={this.props.tryNavigate}
                 navigation={this.props.navigation}
                 isLoggedIn={this.props.isLoggedIn}
+                userId={this.props.userId}
             />
         );
     }
