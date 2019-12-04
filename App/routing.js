@@ -87,7 +87,7 @@ import WorkingAtVodafone4 from "./component/WorkingAtVodafone4";
 import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 import events from "./component/events";
 
-import { survey } from "./screens/survey-screen";
+import { Survey } from "./screens/survey-screen";
 
 import HealthAndSafety from "./component/HealthAndSafety"
 import HealthAndSafety1 from "./component/HealthAndSafety1"
@@ -306,7 +306,7 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
     events: { screen: events },
-    survey: { screen: survey },
+    Survey: { screen: Survey },
 
     Contacts: { screen: Contacts },
     Menu: { screen: Menu },

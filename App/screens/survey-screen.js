@@ -1,4 +1,4 @@
-import Survey from "../component/Survey";
+import SurveyComponent from "../component/Survey";
 import { connect } from "react-redux";
 
 import { State, addSurvey } from "../state";
@@ -34,7 +34,7 @@ class SurveyContainer extends Component {
     render() {
         console.log("props", this.props.userId);
         return (
-            <Survey
+            <SurveyComponent
                 userId={this.props.userId}
                 navigation={this.props.navigation}
             // addSurvey={this.props.addSurvey}
@@ -43,7 +43,7 @@ class SurveyContainer extends Component {
     }
 }
 
-export const survey = connect(
+export const Survey = connect(
     SurveyContainer.mapStateToProps,
     // SurveyContainer.mapDispatchToProps
 )(SurveyContainer);
