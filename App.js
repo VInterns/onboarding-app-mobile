@@ -47,9 +47,14 @@ export default class App extends React.Component {
   async componentDidMount() {
     await Application.run();
 
-    await Font.loadAsync({
-      "VodafoneRg": require("./assets/fonts/Vodafone.ttf"),
-      "VodafoneBold": require("./assets/fonts/VodafoneRg-Bold.ttf")
+    // await Font.loadAsync({
+    //   "VodafoneRg": require("./assets/fonts/Vodafone.ttf"),
+    //   "VodafoneBold": require("./assets/fonts/VodafoneRg-Bold.ttf")
+
+    // });
+      await Font.loadAsync({
+      "VodafoneRg": require("./App/assets/fonts/Vodafone.ttf"),
+      "VodafoneBold": require("./App/assets/fonts/VodafoneRg-Bold.ttf")
 
     });
 
