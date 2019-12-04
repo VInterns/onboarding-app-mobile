@@ -21,11 +21,15 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+      "./assets/"
     ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.vodafone.onboarding"
-    }
+    },
+    "android": {
+      "package": "com.vodafone.onboarding"
+    },
+    "description": "Voda Buddy is an application to help new commers to know more about Vodafone environment"
   }
 }
