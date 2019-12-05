@@ -217,17 +217,18 @@ const styles = StyleSheet.create({
         height: DEVICE_HEIGHT * 0.21,
         borderRadius: 8,
         backgroundColor: "#ffffff",
-        shadowColor: "rgba(0, 0, 0, 0.11)",
+        shadowColor: "#000",
         shadowOffset: {
             width: 0,
             height: 5
         },
-        shadowRadius: 25,
-        shadowOpacity: 1,
+        shadowRadius: 6.68,
+        shadowOpacity: 0.36,
         margin: DEVICE_HEIGHT * 0.03,
         alignItems: 'center',
         paddingVertical: DEVICE_HEIGHT * 0.02,
         paddingHorizontal: DEVICE_HEIGHT * 0.01,
+        elevation: 8
     },
     upperText: {
         // width: 111,

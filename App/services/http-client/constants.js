@@ -1,7 +1,7 @@
 const PROD_BASE_URL = "";
 
 // const DEV_BASE_URL = "http://35.178.84.177:3000/"; //DON'T DELETE
-const DEV_BASE_URL = "https://70592e56.ngrok.io/"; //DON'T DELETE
+const DEV_BASE_URL = "https://9e4bd73a.ngrok.io/"; //DON'T DELETE
 
 
 

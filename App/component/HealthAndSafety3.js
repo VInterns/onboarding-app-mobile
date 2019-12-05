@@ -35,7 +35,7 @@ function q3true() {
 }
 
 
-export default class HealthandSafety2 extends Component {
+export default class HealthandSafety3 extends Component {
 
   constructor() {
     super();

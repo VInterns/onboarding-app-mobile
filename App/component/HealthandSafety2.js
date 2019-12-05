@@ -42,7 +42,7 @@ function q4true() {
 }
 
 
-export default class HealthAndSafety2 extends Component {
+export class HealthAndSafety2 extends Component {
 
   constructor() {
     super();
