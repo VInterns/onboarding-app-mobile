@@ -89,7 +89,7 @@ export default class Organisation0 extends Component {
                             </Text>
                         </View>
                         {/* ------------- */}
-                        <View style={styles.boxItem}>
+                        <View style={styles.boxItemWithoutshaddow}>
                         </View>
                     </View>
                     <View style={styles.textBox}>
@@ -269,6 +269,24 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         margin: DEVICE_HEIGHT * 0.03,
         alignItems: 'center',
+        paddingVertical: DEVICE_HEIGHT * 0.01,
+        paddingHorizontal: DEVICE_HEIGHT * 0.01,
+        elevation: 8
+    },
+    boxItemWithoutshaddow: {
+        width: DEVICE_WIDTH * 0.35,
+        height: DEVICE_HEIGHT * 0.21,
+        borderRadius: 8,
+        backgroundColor: "#ffffff",
+        shadowColor: "rgba(0, 0, 0, 0.11)",
+        shadowOffset: {
+            width: 0,
+            height: 5
+        },
+        shadowRadius: 25,
+        shadowOpacity: 1,
+        margin: DEVICE_HEIGHT * 0.03,
+        alignItems: 'center',
         paddingVertical: DEVICE_HEIGHT * 0.02,
         paddingHorizontal: DEVICE_HEIGHT * 0.01,
     },
@@ -288,7 +306,7 @@ const styles = StyleSheet.create({
         // width: 111,
         // height: 18,
         fontFamily: "VodafoneBold",
-        fontSize: 16,
+        fontSize: 10,
         fontWeight: "bold",
         fontStyle: "normal",
         lineHeight: 18,

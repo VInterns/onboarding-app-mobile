@@ -67,7 +67,7 @@ export default class Organisation0 extends Component {
                         <View style={styles.boxItem}>
                             <Image source={Ayman} />
                             <Text style={styles.upperText}>
-                            Ayman {"\n"} Essam
+                                Ayman {"\n"} Essam
                             </Text>
                             <Text style={styles.lowerText}>
                                 External Affairs Director
@@ -87,7 +87,7 @@ export default class Organisation0 extends Component {
                         <View style={styles.boxItem}>
                             <Image source={Osama} />
                             <Text style={styles.upperText}>
-                            Osama {"\n"} Said
+                                Osama {"\n"} Said
                             </Text>
                             <Text style={styles.lowerText}>
                                 Technology Director
@@ -97,7 +97,7 @@ export default class Organisation0 extends Component {
                         <View style={styles.boxItem}>
                             <Image source={Nagla} />
                             <Text style={styles.upperText}>
-                            Nagla {"\n"} Kinawi
+                                Nagla {"\n"} Kinawi
                             </Text>
                             <Text style={styles.lowerText}>
                                 HR Director
@@ -107,7 +107,7 @@ export default class Organisation0 extends Component {
                         <View style={styles.boxItem}>
                             <Image source={MohamedAbdullah} />
                             <Text style={styles.upperText}>
-                            Mohamed {"\n"} Abdallah
+                                Mohamed {"\n"} Abdallah
                             </Text>
                             <Text style={styles.lowerText}>
                                 Consumer Business Unit Director
@@ -117,28 +117,28 @@ export default class Organisation0 extends Component {
                         <View style={styles.boxItem}>
                             <Image source={Shahinaz} />
                             <Text style={styles.upperText}>
-                            Shahinaz {"\n"} Ghazy
+                                Shahinaz {"\n"} Ghazy
                             </Text>
                             <Text style={styles.lowerText}>
                                 Customer Care Director
                             </Text>
                         </View>
-                        
+
                         {/* ------------- */}
                         <View style={styles.boxItem}>
                             <Image source={KarimShehata} />
                             <Text style={styles.upperText}>
-                            Karim {"\n"} Shehata
+                                Karim {"\n"} Shehata
                             </Text>
                             <Text style={styles.lowerText}>
-                                Vodafone Business Unit Director                            
+                                Vodafone Business Unit Director
                             </Text>
                         </View>
                         {/* ------------- */}
                         <View style={styles.boxItem}>
                             <Image source={KareemEid} />
                             <Text style={styles.upperText}>
-                            Kareem {"\n"} Eid
+                                Kareem {"\n"} Eid
                             </Text>
                             <Text style={styles.lowerText}>
                                 Consumer Marketing Digital Director
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.36,
         margin: DEVICE_HEIGHT * 0.03,
         alignItems: 'center',
-        paddingVertical: DEVICE_HEIGHT * 0.02,
+        paddingVertical: DEVICE_HEIGHT * 0.01,
         paddingHorizontal: DEVICE_HEIGHT * 0.01,
         elevation: 8
     },
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
         // width: 111,
         // height: 18,
         fontFamily: "VodafoneBold",
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: "bold",
         fontStyle: "normal",
         lineHeight: 18,
