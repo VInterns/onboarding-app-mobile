@@ -89,8 +89,8 @@ export default class Organisation0 extends Component {
                             </Text>
                         </View>
                         {/* ------------- */}
-                        <View style={styles.boxItemWithoutshaddow}>
-                        </View>
+                        {/* <View style={styles.boxItemWithoutshaddow}>
+                        </View> */}
                     </View>
                     <View style={styles.textBox}>
                         <Text style={styles.redText}>
@@ -178,7 +178,7 @@ export default class Organisation0 extends Component {
                             BACK
                        </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation3")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation4")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
