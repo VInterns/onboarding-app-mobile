@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: DEVICE_WIDTH * 0.04,
     paddingTop: DEVICE_HEIGHT * 0.09,
-    backgroundColor: "#ECB16A"
+    // backgroundColor: "#ECB16A"
   },
   Text: {
     //welcome to word style
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingTop: DEVICE_HEIGHT * 0.02,
-    backgroundColor: "#EC766A"
+    // backgroundColor: "#EC766A"
   },
   photoContainer: {
     flex: 1,
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     alignItems: "center",
     flexWrap: "wrap",
-    backgroundColor: '#EC6AA3'
+    // backgroundColor: '#EC6AA3'
   },
   paragraphContainer: {
     alignItems: "center",
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     paddingTop: DEVICE_HEIGHT * (5 / DEVICE_WIDTH),
     paddingHorizontal: DEVICE_WIDTH * (10 / DEVICE_WIDTH),
     // paddingLeft: DEVICE_WIDTH * (18 / DEVICE_WIDTH),
-    backgroundColor: "#AD6AEC"
+    // backgroundColor: "#AD6AEC"
   },
   button: {
     // button design
