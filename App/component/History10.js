@@ -48,8 +48,9 @@ export default class History10 extends Component {
           <Image
             source={NickImg}
             style={{
-              /* marginRight: 0.025 * DEVICE_WIDTH */ marginLeft:
-                (20 / DEVICE_WIDTH) * DEVICE_WIDTH
+            //   /* marginRight: 0.025 * DEVICE_WIDTH */ marginLeft:
+                // (1 / DEVICE_WIDTH) * DEVICE_WIDTH
+                
             }}
           />
           <Text style={styles.NickText}>
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
   NickText: {
     //welcome to word style
     fontFamily: "VodafoneRg",
-    fontSize: 21,
+    fontSize: 20,
     fontWeight: "normal",
     fontStyle: "normal",
     letterSpacing: 0,
@@ -151,13 +152,13 @@ const styles = StyleSheet.create({
     flex: 0.5,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: DEVICE_HEIGHT * 0.02,
+    paddingTop: DEVICE_HEIGHT * 0.01,
     // backgroundColor: "#EC766A"
   },
   photoContainer: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     alignItems: "center",
     flexWrap: "wrap",
     // backgroundColor: '#EC6AA3'
