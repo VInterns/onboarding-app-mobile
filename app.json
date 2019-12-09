@@ -13,7 +13,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Vodabuddy.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,10 +25,10 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vodafone.onboarding"
+      "bundleIdentifier": "com.vodafone.vbuddy"
     },
     "android": {
-      "package": "com.vodafone.onboarding"
+      "package": "com.vodafone.vbuddy"
     },
     "description": "Voda Buddy is an application to help new commers to know more about Vodafone environment"
   }
