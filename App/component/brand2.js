@@ -25,7 +25,7 @@ export default class Brand2 extends Component {
         const { navigate } = this.props.navigation;
 
         return (
-            <View style={{ width: '100%', height: '100%', flex: 1 }}>
+            <View style={{  flex: 1 }}>
 
                 <View style={styles.ImagesView}>
 
@@ -44,7 +44,7 @@ export default class Brand2 extends Component {
 
                 <View style={styles.TextContainer}>
 
-                    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    {/* <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: '#E8EC6A'}}> */}
 
                         <Text style={styles.blackText}>
                             <Text style={styles.redText}>“The story of hello” {'\n'}</Text>
@@ -55,7 +55,7 @@ export default class Brand2 extends Component {
                             exciting.
                         </Text>
 
-                    </View>
+                    {/* </View> */}
                 </View>
                 <View style={styles.ButtonsView}>
                     <TouchableOpacity style={styles.BackButton} onPress={() => navigate("Brand1", {
@@ -107,25 +107,27 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         alignItems: 'center',
         flex: 2,
+        // backgroundColor: '#D26AEC',
+        flexWrap: 'wrap'
     },
     blackText: {
         // width: 334,
         // height: 97,
-        // fontFamily: "VodafoneRg",
-        fontSize: 15,
+        fontFamily: "VodafoneRg",
+        fontSize: 16,
         fontWeight: "normal",
         fontStyle: "normal",
-        letterSpacing: 0,
+        // letterSpacing: 0,
         color: "#4b464d"
     },
     redText: {
         // width: 235,
         // height: 31,
-        // fontFamily: "VodafoneRg",
+        fontFamily: "VodafoneBold",
         fontSize: 28,
-        fontWeight: "bold",
+        // fontWeight: "bold",
         fontStyle: "normal",
-        letterSpacing: 0,
+        // letterSpacing: 0,
         color: "#e60000"
     },
     ButtonsView: {
@@ -143,6 +145,7 @@ const styles = StyleSheet.create({
         shadowRadius: 22,
         shadowOpacity: 1,
         elevation: 3,
+        // backgroundColor: '#6AA3EC'
         // position: "absolute"
     },
     BackButton: {

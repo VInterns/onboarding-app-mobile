@@ -105,13 +105,14 @@ const styles = StyleSheet.create({
         fontFamily: "VodafoneBold",
         fontSize: 21,
         fontWeight: "bold",
-        lineHeight: 25,
+        lineHeight: 27,
         letterSpacing: 0,
     },
     imageContainer: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         alignItems: 'stretch',
+        justifyContent: 'center',
         flex: 8,
         marginTop: 50
         // backgroundColor: '#EC6AEA',
