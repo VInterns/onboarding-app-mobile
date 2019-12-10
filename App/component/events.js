@@ -43,24 +43,24 @@ export default class events extends Component {
                 </Text>
                     <View style={styles.EventsContainer}>
                         <Text style={styles.RedText}>Bring</Text>
-                        <Text style={styles.BlackBoldText}>Your kids{'\n'}</Text>
+                        <Text style={styles.BlackBoldText}>Your kids</Text>
                         <View style={styles.UnderLine}></View>
                         <Text style={styles.BlackText}>Employees kids join their parents and Enjoy Vodafone’s workplace</Text>
                         <Image source={events1} style={styles.FirstImageStyle} />
                         <Image source={events2} style={styles.ImageStyle} />
                         <Text style={styles.RedText}>Learning</Text>
-                        <Text style={styles.BlackBoldText}>Week{'\n'}</Text>
+                        <Text style={styles.BlackBoldText}>Week</Text>
                         <View style={styles.UnderLine}></View>
                         <Text style={styles.BlackText}>Everyone’s got different learning needs, and the learning week has got you covered with tons of gamified and up to date sessions</Text>
                         <Image source={events3} style={styles.ImageStyle} />
 
-                        <Text style={styles.BlackBoldText}>Hackathon{'\n'}</Text>
+                        <Text style={styles.BlackBoldText}>Hackathon</Text>
                         <View style={styles.UnderLine}></View>
                         <Text style={styles.BlackText}>Developing digital solutions that serve communities or businesses through Vodafone’s annual hackathon competition</Text>
                         <Image source={events4} style={styles.ImageStyle} />
                         <Image source={events5} style={styles.ImageStyle} />
 
-                        <Text style={styles.BlackBoldText}>STEM{'\n'}</Text>
+                        <Text style={styles.BlackBoldText}>STEM</Text>
                         <View style={styles.UnderLine}></View>
                         <Text style={styles.BlackText}>Encouraging young girls to join the Tech world by joining 1 week STEM program where they #CodeLikeAGirl!</Text>
                         <Image source={events6} style={styles.ImageStyle} />
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         height: 61,
         fontFamily: "VodafoneBold",
         fontSize: DEVICE_WIDTH * 0.1304,
-        fontWeight: "bold",
+        // fontWeight: "bold",
         fontStyle: "normal",
         letterSpacing: 0,
         color: "#4b464d",
@@ -113,26 +113,26 @@ const styles = StyleSheet.create({
     },
     RedText:
     {
-        width: 161,
-        height: 31,
+        // width: 161,
+        // height: 31,
         fontFamily: "VodafoneRg",
         fontSize: 0.0676 * DEVICE_WIDTH,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        letterSpacing: 0,
+        // fontWeight: "normal",
+        // fontStyle: "normal",
+        // letterSpacing: 0,
         color: "#e60000",
         marginBottom: 10
     },
     HeaderBlackText:
     {
-        width: 334,
-        height: 112,
+        // width: 334,
+        // height: 112,
         fontFamily: "VodafoneRg",
         fontSize: 0.0579 * DEVICE_WIDTH,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        lineHeight: 26,
-        letterSpacing: 0,
+        // fontWeight: "normal",
+        // fontStyle: "normal",
+        // lineHeight: 26,
+        // letterSpacing: 0,
         color: "#4b464d",
         marginBottom: 20
     },
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
         fontSize: 0.0483 * DEVICE_WIDTH,
         fontWeight: "normal",
         fontStyle: "normal",
-        lineHeight: 26,
+        // lineHeight: 26,
         letterSpacing: 0,
         color: "#4b464d"
     },
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     BlackBoldText:
     {
         // width: 139,
-        height: 33,
+        // height: 33,
         fontFamily: "VodafoneBold",
         fontSize: 0.0676 * DEVICE_WIDTH,
         fontWeight: "bold",
@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
     ImageStyle:
     {
         marginBottom: 20,
+        marginTop: DEVICE_HEIGHT * 0.02
 
     },
     UnderLine:
@@ -185,13 +186,13 @@ const styles = StyleSheet.create({
     MoreText:
     {
         marginLeft: 170,
-        width: 109,
-        height: 27,
+        // width: 109,
+        // height: 27,
         fontFamily: "VodafoneRg",
         fontSize: 0.0579 * DEVICE_WIDTH,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        letterSpacing: 0,
+        // fontWeight: "normal",
+        // fontStyle: "normal",
+        // letterSpacing: 0,
         color: "#4b464d",
         marginBottom: 30
     },
