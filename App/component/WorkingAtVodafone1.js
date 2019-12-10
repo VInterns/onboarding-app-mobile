@@ -25,8 +25,8 @@ export default class WorkingAtVodafone extends Component {
         const { navigate } = this.props.navigation;
         return (
 
-            <View style={{ justifyContent: 'center', alignItems: 'stretch', flex: 1, marginTop: 90 }}>
-                <ScrollView>
+            // <View style={{ justifyContent: 'center', alignItems: 'stretch', flex: 1, marginTop: 90 }}>
+                <ScrollView style={styles.container}>
 
                     <View style={styles.imageContainer}>
                         <Image source={centerImg} />
@@ -54,7 +54,7 @@ export default class WorkingAtVodafone extends Component {
                         <Text style={styles.redText}>Flexible</Text>
                         <Text style={styles.headerblackText}>Working Place</Text>
                         <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
-                            {'\n'}
+                            {/* {'\n'} */}
                         </Text>
                         <Text>
                             Based on your department you can work from ANYWHERE once per
@@ -64,7 +64,7 @@ export default class WorkingAtVodafone extends Component {
                     </Text>
                         <Text>
                             Vodafone premises.
-                            {'\n'}
+                            {/* {'\n'} */}
 
                         </Text>
                     </View>
@@ -82,7 +82,7 @@ export default class WorkingAtVodafone extends Component {
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
-            </View >
+            // </View >
 
         );
     }
@@ -90,14 +90,19 @@ export default class WorkingAtVodafone extends Component {
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'column',
+        flex: 1,
+        // backgroundColor: '#EC6AA9',
+    },
     imageContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 0.8,
-        marginTop: (10 / DEVICE_HEIGHT) * DEVICE_HEIGHT,
-        //backgroundColor: 'yellow'
+        flexDirection: 'column',
+        flex: 6,
+        paddingTop: (50 / DEVICE_HEIGHT) * DEVICE_HEIGHT,
+        // backgroundColor: 'yellow'
     },
-
     blackText: {//welcome to word style
         color: 'black',
         fontSize: DEVICE_WIDTH * (22 / DEVICE_WIDTH),
@@ -109,19 +114,16 @@ const styles = StyleSheet.create({
         fontSize: DEVICE_WIDTH * (25 / DEVICE_WIDTH),
         fontWeight: 'bold'
     },
-
     redText: {//login word text style
         color: 'red',
         //fontWeight: 'bold',
         fontSize: DEVICE_WIDTH * (25 / DEVICE_WIDTH),
     },
-
-
     TextContainer: {/* Welcome back and vodabuddy wrapper */
-        flex: 0.5,
+        flex: 2,
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        //backgroundColor: 'green',
+        // backgroundColor: 'green',
         marginLeft: DEVICE_WIDTH * (30 / DEVICE_WIDTH),
         marginTop: DEVICE_HEIGHT * (10 / DEVICE_HEIGHT),
     },
@@ -134,21 +136,21 @@ const styles = StyleSheet.create({
         marginTop: DEVICE_HEIGHT * (3 / DEVICE_HEIGHT),
 
     },
-
     button: { // button design
         alignItems: 'center',
         justifyContent: 'center'
     },
-
     NextButtonView: { //wrapper for button 
         justifyContent: 'space-between',
         alignItems: 'center',
+        paddingTop: DEVICE_HEIGHT * 0.03,
         marginBottom: DEVICE_HEIGHT * 0.03,
         marginRight: DEVICE_WIDTH * 0.095,
         marginLeft: DEVICE_WIDTH * 0.095,
         flexWrap: 'wrap',
         flexDirection: 'row',
-        //backgroundColor: 'red'
+        flex: 1,
+        // backgroundColor: 'red'
     },
     ButtonText: { // text inside button
         color: 'black',

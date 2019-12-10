@@ -300,7 +300,12 @@ const AppNavigator = createStackNavigator(
     LearningAtVodafone1: { screen: LearningAtVodafone1 },
     LearningAtVodafone_last: { screen: LearningAtVodafone_last },
     WorkingAtVodafone: { screen: WorkingAtVodafone },
-    WorkingAtVodafone1: { screen: WorkingAtVodafone1 },
+    WorkingAtVodafone1: { 
+      screen: WorkingAtVodafone1 ,
+      navigationOptions: {
+        header: null
+      }
+    },
     WorkingAtVodafone2: { screen: WorkingAtVodafone2 },
     WorkingAtVodafone3: { screen: WorkingAtVodafone3 },
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
