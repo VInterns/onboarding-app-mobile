@@ -17,7 +17,8 @@ class SurveyContainer extends Component {
     static mapStateToProps(state: State) {
         debugger;
         return {
-            userId: state.authorization.userId
+            userId: state.authorization.userId,
+            sectionNumber: state.authorization.sectionNumber
         };
     }
 
@@ -28,6 +29,8 @@ class SurveyContainer extends Component {
     props: {
         userId: String,
         // addSurvey: (survey: SurveyModel) => void,
+        sectionNumber: Number
+
     };
 
 
@@ -37,7 +40,7 @@ class SurveyContainer extends Component {
             <SurveyComponent
                 userId={this.props.userId}
                 navigation={this.props.navigation}
-            // addSurvey={this.props.addSurvey}
+                sectionNumber={this.props.sectionNumber}
             />
         );
     }

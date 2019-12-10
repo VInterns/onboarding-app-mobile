@@ -87,12 +87,13 @@ export async function tryLogin(user: UserLoginModel) {
   };
 }
 
-export async function tryNavigate(nextScreen: string, userId: String) {
+export async function tryNavigate(nextScreen: string, userId: String, sectionNumber: Number) {
   return async dispatch => {
     let user =
     {
       id: userId,
-      lastSection: nextScreen
+      lastSection: nextScreen,
+      sectionNumber: sectionNumber
     };
     let response = await authProxyService.updateLastSection(user);
     if (response.status === 200) {
@@ -172,6 +173,16 @@ export function onNextScreen(nextScreen): NextScreenModel {
     payload: nextScreen
   };
 }
+
+// export function saveTheSectionNumber(sectionNumber): sectionNumberModel
+// {
+//   debugger
+// return
+// {
+//   type: types.ON_NEXT_SCREEN,
+//   payload: sectionNumber
+// };
+// }
 
 export function resetMsg(): RESET_VALIDATION_MSG_Action {
   console.log('inside resetMsg() function');

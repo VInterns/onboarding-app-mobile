@@ -16,7 +16,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 class GreatJob extends Component {
     props: {
         tryNavigate: (nextScreen: string) => void,
-        userId: string
+        userId: string,
+        sectionNumber: Number
     };
     // tryNavigate = () => {
     //     console.log("Try navigate");
