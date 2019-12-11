@@ -30,7 +30,8 @@ export default class walkThrough2 extends Component {
 
     props: {
         tryNavigate: (nextScreen: string) => void,
-        userId: string
+        userId: string,
+        sectionNumber: Number
     };
 
     static navigationOptions = {
@@ -50,9 +51,11 @@ export default class walkThrough2 extends Component {
     // }
 
     tryNavigate = () => {
-        this.props.tryNavigate("walkThrough3");
+        if (this.props.sectionNumber < 2) {
 
-        this.props.navigation.navigate("walkThrough3", this.props.userId);
+            this.props.tryNavigate("walkThrough3", this.props.userId, 2);
+        }
+        this.props.navigation.navigate("walkThrough3");
     };
 
 

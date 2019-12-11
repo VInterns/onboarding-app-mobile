@@ -24,7 +24,8 @@ export default class walkThrough3 extends Component {
 
     props: {
         tryNavigate: (nextScreen: string) => void,
-        userId: string
+        userId: string,
+        sectionNumber: Number
     };
 
     static navigationOptions = {//header styling
@@ -80,8 +81,9 @@ export default class walkThrough3 extends Component {
     // }
 
     tryNavigate = () => {
-        debugger;
-        this.props.tryNavigate("video1", this.props.userId);
+        if (this.props.sectionNumber < 3) {
+            this.props.tryNavigate("video1", this.props.userId, 3);
+        }
         // props.navigation.navigate("video1")
     };
 

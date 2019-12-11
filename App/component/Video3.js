@@ -12,10 +12,13 @@ export default class Video3 extends React.Component {
     }
     props: {
         tryNavigate: (nextScreen: string) => void,
-        userId: string
+        userId: string,
+        sectionNumber: Number
     };
     tryNavigate = () => {
-        this.props.tryNavigate("Brand", this.props.userId);
+        if (this.props.sectionNumber < 6) {
+            this.props.tryNavigate("Brand", this.props.userId, 6);
+        }
     };
     _onPlaybackStatusUpdate = playbackStatus => {
         if (!this.state.navigated && (playbackStatus.durationMillis + 2000 === playbackStatus.positionMillis + 2000)) {     // The player has just finished playing and will stop.

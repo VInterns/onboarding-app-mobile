@@ -53,7 +53,7 @@ export default class Survey extends Component {
     async OnDoneClicked() {
         debugger;
         let response = await surveyService.addSurvey(this.state);
-            console.log("response is --> ", response);
+        console.log("response is --> ", response);
 
         if (response.status === 200) {
             console.log("1 Survey added successfully");

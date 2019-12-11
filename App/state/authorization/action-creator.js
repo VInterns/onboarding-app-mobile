@@ -92,8 +92,7 @@ export async function tryNavigate(nextScreen: string, userId: String, sectionNum
     let user =
     {
       id: userId,
-      lastSection: nextScreen,
-      sectionNumber: sectionNumber
+      lastSection: nextScreen
     };
     let response = await authProxyService.updateLastSection(user);
     if (response.status === 200) {
@@ -103,7 +102,7 @@ export async function tryNavigate(nextScreen: string, userId: String, sectionNum
       console.log("an error occured while adding the last section");
     }
     // debugger;
-    dispatch(onNextScreen(nextScreen));
+    dispatch(onNextScreen(nextScreen, sectionNumber));
   };
 }
 
@@ -166,23 +165,17 @@ export function logout() {
   }
 }
 
-export function onNextScreen(nextScreen): NextScreenModel {
+export function onNextScreen(nextScreen, sectionNumber): NextScreenModel {
   debugger;
+  let sectionInfo = {
+    nextScreen: nextScreen,
+    sectionNumber: sectionNumber
+  }
   return {
     type: types.ON_NEXT_SCREEN,
-    payload: nextScreen
+    payload: sectionInfo
   };
 }
-
-// export function saveTheSectionNumber(sectionNumber): sectionNumberModel
-// {
-//   debugger
-// return
-// {
-//   type: types.ON_NEXT_SCREEN,
-//   payload: sectionNumber
-// };
-// }
 
 export function resetMsg(): RESET_VALIDATION_MSG_Action {
   console.log('inside resetMsg() function');

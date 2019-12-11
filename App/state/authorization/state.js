@@ -17,5 +17,5 @@ export const AuthorizationInitialState: AuthorizationState = {
   errorMessage: "",
   lastScreen: "walkThrough",
   userId: "",
-  sectionNumber: 1
+  sectionNumber: 0
 };

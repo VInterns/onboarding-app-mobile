@@ -12,11 +12,13 @@ export default class Video2 extends React.Component {
     }
     props: {
         tryNavigate: (nextScreen: string) => void,
-        userId: string
-
+        userId: string,
+        sectionNumber: Number
     };
     tryNavigate = () => {
-        this.props.tryNavigate("Organisation", this.props.userId);
+        if (this.props.sectionNumber < 5) {
+            this.props.tryNavigate("Organisation", this.props.userId, 5);
+        }
     };
     _onPlaybackStatusUpdate = playbackStatus => {
         console.log("before if");

@@ -76,7 +76,8 @@ export function authorizationReducer(
     case types.ON_NEXT_SCREEN: {
       return {
         ...state,
-        lastScreen: action.payload,
+        lastScreen: action.payload.nextScreen,
+        sectionNumber: sectionNumber
       }
     }
 
