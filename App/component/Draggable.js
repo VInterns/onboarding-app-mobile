@@ -17,6 +17,7 @@ import FadeInView from './FadeInView';
 
 import centerImg from '../assets/drugs.png';
 
+
 export default class Draggable extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +49,7 @@ export default class Draggable extends Component {
       onStartShouldSetPanResponder: (e, gesture) => true,
       onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
       onMoveShouldSetPanResponder: (evt, gestureState) => true,
-      onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+      // onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
       // onPanResponderTerminationRequest: (evt, gestureState) => true,
       onPanResponderGrant: (e, gesture) => {
         this.state.pan.setOffset({

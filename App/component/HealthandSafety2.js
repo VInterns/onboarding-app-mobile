@@ -79,6 +79,15 @@ export class HealthAndSafety2 extends Component {
 
 
   render() {
+    const DEVICE_WIDTH = Dimensions.get('window').width;
+    const DEVICE_HEIGHT = Dimensions.get('window').height;
+
+    console.log('DEVICE_WIDTH', DEVICE_WIDTH);
+    console.log('DEVICE_HEIGHT', DEVICE_HEIGHT);
+
+    console.log('DEVICE_WIDTH *', DEVICE_WIDTH * 0.07);
+    console.log('DEVICE_HEIGHT *', DEVICE_HEIGHT * 0.81);
+
     return (
       <View style={styles.mainContainer}>
 
@@ -90,10 +99,10 @@ export class HealthAndSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={400} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={200} moveYsecond={410} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={360} moveYsecond={500} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
-          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={500} moveYsecond={820} moveXfirst={40} moveXsecond={80} answerId={4} qtrue={q4true} />
+          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={DEVICE_HEIGHT * 0.67} moveYsecond={DEVICE_HEIGHT * 0.73} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={DEVICE_HEIGHT * 0.37} moveYsecond={DEVICE_HEIGHT * 0.46} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={DEVICE_HEIGHT * 0.534} moveYsecond={DEVICE_HEIGHT * 0.598} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={DEVICE_HEIGHT * 0.80} moveYsecond={DEVICE_HEIGHT * 0.87} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={4} qtrue={q4true} />
         </View>
 
         <View style={styles.answersContainer}>
@@ -181,9 +190,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold", 
     fontFamily: "VodafoneBold",
-    fontStyle: "normal",
-    lineHeight: 25,
-    letterSpacing: 0,
     color: "#e60000",
     flexWrap: 'wrap',
   },
@@ -191,9 +197,6 @@ const styles = StyleSheet.create({
     fontSize: 21,
     fontWeight: "bold",
     fontFamily: "VodafoneRg",
-    fontStyle: "normal",
-    lineHeight: 25,
-    letterSpacing: 0,
     color: "#4c464e",
     flexWrap: 'wrap',
   },
@@ -232,10 +235,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     fontFamily: "VodafoneRg",
     fontSize: 16,
-    fontWeight: "normal",
-    fontStyle: "normal",
-    lineHeight: 20,
-    letterSpacing: 0,
     color: "#4b464d"
   },
   draggable: {
