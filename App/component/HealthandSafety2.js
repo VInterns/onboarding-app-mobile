@@ -90,10 +90,10 @@ export class HealthAndSafety2 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={530} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={320} moveYsecond={390} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={410} moveYsecond={530} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
-          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={620} moveYsecond={820} moveXfirst={40} moveXsecond={80} answerId={4} qtrue={q4true} />
+          <Draggable style={styles.draggable} imageurl={require(drugs)} moveYfirst={400} moveYsecond={660} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(nomobile)} moveYfirst={200} moveYsecond={410} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(speedlimit)} moveYfirst={360} moveYsecond={500} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(streetwork)} moveYfirst={500} moveYsecond={820} moveXfirst={40} moveXsecond={80} answerId={4} qtrue={q4true} />
         </View>
 
         <View style={styles.answersContainer}>
@@ -128,13 +128,12 @@ export class HealthAndSafety2 extends Component {
         <View style={styles.NextButtonView}>
           {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
           <TouchableOpacity style={styles.button} onPress={
-            () => { console.log('inside Back button'); navigate("HealthAndSafety1"), {}; }} >
+            () => { console.log('inside Back button'); this.props.navigate("HealthAndSafety1"), {}; }} >
             <Text style={styles.ButtonText}>
               BACK
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => {
-            // console.log('props is ->>>>', this.props.navigation.navigate);
             this.checkAnswers();
           }} >
             <Text style={styles.ButtonText}>

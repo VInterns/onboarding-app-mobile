@@ -83,9 +83,9 @@ export default class HealthandSafety3 extends Component {
 
         <View style={styles.imagesContainer}>
           {/* images here  */}
-          <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={440} moveYsecond={540} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={540} moveYsecond={680} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
-          <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={320} moveYsecond={420} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
+          <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={350} moveYsecond={540} moveXfirst={40} moveXsecond={80} answerId={1} qtrue={q1true} />
+          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={500} moveYsecond={680} moveXfirst={40} moveXsecond={80} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={250} moveYsecond={420} moveXfirst={40} moveXsecond={80} answerId={3} qtrue={q3true} />
         </View>
         {/* 470 530 */}
         {/* 590 660 */}
@@ -117,13 +117,12 @@ export default class HealthandSafety3 extends Component {
         <View style={styles.NextButtonView}>
           {/* <TouchableOpacity style={styles.button} onPress={() => navigate("History1")} > */}
           <TouchableOpacity style={styles.button} onPress={
-            () => { console.log('inside Back button'); navigate("Organisation"), {}; }} >
+            () => { console.log('inside Back button'); this.props.navigate("HealthAndSafety4"), {}; }} >
             <Text style={styles.ButtonText}>
               BACK
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => {
-            console.log('props is ->>>>', this.props.navigation.navigate);
             this.checkAnswers();
           }} >
             <Text style={styles.ButtonText}>

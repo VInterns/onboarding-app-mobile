@@ -46,6 +46,10 @@ export default class Draggable extends Component {
 
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: (e, gesture) => true,
+      onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => true,
+      onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
+      // onPanResponderTerminationRequest: (evt, gestureState) => true,
       onPanResponderGrant: (e, gesture) => {
         this.state.pan.setOffset({
           x: this._val.x,
@@ -57,9 +61,11 @@ export default class Draggable extends Component {
         null, { dx: this.state.pan.x, dy: this.state.pan.y }
       ]),
       onPanResponderRelease: (e, gesture) => {
-        console.log(gesture);
-        if (this.isDropArea(gesture, this.props.answerId)) {
-        
+        console.log('inside Terminate -- props answerId is', this.props.answerId);
+        // if (this.isDropArea(gesture, this.props.answerId)) {
+        this.isDropArea(gesture, this.props.answerId);
+
+          console.log('inside if condition');
           //   //I WANT TO CHANGE Q1 TO TRUE
 
 
@@ -75,7 +81,7 @@ export default class Draggable extends Component {
           //   })
           // }
           // );
-        }
+        
       }
     });
   }
