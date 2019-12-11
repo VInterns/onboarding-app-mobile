@@ -88,33 +88,28 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         flex: 1,
-        padding: DEVICE_WIDTH * 0.05,
+        padding: DEVICE_WIDTH * 0.03,
+        // backgroundColor: '#6AA3EC'
     },
     text: {
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        marginTop: DEVICE_HEIGHT * 0.06,
-        //   fontFamily: "VodafoneRg",
+        marginTop: DEVICE_HEIGHT * 0.07,
         fontSize: 19,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        lineHeight: 25,
-        letterSpacing: 0,
-        color: "#4b464d"
+        color: "#4b464d",
+        fontFamily: "VodafoneBold",
     },
     imageContainer: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         alignItems: 'stretch',
-        flex: 8
+        justifyContent: 'center',
+        flex: 8,
+        // backgroundColor: '#EC6AE6'
     },
     img: {
-        width: '31%',
-        margin: '1%',
+        // width: '31%',
+        // margin: '1%',
     },
     button: { // button design
-        /*    width: 70,
-           height: 25, */
         alignItems: 'center',
         justifyContent: 'flex-end',
     },
