@@ -43,8 +43,8 @@ class LoginContainer extends Component {
     console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
-      // props.navigation.navigate(props.lastScreen || "walkThrough");
-      props.navigation.navigate("LearningAtVodafone1");
+      props.navigation.navigate(props.lastScreen || "walkThrough");
+      // props.navigation.navigate("Survey");
 
       return state;
     }
@@ -56,7 +56,6 @@ class LoginContainer extends Component {
     // this.props.logout()
     // this.props.resetMsg()
     /// --> TO LOGOUT AND CLEAR PRESIST STATE
-
     return (
       <Login
         loading={this.props.loading}

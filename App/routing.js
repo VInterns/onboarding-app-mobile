@@ -257,7 +257,11 @@ const AppNavigator = createStackNavigator(
     ErrorAlert: { screen: ErrorAlert },
     History2: { screen: History2 },
     History3: { screen: History3 },
-    GreatJob: { screen: greatJob },
+    GreatJob: { 
+      screen: greatJob, 
+      navigationOptions: {
+      header: null
+    } },
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },
@@ -311,7 +315,11 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
     events: { screen: events },
-    Survey: { screen: Survey },
+    Survey: { 
+      screen: Survey, 
+      navigationOptions: {
+      header: null
+    } },
 
     Contacts: { screen: Contacts },
     Menu: { screen: Menu },

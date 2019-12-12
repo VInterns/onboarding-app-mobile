@@ -35,7 +35,8 @@ export default class WorkingAtVodafone extends Component {
                     <View style={styles.TextContainer}>
                         <Text style={styles.redText}>Flexible</Text>
                         <Text style={styles.headerblackText}>Working Hours</Text>
-                        <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
+    
+                        <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH), fontFamily: "VodafoneRg", }}>
                             {'\n'}
                         </Text>
                         <Text>

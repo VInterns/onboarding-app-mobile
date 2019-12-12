@@ -146,7 +146,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: (20 / DEVICE_WIDTH) * DEVICE_WIDTH,
-        fontWeight: "300"
+        fontFamily: "VodafoneRg",
+        // fontWeight: "300"
     },
 
 
