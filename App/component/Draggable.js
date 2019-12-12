@@ -47,10 +47,10 @@ export default class Draggable extends Component {
 
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: (e, gesture) => true,
-      onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
+      // onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
       onMoveShouldSetPanResponder: (evt, gestureState) => true,
       // onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
-      // onPanResponderTerminationRequest: (evt, gestureState) => true,
+      onPanResponderTerminationRequest: (evt, gestureState) => true,
       onPanResponderGrant: (e, gesture) => {
         this.state.pan.setOffset({
           x: this._val.x,

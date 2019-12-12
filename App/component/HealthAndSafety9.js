@@ -35,14 +35,14 @@ class HealthAndSafety9 extends Component {
                     <Image source={ThumbsUp} />
                 </View>
 
-                <View style={{ marginTop: DEVICE_HEIGHT * 0.027 }}>
+                <View style={{ marginTop: DEVICE_HEIGHT * 0.027, paddingBottom: DEVICE_HEIGHT * 0.027 }}>
                     <Text style={{ color: 'red', fontSize: DEVICE_WIDTH * 0.0629, fontWeight: 'bold' }}>
                         Great Job !
                     </Text>
                 </View>
-                <View style={{ marginTop: DEVICE_HEIGHT * 0.027, width: '100%', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ color: 'black', fontSize: DEVICE_WIDTH * 0.050 }}>
-                        These rules should be abided{'\n'}with and for your safety
+                <View style={{ width: '80%', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', fontFamily: "VodafoneBold", backgroundColor: 'yellow' }}>
+                    <Text style={{ color: 'black', fontSize: DEVICE_WIDTH * 0.050, lineHeight:25 }}>
+                        These rules should be abided with and for your safety
                     </Text>
                 </View>
             </View>

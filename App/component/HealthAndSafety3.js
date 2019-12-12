@@ -77,7 +77,7 @@ export default class HealthandSafety3 extends Component {
 
     console.log('DEVICE_WIDTH', DEVICE_WIDTH);
     console.log('DEVICE_HEIGHT', DEVICE_HEIGHT);
-    
+
     return (
       <View style={styles.mainContainer}>
 
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold", 
     fontFamily: "VodafoneBold",
     fontStyle: "normal",
-    lineHeight: 25,
+    // lineHeight: 25,
     letterSpacing: 0,
     color: "#e60000",
     flexWrap: 'wrap',
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontFamily: "VodafoneRg",
     fontStyle: "normal",
-    lineHeight: 25,
+    // lineHeight: 25,
     letterSpacing: 0,
     color: "#4c464e",
     flexWrap: 'wrap',
