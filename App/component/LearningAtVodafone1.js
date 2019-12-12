@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     blackText: {//welcome to word style
         color: 'black',
         fontSize: DEVICE_WIDTH * (20 / DEVICE_WIDTH),
+        fontFamily: "VodafoneRg",
         // fontWeight: 'bold'
     },
     boldText: {

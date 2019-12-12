@@ -40,7 +40,7 @@ class HealthAndSafety9 extends Component {
                         Great Job !
                     </Text>
                 </View>
-                <View style={{ width: '80%', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', fontFamily: "VodafoneBold", backgroundColor: 'yellow' }}>
+                <View style={{ width: '80%', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', fontFamily: "VodafoneBold" }}>
                     <Text style={{ color: 'black', fontSize: DEVICE_WIDTH * 0.050, lineHeight:25 }}>
                         These rules should be abided with and for your safety
                     </Text>

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         fontSize: 37,
         fontWeight: "bold",
         fontStyle: "normal",
-        lineHeight: 44,
+        // lineHeight: 44,
         letterSpacing: 0,
         textAlign: "center",
         color: "#e60000"
