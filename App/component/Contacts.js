@@ -208,12 +208,7 @@ const styles = StyleSheet.create({
     textTitleLarge: {
         fontFamily: "VodafoneBold",
         fontSize: 37,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        lineHeight: 44,
-        letterSpacing: 0,
         color: "#4b464d",
-        marginBottom: 25
     },
     textTitleSmall: {
         fontFamily: "VodafoneBold",
@@ -228,17 +223,12 @@ const styles = StyleSheet.create({
     blockContainer: {
         // justifyContent: 'center',
         flexDirection: 'column',
-        // alignItems: 'center',
-        // backgroundColor: '#6AE0EC',
         flex: 8,
         paddingHorizontal: DEVICE_WIDTH * 0.05,
     },
     blockBigHeader: {
         fontFamily: "VodafoneBold",
         fontSize: 18,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        letterSpacing: 0,
         color: "#4b464d"
     },
     blockHeader: {
@@ -248,7 +238,6 @@ const styles = StyleSheet.create({
         fontStyle: "normal",
         letterSpacing: 0,
         color: "#BD0000",
-        // paddingBottom: DEVICE_HEIGHT * 0.02,
         // backgroundColor: '#6AA7EC',
     },
     blockTitle: {
