@@ -39,13 +39,11 @@ export default class WorkingAtVodafone extends Component {
                         <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH), fontFamily: "VodafoneRg", }}>
                             {'\n'}
                         </Text>
-                        <Text>
-                            Based on your department you can start as early </Text>
-                        <Text>
-                            as 8:00 AM and finish at 4:30 PM or as late as </Text>
-                        <Text>
+                        <Text style={styles.normalText}>
+                            Based on your department you can start as early 
+                            as 8:00 AM and finish at 4:30 PM or as late as 
                             10 AM and finish at 6:30 PM.This includes half an hour daily break.
-                    </Text>
+                        </Text>
                     </View>
 
                     <View style={styles.imageContainer}>
@@ -55,18 +53,10 @@ export default class WorkingAtVodafone extends Component {
                         <Text style={styles.redText}>Flexible</Text>
                         <Text style={styles.headerblackText}>Working Place</Text>
                         <Text style={{ fontSize: DEVICE_WIDTH * (5 / DEVICE_WIDTH) }}>
-                            {/* {'\n'} */}
                         </Text>
-                        <Text>
+                        <Text style={styles.normalText}>
                             Based on your department you can work from ANYWHERE once per
-                    </Text>
-                        <Text>
-                            week or you can even work from nearest
-                    </Text>
-                        <Text>
-                            Vodafone premises.
-                            {/* {'\n'} */}
-
+                            week or you can even work from nearest Vodafone premises.
                         </Text>
                     </View>
 
@@ -121,20 +111,25 @@ const styles = StyleSheet.create({
         fontSize: DEVICE_WIDTH * (25 / DEVICE_WIDTH),
     },
     TextContainer: {/* Welcome back and vodabuddy wrapper */
-        flex: 2,
+        flex: 3,
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
         // backgroundColor: 'green',
-        marginLeft: DEVICE_WIDTH * (30 / DEVICE_WIDTH),
-        marginTop: DEVICE_HEIGHT * (10 / DEVICE_HEIGHT),
+        paddingHorizontal: DEVICE_WIDTH * (30 / DEVICE_WIDTH),
+        paddingTop: DEVICE_HEIGHT * (10 / DEVICE_HEIGHT),
+        flexWrap: 'wrap',
+    },
+    normalText:{
+        fontFamily: "VodafoneRg",
+        fontSize: 21,
     },
     LowerTextContainer: {/* Welcome back and vodabuddy wrapper */
         flex: 0.5,
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
         //backgroundColor: 'green',
-        marginLeft: DEVICE_WIDTH * (30 / DEVICE_WIDTH),
-        marginTop: DEVICE_HEIGHT * (3 / DEVICE_HEIGHT),
+        paddingHorizontal: DEVICE_WIDTH * (30 / DEVICE_WIDTH),
+        paddingTop: DEVICE_HEIGHT * (3 / DEVICE_HEIGHT),
 
     },
     button: { // button design
