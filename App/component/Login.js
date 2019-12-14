@@ -31,8 +31,8 @@ export class Login extends Component {
     super();
     //  _onLoginPressed=this._onLoginPressed.bind(this);
     this.state = {
-      email: "",
-      password: ""
+      email: "osama@gmail.com",
+      password: "123"
     };
   }
 
