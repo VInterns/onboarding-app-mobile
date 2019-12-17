@@ -17,7 +17,7 @@ class GreatJob extends Component {
     props: {
         tryNavigate: (nextScreen: string) => void,
         userId: string,
-        sectionNumber: Number
+        sectionNumber: number
     };
     // tryNavigate = () => {
     //     console.log("Try navigate");

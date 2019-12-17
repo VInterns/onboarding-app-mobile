@@ -13,9 +13,10 @@ export default class Video7 extends React.Component {
     props: {
         tryNavigate: (nextScreen: string) => void,
         userId: string,
-        sectionNumber: Number
+        sectionNumber: number
     };
     tryNavigate = () => {
+        debugger;
         if (this.props.sectionNumber < 10) {
             this.props.tryNavigate("Survey", this.props.userId, 10);
         }

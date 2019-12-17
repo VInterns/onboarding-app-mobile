@@ -31,7 +31,7 @@ export default class walkThrough2 extends Component {
     props: {
         tryNavigate: (nextScreen: string) => void,
         userId: string,
-        sectionNumber: Number
+        sectionNumber: number
     };
 
     static navigationOptions = {
