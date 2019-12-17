@@ -26,7 +26,7 @@ class Walkthrough1Container extends Component {
   props: {
     tryNavigate: (nextScreen: string) => void,
     userId: String,
-    sectionNumber: Number
+    sectionNumber: number
   };
 
   static getDerivedStateFromProps(props, state) {

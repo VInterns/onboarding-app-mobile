@@ -27,7 +27,7 @@ class Video7Container extends Component {
     props: {
         tryNavigate: (nextScreen: string) => void,
         userId: String,
-        sectionNumber: Number
+        sectionNumber: number
     };
 
 

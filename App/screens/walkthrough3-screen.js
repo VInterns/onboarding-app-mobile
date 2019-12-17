@@ -27,7 +27,7 @@ class Walkthrough3Container extends Component {
     lastScreen: string,
     tryNavigate: (nextScreen: string) => void,
     userId: String,
-    sectionNumber: Number
+    sectionNumber: number
   };
 
   render() {

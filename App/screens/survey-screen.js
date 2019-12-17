@@ -29,7 +29,7 @@ class SurveyContainer extends Component {
     props: {
         userId: String,
         // addSurvey: (survey: SurveyModel) => void,
-        sectionNumber: Number
+        sectionNumber: number
 
     };
 
