@@ -6,7 +6,7 @@ export interface AuthorizationState {
   errorMessage: string;
   lastScreen: string;
   userId: String;
-  sectionNumber: Number;
+  sectionNumber: number;
 }
 
 export const AuthorizationInitialState: AuthorizationState = {

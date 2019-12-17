@@ -77,7 +77,7 @@ export function authorizationReducer(
       return {
         ...state,
         lastScreen: action.payload.nextScreen,
-        sectionNumber: sectionNumber
+        sectionNumber: action.payload.sectionNumber
       }
     }
 

@@ -87,7 +87,8 @@ export async function tryLogin(user: UserLoginModel) {
   };
 }
 
-export async function tryNavigate(nextScreen: string, userId: String, sectionNumber: Number) {
+export async function tryNavigate(nextScreen: string, userId: String, sectionNumber: number) {
+  debugger;
   return async dispatch => {
     let user =
     {

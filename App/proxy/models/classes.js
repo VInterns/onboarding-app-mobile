@@ -15,7 +15,7 @@ export interface NextScreenModel {
 }
 
 export interface sectionNumberModel {
-  sectionNumber: Number;
+  sectionNumber: number;
 }
 
 export interface SurveyModel {
