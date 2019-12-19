@@ -89,7 +89,7 @@ export async function tryLogin(user: UserLoginModel) {
 export async function SetSectionNumber(sectionNumber) {
   console.log("######%%%%%% inside set section number %%%%%%%%#######");
   console.log("section number = ", sectionNumber)
-  if (sectionNumber == null) {
+  if (sectionNumber == undefined) {
     return async dispatch => {
       dispatch({ type: types.SET_SECTION_NUMBER });
     };
