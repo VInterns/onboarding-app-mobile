@@ -30,11 +30,20 @@ export function authorizationReducer(
         ...state,
         token: action.payload,
         isLoggedIn: true,
-        userId: action.payload.id
+        userId: action.payload.id,
+
         // lastScreen: "walkThrough"
         // username: action.payload.username
       };
     }
+
+    case types.SET_SECTION_NUMBER:
+      {
+        return {
+          ...state,
+          sectionNumber: 0
+        };
+      }
 
     case types.LOGIN_FAIL: {
       return {

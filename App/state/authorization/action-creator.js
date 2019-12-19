@@ -86,7 +86,15 @@ export async function tryLogin(user: UserLoginModel) {
     dispatch({ type: UiTypes.UI_STOP_LOADING });
   };
 }
-
+export async function SetSectionNumber(sectionNumber) {
+  console.log("######%%%%%% inside set section number %%%%%%%%#######");
+  console.log("section number = ", sectionNumber)
+  if (sectionNumber == null) {
+    return async dispatch => {
+      dispatch({ type: types.SET_SECTION_NUMBER });
+    };
+  }
+}
 export async function tryNavigate(nextScreen: string, userId: String, sectionNumber: number) {
   debugger;
   return async dispatch => {
