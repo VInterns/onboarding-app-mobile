@@ -2,7 +2,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "expo": {
     "name": "Onboarding App",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/vbuddy.png",
     "version": "1.0.0",
     "slug": "ob-boarding-vodafone",
     "sdkVersion": "XX.0.0",
