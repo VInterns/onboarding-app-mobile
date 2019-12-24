@@ -1,16 +1,16 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "expo": {
-    "name": "Onboarding App",
+    "name": "VodaBuddy",
     "icon": "./assets/vbuddy.png",
     "version": "1.0.0",
-    "slug": "ob-boarding-vodafone",
+    "slug": "voda-buddy-vodafone",
     "sdkVersion": "XX.0.0",
     "ios": {
-      "bundleIdentifier": "com.vodafone.onboarding"
+      "bundleIdentifier": "com.vodafone.VodaBuddy"
     },
     "android": {
-      "package": "com.vodafone.onboarding"
+      "package": "com.vodafone.VodaBuddy"
     }
   },
   "scripts": {
