@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "HR_OnBoarding",
-    "slug": "HR_OnBoarding",
+    "name": "VodaBuddy",
+    "slug": "VodaBuddy",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
+    "sdkVersion": "34.0.0",
     "platforms": [
       "ios",
       "android",
@@ -25,11 +25,20 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vodafone.vbuddy"
+      "bundleIdentifier": "com.vodafone.VodaBuddy",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "video"
+        ],
+        "NSMicrophoneUsageDescription": "Allow $(VodaBuddy) to access your microphone"
+      }
     },
     "android": {
-      "package": "com.vodafone.vbuddy"
+      "package": "com.vodafone.VodaBuddy"
     },
-    "description": "Voda Buddy is an application to help new commers to know more about Vodafone environment"
-  }
+    "description": "VodaBuddy is an application to help new commers to know more about Vodafone environment",
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  },
+  "displayName": "VodaBuddy",
+  "name": "VodaBuddy"
 }

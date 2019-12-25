@@ -15,7 +15,7 @@ import {
 import FadeInView from './FadeInView'
 
 import centerImg from '../assets/group_1.png'
-import { DeviceSensor } from 'expo-sensors';
+// import { DeviceSensor } from 'expo-sensors';
 //import backgroundImg from '../assets/background.png';
 export default class History5 extends Component {
 

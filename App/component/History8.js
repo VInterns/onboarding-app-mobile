@@ -26,7 +26,6 @@ import italy from '../assets/rankCopy5.png'
 import uk from '../assets/rankCopy6.png'
 import spain from '../assets/rankCopy7.png'
 import romania from '../assets/rankCopy8.png'
-import { DeviceSensor } from 'expo-sensors';
 
 export default class History8 extends Component {
 
