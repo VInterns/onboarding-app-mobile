@@ -89,11 +89,12 @@ export async function tryLogin(user: UserLoginModel) {
 export async function SetSectionNumber(sectionNumber) {
   console.log("######%%%%%% inside set section number %%%%%%%%#######");
   console.log("section number = ", sectionNumber)
-  if (sectionNumber == undefined) {
-    return async dispatch => {
+
+  return async dispatch => {
+    if (sectionNumber == undefined) {
       dispatch({ type: types.SET_SECTION_NUMBER });
-    };
-  }
+    }
+  };
 }
 export async function tryNavigate(nextScreen: string, userId: String, sectionNumber: number) {
   debugger;
