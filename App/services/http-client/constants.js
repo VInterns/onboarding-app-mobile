@@ -1,7 +1,8 @@
 const PROD_BASE_URL = "";
 
 // const DEV_BASE_URL = "http://35.178.84.177:3000/"; //DON'T DELETE
-const DEV_BASE_URL = "https://3da517ff.ngrok.io/"; //DON'T DELETE
+const DEV_BASE_URL = "http://services-emea.skytap.com:14209/"; //DON'T DELETE
+// const DEV_BASE_URL = "https://3da517ff.ngrok.io/"; //DON'T DELETE
 
 
 // const PROD_BASE_URL = "";
