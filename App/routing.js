@@ -91,7 +91,7 @@ import { Survey } from "./screens/survey-screen";
 
 import HealthAndSafety from "./component/HealthAndSafety";
 import HealthAndSafety1 from "./component/HealthAndSafety1";
-import {HealthAndSafety2} from "./component/HealthandSafety2";
+import { HealthAndSafety2 } from "./component/HealthandSafety2";
 import HealthAndSafety3 from "./component/HealthAndSafety3";
 import HealthAndSafety5 from "./component/HealthAndSafety5";
 import HealthAndSafety9 from "./component/HealthAndSafety9";
@@ -257,11 +257,12 @@ const AppNavigator = createStackNavigator(
     ErrorAlert: { screen: ErrorAlert },
     History2: { screen: History2 },
     History3: { screen: History3 },
-    GreatJob: { 
-      screen: greatJob, 
+    GreatJob: {
+      screen: greatJob,
       navigationOptions: {
-      header: null
-    } },
+        header: null
+      }
+    },
     History4: { screen: History4 },
     History5: { screen: History5 },
     History6: { screen: History6 },
@@ -304,8 +305,8 @@ const AppNavigator = createStackNavigator(
     LearningAtVodafone1: { screen: LearningAtVodafone1 },
     LearningAtVodafone_last: { screen: LearningAtVodafone_last },
     WorkingAtVodafone: { screen: WorkingAtVodafone },
-    WorkingAtVodafone1: { 
-      screen: WorkingAtVodafone1 ,
+    WorkingAtVodafone1: {
+      screen: WorkingAtVodafone1,
       navigationOptions: {
         header: null
       }
@@ -315,11 +316,12 @@ const AppNavigator = createStackNavigator(
     WorkingAtVodafone4: { screen: WorkingAtVodafone4 },
     WorkingAtVodafone_last: { screen: WorkingAtVodafone_last },
     events: { screen: events },
-    Survey: { 
-      screen: Survey, 
+    Survey: {
+      screen: Survey,
       navigationOptions: {
-      header: null
-    } },
+        header: null
+      }
+    },
 
     Contacts: { screen: Contacts },
     Menu: { screen: Menu },
@@ -329,7 +331,7 @@ const AppNavigator = createStackNavigator(
     transitionConfig: nav => handleCustomTransition(nav)
   },
   {
-    initialRouteName: "Login"
+    initialRouteName: "walkThrough"
   }
 );
 
