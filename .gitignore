@@ -10,3 +10,6 @@ web-build/
 web-report/
 App/services/http-client/constants.js
 node_modules
+package-lock.json
+yarn.lock
+yarn-error.log
