@@ -96,13 +96,13 @@ export async function tryNavigate(nextScreen: string, userId: String) {
       id: userId,
       lastSection: nextScreen
     };
-    let response = await authProxyService.updateLastSection(user);
-    if (response.status === 200) {
-      console.log("last section added successfully");
-    }
-    else {
-      console.log("an error occured while adding the last section");
-    }
+    // let response = await authProxyService.updateLastSection(user);
+    // if (response.status === 200) {
+    //   console.log("last section added successfully");
+    // }
+    // else {
+    //   console.log("an error occured while adding the last section");
+    // }
     // debugger;
     dispatch(onNextScreen(nextScreen));
   };
