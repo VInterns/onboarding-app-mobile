@@ -19,8 +19,6 @@ import { AsyncStorage } from "react-native";
 import { State, reducer, success } from "./App/state";
 
 import * as Font from "expo-font";
-// const VodafoneBd = require("./assets/fonts/Vodafone Rg Bold.ttf");
-// const VodafoneRg = require("./assets/fonts/VodafoneRg.ttf");
 
 const persistConfig = {
   key: "root",
@@ -31,7 +29,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, reducer);
 
 const store = createStore(
-  persistedReducer,
+  reducer,
   composeWithDevTools(applyMiddleware(promiseMiddleware, thunkMiddleware))
 );
 const persistor = persistStore(store);
@@ -46,12 +44,6 @@ export default class App extends React.Component {
   }
   async componentDidMount() {
     await Application.run();
-
-    // await Font.loadAsync({
-    //   "VodafoneRg": require("./assets/fonts/Vodafone.ttf"),
-    //   "VodafoneBold": require("./assets/fonts/VodafoneRg-Bold.ttf")
-
-    // });
       await Font.loadAsync({
       "VodafoneRg": require("./App/assets/fonts/Vodafone.ttf"),
       "VodafoneBold": require("./App/assets/fonts/VodafoneRg-Bold.ttf")
