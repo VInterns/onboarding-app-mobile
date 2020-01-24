@@ -29,7 +29,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, reducer);
 
 const store = createStore(
-  reducer,
+  persistedReducer,
   composeWithDevTools(applyMiddleware(promiseMiddleware, thunkMiddleware))
 );
 const persistor = persistStore(store);
@@ -44,12 +44,12 @@ export default class App extends React.Component {
   }
   async componentDidMount() {
     await Application.run();
-      await Font.loadAsync({
+    await Font.loadAsync({
       "VodafoneRg": require("./App/assets/fonts/Vodafone.ttf"),
       "VodafoneBold": require("./App/assets/fonts/VodafoneRg-Bold.ttf")
     });
 
-    this.setState({ isReady: true ,fontLoaded:true});
+    this.setState({ isReady: true, fontLoaded: true });
   }
   async componentWillUnmount() {
     await Application.onClose();

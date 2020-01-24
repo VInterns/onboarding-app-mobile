@@ -9,6 +9,7 @@ import {
   surveyService
 } from "../../proxy";
 import * as UiTypes from "../ui/actions";
+import LearningAtVodafone from "../../component/LearningAtVodafone";
 
 var jwtDecode = require("jwt-decode");
 
@@ -51,39 +52,40 @@ export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_START_LOADING });
-    let response = await authProxyService.login(user);
-    console.log("this is the login response : ", response);
+    // let response = await authProxyService.login(user);
+    // console.log("this is the login response : ", response);
 
-    result = await response.json();
-    var tokenPayload = result["token"];
+    // result = await response.json();
+    // var tokenPayload = result["token"];
 
-    console.log("this is the token response : ", tokenPayload);
+    // console.log("this is the token response : ", tokenPayload);
 
-    var decoded = jwtDecode(tokenPayload);
+    // var decoded = jwtDecode(tokenPayload);
     var token = {};
-    token["email"] = decoded["email"];
-    token["id"] = decoded["_id"];
-    token["payload"] = tokenPayload;
+    token["email"] = "islam.gad2@Vodafone.com";
+    token["id"] = 1;
+    token["payload"] = "tokenPayload";
 
-    console.log("token is ---> ", token);
-    console.log("status is ---> ", result.status);
+    // console.log("token is ---> ", token);
+    // console.log("status is ---> ", result.status);
 
-
+    dispatch(success(token));
+    dispatch({ type: UiTypes.UI_STOP_LOADING });
 
     // let res = response.json();
-    debugger;
-    if (response.status === 200) {
-      // token = await response.json();
-      debugger;
-      console.log('response of trylogin is --->', response);
-      dispatch(success(token));
-      dispatch({ type: UiTypes.UI_STOP_LOADING });
-    } else {
-      console.log('inside ui else section ... ');
-      dispatch(fail("Invalid credentials"));
-      dispatch({ type: UiTypes.UI_STOP_LOADING });
-    }
-    dispatch({ type: UiTypes.UI_STOP_LOADING });
+    // debugger;
+    // if (response.status === 200) {
+    //   // token = await response.json();
+    //   debugger;
+    //   console.log('response of trylogin is --->', response);
+    //   dispatch(success(token));
+    //   dispatch({ type: UiTypes.UI_STOP_LOADING });
+    // } else {
+    //   console.log('inside ui else section ... ');
+    //   dispatch(fail("Invalid credentials"));
+    //   dispatch({ type: UiTypes.UI_STOP_LOADING });
+    // }
+    // dispatch({ type: UiTypes.UI_STOP_LOADING });
   };
 }
 
