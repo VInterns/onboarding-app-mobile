@@ -191,7 +191,6 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    //AppIntroSlider: { screen: AppIntroSlider },
     walkThrough: {
       screen: walkThrough1Screen,
       navigationOptions: {
