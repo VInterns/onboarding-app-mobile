@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import {React,  Component } from 'react';
 import PropTypes from 'prop-types';
-import Dimensions from 'Dimensions';
+import {Dimensions} from 'react-native';
 import { StyleSheet, View, TextInput, floatingLabelInput, Text, Image } from 'react-native';
 
 
