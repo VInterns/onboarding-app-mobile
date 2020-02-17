@@ -88,6 +88,7 @@ import WorkingAtVodafone_last from "./component/WorkingAtVodafone_last";
 import events from "./component/events";
 
 import { Survey } from "./screens/survey-screen";
+import { ThankYou } from "./screens/thankyou-screen";
 
 import HealthAndSafety from "./component/HealthAndSafety";
 import HealthAndSafety1 from "./component/HealthAndSafety1";
@@ -191,7 +192,6 @@ const AppNavigator = createStackNavigator(
         header: null
       }
     },
-    //AppIntroSlider: { screen: AppIntroSlider },
     walkThrough: {
       screen: walkThrough1Screen,
       navigationOptions: {
@@ -318,6 +318,12 @@ const AppNavigator = createStackNavigator(
     events: { screen: events },
     Survey: {
       screen: Survey,
+      navigationOptions: {
+        header: null
+      }
+    },
+    ThankYou: {
+      screen: ThankYou,
       navigationOptions: {
         header: null
       }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Toast } from "native-base";
 import {
     StyleSheet,
     View,
@@ -7,6 +7,7 @@ import {
     Dimensions,
     Text,
     TextInput,
+
 
 } from 'react-native';
 import { Card } from 'react-native-elements'
@@ -20,8 +21,8 @@ export default class Survey extends Component {
         super();
         this.state = {
             id: "",  //// to be changed to be dynamic
-            useful: 3,
-            engaging: 3,
+            useful: 0,
+            engaging: 0,
             comment: "test"
         };
     }
@@ -38,8 +39,11 @@ export default class Survey extends Component {
     static navigationOptions = {//header styling
         header: null
     };
+
     setUseful(rating) {
         this.setState({ useful: rating });
+        //AlertIOS.alert(rating);
+        console.log("rate changed: " + rating);
     }
 
     setEngaging(rating) {
@@ -52,16 +56,29 @@ export default class Survey extends Component {
 
     async OnDoneClicked() {
         debugger;
-        let response = await surveyService.addSurvey(this.state);
-            console.log("response is --> ", response);
+        console.log("usefull counter: " + this.state.useful);
+        console.log("engaging counter: " + this.state.engaging);
+        if (this.state.useful > 0 && this.state.engaging > 0) {
+            console.log("Good job");
+            this.props.navigation.navigate("ThankYou")
+        } else {
+            console.log("Bad job");
+            Toast.show({
+                text: 'WARNING: Please Rate the Journey!',
+                buttonText: 'Okay',
+                duration: 2000,
+            });
+        }
+        // let response = await surveyService.addSurvey(this.state);
+        // console.log("response is --> ", response);
 
-        if (response.status === 200) {
-            console.log("1 Survey added successfully");
-            this.props.navigation.navigate("Menu");
-        }
-        else {
-            console.log("an error occured while adding the survey");
-        }
+        // if (response.status === 200) {
+        //     console.log("1 Survey added successfully");
+        //     this.props.navigation.navigate("Menu");
+        // }
+        // else {
+        //     console.log("an error occured while adding the survey");
+        // }
     }
 
     render() {
@@ -70,11 +87,11 @@ export default class Survey extends Component {
 
                 <Card title="Survey Questions" containerStyle={styles.card} titleStyle={styles.titleStyle}>
                     <Text style={styles.text}>
-                        How useful were the journey?
+                        How useful was the journey?
                     </Text>
 
                     <View style={styles.StarContainer}>
-                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} onFinishRating={this.setUseful.bind(this)} />
+                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} onFinishRating={this.setUseful.bind(this)} defaultRating={0} />
                     </View>
 
                     <Text style={styles.text}>
@@ -82,7 +99,7 @@ export default class Survey extends Component {
                     </Text>
 
                     <View style={styles.StarContainer}>
-                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} onFinishRating={this.setEngaging.bind(this)} />
+                        <AirbnbRating showRating={false} selectedColor='#F1E900' starContainerStyle={styles.container} onFinishRating={this.setEngaging.bind(this)} defaultRating={0} />
                     </View>
 
                     <View style={styles.textContainer}>

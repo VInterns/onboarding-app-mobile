@@ -12,6 +12,7 @@ class Walkthrough1Container extends Component {
   }
 
   static mapStateToProps(state: State) {
+    console.log('map state to props from walk through')
     return {
       lastScreen: state.authorization.lastScreen,
       userId: state.authorization.userId

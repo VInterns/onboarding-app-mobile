@@ -20,13 +20,13 @@ import { State, reducer, success } from "./App/state";
 
 import * as Font from "expo-font";
 
-const persistConfig = {
-  key: "root",
-  storage: AsyncStorage,
-  stateReconciler: hardSet
-};
+// const persistConfig = {
+//   key: "root",
+//   storage: AsyncStorage,
+//   stateReconciler: hardSet
+// };
 
-const persistedReducer = persistReducer(persistConfig, reducer);
+// const persistedReducer = persistReducer(persistConfig, reducer);
 
 const store = createStore(
   reducer,
@@ -44,12 +44,12 @@ export default class App extends React.Component {
   }
   async componentDidMount() {
     await Application.run();
-      await Font.loadAsync({
+    await Font.loadAsync({
       "VodafoneRg": require("./App/assets/fonts/Vodafone.ttf"),
       "VodafoneBold": require("./App/assets/fonts/VodafoneRg-Bold.ttf")
     });
 
-    this.setState({ isReady: true ,fontLoaded:true});
+    this.setState({ isReady: true, fontLoaded: true });
   }
   async componentWillUnmount() {
     await Application.onClose();
@@ -59,16 +59,15 @@ export default class App extends React.Component {
     if (!this.state.isReady || !Application.current) {
       return <AppLoading />;
     }
+    console.log('hi app')
     return (
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Root>
-            <View style={styles.container}>
-              <Navgation />
-              <AppLoading />
-            </View>
-          </Root>
-        </PersistGate>
+        <Root>
+          <View style={styles.container}>
+            <Navgation />
+            <AppLoading />
+          </View>
+        </Root>
       </Provider>
     );
   }
