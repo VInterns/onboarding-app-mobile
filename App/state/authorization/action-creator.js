@@ -54,15 +54,15 @@ export async function tryLogin(user: UserLoginModel) {
     dispatch({ type: UiTypes.UI_START_LOADING });
     try {
       let response = await authProxyService.login(user);
-      result = await response.json();
-      let tokenPayload = result["token"];
-      let decoded = jwtDecode(tokenPayload);
-      let token = {};
-
-      token["email"] = decoded["email"];
-      token["id"] = decoded["_id"];
-      token["payload"] = tokenPayload;
       if (response.status === 200) {
+        result = await response.json();
+        let tokenPayload = result["token"];
+        let decoded = jwtDecode(tokenPayload);
+        let token = {};
+
+        token["email"] = decoded["email"];
+        token["id"] = decoded["_id"];
+        token["payload"] = tokenPayload;
         dispatch(success(token));
         dispatch({ type: UiTypes.UI_STOP_LOADING });
       } else {
@@ -71,6 +71,7 @@ export async function tryLogin(user: UserLoginModel) {
       }
       dispatch({ type: UiTypes.UI_STOP_LOADING });
     } catch (error) {
+      console.log(error)
       dispatch(fail("Invalid credentials"));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
 
@@ -110,13 +111,16 @@ export async function tryRegister(user: UserRegisterModel) {
 
       let response = await authProxyService.register(user);
       if (response.status === 200) {
+        console.log('response 200')
         dispatch(registerSuccess());
         dispatch({ type: UiTypes.UI_STOP_LOADING });
       } else {
+        console.log('response 401')
         dispatch({ type: UiTypes.UI_STOP_LOADING });
         dispatch(registerFail());
       }
     } catch (error) {
+      console.log(error)
       dispatch({ type: UiTypes.UI_STOP_LOADING });
       dispatch(registerFail());
     }
