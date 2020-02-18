@@ -58,14 +58,18 @@ export default class Survey extends Component {
         console.log("engaging counter: " + this.state.engaging);
         if (this.state.useful > 0 && this.state.engaging > 0) {
             console.log("Good job");
-            let response = await surveyService.addSurvey(this.state);
-            console.log("response is --> ", response);
+            try {
 
-            if (response.status === 200) {
-                console.log("1 Survey added successfully");
-                this.props.navigation.navigate("ThankYou")
-            }
-            else {
+                let response = await surveyService.addSurvey(this.state);
+                console.log("response is --> ", response);
+                if (response.status === 200) {
+                    console.log("1 Survey added successfully");
+                    this.props.navigation.navigate("ThankYou")
+                }
+                else {
+                    console.log("an error occured while adding the survey");
+                }
+            } catch (error) {
                 console.log("an error occured while adding the survey");
             }
         } else {

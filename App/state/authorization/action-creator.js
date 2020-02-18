@@ -52,24 +52,29 @@ export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_START_LOADING });
+    try {
+      let response = await authProxyService.login(user);
+      result = await response.json();
+      let tokenPayload = result["token"];
+      let decoded = jwtDecode(tokenPayload);
+      let token = {};
 
-    let response = await authProxyService.login(user);
-    result = await response.json();
-    let tokenPayload = result["token"];
-    let decoded = jwtDecode(tokenPayload);
-    let token = {};
-
-    token["email"] = decoded["email"];
-    token["id"] = decoded["_id"];
-    token["payload"] = tokenPayload;
-    if (response.status === 200) {
-      dispatch(success(token));
+      token["email"] = decoded["email"];
+      token["id"] = decoded["_id"];
+      token["payload"] = tokenPayload;
+      if (response.status === 200) {
+        dispatch(success(token));
+        dispatch({ type: UiTypes.UI_STOP_LOADING });
+      } else {
+        dispatch(fail("Invalid credentials"));
+        dispatch({ type: UiTypes.UI_STOP_LOADING });
+      }
       dispatch({ type: UiTypes.UI_STOP_LOADING });
-    } else {
+    } catch (error) {
       dispatch(fail("Invalid credentials"));
       dispatch({ type: UiTypes.UI_STOP_LOADING });
+
     }
-    dispatch({ type: UiTypes.UI_STOP_LOADING });
   };
 }
 
@@ -80,14 +85,20 @@ export async function tryNavigate(nextScreen: string, userId: String) {
       id: userId,
       lastSection: nextScreen
     };
-    let response = await authProxyService.updateLastSection(user);
-    if (response.status === 200) {
-      console.log("last section added successfully");
-    }
-    else {
+    try {
+
+      let response = await authProxyService.updateLastSection(user);
+      if (response.status === 200) {
+        console.log("last section added successfully");
+      }
+      else {
+        console.log("an error occured while adding the last section");
+      }
+      dispatch(onNextScreen(nextScreen));
+    } catch (error) {
       console.log("an error occured while adding the last section");
+      dispatch(onNextScreen(nextScreen));
     }
-    dispatch(onNextScreen(nextScreen));
   };
 }
 
@@ -95,11 +106,17 @@ export async function tryRegister(user: UserRegisterModel) {
   return async dispatch => {
     dispatch({ type: UiTypes.UI_START_LOADING });
     dispatch(onRegister());
-    let response = await authProxyService.register(user);
-    if (response.status === 200) {
-      dispatch(registerSuccess());
-      dispatch({ type: UiTypes.UI_STOP_LOADING });
-    } else {
+    try {
+
+      let response = await authProxyService.register(user);
+      if (response.status === 200) {
+        dispatch(registerSuccess());
+        dispatch({ type: UiTypes.UI_STOP_LOADING });
+      } else {
+        dispatch({ type: UiTypes.UI_STOP_LOADING });
+        dispatch(registerFail());
+      }
+    } catch (error) {
       dispatch({ type: UiTypes.UI_STOP_LOADING });
       dispatch(registerFail());
     }

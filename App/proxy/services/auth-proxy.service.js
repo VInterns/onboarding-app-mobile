@@ -13,7 +13,6 @@ export class AuthProxyService {
     };
   }
   async login(user: UserLoginModel) {
-    debugger;
     const data = {};
     data["email"] = user.email;
     data["password"] = user.password;
