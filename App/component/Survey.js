@@ -33,7 +33,7 @@ export default class Survey extends Component {
 
     props: {
         userId: string,
-        // addSurvey: (survey: SurveyModel) => void,
+        addSurvey: (survey: SurveyModel) => void,
     };
 
     static navigationOptions = {//header styling
@@ -42,8 +42,6 @@ export default class Survey extends Component {
 
     setUseful(rating) {
         this.setState({ useful: rating });
-        //AlertIOS.alert(rating);
-        console.log("rate changed: " + rating);
     }
 
     setEngaging(rating) {
@@ -60,7 +58,16 @@ export default class Survey extends Component {
         console.log("engaging counter: " + this.state.engaging);
         if (this.state.useful > 0 && this.state.engaging > 0) {
             console.log("Good job");
-            this.props.navigation.navigate("ThankYou")
+            let response = await surveyService.addSurvey(this.state);
+            console.log("response is --> ", response);
+
+            if (response.status === 200) {
+                console.log("1 Survey added successfully");
+                this.props.navigation.navigate("ThankYou")
+            }
+            else {
+                console.log("an error occured while adding the survey");
+            }
         } else {
             console.log("Bad job");
             Toast.show({
@@ -69,16 +76,7 @@ export default class Survey extends Component {
                 duration: 2000,
             });
         }
-        // let response = await surveyService.addSurvey(this.state);
-        // console.log("response is --> ", response);
 
-        // if (response.status === 200) {
-        //     console.log("1 Survey added successfully");
-        //     this.props.navigation.navigate("Menu");
-        // }
-        // else {
-        //     console.log("an error occured while adding the survey");
-        // }
     }
 
     render() {

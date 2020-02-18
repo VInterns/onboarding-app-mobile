@@ -15,19 +15,18 @@ class SurveyContainer extends Component {
 
 
     static mapStateToProps(state: State) {
-        debugger;
         return {
             userId: state.authorization.userId
         };
     }
 
-    // static mapDispatchToProps(dispatch: Dispatch) {
-    //     return bindActionCreators({ addSurvey }, dispatch);
-    // }
+    static mapDispatchToProps(dispatch: Dispatch) {
+        return bindActionCreators({ addSurvey }, dispatch);
+    }
 
     props: {
         userId: String,
-        // addSurvey: (survey: SurveyModel) => void,
+        addSurvey: (survey: SurveyModel) => void,
     };
 
 
@@ -37,7 +36,7 @@ class SurveyContainer extends Component {
             <SurveyComponent
                 userId={this.props.userId}
                 navigation={this.props.navigation}
-            // addSurvey={this.props.addSurvey}
+                addSurvey={this.props.addSurvey}
             />
         );
     }
@@ -45,5 +44,5 @@ class SurveyContainer extends Component {
 
 export const Survey = connect(
     SurveyContainer.mapStateToProps,
-    // SurveyContainer.mapDispatchToProps
+    SurveyContainer.mapDispatchToProps
 )(SurveyContainer);

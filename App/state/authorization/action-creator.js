@@ -52,40 +52,24 @@ export async function tryLogin(user: UserLoginModel) {
   return async dispatch => {
     dispatch(onLogin(user));
     dispatch({ type: UiTypes.UI_START_LOADING });
-    // let response = await authProxyService.login(user);
-    // console.log("this is the login response : ", response);
 
-    // result = await response.json();
-    // var tokenPayload = result["token"];
+    let response = await authProxyService.login(user);
+    result = await response.json();
+    let tokenPayload = result["token"];
+    let decoded = jwtDecode(tokenPayload);
+    let token = {};
 
-    // console.log("this is the token response : ", tokenPayload);
-
-    // var decoded = jwtDecode(tokenPayload);
-    var token = {};
-    token["email"] = "islam.gad2@Vodafone.com";
-    token["id"] = 1;
-    token["payload"] = "tokenPayload";
-
-    // console.log("token is ---> ", token);
-    // console.log("status is ---> ", result.status);
-
-    dispatch(success(token));
+    token["email"] = decoded["email"];
+    token["id"] = decoded["_id"];
+    token["payload"] = tokenPayload;
+    if (response.status === 200) {
+      dispatch(success(token));
+      dispatch({ type: UiTypes.UI_STOP_LOADING });
+    } else {
+      dispatch(fail("Invalid credentials"));
+      dispatch({ type: UiTypes.UI_STOP_LOADING });
+    }
     dispatch({ type: UiTypes.UI_STOP_LOADING });
-
-    // let res = response.json();
-    // debugger;
-    // if (response.status === 200) {
-    //   // token = await response.json();
-    //   debugger;
-    //   console.log('response of trylogin is --->', response);
-    //   dispatch(success(token));
-    //   dispatch({ type: UiTypes.UI_STOP_LOADING });
-    // } else {
-    //   console.log('inside ui else section ... ');
-    //   dispatch(fail("Invalid credentials"));
-    //   dispatch({ type: UiTypes.UI_STOP_LOADING });
-    // }
-    // dispatch({ type: UiTypes.UI_STOP_LOADING });
   };
 }
 
@@ -96,36 +80,25 @@ export async function tryNavigate(nextScreen: string, userId: String) {
       id: userId,
       lastSection: nextScreen
     };
-    // let response = await authProxyService.updateLastSection(user);
-    // if (response.status === 200) {
-    //   console.log("last section added successfully");
-    // }
-    // else {
-    //   console.log("an error occured while adding the last section");
-    // }
-    // debugger;
+    let response = await authProxyService.updateLastSection(user);
+    if (response.status === 200) {
+      console.log("last section added successfully");
+    }
+    else {
+      console.log("an error occured while adding the last section");
+    }
     dispatch(onNextScreen(nextScreen));
   };
 }
 
 export async function tryRegister(user: UserRegisterModel) {
-  let token = null;
   return async dispatch => {
     dispatch({ type: UiTypes.UI_START_LOADING });
     dispatch(onRegister());
     let response = await authProxyService.register(user);
     if (response.status === 200) {
-      // HttpClient.requestInterceptor.push(request => {
-      //   let _token: TokenDto;
-      //   if (token) _token = token;
-      //   request.headers = Object.assign({}, request.headers, {
-      //     Authorization: `bearer ${_token.access_token}`
-      //   });
-      //   return request;
-      // });
       dispatch(registerSuccess());
       dispatch({ type: UiTypes.UI_STOP_LOADING });
-      // dispatch(NavigationActions.navigate({ routeName: "Login" }));
     } else {
       dispatch({ type: UiTypes.UI_STOP_LOADING });
       dispatch(registerFail());
@@ -176,6 +149,5 @@ export function onNextScreen(nextScreen): NextScreenModel {
 }
 
 export function resetMsg(): RESET_VALIDATION_MSG_Action {
-  console.log('inside resetMsg() function');
   return { type: types.RESET_VALIDATION_MSG };
 }
