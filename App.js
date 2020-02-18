@@ -21,7 +21,7 @@ import { State, reducer, success } from "./App/state";
 import * as Font from "expo-font";
 
 const persistConfig = {
-  key: "v-buddy",
+  key: "v-buddy-app",
   storage: AsyncStorage,
   stateReconciler: hardSet
 };
