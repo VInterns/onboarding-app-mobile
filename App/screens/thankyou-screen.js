@@ -15,9 +15,6 @@ class ThankYouContainer extends Component {
         return {};
     }
 
-    static mapDispatchToProps(dispatch: Dispatch) {
-        return bindActionCreators({}, dispatch);
-    }
 
 
 
@@ -32,6 +29,5 @@ class ThankYouContainer extends Component {
 }
 
 export const ThankYou = connect(
-    ThankYouContainer.mapStateToProps,
-    ThankYouContainer.mapDispatchToProps
+    ThankYouContainer.mapStateToProps
 )(ThankYouContainer);
