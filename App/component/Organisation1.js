@@ -71,7 +71,7 @@ export default class Organisation1 extends Component {
                             BACK
                        </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigate("Organisation2")} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigate("CongratulationsR")} >
                         <Text style={styles.ButtonText}>
                             NEXT
                        </Text>
