@@ -6,11 +6,14 @@ import { State, tryLogin, logout, onNextScreen, resetMsg } from "../state";
 
 import { UserLoginModel } from "../proxy";
 import { Login } from "../component/newLogin";
+import Constants from 'expo-constants';
 
 class LoginContainer extends Component {
   constructor() {
     super();
+    console.log('constants-> ',Constants);
     this.state = {};
+
   }
   static mapStateToProps(state: State) {
     return {

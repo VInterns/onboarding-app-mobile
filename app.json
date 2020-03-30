@@ -9,7 +9,7 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "1.1.5",
     "orientation": "portrait",
     "icon": "./assets/appicon.png",
     "splash": {
@@ -31,7 +31,8 @@
       }
     },
     "android": {
-      "package": "com.vodafone.VodaBuddy"
+      "package": "com.vodafone.VodaBuddy",
+      "versionCode": 5
     },
     "description": "VodaBuddy is an application to help new commers to know more about Vodafone environment",
     "entryPoint": "node_modules/expo/AppEntry.js"
