@@ -43,11 +43,11 @@ export default class App extends React.Component {
     };
   }
   async componentDidMount() {
-    await Application.run();
     await Font.loadAsync({
-      "VodafoneRg": require("./App/assets/fonts/Vodafone.ttf"),
-      "VodafoneBold": require("./App/assets/fonts/VodafoneRg-Bold.ttf")
+      "VodafoneRg": require("./assets/fonts/Vodafone.ttf"),
+      "VodafoneBold": require("./assets/fonts/VodafoneRg-Bold.ttf")
     });
+    await Application.run();
 
     this.setState({ isReady: true, fontLoaded: true });
   }
@@ -56,7 +56,8 @@ export default class App extends React.Component {
   }
 
   render() {
-    if (!this.state.isReady || !Application.current) {
+    // if (!this.state.isReady || !Application.current) {
+      if (!this.state.isReady) {
       return <AppLoading />;
     }
     return (

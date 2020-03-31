@@ -46,8 +46,8 @@ class LoginContainer extends Component {
     console.log("Is loggedin " + props.isLoggedIn);
     if (props.isLoggedIn) {
 
-      // props.navigation.navigate(props.lastScreen || "walkThrough");
-      props.navigation.navigate("HealthAndSafety3");
+      props.navigation.navigate(props.lastScreen || "walkThrough");
+      // props.navigation.navigate("HealthAndSafety3");
 
       return state;
     }
