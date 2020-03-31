@@ -78,8 +78,18 @@ export async function tryLogin(user: UserLoginModel) {
     }
   };
 }
+export async function SetSectionNumber(sectionNumber) {
+  console.log("######%%%%%% inside set section number %%%%%%%%#######");
+  console.log("section number = ", sectionNumber)
 
-export async function tryNavigate(nextScreen: string, userId: String) {
+  return async dispatch => {
+    if (sectionNumber == undefined) {
+      dispatch({ type: types.SET_SECTION_NUMBER });
+    }
+  };
+}
+export async function tryNavigate(nextScreen: string, userId: String, sectionNumber: number) {
+  debugger;
   return async dispatch => {
     let user =
     {
@@ -100,6 +110,7 @@ export async function tryNavigate(nextScreen: string, userId: String) {
       console.log("an error occured while adding the last section");
       dispatch(onNextScreen(nextScreen));
     }
+    // dispatch(onNextScreen(nextScreen, sectionNumber));
   };
 }
 
@@ -161,11 +172,15 @@ export function logout() {
   }
 }
 
-export function onNextScreen(nextScreen): NextScreenModel {
+export function onNextScreen(nextScreen, sectionNumber): NextScreenModel {
   debugger;
+  let sectionInfo = {
+    nextScreen: nextScreen,
+    sectionNumber: sectionNumber
+  }
   return {
     type: types.ON_NEXT_SCREEN,
-    payload: nextScreen
+    payload: sectionInfo
   };
 }
 

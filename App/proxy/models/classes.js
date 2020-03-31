@@ -14,6 +14,10 @@ export interface NextScreenModel {
   nextScreen: String;
 }
 
+export interface sectionNumberModel {
+  sectionNumber: number;
+}
+
 export interface SurveyModel {
   id: String,
   useful: Number,

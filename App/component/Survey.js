@@ -53,13 +53,11 @@ export default class Survey extends Component {
     }
 
     async OnDoneClicked() {
-        debugger;
         console.log("usefull counter: " + this.state.useful);
         console.log("engaging counter: " + this.state.engaging);
         if (this.state.useful > 0 && this.state.engaging > 0) {
             console.log("Good job");
             try {
-
                 let response = await surveyService.addSurvey(this.state);
                 console.log("response is --> ", response);
                 if (response.status === 200) {
@@ -80,7 +78,6 @@ export default class Survey extends Component {
                 duration: 2000,
             });
         }
-
     }
 
     render() {

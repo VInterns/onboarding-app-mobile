@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { State, tryLogin, logout, onNextScreen, resetMsg } from "../state";
+import { State, tryLogin, SetSectionNumber, logout, onNextScreen, resetMsg } from "../state";
 
 import { UserLoginModel } from "../proxy";
 import { Login } from "../component/newLogin";
 import Constants from 'expo-constants';
 
 class LoginContainer extends Component {
-  constructor() {
+  constructor(props) {
     super();
     console.log('constants-> ',Constants);
     this.state = {};
@@ -20,12 +20,13 @@ class LoginContainer extends Component {
       isLoggedIn: state.authorization.isLoggedIn,
       errorMessage: state.authorization.errorMessage,
       loading: state.ui.loading,
-      lastScreen: state.authorization.lastScreen
+      lastScreen: state.authorization.lastScreen,
+      sectionNumber: state.authorization.sectionNumber
     };
   }
 
   static mapDispatchToProps(dispatch: Dispatch) {
-    return bindActionCreators({ tryLogin, logout, onNextScreen, resetMsg }, dispatch);
+    return bindActionCreators({ tryLogin, SetSectionNumber, logout, onNextScreen, resetMsg }, dispatch);
   }
 
 
@@ -37,9 +38,10 @@ class LoginContainer extends Component {
     logout: () => void,
     lastScreen: string,
     onNextScreen: (lastScreen: NextScreenModel) => void,
-    resetMsg: () => void
+    resetMsg: () => void,
+    SetSectionNumber: (sectionNumber: number) => void,
+    sectionNumber: number
   };
-
 
   static getDerivedStateFromProps(props, state) {
 
@@ -56,8 +58,9 @@ class LoginContainer extends Component {
 
   render() {
 
-    // this.props.logout()
+    this.props.logout()
     // this.props.resetMsg()
+    this.props.SetSectionNumber(this.props.sectionNumber);
     /// --> TO LOGOUT AND CLEAR PRESIST STATE
     return (
       <Login

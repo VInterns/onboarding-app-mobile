@@ -14,8 +14,8 @@ class Video1Container extends Component {
     static mapStateToProps(state: State) {
         return {
             lastScreen: state.authorization.lastScreen,
-            userId: state.authorization.userId
-
+            userId: state.authorization.userId,
+            sectionNumber: state.authorization.sectionNumber
         };
     }
 
@@ -26,18 +26,20 @@ class Video1Container extends Component {
     props: {
         tryNavigate: (nextScreen: string) => void,
         userId: String,
+        sectionNumber: number
+
     };
 
 
     render() {
         console.log("Here in video1 screen render");
-        console.log('This is the props of Video1 --->', this.props)
         return (
             <Video1
                 tryNavigate={this.props.tryNavigate}
                 navigation={this.props.navigation}
                 isLoggedIn={this.props.isLoggedIn}
                 userId={this.props.userId}
+                sectionNumber={this.props.sectionNumber}
             />
         );
     }

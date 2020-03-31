@@ -14,8 +14,8 @@ class Walkthrough3Container extends Component {
   static mapStateToProps(state: State) {
     return {
       lastScreen: state.authorization.lastScreen,
-      userId: state.authorization.userId
-
+      userId: state.authorization.userId,
+      sectionNumber: state.authorization.sectionNumber
     };
   }
 
@@ -27,6 +27,7 @@ class Walkthrough3Container extends Component {
     lastScreen: string,
     tryNavigate: (nextScreen: string) => void,
     userId: String,
+    sectionNumber: number
   };
 
   render() {
@@ -37,6 +38,7 @@ class Walkthrough3Container extends Component {
         navigation={this.props.navigation}
         isLoggedIn={this.props.isLoggedIn}
         userId={this.props.userId}
+        sectionNumber={this.props.sectionNumber}
       />
     );
   }
