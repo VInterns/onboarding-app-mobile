@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { State, addSurvey } from "../state";
 import React, { Component } from "react";
-// import { Dispatch, bindActionCreators } from "redux";
+import { Dispatch, bindActionCreators } from "redux";
 // import { SurveyModel } from "../proxy";
 
 
