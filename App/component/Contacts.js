@@ -46,28 +46,6 @@ export default class Contacts extends Component {
 
                     <Text style={styles.blockHeader}>
                         {"\n"}
-                        VSSE Premises
-                    </Text>
-                    <Text style={styles.blockTitle}>
-                        -VHUB 1 , VHUB 2
-                    </Text>
-                    <Text style={styles.blockText}>
-                        KM28, Smart Village، Alexandria Desert Rd
-                    </Text>
-                    <Text style={styles.blockTitle}>
-                        - MCCP
-                    </Text>
-                    <Text style={styles.blockText}>
-                        Maadi Technology Park، Etisalat Club Rd, Ezbet Fahmy, El Basatin, Cairo Governorate 11435                    </Text>
-                    <Text style={styles.blockTitle}>
-                        - Horizon
-                    </Text>
-                    <Text style={styles.blockText}>
-                        Vodafone Square, Second 6th of October, Giza Governorate
-                    </Text>
-
-                    <Text style={styles.blockHeader}>
-                        {"\n"}
                         Vodafone Egypt Premises
                     </Text>
                     <Text style={styles.blockTitle}>
