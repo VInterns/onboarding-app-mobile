@@ -21,6 +21,5 @@ export class SurveyService {
             headers: { "content-Type": "application/json" },
             body: JSON.stringify(data)
         });
-
     }
 }

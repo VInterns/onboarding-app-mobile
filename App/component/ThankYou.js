@@ -4,7 +4,8 @@ import {
     StyleSheet,
     View,
     Dimensions,
-    Text
+    Text,
+    TouchableOpacity
 } from 'react-native';
 import { Card } from 'react-native-elements'
 
@@ -14,6 +15,7 @@ export default class Survey extends Component {
     };
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
 
@@ -22,6 +24,15 @@ export default class Survey extends Component {
                         Hope You Enjoyed the Journey, Welcome on board.
                     </Text>
                 </Card>
+                <View style={styles.NextButtonView}>
+
+<TouchableOpacity style={styles.button} onPress={() => navigate("Menu", {})} >
+    <Text style={styles.ButtonText}>
+        NEXT
+        </Text>
+</TouchableOpacity>
+</View>
+
             </View >
 
         );
@@ -56,6 +67,8 @@ const styles = StyleSheet.create({
     },
     card: {
         width: '90%',
+        marginTop: DEVICE_HEIGHT * 0.3,
+
         //backgroundColor:'yellow'
     },
     titleStyle: {
@@ -69,24 +82,17 @@ const styles = StyleSheet.create({
         fontFamily: "VodafoneRg",
         // fontWeight: "300"
     },
-
-
-    button: { // button design
-        width: DEVICE_WIDTH * (130 / DEVICE_WIDTH),
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-        borderColor: 'red',
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 10,
+    NextButtonView: { //wrapper for button 
+        // flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        flex: 1,
+        marginBottom: DEVICE_HEIGHT * 0.05,
+        marginLeft: DEVICE_WIDTH * 0.68
     },
-
-    ButtonView: { //wrapper for button 
-
-        marginTop: DEVICE_HEIGHT * (12 / DEVICE_HEIGHT),
-        justifyContent: 'center',
+    button: {
         alignItems: 'center',
+        justifyContent: 'center'
     },
     ButtonText: { // text inside button
         color: 'red',

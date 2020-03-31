@@ -65,7 +65,7 @@ export class Login extends Component {
 
                 <View style={styles.welcomTextView}>
                     <Text style={styles.HelloText}>Hello!</Text>
-                    <Text style={styles.WelcomeText}>Welcome to VodaBuddy, Lets start your journey as a Vodafoner</Text>
+                    <Text style={styles.WelcomeText}>Welcome to V-Buddy, Lets start your journey as a Vodafoner</Text>
 
                 </View>
                 <View style={styles.userNameTextInputView}>

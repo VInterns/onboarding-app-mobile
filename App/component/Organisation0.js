@@ -74,7 +74,7 @@ export default class Organisation0 extends Component {
                             </Text>
                         </View>
                         {/* ------------- */}
-                        <View style={styles.boxItem}>
+                        {/* <View style={styles.boxItem}>
                             <Image source={Emad} />
                             <Text style={styles.upperText}>
                                 Emad {"\n"} ElAzhary
@@ -82,7 +82,7 @@ export default class Organisation0 extends Component {
                             <Text style={styles.lowerText}>
                                 Strategy Director
                             </Text>
-                        </View>
+                        </View> */}
                         {/* ------------- */}
                         <View style={styles.boxItem}>
                             <Image source={Osama} />

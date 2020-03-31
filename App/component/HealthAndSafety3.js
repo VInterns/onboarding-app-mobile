@@ -78,6 +78,8 @@ export default class HealthandSafety3 extends Component {
     // console.log('DEVICE_WIDTH *', DEVICE_WIDTH * 0.962);
     console.log('DEVICE_HEIGHT First *', DEVICE_HEIGHT * 0.55);
     console.log('DEVICE_HEIGHT Second*', DEVICE_HEIGHT * 0.65);
+console.log('seatbelt device height first ', DEVICE_HEIGHT * 0.65);
+console.log('seatbelt device height second ', DEVICE_HEIGHT * 0.85);
 
     return (
       <View style={styles.mainContainer}>
@@ -91,7 +93,7 @@ export default class HealthandSafety3 extends Component {
         <View style={styles.imagesContainer}>
           {/* images here  */}
           <Draggable style={styles.draggable} imageurl={require(electric)} moveYfirst={DEVICE_HEIGHT * 0.55} moveYsecond={DEVICE_HEIGHT * 0.62} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={1} qtrue={q1true} />
-          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={500} moveYsecond={680} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={2} qtrue={q2true} />
+          <Draggable style={styles.draggable} imageurl={require(seatbelt)} moveYfirst={DEVICE_HEIGHT * 0.65} moveYsecond={DEVICE_HEIGHT * 0.83} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={2} qtrue={q2true} />
           <Draggable style={styles.draggable} imageurl={require(workingatheight)} moveYfirst={DEVICE_HEIGHT * 0.406} moveYsecond={DEVICE_HEIGHT * 0.50} moveXfirst={DEVICE_WIDTH * 0.07} moveXsecond={DEVICE_WIDTH * 0.24} answerId={3} qtrue={q3true} />
         </View>
         {/* 470 530 */}
