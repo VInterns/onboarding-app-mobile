@@ -3,11 +3,7 @@
     "name": "VodaBuddy",
     "slug": "VodaBuddy",
     "privacy": "public",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.1.10",
     "orientation": "portrait",
     "icon": "./assets/appicon.png",
@@ -19,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "./assets/"
-    ],
+    "assetBundlePatterns": ["./assets/"],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.vodafone.VodaBuddy",
@@ -34,7 +28,8 @@
       "versionCode": 10
     },
     "description": "VodaBuddy is an application to help new commers to know more about Vodafone environment",
-    "entryPoint": "node_modules/expo/AppEntry.js"
+    "entryPoint": "node_modules/expo/AppEntry.js",
+    "sdkVersion": "38.0.0"
   },
   "displayName": "VodaBuddy",
   "name": "VodaBuddy"
