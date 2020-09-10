@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'stretch',
         flex: 1,
-        flexWrap: 'wrap',
+        // flexWrap: 'wrap',
     },
     textContainer: {
         flex: 1,
