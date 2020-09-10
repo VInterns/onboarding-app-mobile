@@ -41,6 +41,7 @@
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-ratings": "^7.2.0",
     "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area": "^0.5.1",
     "react-native-screens": "^2.9.0",
     "react-native-unimodules": "^0.10.1",
     "react-native-web": "^0.13.3",
