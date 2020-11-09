@@ -12,7 +12,7 @@ import {
     ScrollView,
 } from 'react-native';
 
-import alexandre from "../assets/Alexandre.png";
+import MohamedKamal from "../assets/MohamedKamal.png";
 import Rasha from "../assets/Rasha.png";
 import Ayman from "../assets/Ayman.png";
 import Emad from "../assets/Emad.png";
@@ -43,9 +43,9 @@ export default class Organisation0 extends Component {
                     {/* <Image source={img1} style={styles.img} /> */}
                     <View style={styles.ceoBoxContainer}>
                         <View style={styles.boxItem}>
-                            <Image source={alexandre} />
+                            <Image source={MohamedKamal} />
                             <Text style={styles.upperText}>
-                                Alexandre {"\n"} Froment-Curtil
+                                Mohamed Kamal {"\n"} Abdullah
                             </Text>
                             <Text style={styles.lowerText}>
                                 CEO
