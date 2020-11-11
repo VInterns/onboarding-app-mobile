@@ -2,7 +2,7 @@
   "expo": {
     "name": "VodaBuddy",
     "icon": "./assets/vbuddy.png",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "slug": "voda-buddy-vodafone",
     "sdkVersion": "XX.0.0",
     "ios": {
@@ -10,8 +10,8 @@
     },
     "android": {
       "package": "com.vodafone.VodaBuddy",
-      "versionCode": 10,
-      "versionName": "1.1.10"
+      "versionCode": 11,
+      "versionName": "1.1.11"
     }
   },
   "scripts": {
