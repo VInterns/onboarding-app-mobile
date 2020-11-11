@@ -43,7 +43,7 @@ export default class Organisation0 extends Component {
                     {/* <Image source={img1} style={styles.img} /> */}
                     <View style={styles.ceoBoxContainer}>
                         <View style={styles.boxItem}>
-                            <Image source={MohamedKamal} />
+                            <Image source={MohamedAbdullah} />
                             <Text style={styles.upperText}>
                                 Mohamed Kamal {"\n"} Abdullah
                             </Text>
@@ -105,9 +105,9 @@ export default class Organisation0 extends Component {
                         </View>
                         {/* ------Mohamed Abulallah------- */}
                         <View style={styles.boxItem}>
-                            <Image source={MohamedAbdullah} />
+                            <Image source={KareemEid} />
                             <Text style={styles.upperText}>
-                                Mohamed {"\n"} Abdallah
+                                Kareem {"\n"} Eid
                             </Text>
                             <Text style={styles.lowerText}>
                                 Consumer Business Unit Director
@@ -124,7 +124,7 @@ export default class Organisation0 extends Component {
                             </Text>
                         </View>
 
-                        {/* ------------- */}
+                        {/* ------- Karim Shehata------ */}
                         <View style={styles.boxItem}>
                             <Image source={KarimShehata} />
                             <Text style={styles.upperText}>
@@ -135,15 +135,6 @@ export default class Organisation0 extends Component {
                             </Text>
                         </View>
                         {/* ------------- */}
-                        <View style={styles.boxItem}>
-                            <Image source={KareemEid} />
-                            <Text style={styles.upperText}>
-                                Kareem {"\n"} Eid
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                Consumer Marketing Digital Director
-                            </Text>
-                        </View>
                     </View>
                 </View>
                 <View style={styles.NextButtonView}>
