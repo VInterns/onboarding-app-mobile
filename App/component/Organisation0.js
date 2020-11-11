@@ -12,10 +12,8 @@ import {
     ScrollView,
 } from 'react-native';
 
-import MohamedKamal from "../assets/MohamedKamal.png";
 import Rasha from "../assets/Rasha.png";
 import Ayman from "../assets/Ayman.png";
-import Emad from "../assets/Emad.png";
 import Osama from "../assets/Osama.png";
 import Nagla from "../assets/Nagla.png";
 import MohamedAbdullah from "../assets/MohamedAbdullah.png";
